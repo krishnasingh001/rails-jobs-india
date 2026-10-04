@@ -1,0 +1,52 @@
+[
+  {
+    "company_name": "Autodesk",
+    "search_location": "Bengaluru, Karnataka",
+    "place_name": "Autodesk India Pvt Ltd",
+    "address": "Sunriver, Embassy Golf Links Business Park, Challaghatta, Bengaluru, Karnataka 560071",
+    "latitude": 12.951092,
+    "longitude": 77.641202,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=12.951092%2C77.6412016",
+    "found": true
+  },
+  {
+    "company_name": "Groww",
+    "search_location": "Mysuru, Karnataka",
+    "place_name": "Groww - Corporate Head Office",
+    "address": "Vaishnavi Tech Park, Sarjapur - Marathahalli Rd, Bellandur, Bengaluru, Karnataka 560103",
+    "latitude": 12.920359,
+    "longitude": 77.671884,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=12.9203592%2C77.6718839",
+    "found": true
+  },
+  {
+    "company_name": "Sigma Infosolutions",
+    "search_location": "Bengaluru, Karnataka",
+    "place_name": "Sigma Infosolutions",
+    "address": "Sigma Towers #66/A, 13th Cross, 6th Main, J P Nagar, 3rd Phase, Bengaluru, Karnataka 560078",
+    "latitude": 12.907461,
+    "longitude": 77.596861,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=12.907460799999999%2C77.5968613",
+    "found": true
+  },
+  {
+    "company_name": "Appster",
+    "search_location": "Gurugram, Haryana",
+    "place_name": "Appster Llp",
+    "address": "54, Golf Course Rd, Suncity, Sector 54, Gurugram, Haryana 122011",
+    "latitude": 28.440805,
+    "longitude": 77.102878,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=28.4408052%2C77.10287819999999",
+    "found": true
+  },
+  {
+    "company_name": "ZecData Technology",
+    "search_location": "Chennai, Tamil Nadu",
+    "place_name": null,
+    "address": null,
+    "latitude": null,
+    "longitude": null,
+    "maps_url": null,
+    "found": false
+  }
+]
