@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-brand: "Space Grotesk", "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+  --color-brand: #dc2626;
+  --color-brand-hover: #b91c1c;
+  --color-brand-soft: #fef2f2;
+  --color-brand-border: #fecaca;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-canvas: #ffffff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+}
+
+::selection {
+  background: rgb(220 38 38 / 0.15);
+  color: #0f172a;
+}
+
+button,
+select,
+label[for],
+summary {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse {
+    animation: none;
+  }
+}
+
+.jobs-tip .maplibregl-popup-content {
+  border: 1px solid #fecaca;
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.96);
+  color: #0f172a;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 8px 30px rgb(15 23 42 / 0.06);
+}
+
+.jobs-tip.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: rgb(255 255 255 / 0.96);
+}
+
+.maplibregl-ctrl-bottom-right {
+  left: 1rem;
+  right: auto;
+}
+
+@media (max-width: 767px) {
+  .maplibregl-ctrl-bottom-right {
+    bottom: calc(46vh + 1.25rem);
+  }
+}
