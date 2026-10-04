@@ -1,0 +1,37 @@
+{
+  "company_name": "Carrier",
+  "query": "Carrier: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:54:18Z",
+  "profile": {
+    "layoffs_last_year": {
+      "date": "2025 (announced and executed through 2025; reported in early 2026)",
+      "employees_affected": 3000,
+      "percent_of_workforce": "~6.4%"
+    },
+    "head_count": {
+      "total": 47000,
+      "as_of": "December 31, 2025"
+    },
+    "office_locations": [
+      "Palm Beach Gardens, FL, USA (Headquarters)",
+      "Charlotte, NC, USA",
+      "Indianapolis, IN, USA",
+      "Syracuse, NY, USA",
+      "Mainz, Germany",
+      "Shanghai, China",
+      "Montluel, France",
+      "27+ offices worldwide; serves customers in 160+ countries"
+    ],
+    "values": [
+      "Respect",
+      "Integrity",
+      "Inclusion",
+      "Innovation",
+      "Excellence"
+    ],
+    "founded_year": 1915,
+    "domain_area": "Carrier Global is an American multinational corporation that designs, manufactures, and sells heating, ventilation, air conditioning (HVAC), refrigeration, and fire and security systems. It serves the building climate control, commercial refrigeration, and industrial cooling industries globally."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": {\n    \"date\": \"2025 (announced and executed through 2025; reported in early 2026)\",\n    \"employees_affected\": 3000,\n    \"percent_of_workforce\": \"~6.4%\"\n  },\n  \"head_count\": {\n    \"total\": 47000,\n    \"as_of\": \"December 31, 2025\"\n  },\n  \"office_locations\": [\n    \"Palm Beach Gardens, FL, USA (Headquarters)\",\n    \"Charlotte, NC, USA\",\n    \"Indianapolis, IN, USA\",\n    \"Syracuse, NY, USA\",\n    \"Mainz, Germany\",\n    \"Shanghai, China\",\n    \"Montluel, France\",\n    \"27+ offices worldwide; serves customers in 160+ countries\"\n  ],\n  \"values\": [\n    \"Respect\",\n    \"Integrity\",\n    \"Inclusion\",\n    \"Innovation\",\n    \"Excellence\"\n  ],\n  \"founded_year\": 1915,\n  \"domain_area\": \"Carrier Global is an American multinational corporation that designs, manufactures, and sells heating, ventilation, air conditioning (HVAC), refrigeration, and fire and security systems. It serves the building climate control, commercial refrigeration, and industrial cooling industries globally.\"\n}\n```\n\n### References",
+  "references": null
+}

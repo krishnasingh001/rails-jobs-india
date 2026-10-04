@@ -1,0 +1,36 @@
+{
+  "company_name": "Hyrhub",
+  "query": "Hyrhub: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:58:08Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found in the last 12 months. Hyrhub is a very small company (under 10 employees) with no publicly reported workforce reductions.",
+    "head_count": "~6 employees (per LinkedIn, as of 2026); other sources (RocketReach, ContactOut) report 5–9.",
+    "office_locations": [
+      "Bangalore, Karnataka, India (HQ: 443 Embassy Pristine, Sarjapur, 560103)"
+    ],
+    "values": "Core belief: 'No company should be devoid of people who are passionate, innovative and focused on both creation and delivery.' Tagline: 'Hire Fast. Hire Smarter.'",
+    "founded_year": 2014,
+    "domain_area": "Hyrhub is a recruitment and talent-acquisition company that provides end-to-end customized hiring solutions (exclusive search, candidate sourcing, and a hiring platform) primarily for technology startups and IT firms, operating in the Human Resources / HR-tech industry."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found in the last 12 months. Hyrhub is a very small company (under 10 employees) with no publicly reported workforce reductions.\",\n  \"head_count\": \"~6 employees (per LinkedIn, as of 2026); other sources (RocketReach, ContactOut) report 5–9.\",\n  \"office_locations\": [\"Bangalore, Karnataka, India (HQ: 443 Embassy Pristine, Sarjapur, 560103)\"],\n  \"values\": \"Core belief: 'No company should be devoid of people who are passionate, innovative and focused on both creation and delivery.' Tagline: 'Hire Fast. Hire Smarter.'\",\n  \"founded_year\": 2014,\n  \"domain_area\": \"Hyrhub is a recruitment and talent-acquisition company that provides end-to-end customized hiring solutions (exclusive search, candidate sourcing, and a hiring platform) primarily for technology startups and IT firms, operating in the Human Resources / HR-tech industry.\"\n}\n```\n\n**Note on `founded_year`**: The company's own website states **2014**, but LinkedIn and ContactOut list **2018** (likely the year of formal registration or rebranding). [0] [1] [2] 2014 is used here as it comes from the primary source.\n\n### References\n\n0. [Home](https://www.hyrhub.com/)\n1. [Hyrhub](https://www.linkedin.com/company/hyrhub)\n2. [Hyrhub](https://in.linkedin.com/company/hyrhub)",
+  "references": [
+    {
+      "title": "Home",
+      "link": "https://www.hyrhub.com/",
+      "source_icon": "https://imgs.search.brave.com/fBrGPpzYEs-6N8Q1YuuUOkx65SYGayIyVR5e1YH0bG4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzU4ZTg1MWIx/ODViODFlZGViMjMy/Nzg3MmVjZDg5ZWRj/ZWNkNmVkNzA0ZDRi/YzM0NmMxM2RmNjE3/NDE0Zjk0MS93d3cu/aHlyaHViLmNvbS8",
+      "index": 0
+    },
+    {
+      "title": "Hyrhub",
+      "link": "https://www.linkedin.com/company/hyrhub",
+      "source_icon": "https://imgs.search.brave.com/B3dmoKTAgUkkbrvzAxFg_MfHAm5WmWy0N-4kH1AGWOo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGE1YzZjOWNj/NmNiODQ4NzI0ODg1/MGY5ZGQ2YzhjZTRm/N2NjOGIzZjc1NTlj/NDM2ZGI5Yjk3ZWI1/YzBmNzJmZS93d3cu/bGlua2VkaW4uY29t/Lw",
+      "index": 1
+    },
+    {
+      "title": "Hyrhub",
+      "link": "https://in.linkedin.com/company/hyrhub",
+      "source_icon": "https://imgs.search.brave.com/ApDQsMnPC5R8DTGgP6uv70RCDXMS0CP7K9pGbLphBTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2E0OTM0MjBm/YzVmNTllYzc2YTQ3/NmVhNDY1YzgyNjYy/NWZlZDZiZjU2MjZl/NDg3MTg0N2YxZjRh/OGFiMDMzNi9pbi5s/aW5rZWRpbi5jb20v",
+      "index": 2
+    }
+  ]
+}

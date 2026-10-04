@@ -1,0 +1,154 @@
+{
+  "company_name": "gitlab",
+  "query": "gitlab company valuation, most recent funding round raised, and any recent layoffs",
+  "fetched_at": "2026-10-04T09:20:35Z",
+  "markdown": "GitLab is a **public company** (NASDAQ: GTLB), so it no longer has private funding rounds in the traditional sense. [0] [1]\n\n**Current valuation:** Market cap of **~$7.8–8.2B** as of late September / early October 2026. [0]\n\n**Most recent funding round:** The last private round was a **$268M Series E in September 2019** at a **$2.75B** post-money valuation, led by ICONIQ Capital and Goldman Sachs. [2] [1] [0] [3] [4] Post-IPO, there was a **PIPE round in November 2023** (investor: Ooredoo, amount undisclosed) and a **post-IPO round in September 2022** (undisclosed). Total raised across all rounds: ~$435M.\n\n**Recent layoffs:** In **late September 2026**, GitLab cut **350 employees (~14% of workforce)** alongside Q2 FY27 results (revenue $286.3M, up 21% YoY). [5] This followed an earlier **May 2026 restructuring** announcement that eliminated up to three layers of management and expanded AI automation, with shares falling ~7% after-hours on that news. [6]\n\n### References\n\n0. [GitLab - Multiples.vc - Public Comps and Valuation Multiples](https://multiples.vc/public-comps/gitlab-valuation-multiples)\n1. [Gitlab - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn](https://tracxn.com/d/companies/gitlab/__68u0ZAtDXnYfDO42syPZfYK01mBWBormGg_pBCb0t_g)\n2. [GitLab Raises $268M to Expand its Leading DevOps Platform to Security, Monitoring, and More](https://about.gitlab.com/press/releases/2019-09-17-gitlab-raises-268m-to-expanding-leading-devops-platform/)\n3. [Announcing $268 million in Series E funding](https://about.gitlab.com/blog/gitlab-series-e-funding/)\n4. [GitLab IPO Timeline and Financing Details](https://forgeglobal.com/gitlab_ipo/)\n5. [GitLab cuts 350 jobs, reports $286M revenue](https://www.saasrise.com/news/gitlab-lays-off-350-staff-as-q2-revenue-hits-286-m-and-billings-jump-24-5c81bd84-094f-4a92-88df-9d662c70a31d)\n6. [GitLab Layoffs 2026: Staff Cuts Amid AI Restructuring](https://startuptalky.com/news/gitlab-to-cut-staff-and-streamline-management-structure/)",
+  "references": [
+    {
+      "title": "GitLab - Multiples.vc - Public Comps and Valuation Multiples",
+      "link": "https://multiples.vc/public-comps/gitlab-valuation-multiples",
+      "source_icon": "https://imgs.search.brave.com/-s7J-RgKBA2qa-hZngFKIBhRzJeGK3G45bB9d3Nsaz4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzk3MGFhZGUw/ZGVlYTQwOWM0NGY0/ZjI3YzU2NDY4Yjcz/Mzc2MjIzMzlkODY4/MzcyMTZkZDRmNDFl/NWYzY2RjZS9tdWx0/aXBsZXMudmMv",
+      "index": 0
+    },
+    {
+      "title": "Gitlab - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+      "link": "https://tracxn.com/d/companies/gitlab/__68u0ZAtDXnYfDO42syPZfYK01mBWBormGg_pBCb0t_g",
+      "source_icon": "https://imgs.search.brave.com/nzB0_WjyGC_evkqvO7ZEs5xI6dVUXnxuwSiKDcsNo2Q/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTJjNDdiZmI3/MDk3MzllZTFkZGU1/M2Y1NTZiNmFhZjhi/YTAzNzhmOGU0MDM5/YTRmZDhkMmZiN2Yw/ODg5MTcxYy90cmFj/eG4uY29tLw",
+      "index": 1
+    },
+    {
+      "title": "GitLab Raises $268M to Expand its Leading DevOps Platform to Security, Monitoring, and More",
+      "link": "https://about.gitlab.com/press/releases/2019-09-17-gitlab-raises-268m-to-expanding-leading-devops-platform/",
+      "source_icon": "https://imgs.search.brave.com/0B1UPgayVPmiUSHZTjtkMcG_L4Ys8GSCxL_X2WQXh64/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWQxZDdkNmRj/NGUwNjAxZmU1MzU4/MWZiMzQwMjUzYWMz/MzI5YjA3OWQ0MWQ0/ZDM0YWE5YWJmMmIz/Y2M0MmJjNS9hYm91/dC5naXRsYWIuY29t/Lw",
+      "index": 2
+    },
+    {
+      "title": "Announcing $268 million in Series E funding",
+      "link": "https://about.gitlab.com/blog/gitlab-series-e-funding/",
+      "source_icon": "https://imgs.search.brave.com/0B1UPgayVPmiUSHZTjtkMcG_L4Ys8GSCxL_X2WQXh64/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWQxZDdkNmRj/NGUwNjAxZmU1MzU4/MWZiMzQwMjUzYWMz/MzI5YjA3OWQ0MWQ0/ZDM0YWE5YWJmMmIz/Y2M0MmJjNS9hYm91/dC5naXRsYWIuY29t/Lw",
+      "index": 3
+    },
+    {
+      "title": "GitLab IPO Timeline and Financing Details",
+      "link": "https://forgeglobal.com/gitlab_ipo/",
+      "source_icon": "https://imgs.search.brave.com/oGZw6hfOD-h6R7UkpHr9vd60M6CvngB_94G32G7mdtA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDMyOTUzOTAx/YWRjMjVkNDU3NGE5/NWU3ZmE4NjEzMWJm/ODVhNjM1MThmMmIw/OWNhMGJmODFiZTE5/ZDFkZWQ1ZS9mb3Jn/ZWdsb2JhbC5jb20v",
+      "index": 4
+    },
+    {
+      "title": "GitLab cuts 350 jobs, reports $286M revenue",
+      "link": "https://www.saasrise.com/news/gitlab-lays-off-350-staff-as-q2-revenue-hits-286-m-and-billings-jump-24-5c81bd84-094f-4a92-88df-9d662c70a31d",
+      "source_icon": "https://imgs.search.brave.com/Xk-HL5gKejHjTVEkJP72DxpPc6kYh7hnnY5WUCNqqgM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2JkYmJmNGYz/YWIxNTM3NzM1MDI4/OTg1ZDQ0ZTNlM2Zm/M2EzYjg1ZTczNzIy/ZGQ0MGVjMDQwYjM2/Y2M3MDkxYS93d3cu/c2Fhc3Jpc2UuY29t/Lw",
+      "index": 5
+    },
+    {
+      "title": "GitLab Layoffs 2026: Staff Cuts Amid AI Restructuring",
+      "link": "https://startuptalky.com/news/gitlab-to-cut-staff-and-streamline-management-structure/",
+      "source_icon": "https://imgs.search.brave.com/a0isbQkWiDvpvWHs1TXTMGN3j5ooh3Z5qhcca_sD9S0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTEzODQwNDQ1/MjVkMjcwYjI5ZjE0/ZTBjNzUyZTU4ZDE5/NGI0YTFjMDY0Mzdm/OGQ3ZjFhM2EwMzNk/NzU3NzY2YS9zdGFy/dHVwdGFsa3kuY29t/Lw",
+      "index": 6
+    }
+  ],
+  "text_blocks": [
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "snippet": "GitLab is a **public company** (NASDAQ: GTLB), so it no longer has private funding rounds in the traditional sense.",
+          "citations": [
+            {
+              "reference_index": 0,
+              "cited_snippet": "### GitLab VC Funding History\nLast private valuation of GitLab was $2.8B, after raising $268M in September 2019 from ICONIQ Capital and Goldman Sachs"
+            },
+            {
+              "reference_index": 1,
+              "cited_snippet": "Gitlab - Provider of a platform for software development, security, and delivery. Public Company. Raised a total funding of $435M over 10 rounds from 52 investors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "snippet": "**Current valuation:** Market cap of **~$7.8–8.2B** as of late September / early October 2026.",
+          "citations": [
+            {
+              "reference_index": 0,
+              "cited_snippet": "As of September 2026, GitLab has a market cap of $7.8B, revenue of $1.1B, revenue valuation multiple of 6.1x and EBITDA valuation multiple of 40.8x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "snippet": "**Most recent funding round:** The last private round was a **$268M Series E in September 2019** at a **$2.75B** post-money valuation, led by ICONIQ Capital and Goldman Sachs.",
+          "citations": [
+            {
+              "reference_index": 2,
+              "cited_snippet": "…— September 17, 2019 —\nToday GitLab, the DevOps platform delivered as a single application, announced it has completed a $268 million Series E round of funding valuing GitLab at $2.75 billion. This recent funding round was led by ICONI…"
+            },
+            {
+              "reference_index": 1,
+              "cited_snippet": "Date of Funding  | Funding Amount  | Round Name  | Post-Money Valuation  | Revenue Multiple  | Lead Investors  | Other Investors  |\n| --- | --- | --- | --- | --- | --- | --- |\n| Sep 16, 2022  | Undisclosed  | Post IPO  | -  | -  | -  | Paradise Silicon Valley Asset Management Group  |\n| Sep 17, 2019  | $268M  | Series E…"
+            },
+            {
+              "reference_index": 0,
+              "cited_snippet": "### GitLab VC Funding History\nLast private valuation of GitLab was $2.8B, after raising $268M in September 2019 from ICONIQ Capital and Goldman Sachs"
+            },
+            {
+              "reference_index": 3,
+              "cited_snippet": "# Announcing $268 million in Series E funding\nWe’re excited to share that GitLab has completed a $268 million Series E round of fundraising that pushed the company’s valuation to $2.75 billion. This latest funding round was led by existing investors Goldman Sachs and ICONIQ…"
+            },
+            {
+              "reference_index": 4,
+              "cited_snippet": "…## GitLab pre-IPO valuation and funding rounds\nFunding history chart\n\nFunding round and deals details\n\n| Funding Date | Round | Amount Raised | Price per Share | Post-Money Valuation ^3 | Key Investors |\n| --- | --- | --- | --- | --- | --- |\n| 09/17/2019 | Series E…"
+            }
+          ]
+        },
+        {
+          "snippet": "Post-IPO, there was a **PIPE round in November 2023** (investor: Ooredoo, amount undisclosed) and a **post-IPO round in September 2022** (undisclosed). Total raised across all rounds: ~$435M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "segments": [
+        {
+          "snippet": "**Recent layoffs:** In **late September 2026**, GitLab cut **350 employees (~14% of workforce)** alongside Q2 FY27 results (revenue $286.3M, up 21% YoY).",
+          "citations": [
+            {
+              "reference_index": 5,
+              "cited_snippet": "## Key Points\n1. GitLab cuts 350 jobs (~14% of workforce) after a 22‑country exit\n2. Q2 FY27 revenue $286.3 M, up 21% YoY; billings up 24%"
+            }
+          ]
+        },
+        {
+          "snippet": "This followed an earlier **May 2026 restructuring** announcement that eliminated up to three layers of management and expanded AI automation, with shares falling ~7% after-hours on that news.",
+          "citations": [
+            {
+              "reference_index": 6,
+              "cited_snippet": "## GitLab Choosing Leaner Team for Operations\nAI integration and restructuring. •The company will lay off an undisclosed number of employees by June 1, 2026. •Up to three layers of management will be removed in certain departments. •Shares fell 7% in after-hours trading after the announcement"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "related_questions": [
+    {
+      "question": "What is GitLab's current revenue growth trend?",
+      "serpapi_link": "https://serpapi.com/search.json?country=in&engine=brave_ai_mode&language=en&q=What+is+GitLab%27s+current+revenue+growth+trend%3F&subsequent_request_token=qVDAqnica1qUmXJTxcAy0cTAJC3VwDDJMiklxTIt0dzIMDHZPCk1JS0tKckkOc3QYG1xZW5uaklRZnJ8dmrlTW3zqHyzEkuDcH-fyPxwz2DXqLwQQ6OgdGNjsygfXTMzl-zURFfvQMOcyOJQAAOcIlI"
+    },
+    {
+      "question": "How does GitLab's market cap compare to competitors?",
+      "serpapi_link": "https://serpapi.com/search.json?country=in&engine=brave_ai_mode&language=en&q=How+does+GitLab%27s+market+cap+compare+to+competitors%3F&subsequent_request_token=qVDAqnica1qUmXJTxcAy0cTAJC3VwDDJMiklxTIt0dzIMDHZPCk1JS0tKckkOc3QYG1xZW5uaklRZnJ8dmrlTW3zqHyzEkuDcH-fyPxwz2DXqLwQQ6OgdGNjsygfXTMzl-zURFfvQMOcyOJQAAOcIlI"
+    },
+    {
+      "question": "What AI automation tools did GitLab expand?",
+      "serpapi_link": "https://serpapi.com/search.json?country=in&engine=brave_ai_mode&language=en&q=What+AI+automation+tools+did+GitLab+expand%3F&subsequent_request_token=qVDAqnica1qUmXJTxcAy0cTAJC3VwDDJMiklxTIt0dzIMDHZPCk1JS0tKckkOc3QYG1xZW5uaklRZnJ8dmrlTW3zqHyzEkuDcH-fyPxwz2DXqLwQQ6OgdGNjsygfXTMzl-zURFfvQMOcyOJQAAOcIlI"
+    }
+  ]
+}

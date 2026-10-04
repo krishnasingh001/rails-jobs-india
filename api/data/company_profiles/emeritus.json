@@ -1,0 +1,32 @@
+{
+  "company_name": "Emeritus",
+  "query": "Emeritus: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:56:11Z",
+  "profile": {
+    "layoffs_last_year": "No confirmed layoffs found for Emeritus in the last 12 months (Oct 2025 – Oct 2026). A July 2026 Reddit thread (r/edtech) references layoffs at an edtech company estimated at 25–30% of staff, but the company is not explicitly identified as Emeritus in the available excerpts.",
+    "head_count": "1,750+ globally (company-stated, as of mid-2024); third-party estimate of ~2,300 as of August 2026 (LeadIQ). Tracxn lists 109 as of May 31, 2026, but this appears to reflect only one Indian legal entity, not the global workforce.",
+    "office_locations": [
+      "Mumbai",
+      "New Delhi",
+      "Shanghai",
+      "Singapore",
+      "Palo Alto",
+      "Mexico City",
+      "New York",
+      "Boston",
+      "London",
+      "Dubai"
+    ],
+    "values": [
+      "Make education accessible and affordable",
+      "Disrupt education digitally",
+      "Diversity and inclusion",
+      "People-first culture with flexibility and autonomy",
+      "Growth mindset and career development"
+    ],
+    "founded_year": 2015,
+    "domain_area": "Emeritus is an EdTech company that partners with 80+ top-tier universities (MIT, Columbia, Wharton, Cambridge, etc.) to deliver online professional education—including short courses, degree programs, professional certificates, and executive programs—to working professionals across 80+ countries."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No confirmed layoffs found for Emeritus in the last 12 months (Oct 2025 – Oct 2026). A July 2026 Reddit thread (r/edtech) references layoffs at an edtech company estimated at 25–30% of staff, but the company is not explicitly identified as Emeritus in the available excerpts.\",\n  \"head_count\": \"1,750+ globally (company-stated, as of mid-2024); third-party estimate of ~2,300 as of August 2026 (LeadIQ). Tracxn lists 109 as of May 31, 2026, but this appears to reflect only one Indian legal entity, not the global workforce.\",\n  \"office_locations\": [\"Mumbai\", \"New Delhi\", \"Shanghai\", \"Singapore\", \"Palo Alto\", \"Mexico City\", \"New York\", \"Boston\", \"London\", \"Dubai\"],\n  \"values\": [\"Make education accessible and affordable\", \"Disrupt education digitally\", \"Diversity and inclusion\", \"People-first culture with flexibility and autonomy\", \"Growth mindset and career development\"],\n  \"founded_year\": 2015,\n  \"domain_area\": \"Emeritus is an EdTech company that partners with 80+ top-tier universities (MIT, Columbia, Wharton, Cambridge, etc.) to deliver online professional education—including short courses, degree programs, professional certificates, and executive programs—to working professionals across 80+ countries.\"\n}\n```\n\n### References",
+  "references": null
+}

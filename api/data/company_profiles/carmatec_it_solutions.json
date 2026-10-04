@@ -1,0 +1,20 @@
+{
+  "company_name": "Carmatec IT Solutions",
+  "query": "Carmatec IT Solutions: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:53:51Z",
+  "profile": {
+    "layoffs_last_year": "No documented layoff event found in the last 12 months (Oct 2025 – Oct 2026). The company has been very small (~9 employees as of Mar 31, 2025). Employee reviews from Dec 2025 mention unpaid salaries and attrition, but no formal layoff announcement is available.",
+    "head_count": "9 employees as of Mar 31, 2025 (latest MCA filing data via Tracxn)",
+    "office_locations": [
+      "Bengaluru, Karnataka, India (HQ – Level 8, Tower 1, Umiya Business Bay, Cessna Business Park, Kadubeesanahalli, Marathahalli Colony, 560037)",
+      "Qatar (Carmatec IT Solutions Middle East WLL)",
+      "Dubai, UAE",
+      "USA"
+    ],
+    "values": "Learning, customer centricity, empathy",
+    "founded_year": 2003,
+    "domain_area": "Carmatec is an AI-first digital transformation and IT services company providing custom software development, cloud infrastructure, managed IT services, mobile/web applications, and AI-enabled solutions to enterprises and growth-stage companies across global markets."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No documented layoff event found in the last 12 months (Oct 2025 – Oct 2026). The company has been very small (~9 employees as of Mar 31, 2025). Employee reviews from Dec 2025 mention unpaid salaries and attrition, but no formal layoff announcement is available.\",\n  \"head_count\": \"9 employees as of Mar 31, 2025 (latest MCA filing data via Tracxn)\",\n  \"office_locations\": [\n    \"Bengaluru, Karnataka, India (HQ – Level 8, Tower 1, Umiya Business Bay, Cessna Business Park, Kadubeesanahalli, Marathahalli Colony, 560037)\",\n    \"Qatar (Carmatec IT Solutions Middle East WLL)\",\n    \"Dubai, UAE\",\n    \"USA\"\n  ],\n  \"values\": \"Learning, customer centricity, empathy\",\n  \"founded_year\": 2003,\n  \"domain_area\": \"Carmatec is an AI-first digital transformation and IT services company providing custom software development, cloud infrastructure, managed IT services, mobile/web applications, and AI-enabled solutions to enterprises and growth-stage companies across global markets.\"\n}\n```\n\n### References",
+  "references": null
+}

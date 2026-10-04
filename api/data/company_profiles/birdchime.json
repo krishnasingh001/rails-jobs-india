@@ -1,0 +1,17 @@
+{
+  "company_name": "BirdChime",
+  "query": "BirdChime: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:52:53Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found for BirdChime Technologies in the last 12 months.",
+    "head_count": "9 employees (per RocketReach, no specific date); another source lists 6.",
+    "office_locations": [
+      "647 Golden Palms, Dera Bassi, SAS Nagar, Mohali, Punjab, India 140507"
+    ],
+    "values": "No company values information found.",
+    "founded_year": 2021,
+    "domain_area": "BirdChime Technologies builds cloud-based SaaS products — specifically a pickup and delivery scheduler — for Shopify/eCommerce merchants, serving the e-commerce/logistics software industry."
+  },
+  "raw_markdown": "Based on the search results, here is the information available about **BirdChime Technologies LLP**:\n\n```json\n{\n  \"layoffs_last_year\": \"No layoffs found for BirdChime Technologies in the last 12 months.\",\n  \"head_count\": \"9 employees (per RocketReach, no specific date); another source lists 6.\",\n  \"office_locations\": [\"647 Golden Palms, Dera Bassi, SAS Nagar, Mohali, Punjab, India 140507\"],\n  \"values\": \"No company values information found.\",\n  \"founded_year\": 2021,\n  \"domain_area\": \"BirdChime Technologies builds cloud-based SaaS products — specifically a pickup and delivery scheduler — for Shopify/eCommerce merchants, serving the e-commerce/logistics software industry.\"\n}\n```\n\n### References",
+  "references": null
+}

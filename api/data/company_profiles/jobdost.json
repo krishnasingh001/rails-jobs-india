@@ -1,0 +1,17 @@
+{
+  "company_name": "Jobdost",
+  "query": "Jobdost: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:58:47Z",
+  "profile": {
+    "layoffs_last_year": "No specific layoffs at JobDost were reported in the last 12 months. Tracxn lists the company as 'Deadpooled' (no longer active), but no layoff events with dates, headcount, or percentage were found in any source.",
+    "head_count": "30 employees as of July 2024 (Tracxn); 6 employees as of February 2025 (EasyLeadz); 7 employees (Growjo). LinkedIn and ZoomInfo list a range of 51–200.",
+    "office_locations": [
+      "Pune, Maharashtra, India (headquarters)"
+    ],
+    "values": "Belief in the power of 'YES'; commitment to addressing hiring challenges in the Indian ecosystem; helping Indians find jobs they love; equal opportunity employer committed to the highest expectations of employees and stakeholders.",
+    "founded_year": 2020,
+    "domain_area": "JobDost is a tech-enabled recruitment-as-a-service platform and job board for the tech industry, developed and backed by JetSynthesys, using AI/ML for job match-making. It serves the HR and staffing industry in India."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific layoffs at JobDost were reported in the last 12 months. Tracxn lists the company as 'Deadpooled' (no longer active), but no layoff events with dates, headcount, or percentage were found in any source.\",\n  \"head_count\": \"30 employees as of July 2024 (Tracxn); 6 employees as of February 2025 (EasyLeadz); 7 employees (Growjo). LinkedIn and ZoomInfo list a range of 51–200.\",\n  \"office_locations\": [\"Pune, Maharashtra, India (headquarters)\"],\n  \"values\": \"Belief in the power of 'YES'; commitment to addressing hiring challenges in the Indian ecosystem; helping Indians find jobs they love; equal opportunity employer committed to the highest expectations of employees and stakeholders.\",\n  \"founded_year\": 2020,\n  \"domain_area\": \"JobDost is a tech-enabled recruitment-as-a-service platform and job board for the tech industry, developed and backed by JetSynthesys, using AI/ML for job match-making. It serves the HR and staffing industry in India.\"\n}\n```\n\n### References",
+  "references": null
+}

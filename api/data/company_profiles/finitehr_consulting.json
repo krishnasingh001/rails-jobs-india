@@ -1,0 +1,20 @@
+{
+  "company_name": "FiniteHR Consulting",
+  "query": "FiniteHR Consulting: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:57:02Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs reported in the last 12 months.",
+    "head_count": "12 (per RocketReach, current); 11–50 (per Crunchbase); 51–200 as of 25 Feb 2025 (per Easyleadz). Figures vary by source and date.",
+    "office_locations": [
+      "Hyderabad, Telangana, India (HQ – multiple addresses listed: Kukatpally, Jubilee Hills/Madhapur, and Shapur Road)",
+      "New Delhi, India (office operations)",
+      "Bengaluru, Karnataka, India",
+      "United States (remote/hybrid)"
+    ],
+    "values": "Quality, Swiftness, and Customer Delight (stated on IndiaMART profile); 'Your Vision, Our Mission' (stated on company website).",
+    "founded_year": 2014,
+    "domain_area": "FiniteHR Consulting is a Human Capital Management and Talent Search firm that provides executive search, recruitment, and staffing services to IT and non-IT clients across domestic and international markets (North America, Asia, Middle East, and Europe)."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs reported in the last 12 months.\",\n  \"head_count\": \"12 (per RocketReach, current); 11–50 (per Crunchbase); 51–200 as of 25 Feb 2025 (per Easyleadz). Figures vary by source and date.\",\n  \"office_locations\": [\n    \"Hyderabad, Telangana, India (HQ – multiple addresses listed: Kukatpally, Jubilee Hills/Madhapur, and Shapur Road)\",\n    \"New Delhi, India (office operations)\",\n    \"Bengaluru, Karnataka, India\",\n    \"United States (remote/hybrid)\"\n  ],\n  \"values\": \"Quality, Swiftness, and Customer Delight (stated on IndiaMART profile); 'Your Vision, Our Mission' (stated on company website).\",\n  \"founded_year\": 2014,\n  \"domain_area\": \"FiniteHR Consulting is a Human Capital Management and Talent Search firm that provides executive search, recruitment, and staffing services to IT and non-IT clients across domestic and international markets (North America, Asia, Middle East, and Europe).\"\n}\n```\n\n### References",
+  "references": null
+}

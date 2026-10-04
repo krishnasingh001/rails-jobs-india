@@ -1,0 +1,38 @@
+{
+  "company_name": "Pal Technology",
+  "query": "Pal Technology: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:59:58Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs at PAL Technology (Abu Dhabi) were found in the last 12 months. The company is small (11–50 employees per ZoomInfo; ~126 per LinkedIn) and no layoff events were reported in available sources.",
+    "head_count": "~11–50 employees (ZoomInfo); LinkedIn lists 126 employees. No precise dated headcount figure was found.",
+    "office_locations": [
+      "Abu Dhabi, UAE (head office: 2nd Floor, Royal Group Building, Salam Street, Opposite Khalifa Park)",
+      "Abu Dhabi, UAE (18-1 & 18-2 Al Najda St, Opposite Transco Villa)",
+      "Abu Dhabi, UAE (Khalifa Park – Ministries Complex, RG Procurement Building)"
+    ],
+    "values": "Not publicly documented in available sources. The parent PAL Group describes itself as a multi-disciplinary enterprise catering to Construction, Utilities, Aquaculture, Travel & Hospitality.",
+    "founded_year": 2000,
+    "domain_area": "PAL Technology is a multidisciplinary project management company based in Abu Dhabi, UAE, specializing in the construction of desalination plants, civil engineering, and community housing projects. It serves the construction and water-treatment/utilities industry in the UAE."
+  },
+  "raw_markdown": "Based on the search results, \"Pal Technology\" most closely matches **PAL Technology** (Abu Dhabi, UAE), a subsidiary of PAL Group. [0] [1] Here is the JSON with available data:\n\n```json\n{\n  \"layoffs_last_year\": \"No layoffs at PAL Technology (Abu Dhabi) were found in the last 12 months. The company is small (11–50 employees per ZoomInfo; ~126 per LinkedIn) and no layoff events were reported in available sources.\",\n  \"head_count\": \"~11–50 employees (ZoomInfo); LinkedIn lists 126 employees. No precise dated headcount figure was found.\",\n  \"office_locations\": [\"Abu Dhabi, UAE (head office: 2nd Floor, Royal Group Building, Salam Street, Opposite Khalifa Park)\", \"Abu Dhabi, UAE (18-1 & 18-2 Al Najda St, Opposite Transco Villa)\", \"Abu Dhabi, UAE (Khalifa Park – Ministries Complex, RG Procurement Building)\"],\n  \"values\": \"Not publicly documented in available sources. The parent PAL Group describes itself as a multi-disciplinary enterprise catering to Construction, Utilities, Aquaculture, Travel & Hospitality.\",\n  \"founded_year\": 2000,\n  \"domain_area\": \"PAL Technology is a multidisciplinary project management company based in Abu Dhabi, UAE, specializing in the construction of desalination plants, civil engineering, and community housing projects. It serves the construction and water-treatment/utilities industry in the UAE.\"\n}\n```\n\n> **Note:** \"Pal Technology\" is an ambiguous name shared by several unrelated companies (e.g., PalTech in the US/India, PAL Technologies in Glasgow, PAL in Shanghai). The above refers to **PAL Technology Services LLC** in Abu Dhabi, the closest exact-name match. [2] If you meant a different company, please clarify.\n\n### References\n\n0. [Working at PAL Technology in Abu Dhabi: Employee Reviews](https://ae.indeed.com/cmp/Pal-Technology/reviews?fcountry=AE&floc=Abu+Dhabi)\n1. [Pal Technology Abu Dhabi - Dubai](https://www.atninfo.com/co/pal-technology-abu-dhabi-45627)\n2. [PAL TECHNOLOGY SERVICES LLC - LEI: 984500FB7109D1CDB643](https://www.lei-lookup.com/record/984500FB7109D1CDB643/)",
+  "references": [
+    {
+      "title": "Working at PAL Technology in Abu Dhabi: Employee Reviews",
+      "link": "https://ae.indeed.com/cmp/Pal-Technology/reviews?fcountry=AE&floc=Abu+Dhabi",
+      "source_icon": "https://imgs.search.brave.com/VeXC4OfJ19swnqM9bH1CsPvVCchcj6APSTbBOO3GuEY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWE3ODJmYmI5/MzBlNDVlMGMzNTE5/ZGRmZGEyMTExOTEx/MjgwOGQ5YTQ4M2M2/NmYwZWQ2YjhlMzA3/MjkwZDI0Yy9hZS5p/bmRlZWQuY29tLw",
+      "index": 0
+    },
+    {
+      "title": "Pal Technology Abu Dhabi - Dubai",
+      "link": "https://www.atninfo.com/co/pal-technology-abu-dhabi-45627",
+      "source_icon": "https://imgs.search.brave.com/qAzUB5gXKRSfr7IYjgmXXKPvDDCI3NDdOXe0AV2TTUI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjBkODUzNzE3/ZmI2OTRlY2ZmZDM1/OTJlMmQxMTkyOWQ1/YmJkMmVhMWQzOTE2/YzBlOTU2YTZmNjk3/MWYyZWU2Ni93d3cu/YXRuaW5mby5jb20v",
+      "index": 1
+    },
+    {
+      "title": "PAL TECHNOLOGY SERVICES LLC - LEI: 984500FB7109D1CDB643",
+      "link": "https://www.lei-lookup.com/record/984500FB7109D1CDB643/",
+      "source_icon": "https://imgs.search.brave.com/h3rhea5XzMxeCl0WTpDhnY1svRbsOCBsjLuYrMqNnRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjg5MTFmZDYy/MmFjZjlkMDU0YzBk/YjU5YzNkZjQ4MjZl/ZGE1NTI1ZDUwYmY4/MTFmYzQxNzk1MTUy/NTEwMDg3Zi93d3cu/bGVpLWxvb2t1cC5j/b20v",
+      "index": 2
+    }
+  ]
+}

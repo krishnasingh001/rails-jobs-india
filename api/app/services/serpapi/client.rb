@@ -37,12 +37,16 @@ module Serpapi
       )
     end
 
+    def brave_ai_mode(query:)
+      get(engine: "brave_ai_mode", q: query, country: "in", language: "en", api_key: api_key)
+    end
+
     private
 
     def get(params)
       uri = URI(ENDPOINT)
       uri.query = URI.encode_www_form(params)
-      response = Net::HTTP.get_response(uri)
+      response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, read_timeout: 120) { |http| http.get(uri.request_uri) }
       body = JSON.parse(response.body)
       raise Error, "SerpApi returned a response that was not JSON." unless body.is_a?(Hash)
 

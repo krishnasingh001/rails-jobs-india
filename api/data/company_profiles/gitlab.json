@@ -1,0 +1,23 @@
+{
+  "company_name": "GitLab",
+  "query": "GitLab: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:47:14Z",
+  "profile": {
+    "layoffs_last_year": {
+      "date": "2026-06-02",
+      "employees_affected": 361,
+      "percent_of_workforce": "14%"
+    },
+    "head_count": {
+      "count": 2580,
+      "as_of": "2026-01-31",
+      "note": "After the June 2026 restructuring (~361 roles eliminated), headcount is approximately 2,219."
+    },
+    "office_locations": "All-remote, no company-owned offices. Legal mailing address: 268 Bush Street, Suite 350, San Francisco, CA 94104. Team members were spread across ~60 countries as of January 2026; the June 2026 restructuring exited 22 of those countries.",
+    "values": "CREDIT: Collaboration, Results for Customers, Efficiency, Diversity Inclusion & Belonging, Iteration, Transparency",
+    "founded_year": 2011,
+    "domain_area": "GitLab is a DevSecOps platform that provides a single application for the entire software development lifecycle (source code management, CI/CD, security, and monitoring), serving the software development industry."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": {\n    \"date\": \"2026-06-02\",\n    \"employees_affected\": 361,\n    \"percent_of_workforce\": \"14%\"\n  },\n  \"head_count\": {\n    \"count\": 2580,\n    \"as_of\": \"2026-01-31\",\n    \"note\": \"After the June 2026 restructuring (~361 roles eliminated), headcount is approximately 2,219.\"\n  },\n  \"office_locations\": \"All-remote, no company-owned offices. Legal mailing address: 268 Bush Street, Suite 350, San Francisco, CA 94104. Team members were spread across ~60 countries as of January 2026; the June 2026 restructuring exited 22 of those countries.\",\n  \"values\": \"CREDIT: Collaboration, Results for Customers, Efficiency, Diversity Inclusion & Belonging, Iteration, Transparency\",\n  \"founded_year\": 2011,\n  \"domain_area\": \"GitLab is a DevSecOps platform that provides a single application for the entire software development lifecycle (source code management, CI/CD, security, and monitoring), serving the software development industry.\"\n}\n```\n\n### References",
+  "references": null
+}

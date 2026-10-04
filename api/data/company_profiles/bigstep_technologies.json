@@ -1,0 +1,17 @@
+{
+  "company_name": "BigStep Technologies",
+  "query": "BigStep Technologies: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:52:10Z",
+  "profile": {
+    "layoffs_last_year": "No specific layoff events were found in the last 12 months. The company was acquired by Wondrlab (Jan 17, 2025), and MCA filing data shows headcount fluctuating (likely due to reporting inconsistencies) before settling at ~113. Tracxn notes only a 2–3% year-over-year decline in headcount (Aug 2024 → Aug 2025), not a mass layoff.",
+    "head_count": "113 employees as of Aug 31, 2025 (per MCA filings via Tracxn)",
+    "office_locations": [
+      "Gurugram, Haryana, India (HQ: JMD Megapolis, Sector 48, Gurugram)"
+    ],
+    "values": "Engineering discipline, AI-native thinking, and execution ownership to build scalable products and long-term technology partnerships",
+    "founded_year": 2008,
+    "domain_area": "AI-driven cloud-native custom software product development, data engineering, and digital transformation for the IT/technology industry, serving clients in media & entertainment, PropTech, SaaS, healthcare, gaming, and BFSI."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific layoff events were found in the last 12 months. The company was acquired by Wondrlab (Jan 17, 2025), and MCA filing data shows headcount fluctuating (likely due to reporting inconsistencies) before settling at ~113. Tracxn notes only a 2–3% year-over-year decline in headcount (Aug 2024 → Aug 2025), not a mass layoff.\",\n  \"head_count\": \"113 employees as of Aug 31, 2025 (per MCA filings via Tracxn)\",\n  \"office_locations\": [\"Gurugram, Haryana, India (HQ: JMD Megapolis, Sector 48, Gurugram)\"],\n  \"values\": \"Engineering discipline, AI-native thinking, and execution ownership to build scalable products and long-term technology partnerships\",\n  \"founded_year\": 2008,\n  \"domain_area\": \"AI-driven cloud-native custom software product development, data engineering, and digital transformation for the IT/technology industry, serving clients in media & entertainment, PropTech, SaaS, healthcare, gaming, and BFSI.\"\n}\n```\n\n### References",
+  "references": null
+}

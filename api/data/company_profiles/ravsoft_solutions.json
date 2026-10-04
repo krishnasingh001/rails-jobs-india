@@ -1,0 +1,18 @@
+{
+  "company_name": "RAVSoft Solutions",
+  "query": "RAVSoft Solutions: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T10:01:31Z",
+  "profile": {
+    "layoffs_last_year": "No specific layoff events were found in available sources. The India subsidiary's EPFO-reported headcount fluctuated sharply in 2024 (e.g., ~735 in June to 82 by October), but this likely reflects data-reporting inconsistencies rather than a single announced layoff.",
+    "head_count": "139 employees as of July 31, 2026 (Tracxn). India subsidiary: 82 as of Oct 31, 2024.",
+    "office_locations": [
+      "Fulton, Maryland, USA (HQ)",
+      "Chennai, India (Tidel Park, Mambalam)"
+    ],
+    "values": "Innovation, integrity, excellence, quality, security, and customer satisfaction",
+    "founded_year": 1998,
+    "domain_area": "RAVSoft Solutions is a healthcare IT software company specializing in medical imaging interoperability, providing DICOM, PACS, HL7, and FHIR-based solutions (medical image processing, revenue cycle management, document management) to clinics, hospitals, radiologists, and medical equipment manufacturers."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific layoff events were found in available sources. The India subsidiary's EPFO-reported headcount fluctuated sharply in 2024 (e.g., ~735 in June to 82 by October), but this likely reflects data-reporting inconsistencies rather than a single announced layoff.\",\n  \"head_count\": \"139 employees as of July 31, 2026 (Tracxn). India subsidiary: 82 as of Oct 31, 2024.\",\n  \"office_locations\": [\n    \"Fulton, Maryland, USA (HQ)\",\n    \"Chennai, India (Tidel Park, Mambalam)\"\n  ],\n  \"values\": \"Innovation, integrity, excellence, quality, security, and customer satisfaction\",\n  \"founded_year\": 1998,\n  \"domain_area\": \"RAVSoft Solutions is a healthcare IT software company specializing in medical imaging interoperability, providing DICOM, PACS, HL7, and FHIR-based solutions (medical image processing, revenue cycle management, document management) to clinics, hospitals, radiologists, and medical equipment manufacturers.\"\n}\n```\n\n### References",
+  "references": null
+}

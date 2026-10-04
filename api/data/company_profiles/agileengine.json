@@ -1,0 +1,23 @@
+{
+  "company_name": "AgileEngine",
+  "query": "AgileEngine: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:50:32Z",
+  "profile": {
+    "layoffs_last_year": "No specific layoff event with a disclosed date was found in available sources. Headcount declined from ~711 (2025) to ~665 (March 2026), a reduction of 46 employees (~6.7% YoY) per Revelio Labs, but this is reported as a general headcount decline rather than a single announced layoff event.",
+    "head_count": "752 (as of June 2026, per Tracxn and LinkedIn)",
+    "office_locations": [
+      "Boca Raton, FL (HQ)",
+      "McLean, VA",
+      "Miami, FL",
+      "Warsaw, Poland",
+      "Lviv, Ukraine",
+      "Madrid, Spain",
+      "Porto, Portugal"
+    ],
+    "values": "Not explicitly enumerated in available sources. The company emphasizes an agile approach, top-tier talent, remote-first culture, and commitment to client success.",
+    "founded_year": 2010,
+    "domain_area": "Custom software development and digital consultancy providing engineering, AI/ML, data, design, and QA solutions; serves 17+ industries including fintech, e-commerce, healthcare, and logistics, with clients ranging from VC-backed startups to Fortune 500 brands."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific layoff event with a disclosed date was found in available sources. Headcount declined from ~711 (2025) to ~665 (March 2026), a reduction of 46 employees (~6.7% YoY) per Revelio Labs, but this is reported as a general headcount decline rather than a single announced layoff event.\",\n  \"head_count\": \"752 (as of June 2026, per Tracxn and LinkedIn)\",\n  \"office_locations\": [\n    \"Boca Raton, FL (HQ)\",\n    \"McLean, VA\",\n    \"Miami, FL\",\n    \"Warsaw, Poland\",\n    \"Lviv, Ukraine\",\n    \"Madrid, Spain\",\n    \"Porto, Portugal\"\n  ],\n  \"values\": \"Not explicitly enumerated in available sources. The company emphasizes an agile approach, top-tier talent, remote-first culture, and commitment to client success.\",\n  \"founded_year\": 2010,\n  \"domain_area\": \"Custom software development and digital consultancy providing engineering, AI/ML, data, design, and QA solutions; serves 17+ industries including fintech, e-commerce, healthcare, and logistics, with clients ranging from VC-backed startups to Fortune 500 brands.\"\n}\n```\n\n### References",
+  "references": null
+}

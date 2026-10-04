@@ -1,0 +1,29 @@
+{
+  "company_name": "Quantiphi Analytics Solutions Private Limited",
+  "query": "Quantiphi Analytics Solutions Private Limited: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T10:00:52Z",
+  "profile": {
+    "layoffs_last_year": "No confirmed mass layoffs reported in the last 12 months (Oct 2025 – Oct 2026). Headcount for the Indian entity grew from 2,670 (May 2025) to 2,820 (Mar 2026), and global headcount rose ~4.8% YoY per Revelio Labs (5,377 in 2025). Anecdotal employee reviews on Blind and Nodeflair mention individual terminations, but no large-scale layoff event was publicly confirmed.",
+    "head_count": {
+      "india_entity": "2,820 as of Mar 01, 2026 (Tracxn/MCA)",
+      "global": "5,393 as of Dec 2025 (Revelio Labs); ~4,118 per Inc42 (2026)"
+    },
+    "office_locations": [
+      "Mumbai, Maharashtra, India (registered office: 504, Quantum Tower, off. S V Road, Ram Baug, Malad West)",
+      "Bengaluru, Karnataka, India",
+      "Thiruvananthapuram (Trivandrum), Kerala, India",
+      "Marlborough, Massachusetts, United States (global HQ)"
+    ],
+    "values": [
+      "\"We Solve What Matters\" – relentless focus on tackling the toughest industry challenges and converting complex technical obstacles into quantifiable business value",
+      "Elevating Customer Success – partnership rooted in empathy, precision, and shared outcomes",
+      "Honoring Human Centricity & Responsible AI – ethical, safe, transparent, and human-aligned AI systems",
+      "Keeping Commitments – complete ownership, transparency, and delivering on promises",
+      "Working as One Team – collaborative, inclusive, and continuous-learning culture across global teams"
+    ],
+    "founded_year": 2013,
+    "domain_area": "Quantiphi is an AI-first digital engineering and services company that provides data science, machine learning, and AI solutions. It serves enterprise clients across healthcare, insurance, media, and other industries, helping them translate big data and AI into quantifiable business impact."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No confirmed mass layoffs reported in the last 12 months (Oct 2025 – Oct 2026). Headcount for the Indian entity grew from 2,670 (May 2025) to 2,820 (Mar 2026), and global headcount rose ~4.8% YoY per Revelio Labs (5,377 in 2025). Anecdotal employee reviews on Blind and Nodeflair mention individual terminations, but no large-scale layoff event was publicly confirmed.\",\n  \"head_count\": {\n    \"india_entity\": \"2,820 as of Mar 01, 2026 (Tracxn/MCA)\",\n    \"global\": \"5,393 as of Dec 2025 (Revelio Labs); ~4,118 per Inc42 (2026)\"\n  },\n  \"office_locations\": [\n    \"Mumbai, Maharashtra, India (registered office: 504, Quantum Tower, off. S V Road, Ram Baug, Malad West)\",\n    \"Bengaluru, Karnataka, India\",\n    \"Thiruvananthapuram (Trivandrum), Kerala, India\",\n    \"Marlborough, Massachusetts, United States (global HQ)\"\n  ],\n  \"values\": [\n    \"\\\"We Solve What Matters\\\" – relentless focus on tackling the toughest industry challenges and converting complex technical obstacles into quantifiable business value\",\n    \"Elevating Customer Success – partnership rooted in empathy, precision, and shared outcomes\",\n    \"Honoring Human Centricity & Responsible AI – ethical, safe, transparent, and human-aligned AI systems\",\n    \"Keeping Commitments – complete ownership, transparency, and delivering on promises\",\n    \"Working as One Team – collaborative, inclusive, and continuous-learning culture across global teams\"\n  ],\n  \"founded_year\": 2013,\n  \"domain_area\": \"Quantiphi is an AI-first digital engineering and services company that provides data science, machine learning, and AI solutions. It serves enterprise clients across healthcare, insurance, media, and other industries, helping them translate big data and AI into quantifiable business impact.\"\n}\n```\n\n### References",
+  "references": null
+}

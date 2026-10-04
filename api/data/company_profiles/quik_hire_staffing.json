@@ -1,0 +1,21 @@
+{
+  "company_name": "Quik Hire Staffing",
+  "query": "Quik Hire Staffing: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T10:01:12Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found in available sources for Quik Hire Staffing in the last 12 months.",
+    "head_count": "17 employees (per BeBee, undated); other sources list 11–50 (SPTIX) or 21–50 (Zeil).",
+    "office_locations": [
+      "Office #54, Level V, Hinjewadi Tech Centre, Phase 1, Rajiv Gandhi Infotech Park, Pune, Maharashtra 411057"
+    ],
+    "values": [
+      "Commitment to Diversity & Inclusion",
+      "Empowering Growth for Teams and Individuals",
+      "End-to-End Recruitment Support"
+    ],
+    "founded_year": "Not found in available sources for the Pune-based Quik Hire Staffing (quik-hire.com). A separate Kolkata-based 'Quik Hire' (quikhire.in) lists 2023 on LinkedIn, but that appears to be a different entity.",
+    "domain_area": "QuikHire is a staffing and recruitment company serving the AI economy, providing AI-training and evaluation cohorts, tech contract staffing, and embedded RPO pods for startups and GCCs."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found in available sources for Quik Hire Staffing in the last 12 months.\",\n  \"head_count\": \"17 employees (per BeBee, undated); other sources list 11–50 (SPTIX) or 21–50 (Zeil).\",\n  \"office_locations\": [\"Office #54, Level V, Hinjewadi Tech Centre, Phase 1, Rajiv Gandhi Infotech Park, Pune, Maharashtra 411057\"],\n  \"values\": [\"Commitment to Diversity & Inclusion\", \"Empowering Growth for Teams and Individuals\", \"End-to-End Recruitment Support\"],\n  \"founded_year\": \"Not found in available sources for the Pune-based Quik Hire Staffing (quik-hire.com). A separate Kolkata-based 'Quik Hire' (quikhire.in) lists 2023 on LinkedIn, but that appears to be a different entity.\",\n  \"domain_area\": \"QuikHire is a staffing and recruitment company serving the AI economy, providing AI-training and evaluation cohorts, tech contract staffing, and embedded RPO pods for startups and GCCs.\"\n}\n```\n\n### References",
+  "references": null
+}

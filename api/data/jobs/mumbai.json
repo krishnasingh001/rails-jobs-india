@@ -1,0 +1,308 @@
+{
+  "state": "Mumbai",
+  "query": "(\"Software Engineer\" OR \"Senior Software Engineer\") Ruby on Rails",
+  "location": "Mumbai, India",
+  "fetched_at": "2026-10-04T08:03:19Z",
+  "total_fetched": 10,
+  "total_results": 10,
+  "jobs": [
+    {
+      "title": "Senior Software Engineer(Ruby on Rails+ React.js)",
+      "company_name": "BigStep Technologies",
+      "location": "Mumbai, Maharashtra",
+      "via": "BeBee",
+      "description": "We are looking for a\n\n\nFull-Stack Engineer(Ruby on Rails)\n\n\nwith\n\n\n5+ years of experience . The candidate should have experience in building scalable, user-focused features and maintaining high-performance platforms. They must also be proficient with\n\n\nSidekiq ,\n\n\nRSpec ,\n\n\nJest ,\n\n\nGit ,\n\n\nDocker , and modern\n\n\nCI/CD tools . They should bring strong problem-solving skills, write clean, reliable code, and thrive in collaborative, fast-paced environments.\nRoles &\n\n\nResponsibilities Contribute to all phases of the software development lifecycle.\nDesign, build, and maintain efficient, reusable, and reliable code across the full stack\nManage framework upgrades, dependencies, and overall application health\nWork effectively with data storage systems such as PostgreSQL, Snowflake, and Amazon S3\nIdentify and resolve bottlenecks, bugs, and performance issues\nHelp maintain high standards of code quality, organization, and automation\nWrite unit, integration, and regression tests to ensure code reliability\nEnsure delivered features meet business requirements and technical specifications\nParticipate in sprint planning, daily standups, retrospectives, and other agile ceremonies\nCommunicate effectively within a distributed team using tools such as Slack, Zoom, and JIRA.\n\n\nSkills Required\nExperience with\nRuby on Rails and idiomatic\n\n\nRuby development\nBasic understanding of\n\n\nReact and\nTypeScript\nSolid understanding of relational databases, particularly\n\n\nPostgreSQL\nExperience with background job processing tools like\n\n\nSidekiq\nFamiliarity with tools such as\n\n\nBundler ,\n\n\nYarn ,\n\n\nRake , and\n\n\nWebpack\nUnderstanding of object-oriented programming and\n\n\nRESTful APIs\nExperience with testing frameworks:\n\n\nRSpec\n(backend) and\n\n\nJest\n(frontend)\nProficiency with\n\n\nGit and CI/CD tools like\n\n\nGitHub Actions ,\n\n\nDocker , and\n\n\nKubernetes\nAbility to design scalable, maintainable software systems",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIoUnVieSBvbiBSYWlscysgUmVhY3QuanMpIiwiY29tcGFueV9uYW1lIjoiQmlnU3RlcCBUZWNobm9sb2dpZXMiLCJodGlkb2NpZCI6IkY4UzB3Tm1zNF85NnJKdERBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNtUkVSVkV6UnpsT1pESXdOMVpOZG1kSFMydE9VVXRzUVhOQmNYTjJielJYV1RReGVTMTJkRnB3TW5GQk56Qm1aakZ1VDNjM2RVNUpNa1ZDZEZWeVYyNTVXRUZNYTFwR09XZFdkbGhTTTNsbU5GTmpkM0JPTm1GS1EwVnZVMmRxVDFSSFYyWmlWMHhZV1VwS1dYQkxUbXgyYldOT1lXcEtaVEozY2xaVmNuaFJaR3R0TFZjU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pSTTI0NVNEWmhVa3BXY0VGVU5scGZVRGhEZVcxU1FXczFVemwzIiwiZmN2IjoiMyIsImZjX2lkIjoiRjhTMHdObXM0Xzk2ckp0REFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "5 days ago",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/senior-software-engineerruby-on-rails-reactjs-bigstep-technologies-mumbai--talent-639290061831996902?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/339837604/senior-software-engineer-ruby-on-rails-react-js-mumbai?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": "https://serpapi.com/searches/6ac2082655ba65999007bca5/images/8v8Yz2TnvOOP3g9-_3weD7XCeBfEUiy3IkAmr_3mLNY.jpeg"
+    },
+    {
+      "title": "Senior Software Developer ( Ruby on Rails)",
+      "company_name": "Voylla",
+      "location": "Mumbai, Maharashtra",
+      "via": "BeBee",
+      "description": "We are looking for an experienced Senior Ruby on Rails Developer to join our dynamic development team. The ideal candidate will be responsible for building and maintaining robust, scalable web applications. You will work on end-to-end development while collaborating with product managers, designers, and other engineers to deliver high-quality software solutions.\n\n\nKey Responsibilities\nDesign, develop, and maintain web applications using Ruby on Rails.\nWrite clean, maintainable, and efficient code.\n\n\nBuild and integrate RESTful APIs and third-party services.\n\n\nEnsure high performance and responsiveness of applications.\n\n\nConduct code reviews and mentor junior developers.\n\n\nCollaborate with product and design teams to define and deliver features.\n\n\nTroubleshoot and debug issues across the stack.\n\n\nStay up to date with best practices in software engineering and Ruby on Rails.",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRGV2ZWxvcGVyICggUnVieSBvbiBSYWlscykiLCJjb21wYW55X25hbWUiOiJWb3lsbGEiLCJodGlkb2NpZCI6IjY3LVpjZTFUTHRDUEZtaHVBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFMwbDBha0k0VDNGeFdHZFBiV2s1UjBwd05FWnBUVGRDY0VSMFFtNUViRVF4VldsR1p6Z3dNak5mVURabVF6TlFlRVpDVFRWT2JYY3hRMDFHTkRob01VRjBhVmhwVVU5aGFtWm1hSEpJYUdWb1UwWmtZMWs1Y0VWTVZuRjNPRWh5WTNFNVFuUk5WRXBLTjFwVlgyMTRXVkpwWXpsbWNXNTNWbE5KWDNWM01qQmtPRXBCY0ZvU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pVTjFjMFlVWkhVbTUyU25KUWFYWTJjamhCUkcxWVkyOUViVXBCIiwiZmN2IjoiMyIsImZjX2lkIjoiNjctWmNlMVRMdENQRm1odUFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "17 days ago",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/senior-software-developer-ruby-on-rails-voylla-mumbai--t7xk-844646112?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "GetHired",
+          "link": "https://gethired.devhub.co.in/jobs/065c886b-1cf0-4d15-b3f6-7c18faca9070?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/337125062/senior-software-developer-ruby-on-rails-mumbai?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAY1BMVEXjj3X____ii3Dih2vjjXPjlHv8___16ub26OLiiW359fD16ODquqros6LszMHgjHHlpI_jnoj6-_fuy7vswrTjmoHor5vkqJPlqJfsx7rw08r28Onw18v04tjnrZ3z4NrggWNAVjpUAAABt0lEQVRIie1UXZObMAy0ZBmQw5d9hpAELv3_v7KyDQk3d9MZ-tiyDzBIXq9WllHqxIkT_wWItsdBXt_Ls3eHmfrhUXX-og8TS4sKbfl3RLLVNyLi_o2IqRdrkJASsbO5VIrplfFRpzeFIBWZ5lYPrGhsTQr2rdsRia8hTNy0MccVxIbhJ9yQa4AC4K7pCneOyUeh3kQyFQjKsjBp07RGl15hA5ercTO0rJeYjLvxShSPxkIYhtpDIip-glEiEbjzVryRXsDhFT5Y6Qso9SJyC7Um0p8A2YcrRKHyHY4QYmPQwRroRfBN1A_bUTKXFZV-ghqgRqxh7GLASPGxhF8Xr3aKaCuO3eB5JZKDMPtO0STlZtc3lH29S997xXxiVS5VtGcPjcQ6sCp77CnSwb8GoPNvj1PhVyIZsFFKulpOQz-vR_GEgIk4M_Izjpx01blXV-OaJQ8BNxIE6VVSWorkmO-GazazjMWQzrEqt1KlHeudQTWGxnAemuw4TmEQJ3Fn4j6EXo-3H0Yat9GV5vDqpJEqJlKvWd0G-UfE49jy3IP509qvyovt3h-Hrv9e4_gP58SJE_8yfgMBXRQchsU5SQAAAABJRU5ErkJggg.png"
+    },
+    {
+      "title": "Sr Software Engineer Ruby on Rails",
+      "company_name": "FiniteHR Consulting",
+      "location": "Mumbai, Maharashtra",
+      "via": "Smart Recruiters Jobs",
+      "description": "Company DescriptionClient of FiniteHR,  Job DescriptionJob location :Powai, MumbaiExperience : 1.5 to 5 YearsResponsibilities ● Delivering high quality code and ensure a high level of enterprise scale performance metrics.● Ensuring deployments and delivery as per agile program management standards.● Ensuring the quality of output exceeds the expectations set with the client.● Identify problems and bottlenecks before hand and raise the flag to concerned personnel.● Work closely with our product and design teams to customize the user experience.Requirements● Passion for building quality technology products for fast growing start up.● Expert knowledge in Ruby on Rails.● Hands on experience in working in Service Oriented frameworks and web services like RESTAPI, JSON● Knowledge in working with MySQL and MS SQL● Experience in working in Agile Program Management environments is an added advantage● Ability to pick up and engineer new technologies.● Bachelor’s degree or equivalent in Computer Science, or equivalent.QualificationsJob location :Powai, MumbaiExperience :1.5 to 5 yearsCandidate should be from top tier institute and from top company .Additional InformationLooking for Candidates who could able to join within 15 DaysCandidate should be from top tier institute and from top company .",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTciBTb2Z0d2FyZSBFbmdpbmVlciBSdWJ5IG9uIFJhaWxzIiwiY29tcGFueV9uYW1lIjoiRmluaXRlSFIgQ29uc3VsdGluZyIsImh0aWRvY2lkIjoiX0F6cEw1cGlCTXU0b1BMekFBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSVlUWFZ0WW1GcExFMWhhR0Z5WVhOb2RISmhMRWx1WkdsaCIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwVERsZk5VTjZiWGxKTUZab0xYazNURkJrY1dScFlVOWhMVzh0VmtjeWJsOTJkMUp0T1RCd1VFY3RUMnBTY1ZneVUzWjBaRlZpYUZnMFRrSlliRmRDZEZCYVdHNW1PR0ZEYm1zNGNXVndhVnBhV2tOMFRqVTBjVVJ0V20xNGVIVkVWa0ZSYWxKZk5XSTFhVGxNUm1Zd2NqTkpTa3hKT1UwMldEVndRakZtWW5jeVZFSmpTbVFTRjFKM2FrTmhjMkZTUWkxVGFIRjBjMUJzT0ZOWE5rRlJHaUpCUkhOeU9XWlVVMnBIWlVoR1NXbFlWREZxWVdGWFYwUnVPSFp0VUhGNU5WZEIiLCJmY3YiOiIzIiwiZmNfaWQiOiJfQXpwTDVwaUJNdTRvUEx6QUFBQUFBPT0ifQ==",
+      "detected_extensions": null,
+      "extensions": [
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Smart Recruiters Jobs",
+          "link": "https://jobs.smartrecruiters.com/FiniteHRConsulting/84673599-sr-software-engineer-ruby-on-rails?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajo.org",
+          "link": "https://in.trabajo.org/job-3112-b195754f657e10193803e5b79c83c3b2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobrapido.com",
+          "link": "https://in.jobrapido.com/jobpreview/6569192162582331392?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/337307491/ruby-on-rails-software-development-engineer-sde-mumbai?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": null
+    },
+    {
+      "title": "Senior ROR Developer",
+      "company_name": "Ajackus",
+      "location": "Pune, Maharashtra",
+      "via": "LinkedIn",
+      "description": "About the role:\n\n\n\n\nWe are looking for a skilled and experienced Ruby on Rails Developer with 6+ years of hands-on experience to join our engineering team. The ideal candidate will have strong expertise in building scalable applications, particularly in e-commerce domains, and experience working with payments, billing systems, and high-traffic environments.\n\n\n\n\nKey Responsibilities:\n\nDesign, develop, and maintain robust, scalable web applications using Ruby on RailsBuild and optimize payments, billing, and checkout systems ensuring high reliability and securityDevelop and manage order management systems and workflowsImplement and maintain background job processing using SidekiqHandle high-traffic applications and large datasets, ensuring performance and scalabilityCollaborate with cross-functional teams including product, design, and QAOptimize database queries and improve application performanceWrite clean, maintainable, and well-tested codeParticipate in code reviews and contribute to best practices\n\n\nQualifications:\n\n6+ years of experience in Ruby on Rails developmentExperience in e-commerce platforms or systemsStrong experience with payments, billing, and checkout flowsHands-on experience with Sidekiq or similar background job frameworksExperience in building and maintaining order management systems/workflowsProven experience working with high-traffic applications or large datasetsSolid understanding of RESTful APIs and microservices architectureStrong knowledge of database design (PostgreSQL/MySQL)Familiarity with caching strategies, queues, and performance tuningWe are looking for candidates who are based in Pune or are willing to relocate to Pune.\n\n\nGood to Have\n\nExperience with third-party payment integrations (e.g., Stripe, Razorpay)Knowledge of cloud platforms (AWS, GCP, or Azure)Familiarity with Docker, CI/CD pipelinesUnderstanding of system design and scalable architectureStrong problem-solving and analytical skillsExcellent communication and collaboration abilitiesAbility to work in a fast-paced environment",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgUk9SIERldmVsb3BlciIsImNvbXBhbnlfbmFtZSI6IkFqYWNrdXMiLCJodGlkb2NpZCI6Ikp3Qlh5Yk5mbnV1N3VqaVBBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNsSlVOMWcxUmxoRFNFMXlaRWxWU0VwdFdsODRVbW90U0hkT1EwWTRkMnRQY0hGYU5VNVhORlJMZUdOV09IcDRYM1ZwWVVzeFFXZ3hjRXRhTTFsNU5IbEtYMDE1TTBOeWNXZHdVM0pvVFU5T1QyMTBYekpUU25ORFVIUlhYelZrVEVOSk0xRnNVV1UyVVhWamVsaDNWSHBYVURkMU1IY3dWRTFOUTNGTk5WUjFSMEUxV25ZU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pUU2tWcE5qbFpaRGsyVlVaUlEwVlRjMVZKVEdsalRYcEVWWEZSIiwiZmN2IjoiMyIsImZjX2lkIjoiSndCWHliTmZudXU3dWppUEFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "10 days ago",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "LinkedIn",
+          "link": "https://in.linkedin.com/jobs/view/senior-ror-developer-at-ajackus-4469678864?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jooble",
+          "link": "https://in.jooble.org/rjdp/1747699352129778227?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/job-listing/senior-ror-developer-techverito-pune-5-to-10-years-experience-111a65c1-ed2e-4397-8ab6-0c319b53c420?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/senior-ror-developer-ajackus-pune-city-maharashtra--t7xk-790827291?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajo.org",
+          "link": "https://in.trabajo.org/job-4112-cb094aa450cc641983d9423cf9862867?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobstore",
+          "link": "https://www.jobstore.com/in/job/l31397690/senior-ror-developer-job?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "NiyukJobs",
+          "link": "https://niyukjobs.ai/jobs/detail/senior-ror-developer-at-ajackus-pune-city-maharashtra-india-434475?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/337279424/senior-ror-developer-pune?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": "https://serpapi.com/searches/6ac2082655ba65999007bca5/images/Qe0bRg9Dx_YDcEe3P822xekHpwcPpkpoGwmjEhDZ3nY.jpeg"
+    },
+    {
+      "title": "Software Engineer Ruby (Remote) (Mumbai)",
+      "company_name": "Quik Hire Staffing",
+      "location": "Mumbai, Maharashtra",
+      "via": "Kit Job",
+      "description": "Role : Software Engineer – Ruby (Remote)  \nLocation : Remote (Work from Anywhere)  \n\nRole Overview:  \nWe are hiring for one of our clients, seeking a Senior Software Engineer – Ruby (LLM Evaluation & Repository Validation) to work on a Full-Time basis. The projects focus on building LLM evaluation and training datasets that address realistic software engineering problems. One approach involves creating verifiable software engineering tasks from public repository histories using a synthetic method with human‑in‑the‑loop, while expanding coverage across programming languages and difficulty levels.  \n\nKey Responsibilities:  \n• Analyze and triage GitHub issues across trending open‑source libraries to identify suitable evaluation scenarios.  \n• Set up and configure code repositories, including Docker containerization and setting preparation for reproducible testing.  \n• Evaluate unit test coverage and quality metrics to assess baseline code health and test suite robustness.  \n• Modify and run Ruby codebases locally to measure LLM performance in bug‑fixing and code‑completion tasks.  \n• Collaborate with AI researchers to design and select repositories and issues that present challenging cases for LLMs.  \n\nRequired Skills & Qualifications:  \n• Minimum three years of professional software engineering experience with strong proficiency in Ruby and Ruby on Rails.  \n• Demonstrated expertise with Git, Docker, and basic software pipeline setup for reproducible testing.  \n• Ability to navigate and understand complex, real‑world codebases, and to run, modify, and test them locally.  \n• Experience with Ruby testing frameworks (RSpec, Minitest), gem management (Bundler), and code quality tooling.  \n• Prior contribution to or evaluation of open‑source projects is considered a plus.  \n\nMore About the Opportunity:  \nThis role provides a unique opportunity to work with a global leader in the artificial intelligence industry, contributing to how large language models interact with real code. The work directly influences the development of AI‑assisted software development tools and benchmarks.  \n\nEqual Opportunity Employer:  \nWe hire based on skills and expertise. All qualified candidates are welcome regardless of background, experience, or prior employment history. Applications are reviewed solely on demonstrated technical ability and qualifications.  \n\nApply Now!",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciBSdWJ5IChSZW1vdGUpIChNdW1iYWkpIiwiY29tcGFueV9uYW1lIjoiUXVpayBIaXJlIFN0YWZmaW5nIiwiaHRpZG9jaWQiOiJtMHVqcXdNWkE2TlJFVVUwQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJWVRYVnRZbUZwTEUxaGFHRnlZWE5vZEhKaExFbHVaR2xoIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTWFUxZW1oZmEycFpNbE0wVEY5d09EVlplbTlRU1c4d1VIRTFRVTFhVlZsZlEza3pRVjkyV1hGQ09VbGlTMWxCVFVObU9YVnpTR0owU0dsR09GRmthVEZDTURkMVVIRnNTbkJ0VkZKR1ZqRk5TMUpCYlVaTExUZzFWbTEyZW1ObGIzVjZiRXhCUkRVemRGOTNUbUpJVTNab1NYQTJkak5PZFROR1NIVjZVbE5NZVhSb1VFMFNGMUozYWtOaGMyRlNRaTFUYUhGMGMxQnNPRk5YTmtGUkdpSkJSSE55T1daVVdUQnZZVkZuVm00MmEwUjRiMGRJUldSeFdscFJaamhVVVU1biIsImZjdiI6IjMiLCJmY19pZCI6Im0wdWpxd01aQTZOUkVVVTBBQUFBQUE9PSJ9",
+      "detected_extensions": null,
+      "extensions": [
+        "9 days ago",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/337515637/software-engineer-ruby-remote-mumbai?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": null
+    },
+    {
+      "title": "Sr. Ruby on Rails Engineer",
+      "company_name": "Jobdost",
+      "location": "Mumbai, Maharashtra",
+      "via": "Cutshort",
+      "description": "Responsibilities:\n\n● Collaborate with engineering, design and product teams to design and ship new\nfeatures. Identify and solve bottlenecks and fix bugs.\n\nDesirable Qualifications:\n\n● Deep knowledge of Ruby on Rails (RoR) practices and commonly used modules; deep\nunderstanding of RoR internals like databases, API, caching, proxies, web services,\nperformance and scalability.\n● Experience creating self-contained, reusable, and testable modules and components.\n● Experience in SQL and NoSql databases in production environments. Experience\nworking with Git, AWS/GCP.\n● Good communication skills\n● 4+ years of relevant experience as a software engineer.",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTci4gUnVieSBvbiBSYWlscyBFbmdpbmVlciIsImNvbXBhbnlfbmFtZSI6IkpvYmRvc3QiLCJodGlkb2NpZCI6IlhGQnJxdFByOU54YklpX1hBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFMyRXRTakZDUTJ4TFZ6aHRWbXRUV1ZOMldGUTFkSEo1ZW05aWJGWktaMVpYVlVwV09VTktUbmhyUlcxM1JFOVlZMEZCTjNJMmFYaFRTRlpRYkZsc1RXWjJiMDE2ZEdrMGNHazBhRUUzWWxsbFYzVkliV3RCWVhCWk9WRm5RMjlCTmpWWWIwMTRkV0owZVZBMlJYSTVVV05QWHpoSloyVXllRlp2YlhkVVNFMUNTM0ZCVjFjU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pUTW1wT2JEbG9WRWc0Wm1SUFFYTTJaV28yV0Y5TldWQkNVeTFCIiwiZmN2IjoiMyIsImZjX2lkIjoiWEZCcnF0UHI5TnhiSWlfWEFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "₹5L–₹20L a year",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Cutshort",
+          "link": "https://cutshort.io/job/Sr-Ruby-on-Rails-Engineer-Mumbai-Jobdost-UTi2fty0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Adzuna",
+          "link": "https://www.adzuna.in/details/4344578087?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAilBMVEX____1gACLrhTs8eH1fgCNsBz2iifE1ZmQsSf6yKX83MfA0pT9_vr5s4P-8uf4q3H2hhj4-vH2kTr3nFbf6Mr3n1u2y4H71736w5uHrADz9-r4r332jjL-8-z1egD3l0uWtTfO3KytxW-lv1yauETY4774pGb959jn8t35uIufu0_5vZKqw2f70LRu42pNAAABC0lEQVRIie2R3W6DMAxGbUhCAqSkLX-jpQRWRgvb-7_eDOukFq52sbscIYyQT_iwARwOh8PxL6TB_vHky3ypRVmqcNNXrF9FbxXd41n08qWeDLuwc_3aFl-alRh4FfSWyxZ83r1zm4LGGpQ50AmIzQ7qhmEJRgi2Fvc379qOXl9JmQdSkrgD-GC1xqQ0BhIM75eBTlIbMeApVLyji5Lz2yLeMRT00QkHxY6KcuPxxWoh-hXzRcxnkfoExrNIPgzlAYeVaHlkOfxETeeokbSgjT4JpugXk4miNhhOrAA8l0-iP0qaBqRXaXtaR_cpRx-0ECKbh6-NyWg4mTEa4EuYzYoe63iuDofD4fgj34-rENRAaBpIAAAAAElFTkSuQmCC.png"
+    },
+    {
+      "title": "Senior Ruby Developer - Founding Engineer (India)",
+      "company_name": "CRMified",
+      "location": "Mumbai, Maharashtra",
+      "via": "BeBee",
+      "description": "Reports to\nCEO Scope\nNew product - ground-up build, founding engineering seat Location:\n\n\nRemote, India Type:\n\n\nFull-time Experience:\n\n\n10+ years\n\n\nAbout CRMified Founded in 2011 by Joshua Hoskins, a Salesforce MVP and Hall of Famer, CRMified delivers Salesforce design and development expertise to mid-market and enterprise clients. We specialize in systems integration with a strong referral-based business, a US-based principal team and a talented delivery team in India.\n\n\nCRMified runs on EOS (Entrepreneurial Operating System) and we're in an intentional growth phase. Alongside our consulting business, we are now building a new product - and this role is the founding engineering seat for that venture.\n\n\nAbout This Role CRMified's CEO is a senior Salesforce technologist with a clear vision for a new product. What he needs is a senior Ruby developer who can be a true thought partner\n\n\nsomeone who shapes architecture and product direction with the founder, and then writes the production code to make it real.\nThis is not a heads-down ticket-execution role and it is not a side gig. It's a full-time, in-seat position for a builder who wants to start a product: high ownership, high ambiguity and a direct line to the founder with no layers in between. You get the upside of building something from zero, backed by the stability of an established, profitable company.\n\n\nWhat You'll Own\nProduct & Technical Direction Partner directly with the founder on product strategy, technical decisions, and architecture - you are the technical voice in the room. Translate product vision into pragmatic technical plans, challenging assumptions and proposing better paths where you see them.\n\n\nBuilding & Shipping Design, build, and ship the core product in Ruby on a modern application stack. Own the full engineering lifecycle: architecture, development, deployment (Heroku), and iteration based on real user feedback. Set the engineering foundations - code standards, CI/CD, tooling - that future hires will build on.\n\n\nAI-Accelerated Development Apply AI concepts (LLM APIs, agents, retrieval, automation) both inside the product and in your own workflow to accelerate development velocity. Advise the founder on where AI genuinely belongs in the product and where it doesn't.\n\n\nSalesforce Ecosystem Integration Design integrations with the Salesforce platform where the product requires it, drawing on your understanding of its data model and APIs.\n\n\nWhat You Bring 10+ years of software development experience, with deep, hands-on expertise in Ruby (Rails or comparable frameworks). A track record at well-known brands or products - you've built and shipped software that real users depend on at scale.\n\n\nWorking knowledge of the Salesforce ecosystem: its data model, APIs and how modern applications integrate with it. Heroku and modern application stack experience - comfortable owning deployment, infrastructure, and the full stack. Fluency with AI concepts - you actively use AI tooling in your workflow and can reason about where LLMs, agents, and automation belong in a product. A founder-partner mindset: you want to start a product, not maintain one; you're energized by ambiguity and ownership. Strong written and verbal communication skills, with the ability to collaborate effectively across time zones with a US-based founder.\n\n\nBonus Points Prior experience as an early or founding engineer at a startup or new product line. Experience building on or alongside Salesforce (AppExchange, Heroku Connect, platform APIs). Experience integrating LLM providers (OpenAI, Anthropic, etc.) into production applications. Experience in a founder-led, growth-stage firm.",
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgUnVieSBEZXZlbG9wZXIgLSBGb3VuZGluZyBFbmdpbmVlciAoSW5kaWEpIiwiY29tcGFueV9uYW1lIjoiQ1JNaWZpZWQiLCJodGlkb2NpZCI6Imswb1lUNXh3MW9xdG1mTjFBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNXSk1RbTR0WkVweGNWVlBSMUJNYzJsb1RHaGxlVkZyTURkR2JHaDJZa0pIUTNoVldsb3dPVE5ETUd4cUxUQmxZblJsU21abk1WUlVPRzB5TW1Zd2JGOTVaVTlEY0VwWGJqTTJSbDlFUTFOMFRFZEVkalpNT0VkVE9EVkxjMHczTmtwTFRrUlFaVzlZUTFkVmIwZ3hTV1ZxU1ROblFYTnpWV1pLZUdOV1NVZEZka05QWm5RU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pVVEdGQlVtOUJkRU5YZVRCUVZEWTJZa0ptWlVwcFJIWXdkamgzIiwiZmN2IjoiMyIsImZjX2lkIjoiazBvWVQ1eHcxb3F0bWZOMUFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "29 days ago",
+        "Internship"
+      ],
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/senior-ruby-developer-founding-engineer-india-crmified-mumbai--jobmesh-21bb0faa-70fe-4ee9-b929-5ac2ca4d8e4a?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "CallCenterJob.co.in",
+          "link": "https://callcenterjob.co.in/android-developer-mumbai_653694?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": null
+    },
+    {
+      "title": "Ruby on Rail",
+      "company_name": "FiniteHR Consulting",
+      "location": "Mumbai, Maharashtra",
+      "via": "Smart Recruiters Jobs",
+      "description": "Company DescriptionClient of FiniteHR, IT Product Development CompanyJob DescriptionResponsibilities● Delivering high quality code and ensure a high level of enterprise scale performance metrics. ● Ensuring deployments and delivery as per agile program management standards. ● Ensuring the quality of output exceeds the expectations set with the client. ● Identify problems and bottlenecks before hand and raise the flag to concerned personnel. ● Work closely with our product and design teams to customize the user experience.Requirements● Passion for building quality technology products for fast growing start up. ● Expert knowledge in Ruby on Rails. ● Hands on experience in working in Service Oriented frameworks and web services like RESTAPI, JSON● Knowledge in working with MySQL and MS SQL ● Experience in working in Agile Program Management environments is an added advantage ● Ability to pick up and engineer new technologies. ● Bachelor’s degree or equivalent in Computer Science, or equivalent.Job location :Powai, MumbaiExperience :1.5 to 5 yearsSalary : 3- 15 LPAVacancies : 4Additional InformationAll your information will be kept confidential according to EEO guidelines.",
+      "job_id": "eyJqb2JfdGl0bGUiOiJSdWJ5IG9uIFJhaWwiLCJjb21wYW55X25hbWUiOiJGaW5pdGVIUiBDb25zdWx0aW5nIiwiaHRpZG9jaWQiOiIxZmNyV1k5MWtEZkhvLVRGQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJWVRYVnRZbUZwTEUxaGFHRnlZWE5vZEhKaExFbHVaR2xoIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTVWt3Y0dsSVdrZFJNRUpWVEc1ZllqVldVVE56ZG5WQ1ZFbE5ZbU4xV2toRlRqaEVRV2N3YW5OcFpWRkJNblJpYTFkT2QySkhMVkJtYVc1elZHOUJaM1psWVVOVVMyUTJhVlp0VGt3d2QzUm1ZM0Y0VkhKaFJuQTROMXAwZEZkNVJtaGpjVUpoTldKSGJ6RlRNbEY2WVRNNWNVUnFjMGhJZFdSSFMzcFZSbFZOZUZsNGFuQVNGMUozYWtOaGMyRlNRaTFUYUhGMGMxQnNPRk5YTmtGUkdpSkJSSE55T1daVGJURndOWEpRZFVKVmRrZGllR2t5YjFGWFJVaFBlbEZWWWpKbiIsImZjdiI6IjMiLCJmY19pZCI6IjFmY3JXWTkxa0RmSG8tVEZBQUFBQUE9PSJ9",
+      "detected_extensions": null,
+      "extensions": [
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Smart Recruiters Jobs",
+          "link": "https://jobs.smartrecruiters.com/FiniteHRConsulting/84996049-ruby-on-rail?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "HireFT",
+          "link": "https://hireft.com/jobs/finitehr-consulting-ruby-on-rail-1abd54ec-d18a-4795-a3d1-f7df02824249?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": null
+    },
+    {
+      "title": "Ruby on Rails Engineer",
+      "company_name": "Emeritus",
+      "location": "Mumbai, Maharashtra",
+      "via": "Jooble",
+      "description": "About Emeritus \n\n\n\n Emeritus is committed to teaching the skills of the future by making high-quality education accessible and affordable to individuals, companies, and governments around the world. It does this by collaborating with more than 80 top-tier universities across the United States, Europe, Latin America, Southeast Asia, India and China. \n\n Emeritus’ short courses, degree programs, professional certificates, and senior executive programs help individuals learn new skills and transform their lives, companies and organizations. Its unique model of state-of-the-art technology, curriculum innovation, and hands-on instruction from senior faculty, mentors and coaches has educated more than 300,000 individuals across 80+ countries. \n\n Founded in 2015, Emeritus, part of Eruditus Group, has more than 1,800 employees globally and offices in Mumbai, New Delhi, Shanghai, Singapore, Palo Alto, Mexico City, New York, Boston, London, and Dubai. The company is backed by prominent investors including Accel, SoftBank Vision Fund 2, the Chan Zuckerberg Initiative, Leeds Illuminate, Prosus Ventures, Sequoia Capital India, and Bertelsmann. \n\n About the Role \n\n We are looking for a \n\n Ruby on Rails Engineer \n\n to join our backend engineering team as an individual contributor. In this role, you will design, build, and maintain production-grade systems that power core platform capabilities such as learner enrollment, order management, and payments. \n\n This is a hands-on engineering role where you will own features end-to-end from technical design and development to testing, deployment, and production support within a multi-service Rails ecosystem. \n\n We are actively investing in AI-assisted engineering and AI-powered product capabilities. The ideal candidate is not only comfortable leveraging AI tools in their daily workflow but is also excited about shaping how AI integrates into real-world products. You will contribute to building reliable, user-facing AI features going beyond usage to actively influencing how AI enhances product experiences. \n\n Key Responsibilities \n\n Design and implement backend features across enrollment, orders, payments, and related services\nOwn feature development end-to-end, ensuring clean, maintainable, and well-tested Ruby code\nBuild, document, and maintain APIs, including keeping documentation up to date\nCollaborate with product, QA, and engineering teams on cross-service workflows\nParticipate in code reviews and contribute to engineering best practices and standards\nInvestigate and resolve production issues while improving overall system reliability\nLeverage AI tools to enhance development efficiency and team productivity\nExplore and prototype AI-powered capabilities that deliver meaningful user or developer value \n\n Key Skills, Qualifications and Competencies \n\n3–5 years of experience building and shipping Ruby on Rails applications in production\nStrong fundamentals in Ruby, Rails conventions, and object-oriented design\nSolid experience with PostgreSQL (schema design, migrations, indexing, query optimization)\nProficiency in building and consuming RESTful/JSON APIs\nExperience writing automated tests (RSpec preferred) and maintaining critical test coverage\nAbility to work independently as an individual contributor, with strong ownership and execution skills\nStrong debugging capabilities across application code, background jobs, and databases\nEffective written communication for code reviews, technical documentation, and async collaboration\nHands-on experience with AI-assisted development tools (e.g., Copilot, Cursor, Claude) to improve coding, testing, debugging, and documentation\nAbility to critically evaluate AI-generated outputs, write effective prompts, and ensure high-quality, maintainable code\nStrong understanding of secure AI usage practices (protecting sensitive data, credentials, and PII)\nDemonstrated interest in building AI-powered products or tooling, with curiosity about integrating AI into backend systems responsibly \n\n Nice to Have \n\n Familiarity with \n\n microservices \n\n or multi-app ecosystems\nKnowledge of \n\n payment gateway integrations \n\n(Stripe or similar)\nExperience with modular monoliths, or component-based Rails architectures\nExposure to OpenAPI-driven API development\nExperience with feature flags, A/B testing, or gradual rollouts\nPrior work in \n\n high-traffic, revenue-critical \n\n systems \n\n What Success Looks Like \n\n Within your first six months, you will independently ship production features within at least one Rails application, demonstrating strong ownership through robust test coverage and clear documentation. You will confidently navigate cross-service workflows and be a visible practitioner of AI-augmented engineering, delivering faster without compromising quality, while also contributing meaningfully to at least one initiative focused on AI tooling or product innovation. \n\n Emeritus provides equal employment opportunities to all employees and applicants for employment and prohibits discrimination and harassment of any type without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws. \n\n In press:\n\nemeritus harvard business school: Edtech unicorn Emeritus story now a Harvard Business School case …",
+      "job_id": "eyJqb2JfdGl0bGUiOiJSdWJ5IG9uIFJhaWxzIEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiRW1lcml0dXMiLCJodGlkb2NpZCI6Im9JX2V4UkdzVEg4YXRxbGpBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFRFUlhMVkp4T1ZSaVNqWk1jbGxvV2taVlJERXpjV2xpTlU5cFZHWklNRTFuZEVNM2FUSk5XbFJKVHkxMFEzRnRRVkZYYkdobE0xQnVMVkpqYkVoRVV6ZzJSa1F4TnpZMlpteEdPSGd6TmtKblpFZEViVk51U0hWWlEwOHdYekV0VmtneFMyOXZkM0JmTWtSclZqZ3pOVU5ZV0dZd1IyOXlRMlJUTTBsRGNuQmphSEpvZVZRU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pVUzFKd1NUTTRhbmhGVkVsdGFYSlZMVFZDVDJwNGFFTldXWGRuIiwiZmN2IjoiMyIsImZjX2lkIjoib0lfZXhSR3NUSDhhdHFsakFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "12 days ago",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Jooble",
+          "link": "https://in.jooble.org/jdp/9165605938818176060?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/ruby-on-rails-engineer-emeritus-mumbai--remote-i-XRUMDchwBm7aB-1FKWmxi-HgIxhL8eOwht6F?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobrapido.com",
+          "link": "https://in.jobrapido.com/jobpreview/1790138106217758720?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JobLeads",
+          "link": "https://www.jobleads.com/in/job/ruby-on-rails-engineer--mumbai--eb135465e41bcbe6f72cd3ba21e57e5ca?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/321696491/ruby-on-rails-engineer-mumbai?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": null
+    },
+    {
+      "title": "Ruby on Rails Engineer",
+      "company_name": "TeamExtn",
+      "location": "Mumbai, Maharashtra",
+      "via": "Cutshort",
+      "description": "Ruby on Rails Full Stack Engineer\n\n\n\n\nJob Description:\n\n\nTeamExtn is looking for a passionate Ruby on Rails Engineer. It will be expected from you to build pragmatic solutions on mission-critical initiatives. If you know your stuff, see the beauty in code, have knowledge in depth and breadth, advocate best practices, and love to work with distributed systems, then this is an ideal position for you.\n\n\nDoes this click with you:\n\n\n\n8 hour work day\nYou know your stuff...\nBelieve in quality more than deadlines\nFlat hierarchy\nSet the ground rules\nBecome a part of the expansion\nFlexible working hours\nYou will be responsible for:\nCollaborating on the design decisions\n\nWe are looking for:\n\n\n\n3 of overall software development experience with Ruby on Rails\nExpertise working on SQL and No-SQL databases\nExperience using HTTP and AMQP transport mediums and streaming technologies like Kafka\nInner-drive to take the team to the next level in a fast-paced environment\nFamiliarity with Frontend libraries like React.js is big plus\n\nInterview Process:\n\n\nWe schedule a technical round that can go up to 2 hours, where we have technical discussions plus remote pairing sessions.\n\n\nWe double-check the potential team member is a culture fit. Culture fit is as important to us as writing code. Once we know that you are a great fit, we discuss and finalize numbers on the same call. You will have three days to take up the offer.\n\n\nTeamExtn is a niche software consulting agency to implement pragmatic solutions that believes in getting the work done more than talking big. Come and join us in our growth journey.\n\n\nLocation: \n\n\nMumbai preferred; remote is an option",
+      "job_id": "eyJqb2JfdGl0bGUiOiJSdWJ5IG9uIFJhaWxzIEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiVGVhbUV4dG4iLCJodGlkb2NpZCI6IndXa3ZJWFNGcGpGMHJfa0VBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lZVFhWdFltRnBMRTFoYUdGeVlYTm9kSEpoTEVsdVpHbGgiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNucGZMVzV0Ykd0NmRHSndUWHBPUjFZd1RrMXVVWEZVWWtSNlRtaDJTbEJEV0dOaVNsQkljbUpJZEdGalVXVlBRMUp5VVhKT1ZEWnphRVZNYkd0NldVSjZkRVpRVjA1QlZYaFlZbWhVUzBsbGMwbDVZV1pNY1RkbVF6ZFJabVZWZHpkUE1UTmpZbkZXZG1aRllUZFpiRzFYZVhwak5XVnJaVWhSTVV4SlMxRXdPV3hPZUdzU0YxSjNha05oYzJGU1FpMVRhSEYwYzFCc09GTlhOa0ZSR2lKQlJITnlPV1pSU0c1dFZHbFdPRFZoZW1aVFVVVjBaWFEwWjFZMVZXNUZaVWxSIiwiZmN2IjoiMyIsImZjX2lkIjoid1drdklYU0ZwakYwcl9rRUFBQUFBQT09In0=",
+      "detected_extensions": null,
+      "extensions": [
+        "₹1L–₹15L a year",
+        "Full–time"
+      ],
+      "apply_options": [
+        {
+          "title": "Cutshort",
+          "link": "https://cutshort.io/job/Ruby-on-Rails-Engineer-Mumbai-TeamExtn-dN3CSoGy?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/ruby-on-rails-engineer-emeritus-mumbai-maharashtra--t7xk-825892454?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/in/job-listing/ruby-on-rails-engineer-emeritus-mumbai-3-to-5-years-experience-510f3683-9d44-44fe-9b69-c51a7e8cb196?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajo.org",
+          "link": "https://in.trabajo.org/job-2927-cf84947b3fa762c477aeb8e4976fc3b0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Expertini",
+          "link": "https://mumbai.in.expertini.com/job/ruby-on-rails-engineer-mumbai-emeritus-4948-1219345/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Blackboardjob",
+          "link": "https://in.blackboardjob.com/detail/a/ruby-on-rails-engineer_mumbai_253359661?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "thumbnail": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAG1BMVEXm5ub____l5eXp6ens7Oz7-_v19fXx8fH4-Pin8JYcAAABK0lEQVRIie2U227EIAxEwTY2___F9QVCqu16SdWHPjBSJCxxGDxYKeXo6F8J4JcYcXmOKtZqrfKQDKyJfvgADayj9si18m6rN0wL1DXtkAuDKIG03MTYMa5YKhdfce45MLNBbc7AKJE-Y-JYr3WCnk5mGBhYU4FdoLkmwuHm7z63yyiyOUB3k0l1svuNZvMB0o0T6zIGHGJkU9CnxNQEwwwK2NIWmBgG1uwNPVhpmqa7Y56qxxEGerkWz3A1nIEWh1vN11hgPjnLaoF9A7xZRbDkhxWS3jIQllXjGWaJltNUYRnFZiTFWQgLpKmCGgWjM8Td_Wmc1no6AN4P3_vEnVThnucL2BPwBTNwHpY6yhCZ0HSlmoSDa_vPenDR73r3i4RPenvXo6OjP9EXyg0HVQ-pUoAAAAAASUVORK5CYII.png"
+    }
+  ]
+}

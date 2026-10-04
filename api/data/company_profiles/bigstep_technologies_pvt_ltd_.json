@@ -1,0 +1,27 @@
+{
+  "company_name": "BigStep Technologies Pvt. Ltd.",
+  "query": "BigStep Technologies Pvt. Ltd.: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:52:36Z",
+  "profile": {
+    "layoffs_last_year": "No confirmed layoff events found in available sources. The company was acquired by Wondrlab on Jan 17, 2025, and headcount declined from ~175 (Feb 2025) to 113 (Aug 2025), but no specific layoff date, employee count, or percentage is documented in public sources.",
+    "head_count": "113 employees as of Aug 31, 2025",
+    "office_locations": [
+      "Gurugram (Gurgaon), Haryana, India (HQ) – Unit No. 754-755, JMD Megapolis, Near Subhash Chowk, Sector-48, Gurgaon, Haryana 122018"
+    ],
+    "values": [
+      "Collaboration",
+      "Customer Centricity",
+      "Integrity",
+      "Continuous Learning",
+      "Innovation",
+      "Excellence",
+      "Ownership",
+      "Accountability",
+      "Sustainability"
+    ],
+    "founded_year": 2008,
+    "domain_area": "BigStep Technologies is an AI-driven, cloud-native software product development and digital transformation company. It serves the IT/technology industry by providing web & mobile app development, enterprise software engineering, managed cloud services, DevOps, and RPA to startups and enterprises globally."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No confirmed layoff events found in available sources. The company was acquired by Wondrlab on Jan 17, 2025, and headcount declined from ~175 (Feb 2025) to 113 (Aug 2025), but no specific layoff date, employee count, or percentage is documented in public sources.\",\n  \"head_count\": \"113 employees as of Aug 31, 2025\",\n  \"office_locations\": [\n    \"Gurugram (Gurgaon), Haryana, India (HQ) – Unit No. 754-755, JMD Megapolis, Near Subhash Chowk, Sector-48, Gurgaon, Haryana 122018\"\n  ],\n  \"values\": [\n    \"Collaboration\",\n    \"Customer Centricity\",\n    \"Integrity\",\n    \"Continuous Learning\",\n    \"Innovation\",\n    \"Excellence\",\n    \"Ownership\",\n    \"Accountability\",\n    \"Sustainability\"\n  ],\n  \"founded_year\": 2008,\n  \"domain_area\": \"BigStep Technologies is an AI-driven, cloud-native software product development and digital transformation company. It serves the IT/technology industry by providing web & mobile app development, enterprise software engineering, managed cloud services, DevOps, and RPA to startups and enterprises globally.\"\n}\n```\n\n### References",
+  "references": null
+}

@@ -1,0 +1,18 @@
+{
+  "company_name": "HyreSnap",
+  "query": "HyreSnap: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:57:46Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs at HyreSnap were found in the last 12 months (Oct 2025 – Oct 2026).",
+    "head_count": "32 employees as of Jul 31, 2026 (per Tracxn).",
+    "office_locations": [
+      "Bengaluru, Karnataka, India (headquarters)",
+      "Delhi, India (registered office: Janakpuri A-3, West Delhi; also listed at Sadar Bazaar, Delhi Cantt)"
+    ],
+    "values": "No formal company values statement was publicly found. The company's tagline emphasizes 'Hire Right, Hire Fast' and 'Process Excellence,' and it stresses evidence-backed, rubric-based scoring to remove bias from hiring.",
+    "founded_year": 2020,
+    "domain_area": "HyreSnap is an AI-powered recruitment platform offering Interview-as-a-Service, AI-driven resume building, and smart sourcing for tech-related roles. It serves the human-resources technology / staffing and recruitment industry, primarily in India with clients in the US, UK, Australia, and Singapore."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs at HyreSnap were found in the last 12 months (Oct 2025 – Oct 2026).\",\n  \"head_count\": \"32 employees as of Jul 31, 2026 (per Tracxn).\",\n  \"office_locations\": [\n    \"Bengaluru, Karnataka, India (headquarters)\",\n    \"Delhi, India (registered office: Janakpuri A-3, West Delhi; also listed at Sadar Bazaar, Delhi Cantt)\"\n  ],\n  \"values\": \"No formal company values statement was publicly found. The company's tagline emphasizes 'Hire Right, Hire Fast' and 'Process Excellence,' and it stresses evidence-backed, rubric-based scoring to remove bias from hiring.\",\n  \"founded_year\": 2020,\n  \"domain_area\": \"HyreSnap is an AI-powered recruitment platform offering Interview-as-a-Service, AI-driven resume building, and smart sourcing for tech-related roles. It serves the human-resources technology / staffing and recruitment industry, primarily in India with clients in the US, UK, Australia, and Singapore.\"\n}\n```\n\n### References",
+  "references": null
+}

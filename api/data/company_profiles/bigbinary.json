@@ -1,0 +1,30 @@
+{
+  "company_name": "BigBinary",
+  "query": "BigBinary: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:51:29Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs at BigBinary were found in any available source for the last 12 months (Oct 2025 – Oct 2026).",
+    "head_count": {
+      "count": 77,
+      "as_of": "2026-06-30"
+    },
+    "office_locations": [
+      "Miami, Florida, USA (HQ)",
+      "Pune, Maharashtra, India (registered office)",
+      "100% remote workforce spread across India and the USA"
+    ],
+    "values": [
+      "Respect, learning, and human connection",
+      "No micro-management; trust and autonomy",
+      "No monitoring software",
+      "Open source culture",
+      "Asynchronous, remote-first communication",
+      "Raising the bar (high hiring standards)",
+      "No referral bonus"
+    ],
+    "founded_year": 2011,
+    "domain_area": "BigBinary is a Ruby on Rails consulting and software development agency that builds custom web applications (Ruby on Rails, React.js) and mobile applications (React Native) for clients. It operates in the IT services and IT consulting industry, serving startups and small-to-mid-size businesses."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs at BigBinary were found in any available source for the last 12 months (Oct 2025 – Oct 2026).\",\n  \"head_count\": {\n    \"count\": 77,\n    \"as_of\": \"2026-06-30\"\n  },\n  \"office_locations\": [\n    \"Miami, Florida, USA (HQ)\",\n    \"Pune, Maharashtra, India (registered office)\",\n    \"100% remote workforce spread across India and the USA\"\n  ],\n  \"values\": [\n    \"Respect, learning, and human connection\",\n    \"No micro-management; trust and autonomy\",\n    \"No monitoring software\",\n    \"Open source culture\",\n    \"Asynchronous, remote-first communication\",\n    \"Raising the bar (high hiring standards)\",\n    \"No referral bonus\"\n  ],\n  \"founded_year\": 2011,\n  \"domain_area\": \"BigBinary is a Ruby on Rails consulting and software development agency that builds custom web applications (Ruby on Rails, React.js) and mobile applications (React Native) for clients. It operates in the IT services and IT consulting industry, serving startups and small-to-mid-size businesses.\"\n}\n```\n\n### References",
+  "references": null
+}

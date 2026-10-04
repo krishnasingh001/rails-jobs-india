@@ -1,0 +1,17 @@
+{
+  "company_name": "Infopine",
+  "query": "Infopine: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:58:21Z",
+  "profile": {
+    "layoffs_last_year": "No layoff events for Infopine were found in the last 12 months (Oct 2025 – Oct 2026).",
+    "head_count": "77 employees (as of April 7, 2024)",
+    "office_locations": [
+      "Mysore, Karnataka, India (headquarters)"
+    ],
+    "values": "Doing great work, treating employees well, and meeting clients' expectations; 'Be Brilliant Together'",
+    "founded_year": 2017,
+    "domain_area": "Infopine is an ERP consulting and implementation firm specializing in industry-specific ERP software (notably for the textile industry), cloud application development, and product development, serving mid-size to large enterprises globally."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoff events for Infopine were found in the last 12 months (Oct 2025 – Oct 2026).\",\n  \"head_count\": \"77 employees (as of April 7, 2024)\",\n  \"office_locations\": [\"Mysore, Karnataka, India (headquarters)\"],\n  \"values\": \"Doing great work, treating employees well, and meeting clients' expectations; 'Be Brilliant Together'\",\n  \"founded_year\": 2017,\n  \"domain_area\": \"Infopine is an ERP consulting and implementation firm specializing in industry-specific ERP software (notably for the textile industry), cloud application development, and product development, serving mid-size to large enterprises globally.\"\n}\n```\n\n### References",
+  "references": null
+}

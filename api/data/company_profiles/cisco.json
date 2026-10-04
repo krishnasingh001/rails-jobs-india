@@ -1,0 +1,37 @@
+{
+  "company_name": "Cisco",
+  "query": "Cisco: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:55:07Z",
+  "profile": {
+    "layoffs_last_year": [
+      {
+        "date": "October 13, 2025",
+        "employees_affected": 221,
+        "percent_of_workforce": "Not stated (Bay Area only: 157 in Milpitas, 64 in San Francisco)"
+      },
+      {
+        "date": "May 13, 2026",
+        "employees_affected": "<4,000",
+        "percent_of_workforce": "<5% of global workforce (~80,000 employees)"
+      }
+    ],
+    "head_count": "82,400 employees as of July 25, 2026 (FY2026 10-K)",
+    "office_locations": [
+      "San Jose, CA (HQ)",
+      "Milpitas, CA",
+      "San Francisco, CA",
+      "Research Triangle Park, NC",
+      "Boxborough / Bedford, MA",
+      "Richardson / Plano, TX",
+      "Austin, TX",
+      "Bloomington, MN",
+      "Salt Lake City, UT",
+      "Netanya, Israel"
+    ],
+    "values": "Cisco's purpose is 'Power an Inclusive Future for All.' Core values (The Cisco Way) include: Give Your Best, Take Accountability, Focus on the Customer, Be Bold, Do the Right Thing, and Win Together. Broader principles include responsible innovation, inclusivity, and creating change.",
+    "founded_year": 1984,
+    "domain_area": "Cisco is a global leader in networking hardware and cybersecurity that develops, manufactures, and sells networking equipment, software, and security solutions serving the enterprise technology and telecommunications industry."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": [\n    {\n      \"date\": \"October 13, 2025\",\n      \"employees_affected\": 221,\n      \"percent_of_workforce\": \"Not stated (Bay Area only: 157 in Milpitas, 64 in San Francisco)\"\n    },\n    {\n      \"date\": \"May 13, 2026\",\n      \"employees_affected\": \"<4,000\",\n      \"percent_of_workforce\": \"<5% of global workforce (~80,000 employees)\"\n    }\n  ],\n  \"head_count\": \"82,400 employees as of July 25, 2026 (FY2026 10-K)\",\n  \"office_locations\": [\n    \"San Jose, CA (HQ)\",\n    \"Milpitas, CA\",\n    \"San Francisco, CA\",\n    \"Research Triangle Park, NC\",\n    \"Boxborough / Bedford, MA\",\n    \"Richardson / Plano, TX\",\n    \"Austin, TX\",\n    \"Bloomington, MN\",\n    \"Salt Lake City, UT\",\n    \"Netanya, Israel\"\n  ],\n  \"values\": \"Cisco's purpose is 'Power an Inclusive Future for All.' Core values (The Cisco Way) include: Give Your Best, Take Accountability, Focus on the Customer, Be Bold, Do the Right Thing, and Win Together. Broader principles include responsible innovation, inclusivity, and creating change.\",\n  \"founded_year\": 1984,\n  \"domain_area\": \"Cisco is a global leader in networking hardware and cybersecurity that develops, manufactures, and sells networking equipment, software, and security solutions serving the enterprise technology and telecommunications industry.\"\n}\n```\n\n### References",
+  "references": null
+}

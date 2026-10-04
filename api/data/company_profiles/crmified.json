@@ -1,0 +1,20 @@
+{
+  "company_name": "CRMified",
+  "query": "CRMified: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:53:10Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found in the last 12 months. CRMified is a small private firm (≈13–14 employees) with no reported workforce reductions.",
+    "head_count": "~13–14 employees (per RocketReach/ZoomInfo; no specific date provided by the company).",
+    "office_locations": [
+      "Orlando, Florida, USA (headquarters)",
+      "Jaipur, Rajasthan, India",
+      "Bokaro Steel City, Jharkhand, India",
+      "Oklahoma City, OK, USA (served)"
+    ],
+    "values": "Agility, Passion, Traceability; minimum risk and maximum return on investment for clients.",
+    "founded_year": 2011,
+    "domain_area": "CRMified is a black-owned IT consulting firm that provides custom Salesforce development, managed services, and product management consulting to small and mid-sized businesses, helping them streamline operations and deliver customer experiences using the Salesforce platform."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found in the last 12 months. CRMified is a small private firm (≈13–14 employees) with no reported workforce reductions.\",\n  \"head_count\": \"~13–14 employees (per RocketReach/ZoomInfo; no specific date provided by the company).\",\n  \"office_locations\": [\n    \"Orlando, Florida, USA (headquarters)\",\n    \"Jaipur, Rajasthan, India\",\n    \"Bokaro Steel City, Jharkhand, India\",\n    \"Oklahoma City, OK, USA (served)\"\n  ],\n  \"values\": \"Agility, Passion, Traceability; minimum risk and maximum return on investment for clients.\",\n  \"founded_year\": 2011,\n  \"domain_area\": \"CRMified is a black-owned IT consulting firm that provides custom Salesforce development, managed services, and product management consulting to small and mid-sized businesses, helping them streamline operations and deliver customer experiences using the Salesforce platform.\"\n}\n```\n\n### References",
+  "references": null
+}

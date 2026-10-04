@@ -1,0 +1,37 @@
+{
+  "company_name": "Aeries Technology",
+  "query": "Aeries Technology: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:50:07Z",
+  "profile": {
+    "layoffs_last_year": {
+      "date": null,
+      "employees_affected": null,
+      "percent_of_workforce": null,
+      "note": "No specific layoff event with a confirmed date and headcount was found in the last 12 months (Oct 2025–Oct 2026). Headcount actually increased from ~1,509 (Q2 2025) to 1,696 (Q1 2026). A broader decline from a 2023 peak of 1,923 to a 2025 low of 1,509 (~22%) is documented, but it occurred before the 12-month window."
+    },
+    "head_count": {
+      "total": 1696,
+      "as_of": "March 2026",
+      "source": "Revelio Labs"
+    },
+    "office_locations": [
+      "Mumbai, India (HQ)",
+      "Hyderabad, India",
+      "Bengaluru, India",
+      "Pune, India",
+      "Mexico (nearshore)"
+    ],
+    "values": [
+      "Collaboration",
+      "Transparency",
+      "Accountability",
+      "Innovation",
+      "Integrity",
+      "Customer Centricity"
+    ],
+    "founded_year": 2012,
+    "domain_area": "A global professional services and consulting firm that provides AI-enabled Global Capability Center (GCC) solutions, technology services, business process management, and digital transformation for private equity sponsors and their portfolio companies."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": {\n    \"date\": null,\n    \"employees_affected\": null,\n    \"percent_of_workforce\": null,\n    \"note\": \"No specific layoff event with a confirmed date and headcount was found in the last 12 months (Oct 2025–Oct 2026). Headcount actually increased from ~1,509 (Q2 2025) to 1,696 (Q1 2026). A broader decline from a 2023 peak of 1,923 to a 2025 low of 1,509 (~22%) is documented, but it occurred before the 12-month window.\"\n  },\n  \"head_count\": {\n    \"total\": 1696,\n    \"as_of\": \"March 2026\",\n    \"source\": \"Revelio Labs\"\n  },\n  \"office_locations\": [\n    \"Mumbai, India (HQ)\",\n    \"Hyderabad, India\",\n    \"Bengaluru, India\",\n    \"Pune, India\",\n    \"Mexico (nearshore)\"\n  ],\n  \"values\": [\n    \"Collaboration\",\n    \"Transparency\",\n    \"Accountability\",\n    \"Innovation\",\n    \"Integrity\",\n    \"Customer Centricity\"\n  ],\n  \"founded_year\": 2012,\n  \"domain_area\": \"A global professional services and consulting firm that provides AI-enabled Global Capability Center (GCC) solutions, technology services, business process management, and digital transformation for private equity sponsors and their portfolio companies.\"\n}\n```\n\n### References",
+  "references": null
+}

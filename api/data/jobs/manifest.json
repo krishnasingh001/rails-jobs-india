@@ -1,0 +1,42 @@
+{
+  "Karnataka": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:02:46Z",
+    "cache_file": "storage/serpapi_cache/jobs/karnataka.json"
+  },
+  "Pune": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:02:46Z",
+    "cache_file": "storage/serpapi_cache/jobs/pune.json"
+  },
+  "Mumbai": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:03:19Z",
+    "cache_file": "storage/serpapi_cache/jobs/mumbai.json"
+  },
+  "Rajasthan": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:04:00Z",
+    "cache_file": "storage/serpapi_cache/jobs/rajasthan.json"
+  },
+  "Madhya Pradesh": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:04:02Z",
+    "cache_file": "storage/serpapi_cache/jobs/madhya_pradesh.json"
+  },
+  "New Delhi": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:07:01Z",
+    "cache_file": "storage/serpapi_cache/jobs/new_delhi.json"
+  },
+  "Gurugram": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:07:50Z",
+    "cache_file": "storage/serpapi_cache/jobs/gurugram.json"
+  },
+  "Noida": {
+    "count": 10,
+    "fetched_at": "2026-10-04T08:07:52Z",
+    "cache_file": "storage/serpapi_cache/jobs/noida.json"
+  }
+}

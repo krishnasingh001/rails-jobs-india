@@ -10,9 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_04_144500) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_04_180000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "company_name", null: false
+    t.text "logo"
+    t.integer "job_count", default: 0, null: false
+    t.jsonb "states", default: [], null: false
+    t.jsonb "locations", default: [], null: false
+    t.jsonb "via_sources", default: [], null: false
+    t.jsonb "job_ids", default: [], null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_name"], name: "index_companies_on_company_name", unique: true
+  end
+
+  create_table "company_insights", force: :cascade do |t|
+    t.string "company_name", null: false
+    t.text "query"
+    t.datetime "fetched_at"
+    t.text "markdown"
+    t.jsonb "references", default: [], null: false
+    t.jsonb "text_blocks", default: [], null: false
+    t.jsonb "related_questions", default: [], null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.jsonb "profile", default: {}, null: false
+    t.text "domain_area"
+    t.index ["company_name"], name: "index_company_insights_on_company_name", unique: true
+  end
 
   create_table "company_places", force: :cascade do |t|
     t.string "company_name", null: false
@@ -45,8 +73,10 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_04_144500) do
     t.datetime "last_seen_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
     t.index ["external_id"], name: "index_jobs_on_external_id", unique: true
     t.index ["last_seen_at"], name: "index_jobs_on_last_seen_at"
+    t.index ["state"], name: "index_jobs_on_state"
   end
 
   create_table "search_cursors", force: :cascade do |t|

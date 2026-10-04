@@ -1,0 +1,18 @@
+{
+  "company_name": "Multi Recruit",
+  "query": "Multi Recruit: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:59:20Z",
+  "profile": {
+    "layoffs_last_year": null,
+    "head_count": "166 (as of May 31, 2026, per Tracxn)",
+    "office_locations": [
+      "Bengaluru, Karnataka, India — HQ: 103, 2nd Floor, Bull Temple Road, Bangalore 560019",
+      "No-6, 3rd Floor, Gurappanapalya, Banneragatta Main Road, J P Nagar, Bangalore South, Karnataka 560078"
+    ],
+    "values": "Tagline: 'Recruiting the right talent for all opportunities.' Emphasis on collaboration as the key to winning top talent in any niche. No formal values list published.",
+    "founded_year": 2013,
+    "domain_area": "Multi Recruit is a customized recruitment solutions provider in the staffing and recruiting industry, catering to global product startups and SMEs with end-to-end recruitment, HR consulting, payroll, and background verification services, sourcing talent from India."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": null,\n  \"head_count\": \"166 (as of May 31, 2026, per Tracxn)\",\n  \"office_locations\": [\n    \"Bengaluru, Karnataka, India — HQ: 103, 2nd Floor, Bull Temple Road, Bangalore 560019\",\n    \"No-6, 3rd Floor, Gurappanapalya, Banneragatta Main Road, J P Nagar, Bangalore South, Karnataka 560078\"\n  ],\n  \"values\": \"Tagline: 'Recruiting the right talent for all opportunities.' Emphasis on collaboration as the key to winning top talent in any niche. No formal values list published.\",\n  \"founded_year\": 2013,\n  \"domain_area\": \"Multi Recruit is a customized recruitment solutions provider in the staffing and recruiting industry, catering to global product startups and SMEs with end-to-end recruitment, HR consulting, payroll, and background verification services, sourcing talent from India.\"\n}\n```\n\n### References",
+  "references": null
+}

@@ -1,0 +1,54 @@
+{
+  "company_name": "Excal Technologies",
+  "query": "Excal Technologies: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:56:40Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found for EXCAL Technologies Private Limited (Pune, India) in the last 12 months (Oct 2025 – Oct 2026). No such event appears in layoff trackers or news sources.",
+    "head_count": "26 employees (per ZoomInfo); Indeed lists company size as 11–50. No more recent or precise figure available.",
+    "office_locations": [
+      "Pune, Maharashtra, India (registered office: Magarpatta City, Hadapsar, Pune 411028)"
+    ],
+    "values": "No publicly documented company values found in available sources.",
+    "founded_year": 2013,
+    "domain_area": "EXCAL Technologies Pvt. Ltd is a small software development and IT outsourcing firm that provides offshore and onshore solutions — IT consulting, web development, reporting, and database services — to business enterprises across industries such as GIS, renewable energy, oil & gas, banking, manufacturing, and healthcare."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found for EXCAL Technologies Private Limited (Pune, India) in the last 12 months (Oct 2025 – Oct 2026). No such event appears in layoff trackers or news sources.\",\n  \"head_count\": \"26 employees (per ZoomInfo); Indeed lists company size as 11–50. No more recent or precise figure available.\",\n  \"office_locations\": [\"Pune, Maharashtra, India (registered office: Magarpatta City, Hadapsar, Pune 411028)\"],\n  \"values\": \"No publicly documented company values found in available sources.\",\n  \"founded_year\": 2013,\n  \"domain_area\": \"EXCAL Technologies Pvt. Ltd is a small software development and IT outsourcing firm that provides offshore and onshore solutions — IT consulting, web development, reporting, and database services — to business enterprises across industries such as GIS, renewable energy, oil & gas, banking, manufacturing, and healthcare.\"\n}\n```\n\n> **Note:** This refers to **EXCAL Technologies Private Limited** (CIN U72900PN2013PTC146858), the Pune-based Indian company. [0] [1] [2] [3] [4] [5] It is distinct from **ExcalTech** (formerly Excalibur Technology Corp.), a U.S.-based managed IT services firm founded in 1994 in Illinois. If you meant the U.S. company, let me know and I can re-run the research.\n\n### References\n\n0. [EXCAL TECHNOLOGIES PRIVATE LIMITED](https://www.zaubacorp.com/EXCAL-TECHNOLOGIES-PRIVATE-LIMITED-U72900PN2013PTC146858)\n1. [EXCAL TECHNOLOGIES PRIVATE LIMITED - IndiaFilings](https://www.indiafilings.com/search/excal-technologies-private-limited-cin-U72900PN2013PTC146858)\n2. [Excal Technologies Private Limited](https://www.allindiaitr.com/company/excal-technologies-private-limited/U72900PN2013PTC146858)\n3. [EXCAL TECHNOLOGIES PRIVATE LIMITED](https://www.zaubacorp.com/company/EXCAL-TECHNOLOGIES-PRIVATE-LIMITED/U72900PN2013PTC146858)\n4. [EXCAL Technologies Pvt Ltd Careers and Employment](https://in.indeed.com/cmp/Excal-Technologies-Pvt-Ltd)\n5. [EXCAL TECHNOLOGIES PRIVATE LIMITED - 2026 Company Profile & Financials - Tracxn](https://tracxn.com/d/legal-entities/india/excal-technologies-private-limited/__wV_v8XhWxrfIcg4RVmxFTbttI3HOgIW0VhSddmNFW-Y)",
+  "references": [
+    {
+      "title": "EXCAL TECHNOLOGIES PRIVATE LIMITED",
+      "link": "https://www.zaubacorp.com/EXCAL-TECHNOLOGIES-PRIVATE-LIMITED-U72900PN2013PTC146858",
+      "source_icon": "https://imgs.search.brave.com/WEaMLdq5MirKe1wl9q7R-h0pc_SRNrfVV7z8yFs3XaU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2FkMzVlYWNl/NjVjMmNjMjRmNDRm/MWZmNTc3OGJkZDA0/M2IxMzE5OGU5ZTlh/YjA2MjJjZDAxNTYz/YjJjNjY1Ni93d3cu/emF1YmFjb3JwLmNv/bS8",
+      "index": 0
+    },
+    {
+      "title": "EXCAL TECHNOLOGIES PRIVATE LIMITED - IndiaFilings",
+      "link": "https://www.indiafilings.com/search/excal-technologies-private-limited-cin-U72900PN2013PTC146858",
+      "source_icon": "https://imgs.search.brave.com/7QmmlZkJTH3mnBAnMjpfT__9n-uWxZFfpFtBqFpLRrE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWY5N2ZlMzYy/Y2I0OWI1NWEyMzMx/Nzc2NzU2NTkzNzZh/YWUxMDNlZDg3ZWNl/MWQxZjZlYTI5Zjdi/YzhhNmYzZi93d3cu/aW5kaWFmaWxpbmdz/LmNvbS8",
+      "index": 1
+    },
+    {
+      "title": "Excal Technologies Private Limited",
+      "link": "https://www.allindiaitr.com/company/excal-technologies-private-limited/U72900PN2013PTC146858",
+      "source_icon": "https://imgs.search.brave.com/yWMZ7Zg1JIOLtpoxmp4ZGnNnhlO3HJ9JZUZsAwyt17Q/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2I2ZWNkN2My/MzEzZDJiZGZmZmUy/MGM2ZDEzMTVjZDE0/OWM0MjUwZjM3OTFm/YzgwN2YxN2U0MGI5/NzU5NGI0OC93d3cu/YWxsaW5kaWFpdHIu/Y29tLw",
+      "index": 2
+    },
+    {
+      "title": "EXCAL TECHNOLOGIES PRIVATE LIMITED",
+      "link": "https://www.zaubacorp.com/company/EXCAL-TECHNOLOGIES-PRIVATE-LIMITED/U72900PN2013PTC146858",
+      "source_icon": "https://imgs.search.brave.com/WEaMLdq5MirKe1wl9q7R-h0pc_SRNrfVV7z8yFs3XaU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2FkMzVlYWNl/NjVjMmNjMjRmNDRm/MWZmNTc3OGJkZDA0/M2IxMzE5OGU5ZTlh/YjA2MjJjZDAxNTYz/YjJjNjY1Ni93d3cu/emF1YmFjb3JwLmNv/bS8",
+      "index": 3
+    },
+    {
+      "title": "EXCAL Technologies Pvt Ltd Careers and Employment",
+      "link": "https://in.indeed.com/cmp/Excal-Technologies-Pvt-Ltd",
+      "source_icon": "https://imgs.search.brave.com/ZcoF52qSDtdAqCC_o9OApjWx62XDM4Gk4fVXLSwTNkg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTJhZjkxYmFi/ZjJjY2Y5YjA2Y2Jj/ZjM0ZTc1ZDQ4N2Q3/ZGRkMWE3Y2E5Njc1/YjU4YzU5ZDEyMTMx/YjM3NjI1Mi9pbi5p/bmRlZWQuY29tLw",
+      "index": 4
+    },
+    {
+      "title": "EXCAL TECHNOLOGIES PRIVATE LIMITED - 2026 Company Profile & Financials - Tracxn",
+      "link": "https://tracxn.com/d/legal-entities/india/excal-technologies-private-limited/__wV_v8XhWxrfIcg4RVmxFTbttI3HOgIW0VhSddmNFW-Y",
+      "source_icon": "https://imgs.search.brave.com/nzB0_WjyGC_evkqvO7ZEs5xI6dVUXnxuwSiKDcsNo2Q/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTJjNDdiZmI3/MDk3MzllZTFkZGU1/M2Y1NTZiNmFhZjhi/YTAzNzhmOGU0MDM5/YTRmZDhkMmZiN2Yw/ODg5MTcxYy90cmFj/eG4uY29tLw",
+      "index": 5
+    }
+  ]
+}

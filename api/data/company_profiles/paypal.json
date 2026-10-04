@@ -1,0 +1,74 @@
+{
+  "company_name": "PayPal",
+  "query": "PayPal: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T10:00:19Z",
+  "profile": {
+    "layoffs_last_year": [
+      {
+        "date": "2026-05-05",
+        "employees_affected": 4760,
+        "percent_of_workforce": "20%",
+        "note": "Announced as a multi-year plan (2–3 years) to cut ~4,760 roles; phased execution began in Aug 2026."
+      },
+      {
+        "date": "2026-08-31",
+        "employees_affected": 220,
+        "percent_of_workforce": "4% of India workforce",
+        "locations": [
+          "Chennai",
+          "Bengaluru",
+          "Hyderabad"
+        ],
+        "note": "PayPal-confirmed figure; some media reported ~600."
+      },
+      {
+        "date": "2026-08-28",
+        "employees_affected": 164,
+        "percent_of_workforce": "11.9% of Irish workforce (1,380 total)",
+        "locations": [
+          "Dublin, Ireland"
+        ],
+        "note": "Proposed redundancies subject to consultation; effective Oct 7–21, 2026."
+      },
+      {
+        "date": "2026-08-31",
+        "employees_affected": 251,
+        "percent_of_workforce": null,
+        "locations": [
+          "San Jose, CA (HQ)"
+        ],
+        "note": "California WARN filing; effective October 30, 2026."
+      }
+    ],
+    "head_count": {
+      "total": 23800,
+      "as_of": "2025-12-31",
+      "breakdown": {
+        "americas": "46%",
+        "asia_pacific": "42%",
+        "europe_mideast": "12%",
+        "united_states": 9600
+      }
+    },
+    "office_locations": [
+      "San Jose, CA (HQ)",
+      "Austin, TX",
+      "Chicago, IL",
+      "Dublin, Ireland",
+      "Singapore",
+      "Chennai, India",
+      "Bengaluru, India",
+      "Hyderabad, India"
+    ],
+    "values": [
+      "Inclusion",
+      "Innovation",
+      "Collaboration",
+      "Wellness"
+    ],
+    "founded_year": 1998,
+    "domain_area": "PayPal is a global digital payments and financial services platform that enables online transactions, peer-to-peer money transfers, and merchant payment processing across nearly 200 markets. It operates in the fintech / financial services industry."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": [\n    {\n      \"date\": \"2026-05-05\",\n      \"employees_affected\": 4760,\n      \"percent_of_workforce\": \"20%\",\n      \"note\": \"Announced as a multi-year plan (2–3 years) to cut ~4,760 roles; phased execution began in Aug 2026.\"\n    },\n    {\n      \"date\": \"2026-08-31\",\n      \"employees_affected\": 220,\n      \"percent_of_workforce\": \"4% of India workforce\",\n      \"locations\": [\"Chennai\", \"Bengaluru\", \"Hyderabad\"],\n      \"note\": \"PayPal-confirmed figure; some media reported ~600.\"\n    },\n    {\n      \"date\": \"2026-08-28\",\n      \"employees_affected\": 164,\n      \"percent_of_workforce\": \"11.9% of Irish workforce (1,380 total)\",\n      \"locations\": [\"Dublin, Ireland\"],\n      \"note\": \"Proposed redundancies subject to consultation; effective Oct 7–21, 2026.\"\n    },\n    {\n      \"date\": \"2026-08-31\",\n      \"employees_affected\": 251,\n      \"percent_of_workforce\": null,\n      \"locations\": [\"San Jose, CA (HQ)\"],\n      \"note\": \"California WARN filing; effective October 30, 2026.\"\n    }\n  ],\n  \"head_count\": {\n    \"total\": 23800,\n    \"as_of\": \"2025-12-31\",\n    \"breakdown\": {\n      \"americas\": \"46%\",\n      \"asia_pacific\": \"42%\",\n      \"europe_mideast\": \"12%\",\n      \"united_states\": 9600\n    }\n  },\n  \"office_locations\": [\n    \"San Jose, CA (HQ)\",\n    \"Austin, TX\",\n    \"Chicago, IL\",\n    \"Dublin, Ireland\",\n    \"Singapore\",\n    \"Chennai, India\",\n    \"Bengaluru, India\",\n    \"Hyderabad, India\"\n  ],\n  \"values\": [\"Inclusion\", \"Innovation\", \"Collaboration\", \"Wellness\"],\n  \"founded_year\": 1998,\n  \"domain_area\": \"PayPal is a global digital payments and financial services platform that enables online transactions, peer-to-peer money transfers, and merchant payment processing across nearly 200 markets. It operates in the fintech / financial services industry.\"\n}\n```\n\n### References",
+  "references": null
+}

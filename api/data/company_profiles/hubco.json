@@ -1,0 +1,21 @@
+{
+  "company_name": "Hubco",
+  "query": "Hubco: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:57:22Z",
+  "profile": {
+    "layoffs_last_year": "No specific layoff event for HUBCO in the last 12 months (Oct 2025 – Oct 2026) was found in search results. Headcount declined from ~801 (2024) to 664 (Sep 2026), likely reflecting the October 2024 termination of its energy agreement and natural attrition, but no formal layoff announcement with a date, employee count, or percentage was identified.",
+    "head_count": "664 employees as of September 30, 2026 (per TradingView). Wikipedia lists 801 employees (2024).",
+    "office_locations": [
+      "Karachi, Sindh, Pakistan – HQ (Ocean Towers, Block 9, Clifton)",
+      "Mouza Kund, Balochistan, Pakistan – Hub Power Station",
+      "Narowal, Punjab, Pakistan – Narowal Power Plant",
+      "Laraib, Azad Jammu & Kashmir – Laraib Hydel Power Plant",
+      "Thar, Sindh, Pakistan – Thar coal-fired plants"
+    ],
+    "values": "Passion, Ownership, Winning, Enjoyment, Renewal",
+    "founded_year": 1991,
+    "domain_area": "The Hub Power Company Limited (HUBCO) is Pakistan's first Independent Power Producer (IPP) with a combined installed capacity of 2,289 MW, operating in the electricity generation and utilities industry. It owns and operates thermal, hydel, and coal-fired power plants across Pakistan, and has diversified into mining, oil & gas, and EV charging infrastructure."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific layoff event for HUBCO in the last 12 months (Oct 2025 – Oct 2026) was found in search results. Headcount declined from ~801 (2024) to 664 (Sep 2026), likely reflecting the October 2024 termination of its energy agreement and natural attrition, but no formal layoff announcement with a date, employee count, or percentage was identified.\",\n  \"head_count\": \"664 employees as of September 30, 2026 (per TradingView). Wikipedia lists 801 employees (2024).\",\n  \"office_locations\": [\n    \"Karachi, Sindh, Pakistan – HQ (Ocean Towers, Block 9, Clifton)\",\n    \"Mouza Kund, Balochistan, Pakistan – Hub Power Station\",\n    \"Narowal, Punjab, Pakistan – Narowal Power Plant\",\n    \"Laraib, Azad Jammu & Kashmir – Laraib Hydel Power Plant\",\n    \"Thar, Sindh, Pakistan – Thar coal-fired plants\"\n  ],\n  \"values\": \"Passion, Ownership, Winning, Enjoyment, Renewal\",\n  \"founded_year\": 1991,\n  \"domain_area\": \"The Hub Power Company Limited (HUBCO) is Pakistan's first Independent Power Producer (IPP) with a combined installed capacity of 2,289 MW, operating in the electricity generation and utilities industry. It owns and operates thermal, hydel, and coal-fired power plants across Pakistan, and has diversified into mining, oil & gas, and EV charging infrastructure.\"\n}\n```\n\n### References",
+  "references": null
+}

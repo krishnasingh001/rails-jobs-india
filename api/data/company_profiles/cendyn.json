@@ -1,0 +1,42 @@
+{
+  "company_name": "Cendyn",
+  "query": "Cendyn: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:54:41Z",
+  "profile": {
+    "layoffs_last_year": {
+      "date": "No specific documented layoff event found in the last 12 months (Oct 2025 – Oct 2026).",
+      "employees_affected": "Not quantified in available sources. A May 2026 'leadership reorientation' and team restructuring was announced under new CEO Michael Bennett, but no headcount figure was published. Glassdoor reviews (Aug 2026) mention 'layoffs every quarter' and 'sweeping layoffs out of the blue,' but no specific date or percentage is documented.",
+      "percent_of_workforce": "Not confirmed in available sources."
+    },
+    "head_count": {
+      "count": 860,
+      "as_of": "July 31, 2026"
+    },
+    "office_locations": [
+      "Boca Raton, FL, USA (HQ)",
+      "Alpharetta, GA, USA",
+      "Las Vegas, NV, USA",
+      "San Diego, CA, USA",
+      "Hyderabad, India",
+      "Gurgaon, India",
+      "New Delhi, India",
+      "Tallinn, Estonia",
+      "München, Germany",
+      "France",
+      "United Kingdom",
+      "Singapore",
+      "Bangkok, Thailand"
+    ],
+    "values": [
+      "Humanity",
+      "Innovation",
+      "Excellence",
+      "Accountability",
+      "Collaboration"
+    ],
+    "founded_year": 1996,
+    "domain_area": "Cendyn is a global hospitality technology company that provides cloud-based CRM, digital marketing, and revenue management software for hotels and resorts, helping them drive direct bookings, maximize profitability, and build guest loyalty."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": {\n    \"date\": \"No specific documented layoff event found in the last 12 months (Oct 2025 – Oct 2026).\",\n    \"employees_affected\": \"Not quantified in available sources. A May 2026 'leadership reorientation' and team restructuring was announced under new CEO Michael Bennett, but no headcount figure was published. Glassdoor reviews (Aug 2026) mention 'layoffs every quarter' and 'sweeping layoffs out of the blue,' but no specific date or percentage is documented.\",\n    \"percent_of_workforce\": \"Not confirmed in available sources.\"\n  },\n  \"head_count\": {\n    \"count\": 860,\n    \"as_of\": \"July 31, 2026\"\n  },\n  \"office_locations\": [\n    \"Boca Raton, FL, USA (HQ)\",\n    \"Alpharetta, GA, USA\",\n    \"Las Vegas, NV, USA\",\n    \"San Diego, CA, USA\",\n    \"Hyderabad, India\",\n    \"Gurgaon, India\",\n    \"New Delhi, India\",\n    \"Tallinn, Estonia\",\n    \"München, Germany\",\n    \"France\",\n    \"United Kingdom\",\n    \"Singapore\",\n    \"Bangkok, Thailand\"\n  ],\n  \"values\": [\n    \"Humanity\",\n    \"Innovation\",\n    \"Excellence\",\n    \"Accountability\",\n    \"Collaboration\"\n  ],\n  \"founded_year\": 1996,\n  \"domain_area\": \"Cendyn is a global hospitality technology company that provides cloud-based CRM, digital marketing, and revenue management software for hotels and resorts, helping them drive direct bookings, maximize profitability, and build guest loyalty.\"\n}\n```\n\n### References",
+  "references": null
+}

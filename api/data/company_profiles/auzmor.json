@@ -1,0 +1,19 @@
+{
+  "company_name": "Auzmor",
+  "query": "Auzmor: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:51:02Z",
+  "profile": {
+    "layoffs_last_year": "No confirmed layoff data found for Auzmor in the last 12 months. Glassdoor reviews mention some employees reporting layoffs or unstable roles, but no specific dates, headcount, or percentage were identified.",
+    "head_count": "59 employees as of July 31, 2026 (Tracxn); other sources cite 63–69 in 2026.",
+    "office_locations": [
+      "West Des Moines, Iowa, USA (HQ) — 12951 University Ave",
+      "Gardena, California, USA — 250 E Gardena Blvd",
+      "Chennai, India (registered Indian entity)"
+    ],
+    "values": "Cultivate Great Employees; innovation at the heart; vision to make company software invisible and assistive so HR leaders can focus on taking care of employees.",
+    "founded_year": 2017,
+    "domain_area": "Auzmor is an HR SaaS company serving the human-resources and corporate-training industry, offering a suite of Learning Management System (LMS), Learning Experience Platform (LXP), and Employee Experience products for employee training, recruitment, and engagement."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No confirmed layoff data found for Auzmor in the last 12 months. Glassdoor reviews mention some employees reporting layoffs or unstable roles, but no specific dates, headcount, or percentage were identified.\",\n  \"head_count\": \"59 employees as of July 31, 2026 (Tracxn); other sources cite 63–69 in 2026.\",\n  \"office_locations\": [\n    \"West Des Moines, Iowa, USA (HQ) — 12951 University Ave\",\n    \"Gardena, California, USA — 250 E Gardena Blvd\",\n    \"Chennai, India (registered Indian entity)\"\n  ],\n  \"values\": \"Cultivate Great Employees; innovation at the heart; vision to make company software invisible and assistive so HR leaders can focus on taking care of employees.\",\n  \"founded_year\": 2017,\n  \"domain_area\": \"Auzmor is an HR SaaS company serving the human-resources and corporate-training industry, offering a suite of Learning Management System (LMS), Learning Experience Platform (LXP), and Employee Experience products for employee training, recruitment, and engagement.\"\n}\n```\n\n### References",
+  "references": null
+}

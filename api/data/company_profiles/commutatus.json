@@ -1,0 +1,27 @@
+{
+  "company_name": "Commutatus",
+  "query": "Commutatus: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:55:27Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found for Commutatus in the last 12 months.",
+    "head_count": "31 employees as of May 31, 2026",
+    "office_locations": [
+      "Chennai: 715A Spencer Plaza, 7th Floor, 768-769 Anna Salai, Chennai, Tamil Nadu, India – 600002",
+      "Bengaluru: 150/1, Infantry Road, Opp. Commissioner's Office, Vasanthnagar, Bengaluru 560001, Karnataka"
+    ],
+    "values": [
+      "Integrity",
+      "Ingenuity",
+      "Empowerment",
+      "Belief",
+      "Excellence",
+      "Innovation",
+      "Team",
+      "Fearlessness"
+    ],
+    "founded_year": 2014,
+    "domain_area": "Commutatus is a web and mobile app development firm that partners with entrepreneurs, startups, and corporates to conceptualize, design, and build digital products. It serves the IT and technology industry, offering services including product strategy, design, web development, mobile app development, and CTO-as-a-Service."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found for Commutatus in the last 12 months.\",\n  \"head_count\": \"31 employees as of May 31, 2026\",\n  \"office_locations\": [\n    \"Chennai: 715A Spencer Plaza, 7th Floor, 768-769 Anna Salai, Chennai, Tamil Nadu, India – 600002\",\n    \"Bengaluru: 150/1, Infantry Road, Opp. Commissioner's Office, Vasanthnagar, Bengaluru 560001, Karnataka\"\n  ],\n  \"values\": [\"Integrity\", \"Ingenuity\", \"Empowerment\", \"Belief\", \"Excellence\", \"Innovation\", \"Team\", \"Fearlessness\"],\n  \"founded_year\": 2014,\n  \"domain_area\": \"Commutatus is a web and mobile app development firm that partners with entrepreneurs, startups, and corporates to conceptualize, design, and build digital products. It serves the IT and technology industry, offering services including product strategy, design, web development, mobile app development, and CTO-as-a-Service.\"\n}\n```\n\n### References",
+  "references": null
+}

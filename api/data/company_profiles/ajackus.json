@@ -1,0 +1,28 @@
+{
+  "company_name": "Ajackus",
+  "query": "Ajackus: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-04T09:50:48Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs found for Ajackus in the last 12 months.",
+    "head_count": "91 employees as of May 31, 2026",
+    "office_locations": [
+      "Mumbai, Maharashtra, India (HQ)",
+      "Boston, USA",
+      "Dubai, UAE"
+    ],
+    "values": [
+      "Empathy",
+      "Inclusivity",
+      "Adaptiveness",
+      "Diligence",
+      "Trust",
+      "Progress",
+      "Confidence",
+      "Curiosity"
+    ],
+    "founded_year": 2011,
+    "domain_area": "Ajackus is an IT services and software engineering firm that builds AI-augmented remote technology teams for enterprises and growth-stage companies across FinTech, PropTech, Healthcare, Travel, Oil & Gas, and Enterprise software."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs found for Ajackus in the last 12 months.\",\n  \"head_count\": \"91 employees as of May 31, 2026\",\n  \"office_locations\": [\"Mumbai, Maharashtra, India (HQ)\", \"Boston, USA\", \"Dubai, UAE\"],\n  \"values\": [\"Empathy\", \"Inclusivity\", \"Adaptiveness\", \"Diligence\", \"Trust\", \"Progress\", \"Confidence\", \"Curiosity\"],\n  \"founded_year\": 2011,\n  \"domain_area\": \"Ajackus is an IT services and software engineering firm that builds AI-augmented remote technology teams for enterprises and growth-stage companies across FinTech, PropTech, Healthcare, Travel, Oil & Gas, and Enterprise software.\"\n}\n```\n\n### References",
+  "references": null
+}
