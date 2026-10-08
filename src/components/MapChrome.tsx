@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { Check, ChevronDown, LocateFixed, Map as MapIcon, Pentagon, RefreshCw } from 'lucide-react'
+import { Check, ChevronDown, Globe, LocateFixed, Map as MapIcon, Pentagon, RefreshCw } from 'lucide-react'
+import { useAuth } from '../context/AuthContext.tsx'
 import { ORIGIN_CHOICES } from '../data/cities.ts'
 import type { Origin } from '../types.ts'
 
@@ -90,18 +91,24 @@ type MapChromeProps = {
   remoteCount: number
   remoteActive: boolean
   pitched: boolean
+  earth: boolean
+  showPanels: boolean
   showBack: boolean
   locatedJobs: number
   hiringStates: number
   onOriginChange: (cityName: string) => void
   onLocate: () => void
   onTogglePitch: () => void
+  onToggleEarth: () => void
   onBack: () => void
   onRemote: () => void
   harvesting: boolean
   harvestMessage: string | null
   harvestFailed: boolean
   onHarvest: () => void
+  onSignIn: () => void
+  onSignUp: () => void
+  onOpenApplications: () => void
 }
 
 export function MapChrome({
@@ -111,22 +118,29 @@ export function MapChrome({
   remoteCount,
   remoteActive,
   pitched,
+  earth,
+  showPanels,
   showBack,
   locatedJobs,
   hiringStates,
   onOriginChange,
   onLocate,
   onTogglePitch,
+  onToggleEarth,
   onBack,
   onRemote,
   harvesting,
   harvestMessage,
   harvestFailed,
   onHarvest,
+  onSignIn,
+  onSignUp,
+  onOpenApplications,
 }: MapChromeProps) {
+  const { user, logout } = useAuth()
   return (
-    <div className="pointer-events-none absolute inset-x-4 top-4 z-20 flex flex-wrap items-start justify-between gap-2">
-      <section className="pointer-events-auto w-full min-w-0 rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-lg backdrop-blur-md md:w-80">
+    <div className="pointer-events-none absolute inset-x-4 top-4 z-50 flex flex-wrap items-start justify-between gap-2">
+      {showPanels ? <section className="pointer-events-auto w-full min-w-0 rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-lg backdrop-blur-md md:w-80">
         <p className="font-brand text-xs font-semibold uppercase tracking-[0.14em] text-brand">Rails jobs in India</p>
         <h1 className="mt-1 font-brand text-xl font-semibold text-ink">Where the roles are</h1>
         <p className="mt-1 text-sm text-ink-muted">
@@ -173,9 +187,57 @@ export function MapChrome({
             {harvestMessage}
           </p>
         ) : null}
-      </section>
+      </section> : <span className="sr-only">Rails jobs in India</span>}
 
-      <div className="pointer-events-auto flex shrink-0 flex-row gap-2 md:flex-col md:items-end">
+      <div className="pointer-events-auto ml-auto flex shrink-0 flex-row gap-2 md:flex-col md:items-end">
+        {showPanels && user ? (
+          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-2 text-sm shadow-lg backdrop-blur-md">
+            <span className="max-w-40 truncate font-semibold text-ink">{user.name}</span>
+            <button
+              type="button"
+              className="cursor-pointer font-semibold text-ink transition-colors duration-200 hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              onClick={onOpenApplications}
+            >
+              Applications
+            </button>
+            <button
+              type="button"
+              className="cursor-pointer font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              onClick={() => {
+                void logout()
+              }}
+            >
+              Sign out
+            </button>
+          </div>
+        ) : showPanels ? (
+          <div className="flex gap-2">
+            <button
+              type="button"
+              className="cursor-pointer rounded-full border border-slate-200 bg-white/90 px-3 py-2 text-sm font-semibold text-ink shadow-lg backdrop-blur-md transition-colors duration-200 hover:border-brand-border hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              onClick={onSignIn}
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              className="cursor-pointer rounded-full bg-brand px-3 py-2 text-sm font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              onClick={onSignUp}
+            >
+              Create account
+            </button>
+          </div>
+        ) : null}
+        <button
+          type="button"
+          className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-2 text-sm font-semibold text-ink shadow-lg backdrop-blur-md transition-colors duration-200 hover:border-brand-border hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          onClick={onToggleEarth}
+          aria-pressed={earth}
+          aria-label={earth ? 'Show the street map' : 'Show the earth layer'}
+        >
+          {earth ? <MapIcon className="h-4 w-4" aria-hidden="true" /> : <Globe className="h-4 w-4" aria-hidden="true" />}
+          {earth ? 'Map' : 'Earth'}
+        </button>
         <button
           type="button"
           className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-2 text-sm font-semibold text-ink shadow-lg backdrop-blur-md transition-colors duration-200 hover:border-brand-border hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"

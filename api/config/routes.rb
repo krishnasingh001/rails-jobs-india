@@ -10,6 +10,15 @@ Rails.application.routes.draw do
       resources :jobs, only: :index
       resources :harvests, only: :create
       get "place", to: "places#show"
+      post "auth/register", to: "auth#register"
+      post "auth/login", to: "auth#login"
+      delete "auth/logout", to: "auth#logout"
+      get "auth/me", to: "auth#me"
+      resources :tracked_applications, only: %i[index create destroy] do
+        member do
+          post :status
+        end
+      end
     end
   end
 end

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { ApplicationsBoard } from './components/ApplicationsBoard.tsx'
+import { SignInScreen, SignUpScreen } from './components/AuthScreens.tsx'
 import { IndiaJobsMap } from './components/IndiaJobsMap.tsx'
 import { serpApiJobsSource } from './data/serpJobs.ts'
 import { countJobsByState, withJobCounts } from './lib/aggregateJobs.ts'
@@ -41,6 +43,7 @@ function ErrorScreen({ message }: { message: string }) {
 
 export default function App() {
   const [load, setLoad] = useState<LoadState>({ status: 'loading' })
+  const [screen, setScreen] = useState<'map' | 'sign-in' | 'sign-up' | 'applications'>('map')
 
   useEffect(() => {
     let cancelled = false
@@ -76,5 +79,23 @@ export default function App() {
 
   if (load.status === 'loading') return <LoadingScreen />
   if (load.status === 'error') return <ErrorScreen message={load.message} />
-  return <IndiaJobsMap geo={load.geo} jobs={load.jobs} />
+  return (
+    <>
+      <IndiaJobsMap
+        geo={load.geo}
+        jobs={load.jobs}
+        showPanels={screen === 'map'}
+        onSignIn={() => setScreen('sign-in')}
+        onSignUp={() => setScreen('sign-up')}
+        onOpenApplications={() => setScreen('applications')}
+      />
+      {screen === 'applications' ? <ApplicationsBoard onClose={() => setScreen('map')} /> : null}
+      {screen === 'sign-in' ? (
+        <SignInScreen onSignUp={() => setScreen('sign-up')} onSuccess={() => setScreen('map')} onClose={() => setScreen('map')} />
+      ) : null}
+      {screen === 'sign-up' ? (
+        <SignUpScreen onSignIn={() => setScreen('sign-in')} onSuccess={() => setScreen('map')} onClose={() => setScreen('map')} />
+      ) : null}
+    </>
+  )
 }

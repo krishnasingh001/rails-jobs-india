@@ -1,7 +1,9 @@
 import { useId, useState } from 'react'
-import { ArrowLeft, ExternalLink, MapPin } from 'lucide-react'
+import { ArrowLeft, BookmarkPlus, ExternalLink, MapPin } from 'lucide-react'
+import { useAuth } from '../context/AuthContext.tsx'
 import { loadCompanyPlace, type CompanyPlace } from '../data/companyPlace.ts'
 import { formatKilometres, travelSense } from '../lib/formatDistance.ts'
+import { trackJob } from '../lib/applications.ts'
 import type { JobPin } from '../types.ts'
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -31,10 +33,13 @@ function workModeLabel(mode: JobPin['workMode']): string {
 }
 
 function JobCard({ job, onShowOffice }: { job: JobPin; onShowOffice: (place: CompanyPlace) => void }) {
+  const { user } = useAuth()
   const panelId = useId()
   const [open, setOpen] = useState(false)
   const [place, setPlace] = useState<CompanyPlace | null | undefined>(undefined)
   const [error, setError] = useState<string | null>(null)
+  const [tracking, setTracking] = useState(false)
+  const [trackMessage, setTrackMessage] = useState<string | null>(null)
 
   function reveal(found: CompanyPlace) {
     if (found.latitude != null && found.longitude != null) onShowOffice(found)
@@ -55,6 +60,19 @@ function JobCard({ job, onShowOffice }: { job: JobPin; onShowOffice: (place: Com
       if (found) reveal(found)
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'Could not look up this office.')
+    }
+  }
+
+  async function track() {
+    setTracking(true)
+    setTrackMessage(null)
+    try {
+      const result = await trackJob(job)
+      setTrackMessage(result.alreadyTracked ? 'Already on your application board.' : 'Application tracked.')
+    } catch (caught) {
+      setTrackMessage(caught instanceof Error ? caught.message : 'Could not track this application.')
+    } finally {
+      setTracking(false)
     }
   }
 
@@ -121,6 +139,22 @@ function JobCard({ job, onShowOffice }: { job: JobPin; onShowOffice: (place: Com
             </a>
           ) : null}
           {job.postedAt ? <p className="mt-1 text-sm text-ink-muted">Posted {formatPosted(job.postedAt)}</p> : null}
+        </div>
+      ) : null}
+      {user ? (
+        <div className="px-3 pb-3">
+          <button
+            type="button"
+            className="inline-flex cursor-pointer items-center gap-1 text-sm font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:text-brand/70"
+            disabled={tracking}
+            onClick={() => {
+              void track()
+            }}
+          >
+            <BookmarkPlus className="h-3.5 w-3.5" aria-hidden="true" />
+            {tracking ? 'Tracking…' : 'Track application'}
+          </button>
+          {trackMessage ? <p className="mt-1 text-xs text-ink-muted">{trackMessage}</p> : null}
         </div>
       ) : null}
     </article>

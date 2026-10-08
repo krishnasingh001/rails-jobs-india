@@ -20,8 +20,9 @@ import { JobDrawer } from './JobDrawer.tsx'
 import { MapChrome } from './MapChrome.tsx'
 import { PlaceList } from './PlaceList.tsx'
 
-const INDIA_VIEW = { longitude: 79.2, latitude: 22.2, zoom: 3.55, bearing: 0 }
+const INDIA_VIEW = { longitude: 79.2, latitude: 22.2, zoom: 1.7, bearing: 0 }
 const INDIA_MAX_BOUNDS: [number, number, number, number] = [67.2, 5.8, 98.2, 36.2]
+const STREET_STYLE = 'https://tiles.openfreemap.org/styles/bright'
 const EARTH_STYLE = {
   version: 8,
   projection: { type: 'globe' },
@@ -38,10 +39,25 @@ const EARTH_STYLE = {
     { id: 'satellite', type: 'raster', source: 'satellite' },
   ],
 } as StyleSpecification
+const GLOBE_FOV = 0.6435011087932844
+
+function fittedGlobeZoom(width: number, height: number, wide: boolean) {
+  const horizontalRoom = wide ? Math.max(280, width - 660) : Math.max(220, width - 24)
+  const verticalRoom = wide ? Math.max(280, height - 32) : Math.max(220, height * 0.46)
+  const targetRadius = (Math.min(horizontalRoom, verticalRoom) * 0.96) / 2
+  const distance = (0.5 / Math.tan(GLOBE_FOV / 2)) * Math.max(height, 1)
+  const radius = (targetRadius * distance) / Math.hypot(distance, targetRadius)
+  const cosLat = Math.cos((INDIA_VIEW.latitude * Math.PI) / 180)
+  return Math.log2((radius * 2 * Math.PI * cosLat) / 512)
+}
 
 type IndiaJobsMapProps = {
   geo: IndiaFeatureCollection
   jobs: JobPin[]
+  showPanels: boolean
+  onSignIn: () => void
+  onSignUp: () => void
+  onOpenApplications: () => void
 }
 
 type OfficePin = {
@@ -69,8 +85,11 @@ function readFeature(event: MapLayerMouseEvent, layerId: string) {
   return (event.features ?? []).find((feature) => feature.layer.id === layerId)
 }
 
-export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
+export function IndiaJobsMap({ geo, jobs: initialJobs, showPanels, onSignIn, onSignUp, onOpenApplications }: IndiaJobsMapProps) {
   const mapRef = useRef<MapRef>(null)
+  const projectionRef = useRef<'globe' | 'mercator'>('globe')
+  const globeZoomRef = useRef(INDIA_VIEW.zoom)
+  const boundsLockedRef = useRef(false)
   const previousRef = useRef<Panel>({ kind: 'states' })
   const backRef = useRef<() => void>(() => {})
   const isWide = useMediaQuery('(min-width: 768px)')
@@ -79,6 +98,7 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
   const [usingDeviceLocation, setUsingDeviceLocation] = useState(false)
   const [locateMessage, setLocateMessage] = useState<string | null>(null)
   const [pitched, setPitched] = useState(true)
+  const [earth, setEarth] = useState(false)
   const [selectedCode, setSelectedCode] = useState<string | null>(null)
   const [panel, setPanel] = useState<Panel>({ kind: 'states' })
   const [query, setQuery] = useState('')
@@ -88,6 +108,7 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
   const [harvestMessage, setHarvestMessage] = useState<string | null>(null)
   const [harvestFailed, setHarvestFailed] = useState(false)
   const [office, setOffice] = useState<OfficePin | null>(null)
+  const [streetLevel, setStreetLevel] = useState(false)
 
   if (panel.kind !== 'remote') previousRef.current = panel
 
@@ -153,14 +174,18 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
         ['interpolate', ['linear'], ['get', 'jobs'], 1, '#FECACA', scaleMax, '#DC2626'],
       ],
       'fill-opacity': [
-        'case',
-        ['==', ['get', 'code'], selectedCode ?? ''],
-        0.82,
-        ['==', ['get', 'code'], hover?.code ?? ''],
-        0.7,
-        ['==', ['get', 'jobs'], 0],
-        0.18,
-        0.62,
+        '*',
+        ['interpolate', ['linear'], ['zoom'], 5.2, 1, 7.4, 0.28, 9, 0],
+        [
+          'case',
+          ['==', ['get', 'code'], selectedCode ?? ''],
+          0.72,
+          ['==', ['get', 'code'], hover?.code ?? ''],
+          0.55,
+          ['==', ['get', 'jobs'], 0],
+          0.16,
+          0.5,
+        ],
       ],
     } as FillLayerSpecification['paint']
   }, [hover?.code, scaleMax, selectedCode])
@@ -173,11 +198,12 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
         '#DC2626',
         ['==', ['get', 'code'], hover?.code ?? ''],
         '#F87171',
-        '#FFFFFF',
+        earth ? '#FFFFFF' : '#94A3B8',
       ],
       'line-width': ['case', ['==', ['get', 'code'], selectedCode ?? ''], 2.4, 1.1],
+      'line-opacity': ['interpolate', ['linear'], ['zoom'], 5.2, 1, 7.4, 0.28, 9, 0],
     } as LineLayerSpecification['paint']
-  }, [hover?.code, selectedCode])
+  }, [earth, hover?.code, selectedCode])
 
   const cityPaint = useMemo(() => {
     return {
@@ -185,17 +211,15 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
       'circle-color': ['case', ['==', ['get', 'city'], activeCity], '#7F1D1D', '#DC2626'],
       'circle-stroke-width': 2,
       'circle-stroke-color': '#FFFFFF',
-      'circle-opacity': 0.95,
+      'circle-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.95, 11.5, 0],
+      'circle-stroke-opacity': ['interpolate', ['linear'], ['zoom'], 8, 1, 11.5, 0],
     } as CircleLayerSpecification['paint']
   }, [activeCity, scaleMax])
 
-  const interactiveLayerIds = useMemo(
-    () =>
-      selectedCities.length > 0
-        ? ['states-fill', 'city-circles']
-        : ['states-fill'],
-    [selectedCities.length],
-  )
+  const interactiveLayerIds = useMemo(() => {
+    if (streetLevel) return selectedCities.length > 0 ? ['city-circles'] : []
+    return selectedCities.length > 0 ? ['states-fill', 'city-circles'] : ['states-fill']
+  }, [selectedCities.length, streetLevel])
 
   function selectState(code: string) {
     setSelectedCode(code)
@@ -253,9 +277,13 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
     setPanel({ kind: 'states' })
     setQuery('')
     runCamera((map) => {
+      const canvas = map.getCanvas()
+      const zoom = fittedGlobeZoom(canvas.clientWidth, canvas.clientHeight, isWide)
+      globeZoomRef.current = zoom
+      map.getMap().setMinZoom(Math.max(0.4, zoom - 0.35))
       map.flyTo({
         center: [INDIA_VIEW.longitude, INDIA_VIEW.latitude],
-        zoom: INDIA_VIEW.zoom,
+        zoom,
         pitch,
         bearing: 0,
         duration: reducedMotion ? 0 : 1100,
@@ -328,6 +356,43 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
     } finally {
       setHarvesting(false)
     }
+  }
+
+  function syncView(zoom: number) {
+    const map = mapRef.current?.getMap()
+    if (map) {
+      const next =
+        projectionRef.current === 'globe' ? (zoom >= 6.2 ? 'mercator' : 'globe') : zoom <= 5.2 ? 'globe' : 'mercator'
+      if (next !== projectionRef.current) {
+        projectionRef.current = next
+        map.setProjection({ type: next })
+      }
+      const lock = zoom >= 6.4 ? true : zoom <= 6 ? false : boundsLockedRef.current
+      if (lock !== boundsLockedRef.current) {
+        boundsLockedRef.current = lock
+        map.setMaxBounds(lock ? INDIA_MAX_BOUNDS : null)
+      }
+    }
+    const nextStreet = zoom >= 8.2
+    setStreetLevel((current) => (current === nextStreet ? current : nextStreet))
+  }
+
+  function fitGlobe() {
+    const map = mapRef.current
+    if (!map) return
+    const canvas = map.getCanvas()
+    const width = canvas.clientWidth
+    const height = canvas.clientHeight
+    if (width < 10 || height < 10) return
+    const zoom = fittedGlobeZoom(width, height, isWide)
+    globeZoomRef.current = zoom
+    map.getMap().setMinZoom(Math.max(0.4, zoom - 0.35))
+    map.jumpTo({
+      center: [INDIA_VIEW.longitude, INDIA_VIEW.latitude],
+      zoom,
+      pitch,
+      bearing: 0,
+    })
   }
 
   function onMapClick(event: MapLayerMouseEvent) {
@@ -405,6 +470,20 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  const fitGlobeRef = useRef(fitGlobe)
+  fitGlobeRef.current = fitGlobe
+
+  useEffect(() => {
+    const onResize = () => {
+      const map = mapRef.current
+      if (!map) return
+      if (map.getZoom() > globeZoomRef.current + 0.45) return
+      fitGlobeRef.current()
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const cityJobs = panel.kind === 'jobs' ? jobsInCity(jobs, panel.city) : []
   const activeCityCount =
     panel.kind === 'jobs' ? (allCities.find((city) => city.city === panel.city) ?? null) : null
@@ -423,18 +502,17 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
     : 'absolute inset-x-4 bottom-4 z-30 flex max-h-[min(46vh,calc(100dvh-19rem))] min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-lg backdrop-blur-md'
 
   return (
-    <div className="relative h-dvh w-full overflow-hidden bg-[#020617] font-sans text-ink">
+    <div className={`relative h-dvh w-full overflow-hidden font-sans text-ink ${earth ? 'bg-[#16324f]' : 'bg-[#f8f4f0]'}`}>
       <p className="sr-only" aria-live="polite" aria-atomic="true">
         {announcement}
       </p>
       <div className="absolute inset-0" role="region" aria-label="Map of Rails jobs across Indian states">
         <Map
           ref={mapRef}
-          mapStyle={EARTH_STYLE}
+          mapStyle={earth ? EARTH_STYLE : STREET_STYLE}
           initialViewState={{ ...INDIA_VIEW, pitch }}
-          minZoom={3.35}
+          minZoom={0.4}
           maxZoom={16}
-          maxBounds={INDIA_MAX_BOUNDS}
           renderWorldCopies={false}
           dragRotate={false}
           pitchWithRotate={false}
@@ -444,7 +522,20 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
           interactiveLayerIds={interactiveLayerIds}
           cursor={hover ? 'pointer' : 'grab'}
           onLoad={() => {
+            projectionRef.current = 'globe'
+            boundsLockedRef.current = false
             mapRef.current?.getMap().setProjection({ type: 'globe' })
+            mapRef.current?.getMap().setMaxBounds(null)
+            fitGlobe()
+          }}
+          onStyleData={() => {
+            const map = mapRef.current?.getMap()
+            if (!map?.isStyleLoaded()) return
+            if (map.getProjection()?.type === projectionRef.current) return
+            map.setProjection({ type: projectionRef.current })
+          }}
+          onMove={(event) => {
+            syncView(event.viewState.zoom)
           }}
           onClick={onMapClick}
           onMouseMove={onMapMove}
@@ -509,12 +600,15 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
         remoteCount={remoteList.length}
         remoteActive={panel.kind === 'remote'}
         pitched={pitched}
-        showBack={selectedCode !== null}
+        earth={earth}
+        showPanels={showPanels}
+        showBack={showPanels && selectedCode !== null}
         locatedJobs={locatedJobs}
         hiringStates={hiringStates}
         onOriginChange={onOriginChange}
         onLocate={onLocate}
         onTogglePitch={togglePitch}
+        onToggleEarth={() => setEarth((current) => !current)}
         onBack={showIndia}
         onRemote={openRemote}
         harvesting={harvesting}
@@ -523,9 +617,12 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
         onHarvest={() => {
           void onHarvest()
         }}
+        onSignIn={onSignIn}
+        onSignUp={onSignUp}
+        onOpenApplications={onOpenApplications}
       />
 
-      <aside className={panelClass} data-panel={panel.kind}>
+      {showPanels ? <aside className={panelClass} data-panel={panel.kind}>
         {panel.kind === 'jobs' ? (
           <JobDrawer
             title={panel.city}
@@ -572,7 +669,7 @@ export function IndiaJobsMap({ geo, jobs: initialJobs }: IndiaJobsMapProps) {
             onBackToStates={showIndia}
           />
         ) : null}
-      </aside>
+      </aside> : null}
     </div>
   )
 }

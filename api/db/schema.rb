@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_04_180000) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_04_210000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -94,4 +94,40 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_04_180000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "sessions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "token_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token_digest"], name: "index_sessions_on_token_digest", unique: true
+    t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
+  create_table "tracked_applications", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "job_external_id", null: false
+    t.string "job_title", null: false
+    t.string "company_name", null: false
+    t.text "job_url"
+    t.string "location", default: "", null: false
+    t.string "status", default: "applied", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "job_external_id"], name: "index_tracked_applications_on_user_id_and_job_external_id", unique: true
+    t.index ["user_id"], name: "index_tracked_applications_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.string "role", default: "candidate", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  add_foreign_key "sessions", "users"
+  add_foreign_key "tracked_applications", "users"
 end
