@@ -5,7 +5,12 @@ module Api
         result = Serpapi::Harvest.call(force: refresh?)
         render json: JobBlueprint.render_as_hash(result.jobs, root: :jobs)
       rescue Serpapi::Error => error
-        render json: { error: error.message }, status: :bad_gateway
+        jobs = Job.recent
+        if jobs.any?
+          render json: JobBlueprint.render_as_hash(jobs, root: :jobs)
+        else
+          render json: { error: error.message }, status: :bad_gateway
+        end
       end
 
       private

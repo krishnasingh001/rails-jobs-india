@@ -91,6 +91,76 @@ class Serpapi::HarvestTest < ActiveSupport::TestCase
     assert_includes client.tokens, "Ruby on Rails-2"
   end
 
+  class EmptyPageClient
+    attr_reader :api_key, :tokens
+
+    def initialize
+      @api_key = "test-key"
+      @tokens = []
+    end
+
+    def google_jobs(query:, location:, next_page_token: nil)
+      @tokens << next_page_token
+      if next_page_token.present?
+        raise Serpapi::Error, "Google hasn't returned any results for this query."
+      end
+
+      {
+        "jobs_results" => [
+          {
+            "job_id" => "fresh-1",
+            "title" => "Rails Dev",
+            "company_name" => "Acme",
+            "location" => location
+          }
+        ]
+      }
+    end
+  end
+
+  test "drops an expired next page and loads the first page of results" do
+    SearchCursor.create!(query: "Ruby on Rails", location: "India", next_page_token: "stale-token")
+    SearchCursor.create!(
+      query: "Ruby on Rails developer",
+      location: "Bengaluru, Karnataka, India",
+      next_page_token: "stale-token"
+    )
+    client = EmptyPageClient.new
+
+    result = Serpapi::Harvest.call(force: true, client: client)
+
+    assert_equal 1, result.added
+    assert_includes client.tokens, nil
+    assert_nil SearchCursor.find_by!(query: "Ruby on Rails", location: "India").next_page_token
+  end
+
+  class NoResultsClient
+    attr_reader :api_key
+
+    def initialize
+      @api_key = "test-key"
+    end
+
+    def google_jobs(query:, location:, next_page_token: nil)
+      raise Serpapi::Error, "Google hasn't returned any results for this query."
+    end
+  end
+
+  test "keeps stored jobs when Google returns no results" do
+    Job.create!(
+      external_id: "stored-1",
+      title: "Rails Dev",
+      company_name: "Acme",
+      location: "Chennai, Tamil Nadu",
+      last_seen_at: Time.current
+    )
+
+    result = Serpapi::Harvest.call(force: true, client: NoResultsClient.new)
+
+    assert_equal 0, result.added
+    assert_equal [ "stored-1" ], result.jobs.map(&:external_id)
+  end
+
   test "refuses to search without an API key" do
     error = assert_raises(Serpapi::MissingKey) do
       Serpapi::Harvest.call(client: FakeClient.new(api_key: ""))

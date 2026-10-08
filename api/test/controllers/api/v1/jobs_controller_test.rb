@@ -28,6 +28,30 @@ class Api::V1::JobsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "3 days ago", job["postedAt"]
   end
 
+  test "returns stored jobs when a live search fails" do
+    Job.create!(
+      external_id: "job-1",
+      title: "Rails Dev",
+      company_name: "Acme",
+      location: "Chennai, Tamil Nadu",
+      last_seen_at: Time.current
+    )
+    singleton = class << Serpapi::Harvest; self; end
+    original = Serpapi::Harvest.method(:call)
+    singleton.define_method(:call) do |*|
+      raise Serpapi::Error, "SerpApi could not be reached."
+    end
+
+    get api_v1_jobs_path
+
+    assert_response :success
+    assert_equal "job-1", JSON.parse(response.body).fetch("jobs").fetch(0).fetch("id")
+  ensure
+    singleton&.define_method(:call) do |*args, **kwargs, &block|
+      original.call(*args, **kwargs, &block)
+    end
+  end
+
   test "returns an error when the SerpApi key is missing" do
     original = ENV["SERPAPI_KEY"]
     ENV["SERPAPI_KEY"] = ""

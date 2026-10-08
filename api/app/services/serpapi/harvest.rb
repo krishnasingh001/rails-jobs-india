@@ -44,9 +44,21 @@ module Serpapi
       cursor = SearchCursor.find_or_initialize_by(query: search[:query], location: search[:location])
       token = cursor.next_page_token
       added = 0
+      dropped_token = false
 
       MAX_PAGES.times do
-        payload = client.google_jobs(query: search[:query], location: search[:location], next_page_token: token)
+        payload = fetch_page(search, token)
+        if payload.nil?
+          if token.present? && !dropped_token
+            token = nil
+            dropped_token = true
+            cursor.update!(next_page_token: nil)
+            redo
+          end
+          cursor.update!(next_page_token: nil)
+          break
+        end
+
         page_added = store_page(payload, search)
         added += page_added
         token = next_page_token(payload)
@@ -55,6 +67,18 @@ module Serpapi
       end
 
       added
+    end
+
+    def fetch_page(search, token)
+      client.google_jobs(query: search[:query], location: search[:location], next_page_token: token)
+    rescue Error => error
+      return nil if no_results?(error)
+
+      raise
+    end
+
+    def no_results?(error)
+      error.message.match?(/hasn't returned any results/i)
     end
 
     def store_page(payload, search)
