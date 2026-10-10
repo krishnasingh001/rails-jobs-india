@@ -31,11 +31,16 @@ function matchesQuery(job: JobPin, needle: string): boolean {
   return needle.split(/\s+/).every((word) => haystack.includes(word))
 }
 
+/** Jobs with a company logo come first, so the list opens with complete cards. */
+function logoFirst(a: JobPin, b: JobPin): number {
+  return Number(Boolean(b.thumbnail)) - Number(Boolean(a.thumbnail))
+}
+
 export function sortJobs(jobs: JobPin[], sort: SortKey): JobPin[] {
   const copy = [...jobs]
   if (sort === 'company') return copy.sort((a, b) => a.company.localeCompare(b.company) || postedTime(b) - postedTime(a))
-  if (sort === 'oldest') return copy.sort((a, b) => postedTime(a) - postedTime(b))
-  return copy.sort((a, b) => postedTime(b) - postedTime(a))
+  if (sort === 'oldest') return copy.sort((a, b) => logoFirst(a, b) || postedTime(a) - postedTime(b))
+  return copy.sort((a, b) => logoFirst(a, b) || postedTime(b) - postedTime(a))
 }
 
 /** Everything except the work-mode filter, so the mode chips can show counts for the rest of the filters. */

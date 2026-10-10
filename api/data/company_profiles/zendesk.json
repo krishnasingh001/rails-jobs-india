@@ -1,0 +1,54 @@
+{
+  "company_name": "Zendesk",
+  "query": "Zendesk: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:45:09Z",
+  "profile": {
+    "layoffs_last_year": [
+      {
+        "date": "2026-01",
+        "employees_affected": 350,
+        "percent_of_workforce": "≈5% (regional – Ireland/Dublin)"
+      },
+      {
+        "date": "2026-03-24",
+        "employees_affected": 100,
+        "percent_of_workforce": "N/A"
+      },
+      {
+        "date": "2026-08-04",
+        "employees_affected": 200,
+        "percent_of_workforce": "2.9%"
+      }
+    ],
+    "head_count": {
+      "total": 7613,
+      "as_of": "2026-07-31",
+      "source": "Tracxn"
+    },
+    "office_locations": [
+      "San Francisco, CA (HQ)",
+      "Madison, WI",
+      "Austin, TX",
+      "New York, NY",
+      "Dublin, Ireland",
+      "Melbourne, Australia",
+      "Berlin, Germany",
+      "São Paulo, Brazil",
+      "Pune, India",
+      "Mexico City, Mexico",
+      "Singapore",
+      "London, UK",
+      "and ~10 other locations (20 total offices)"
+    ],
+    "values": [
+      "Lead with exceptional customer service",
+      "Deliver the simplest solution",
+      "Show pride in our work",
+      "Care for each other"
+    ],
+    "founded_year": 2007,
+    "domain_area": "Zendesk is a cloud-based customer experience (CX) software company that provides unified customer service, support, and engagement solutions (help desk, chat, email, voice, AI) for businesses, serving the customer service / CX software industry."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": [\n    {\"date\": \"2026-01\", \"employees_affected\": 350, \"percent_of_workforce\": \"≈5% (regional – Ireland/Dublin)\"},\n    {\"date\": \"2026-03-24\", \"employees_affected\": 100, \"percent_of_workforce\": \"N/A\"},\n    {\"date\": \"2026-08-04\", \"employees_affected\": 200, \"percent_of_workforce\": \"2.9%\"}\n  ],\n  \"head_count\": {\"total\": 7613, \"as_of\": \"2026-07-31\", \"source\": \"Tracxn\"},\n  \"office_locations\": [\"San Francisco, CA (HQ)\", \"Madison, WI\", \"Austin, TX\", \"New York, NY\", \"Dublin, Ireland\", \"Melbourne, Australia\", \"Berlin, Germany\", \"São Paulo, Brazil\", \"Pune, India\", \"Mexico City, Mexico\", \"Singapore\", \"London, UK\", \"and ~10 other locations (20 total offices)\"],\n  \"values\": [\n    \"Lead with exceptional customer service\",\n    \"Deliver the simplest solution\",\n    \"Show pride in our work\",\n    \"Care for each other\"\n  ],\n  \"founded_year\": 2007,\n  \"domain_area\": \"Zendesk is a cloud-based customer experience (CX) software company that provides unified customer service, support, and engagement solutions (help desk, chat, email, voice, AI) for businesses, serving the customer service / CX software industry.\"\n}\n```\n\n### References",
+  "references": null
+}

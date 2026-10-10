@@ -1,0 +1,54 @@
+{
+  "company_name": "Accenture",
+  "query": "Accenture: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:49:10Z",
+  "profile": {
+    "layoffs_last_year": [
+      {
+        "date": "Late 2025 – ongoing into 2026",
+        "employees_affected": "~11,000",
+        "percent_of_workforce": "~1%",
+        "context": "AI-focused restructuring program ($865M); CEO Julie Sweet said the company is 'exiting people on a compressed timeline where reskilling is not a viable path.' Cuts expected to run through November 2025, with additional WARN filings in 2026 (e.g., March 2026: 54 roles, Atlanta, GA)."
+      }
+    ],
+    "head_count": {
+      "total": "~814,000",
+      "as_of": "2026"
+    },
+    "office_locations": {
+      "headquarters": "1 Grand Canal Square, Dublin, Ireland",
+      "countries": "120+",
+      "cities": "200+",
+      "major_hubs": [
+        "Dublin, Ireland",
+        "New York, USA",
+        "Atlanta, USA",
+        "San Jose, USA",
+        "Austin, USA",
+        "Bengaluru, India",
+        "Mumbai, India",
+        "Pune, India",
+        "Hyderabad, India",
+        "London, UK",
+        "Munich, Germany",
+        "Paris, France",
+        "Tokyo, Japan",
+        "Singapore",
+        "Sydney, Australia",
+        "São Paulo, Brazil"
+      ]
+    },
+    "values": [
+      "Client Value Creation",
+      "One Global Network",
+      "Respect for the Individual",
+      "Best People",
+      "Integrity",
+      "Stewardship"
+    ],
+    "founded_year": 1989,
+    "domain_area": "Accenture is a global professional services firm offering strategy and consulting, technology, and operations services across 40+ industries, with leading capabilities in digital, cloud, and security. It serves clients in over 120 countries."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": [\n    {\n      \"date\": \"Late 2025 – ongoing into 2026\",\n      \"employees_affected\": \"~11,000\",\n      \"percent_of_workforce\": \"~1%\",\n      \"context\": \"AI-focused restructuring program ($865M); CEO Julie Sweet said the company is 'exiting people on a compressed timeline where reskilling is not a viable path.' Cuts expected to run through November 2025, with additional WARN filings in 2026 (e.g., March 2026: 54 roles, Atlanta, GA).\"\n    }\n  ],\n  \"head_count\": {\n    \"total\": \"~814,000\",\n    \"as_of\": \"2026\"\n  },\n  \"office_locations\": {\n    \"headquarters\": \"1 Grand Canal Square, Dublin, Ireland\",\n    \"countries\": \"120+\",\n    \"cities\": \"200+\",\n    \"major_hubs\": [\n      \"Dublin, Ireland\",\n      \"New York, USA\",\n      \"Atlanta, USA\",\n      \"San Jose, USA\",\n      \"Austin, USA\",\n      \"Bengaluru, India\",\n      \"Mumbai, India\",\n      \"Pune, India\",\n      \"Hyderabad, India\",\n      \"London, UK\",\n      \"Munich, Germany\",\n      \"Paris, France\",\n      \"Tokyo, Japan\",\n      \"Singapore\",\n      \"Sydney, Australia\",\n      \"São Paulo, Brazil\"\n    ]\n  },\n  \"values\": [\n    \"Client Value Creation\",\n    \"One Global Network\",\n    \"Respect for the Individual\",\n    \"Best People\",\n    \"Integrity\",\n    \"Stewardship\"\n  ],\n  \"founded_year\": 1989,\n  \"domain_area\": \"Accenture is a global professional services firm offering strategy and consulting, technology, and operations services across 40+ industries, with leading capabilities in digital, cloud, and security. It serves clients in over 120 countries.\"\n}\n```\n\n### References",
+  "references": null
+}

@@ -90,6 +90,16 @@ class JobBlueprintTest < ActiveSupport::TestCase
     assert_nil payload[:thumbnail]
   end
 
+  test "prefers the stored company logo over the job thumbnail" do
+    company = Company.create!(company_name: "Acme", logo_data: "png", logo_content_type: "image/png")
+    Company.create!(company_name: "No Logo")
+    job = Job.new(external_id: "job-7", title: "T", company_name: "Acme", raw: { "thumbnail" => "https://img.example/logo.png" }, last_seen_at: Time.current)
+    plain = Job.new(external_id: "job-8", title: "T", company_name: "No Logo", raw: { "thumbnail" => "https://img.example/logo.png" }, last_seen_at: Time.current)
+
+    assert_equal "/api/v1/logos/#{company.id}?v=#{company.updated_at.to_i}", JobBlueprint.render_as_hash(job)[:thumbnail]
+    assert_equal "https://img.example/logo.png", JobBlueprint.render_as_hash(plain)[:thumbnail]
+  end
+
   test "renders whether the scrape found the job remote" do
     job = Job.new(external_id: "job-6", title: "T", company_name: "C", remote: true, remote_source: "extensions", last_seen_at: Time.current)
 

@@ -1,0 +1,30 @@
+{
+  "company_name": "Easyship",
+  "query": "Easyship: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:48:20Z",
+  "profile": {
+    "layoffs_last_year": "No layoffs recorded in the last 12 months. Headcount grew from 269 (2025) to 289 (March 2026), a +7.4% increase. Workopia's WARN/SEC tracker shows zero announced layoffs.",
+    "head_count": "289 employees as of March 2026 (Revelio Labs)",
+    "office_locations": [
+      "New York, USA",
+      "London, UK",
+      "Hong Kong",
+      "Singapore",
+      "Toronto, Canada",
+      "Melbourne, Australia",
+      "Taipei, Taiwan"
+    ],
+    "values": [
+      "Respect for employees, their ideas, and their best potential",
+      "Diversity drives innovation",
+      "Accountability delivers growth",
+      "Collaboration creates passion",
+      "Challenge the status quo",
+      "Democratize shipping for all"
+    ],
+    "founded_year": 2014,
+    "domain_area": "Easyship is a multi-carrier shipping software and logistics API platform serving the e-commerce industry, enabling merchants to compare rates, buy and print labels, and manage cross-border shipping across 550+ courier services in 200+ countries."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No layoffs recorded in the last 12 months. Headcount grew from 269 (2025) to 289 (March 2026), a +7.4% increase. Workopia's WARN/SEC tracker shows zero announced layoffs.\",\n  \"head_count\": \"289 employees as of March 2026 (Revelio Labs)\",\n  \"office_locations\": [\"New York, USA\", \"London, UK\", \"Hong Kong\", \"Singapore\", \"Toronto, Canada\", \"Melbourne, Australia\", \"Taipei, Taiwan\"],\n  \"values\": [\"Respect for employees, their ideas, and their best potential\", \"Diversity drives innovation\", \"Accountability delivers growth\", \"Collaboration creates passion\", \"Challenge the status quo\", \"Democratize shipping for all\"],\n  \"founded_year\": 2014,\n  \"domain_area\": \"Easyship is a multi-carrier shipping software and logistics API platform serving the e-commerce industry, enabling merchants to compare rates, buy and print labels, and manage cross-border shipping across 550+ courier services in 200+ countries.\"\n}\n```\n\n### References",
+  "references": null
+}

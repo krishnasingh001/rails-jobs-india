@@ -1,0 +1,31 @@
+{
+  "company_name": "Gojek",
+  "query": "Gojek: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:45:40Z",
+  "profile": {
+    "layoffs_last_year": "No confirmed layoffs found for Gojek (or parent GoTo) in the 12-month window from October 2025 to October 2026. The most recent confirmed round was in March 2023 (~600 employees at GoTo).",
+    "head_count": "~24,366 employees as of December 2025 (per Revelio Labs)",
+    "office_locations": [
+      "Jakarta, Indonesia (Headquarters)",
+      "Singapore (AXA Tower, 8 Shenton Way)",
+      "Bengaluru, India (Diamond District, Tower B)",
+      "Ho Chi Minh City, Vietnam (Representative Office)"
+    ],
+    "values": [
+      "It's Not About You",
+      "Stand Up For What You Believe In",
+      "Collaborate With Compassion",
+      "Be Fast and Fearless",
+      "Earn Your Title",
+      "Become a Scientist",
+      "Always Be Prepared",
+      "Criticism Is a Gift",
+      "Communicate With Purpose",
+      "Shoot for Greatness"
+    ],
+    "founded_year": 2010,
+    "domain_area": "Gojek is an Indonesian on-demand multi-service super app and digital payments platform, serving the ride-hailing, food/goods delivery, logistics, and fintech industries across Southeast Asia."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No confirmed layoffs found for Gojek (or parent GoTo) in the 12-month window from October 2025 to October 2026. The most recent confirmed round was in March 2023 (~600 employees at GoTo).\",\n  \"head_count\": \"~24,366 employees as of December 2025 (per Revelio Labs)\",\n  \"office_locations\": [\n    \"Jakarta, Indonesia (Headquarters)\",\n    \"Singapore (AXA Tower, 8 Shenton Way)\",\n    \"Bengaluru, India (Diamond District, Tower B)\",\n    \"Ho Chi Minh City, Vietnam (Representative Office)\"\n  ],\n  \"values\": [\n    \"It's Not About You\",\n    \"Stand Up For What You Believe In\",\n    \"Collaborate With Compassion\",\n    \"Be Fast and Fearless\",\n    \"Earn Your Title\",\n    \"Become a Scientist\",\n    \"Always Be Prepared\",\n    \"Criticism Is a Gift\",\n    \"Communicate With Purpose\",\n    \"Shoot for Greatness\"\n  ],\n  \"founded_year\": 2010,\n  \"domain_area\": \"Gojek is an Indonesian on-demand multi-service super app and digital payments platform, serving the ride-hailing, food/goods delivery, logistics, and fintech industries across Southeast Asia.\"\n}\n```\n\n### References",
+  "references": null
+}

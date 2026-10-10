@@ -2,6 +2,7 @@
   {
     "company_name": "Acme",
     "logo": "https://example.com/acme.png",
+    "logo_file": "acme.png",
     "job_count": 2,
     "states": ["Pune"],
     "locations": ["Pune, Maharashtra"],

@@ -31,8 +31,15 @@ class JobBlueprint < Blueprinter::Base
     job.raw["share_link"].presence
   end
 
+  # The stored logo, served by LogosController. The version in the query
+  # makes the browser fetch it again after an import changes it.
   field :thumbnail do |job|
-    job.raw["thumbnail"].presence
+    company = job.company
+    if company&.logo_content_type.present?
+      "/api/v1/logos/#{company.id}?v=#{company.updated_at.to_i}"
+    else
+      job.raw["thumbnail"].presence
+    end
   end
 
   # Where this listing came from: the SerpApi Google Jobs search that returned it

@@ -1,0 +1,15 @@
+{
+  "company_name": "G2",
+  "query": "G2: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:46:20Z",
+  "profile": {
+    "layoffs_last_year": "No specific verified WARN filings or public announcements with dates and headcount figures were found for G2.com, Inc. in the last 12 months (Oct 2025 – Oct 2026). A Glassdoor employee review references 'at least two formal layoffs' in the past year, but no employee count or percentage of workforce is publicly documented. (Note: 'G2 Secure Staff,' a separate staffing company, did file WARN notices in this period, but is not the same entity.)",
+    "head_count": "Approximately 1,500 employees as of March 2026 (Revelio Labs); 1,710 as of July 31, 2026 (Tracxn).",
+    "office_locations": "Chicago, IL (HQ); Bengaluru, India; London, UK; New York, NY; San Francisco, CA; plus other US, India, and UK sites (22 locations total).",
+    "values": "PEAK: Performance, Entrepreneurship, Authenticity, Kindness.",
+    "founded_year": 2012,
+    "domain_area": "G2 is the world's largest B2B software review and data marketplace, serving the technology industry by helping buyers research, compare, and purchase business software based on verified peer reviews."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": \"No specific verified WARN filings or public announcements with dates and headcount figures were found for G2.com, Inc. in the last 12 months (Oct 2025 – Oct 2026). A Glassdoor employee review references 'at least two formal layoffs' in the past year, but no employee count or percentage of workforce is publicly documented. (Note: 'G2 Secure Staff,' a separate staffing company, did file WARN notices in this period, but is not the same entity.)\",\n  \"head_count\": \"Approximately 1,500 employees as of March 2026 (Revelio Labs); 1,710 as of July 31, 2026 (Tracxn).\",\n  \"office_locations\": \"Chicago, IL (HQ); Bengaluru, India; London, UK; New York, NY; San Francisco, CA; plus other US, India, and UK sites (22 locations total).\",\n  \"values\": \"PEAK: Performance, Entrepreneurship, Authenticity, Kindness.\",\n  \"founded_year\": 2012,\n  \"domain_area\": \"G2 is the world's largest B2B software review and data marketplace, serving the technology industry by helping buyers research, compare, and purchase business software based on verified peer reviews.\"\n}\n```\n\n### References",
+  "references": null
+}
