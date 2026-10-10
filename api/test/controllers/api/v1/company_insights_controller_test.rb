@@ -1,9 +1,29 @@
 require "test_helper"
 
 class Api::V1::CompanyInsightsControllerTest < ActionDispatch::IntegrationTest
+  test "reads a json profile before a different database row" do
+    CompanyInsight.create!(
+      company_name: "Cisco",
+      profile: { "head_count" => "from the database" },
+      domain_area: "from the database"
+    )
+
+    get api_v1_company_insight_path, params: { company: "cisco" }
+
+    assert_response :success
+    insight = JSON.parse(response.body).fetch("insight")
+    assert_includes insight.fetch("layoffs"), "October 13, 2025"
+    assert_includes insight.fetch("layoffs"), "221 people"
+    assert_includes insight.fetch("headCount"), "82,400"
+    assert_includes insight.fetch("offices"), "San Jose, CA (HQ)"
+    assert_equal 1984, insight.fetch("foundedYear")
+    assert_equal "2026-10-04T09:55:07Z", insight.fetch("fetchedAt")
+    refute_includes insight.fetch("domainArea"), "from the database"
+  end
+
   test "returns the stored profile with its sources, matched case-insensitively" do
     CompanyInsight.create!(
-      company_name: "Excal Technologies",
+      company_name: "Stored Only Co",
       profile_fetched_at: Time.utc(2026, 10, 4, 9, 56),
       profile: {
         "layoffs_last_year" => "No layoffs found.",
@@ -19,7 +39,7 @@ class Api::V1::CompanyInsightsControllerTest < ActionDispatch::IntegrationTest
       ]
     )
 
-    get api_v1_company_insight_path, params: { company: "excal technologies" }
+    get api_v1_company_insight_path, params: { company: "stored only co" }
 
     assert_response :success
     insight = JSON.parse(response.body).fetch("insight")

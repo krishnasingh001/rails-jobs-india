@@ -22,11 +22,11 @@ const linkClass =
 
 function Fact({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-3">
+    <div className="flex items-start gap-2.5">
       <span className="mt-0.5 text-brand">{icon}</span>
       <div className="min-w-0">
         <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted">{label}</dt>
-        <dd className="mt-0.5 text-sm text-ink">{children}</dd>
+        <dd className="mt-0.5 text-sm leading-relaxed text-ink">{children}</dd>
       </div>
     </div>
   )
@@ -59,18 +59,98 @@ function highlight(paragraph: string, fit: JobFit | null) {
   })
 }
 
-function Description({ text, fit }: { text: string; fit: JobFit | null }) {
-  const paragraphs = text
-    .split(/\n{2,}/)
+const SECTION_TITLES = [
+  'Preferred Qualifications',
+  'Minimum Qualifications',
+  'What you will do',
+  "What you'll do",
+  'Job Description',
+  'Meet the Team',
+  'Your Impact',
+  'Responsibilities',
+  'Qualifications',
+  'Requirements',
+  'About the job',
+  'About the role',
+  'What we offer',
+  'Who we are',
+  'About us',
+  'The role',
+  'Benefits',
+  'Preferred',
+  'Disclaimer',
+]
+
+function separateHeadings(text: string): string {
+  let result = text.replace(/\r\n/g, '\n')
+  for (const title of SECTION_TITLES) {
+    result = result.replace(new RegExp(`(${escapeRegExp(title)})(?=[A-Za-z])`, 'gi'), '$1\n')
+  }
+  return result
+}
+
+function isSectionTitle(part: string): boolean {
+  const label = part.replace(/:$/, '').trim()
+  if (SECTION_TITLES.some((title) => title.toLowerCase() === label.toLowerCase())) return true
+  return label.length > 0 && label.length <= 40 && label.includes(' ') && !/[.!?,]/.test(label)
+}
+
+type DescriptionBlock =
+  | { kind: 'heading'; text: string }
+  | { kind: 'paragraph'; text: string }
+  | { kind: 'list'; items: string[] }
+
+function descriptionBlocks(text: string): DescriptionBlock[] {
+  const parts = separateHeadings(text)
+    .split(/\n+/)
     .map((part) => part.trim())
-    .filter(Boolean)
+    .filter((part) => part && !/^job description$/i.test(part))
+  const blocks: DescriptionBlock[] = []
+  let items: string[] = []
+  function flush() {
+    if (items.length === 0) return
+    blocks.push({ kind: 'list', items })
+    items = []
+  }
+  for (const part of parts) {
+    if (isSectionTitle(part)) {
+      flush()
+      blocks.push({ kind: 'heading', text: part.replace(/:$/, '') })
+      continue
+    }
+    if (part.includes(' ') && part.length < 280 && (part.match(/[.!?](?:\s|$)/g) ?? []).length <= 1) {
+      items.push(part)
+      continue
+    }
+    flush()
+    blocks.push({ kind: 'paragraph', text: part })
+  }
+  flush()
+  return blocks
+}
+
+function Description({ text, fit }: { text: string; fit: JobFit | null }) {
   return (
-    <div className="space-y-4 text-sm leading-relaxed text-ink">
-      {paragraphs.map((paragraph, index) => (
-        <p key={index} className="whitespace-pre-line">
-          {highlight(paragraph, fit)}
-        </p>
-      ))}
+    <div className="space-y-3 text-sm leading-relaxed text-ink">
+      {descriptionBlocks(text).map((block, index) => {
+        if (block.kind === 'heading') {
+          return (
+            <h3 key={index} className="pt-2 font-brand text-base font-semibold text-ink first:pt-0">
+              {block.text}
+            </h3>
+          )
+        }
+        if (block.kind === 'list') {
+          return (
+            <ul key={index} className="list-disc space-y-2 pl-5">
+              {block.items.map((item, itemIndex) => (
+                <li key={`${itemIndex}-${item}`}>{highlight(item, fit)}</li>
+              ))}
+            </ul>
+          )
+        }
+        return <p key={index}>{highlight(block.text, fit)}</p>
+      })}
     </div>
   )
 }
@@ -200,7 +280,7 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
               <h1
                 ref={headingRef}
                 tabIndex={-1}
-                className="font-brand text-2xl font-semibold text-ink outline-none sm:text-3xl"
+                className="font-brand text-2xl font-semibold leading-tight text-balance text-ink outline-none sm:text-3xl"
               >
                 {job.title}
               </h1>
@@ -272,9 +352,7 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
           onPickResume={setPickedResumeId}
         />
 
-        <CompanyInsightPanel key={job.company} company={job.company} />
-
-        <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="job-description">
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="job-description">
           <h2 id="job-description" className="font-brand text-lg font-semibold text-ink">
             About this role
           </h2>
@@ -287,25 +365,29 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
           </div>
         </section>
 
+        <CompanyInsightPanel key={job.company} company={job.company} />
+
         </div>
 
         <aside className="min-w-0 space-y-4" aria-label="Job details">
-        <dl className="grid gap-3">
-          <Fact icon={<MapPin className="h-4 w-4" aria-hidden="true" />} label="Location">
-            {job.locationLabel}
-          </Fact>
-          <Fact icon={<Building2 className="h-4 w-4" aria-hidden="true" />} label="Work mode">
-            {workModeLabel(job.workMode)}
-            {jobType ? ` · ${jobType}` : ''}
-          </Fact>
-          <Fact icon={<Wallet className="h-4 w-4" aria-hidden="true" />} label="Salary">
-            {job.salaryLabel ?? 'Not listed'}
-          </Fact>
-          <Fact icon={<Clock className="h-4 w-4" aria-hidden="true" />} label="Posted">
-            {posted ?? 'Not listed'}
-            {job.via ? ` · via ${job.via}` : ''}
-          </Fact>
-        </dl>
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" aria-label="Role facts">
+          <dl className="grid grid-cols-2 gap-x-4 gap-y-4">
+            <Fact icon={<MapPin className="h-4 w-4" aria-hidden="true" />} label="Location">
+              {job.locationLabel}
+            </Fact>
+            <Fact icon={<Building2 className="h-4 w-4" aria-hidden="true" />} label="Work mode">
+              {workModeLabel(job.workMode)}
+              {jobType ? ` · ${jobType}` : ''}
+            </Fact>
+            <Fact icon={<Wallet className="h-4 w-4" aria-hidden="true" />} label="Salary">
+              {job.salaryLabel ?? 'Not listed'}
+            </Fact>
+            <Fact icon={<Clock className="h-4 w-4" aria-hidden="true" />} label="Posted">
+              {posted ?? 'Not listed'}
+              {job.via ? ` · via ${job.via}` : ''}
+            </Fact>
+          </dl>
+        </section>
 
         <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="job-office">
           <h2 id="job-office" className="font-brand text-lg font-semibold text-ink">
@@ -395,10 +477,15 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
             <h2 id="job-apply" className="font-brand text-lg font-semibold text-ink">
               Other places to apply
             </h2>
-            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {otherOptions.map((option) => (
                 <li key={option.link}>
-                  <a href={option.link} target="_blank" rel="noreferrer" className={linkClass}>
+                  <a
+                    href={option.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex cursor-pointer items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-ink transition-colors duration-200 hover:border-brand-border hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                  >
                     {option.title}
                     <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                     <span className="sr-only">Opens in a new tab</span>
