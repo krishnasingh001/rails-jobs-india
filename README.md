@@ -7,15 +7,29 @@ Built for the [SerpApi India Hackathon 2026](https://serpapi.github.io/serpapi-i
 - Demo video: _add link here_
 - Live demo: _add link here (or run it locally, see below)_
 
----
+## Track
 
-## What is ROR India?
+**Knowledge & Public Interest**
 
-ROR India is a job board made only for **Ruby on Rails developers in India**. It shows you **where** the Rails jobs are on a map, and gives you the facts you need before you apply:
+## What it does
 
-- **About the job:** city, remote / hybrid / on-site, salary, posted date, the full description, and every place you can apply.
-- **About the company:** recent layoffs, head count, office locations, values and founding year, with source links so you can check them yourself.
-- **About you:** how well your resume fits the job, and where each of your applications stands.
+ROR India is a job board for Ruby on Rails roles in India. A map shows where the openings are. Each job page has the description, salary, work mode, posted date, and every place to apply. The company panel lists recent layoffs, head count, offices, values, and the year founded. A signed-in developer can check a resume against a role and move applications from applied to offer.
+
+## Who it helps
+
+Rails developers in India who are looking for a job. They can see which cities have work, judge a company before applying, and keep track of every application in one place.
+
+## How it uses SerpApi
+
+SerpApi is the data source. The listings and company facts are not written by hand.
+
+| Engine | Role |
+|---|---|
+| `google_jobs` | Finds live Rails openings and keeps the original description, salary, and apply links. |
+| `google_maps` | Finds the company's office the first time someone clicks **Show office** for that company and city. |
+| `brave_ai_mode` | Builds the company profile (layoffs, head count, offices, values) when `data:fetch_company_profile` is run. |
+
+Opening the map or a job reads saved data from PostgreSQL and `api/data/`. That request does not call SerpApi. The key stays in `api/.env` and is never sent to the browser.
 
 ---
 
