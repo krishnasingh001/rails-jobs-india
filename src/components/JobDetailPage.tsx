@@ -341,6 +341,8 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
 
         <div className="mt-4 grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_22rem] xl:grid-cols-[minmax(0,1fr)_26rem]">
         <div className="min-w-0 space-y-4">
+        <CompanyInsightPanel key={job.company} company={job.company} />
+
         <JobFitCard
           fit={fit}
           error={fitError}
@@ -364,8 +366,6 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
             )}
           </div>
         </section>
-
-        <CompanyInsightPanel key={job.company} company={job.company} />
 
         </div>
 

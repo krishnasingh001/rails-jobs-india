@@ -1,5 +1,6 @@
 import { PageSheet } from './AppShell.tsx'
 import { GripVertical } from 'lucide-react'
+import { createPortal } from 'react-dom'
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from 'react'
 import {
   APPLICATION_STATUSES,
@@ -117,6 +118,7 @@ export function ApplicationsBoard({ onClose }: { onClose: () => void }) {
 
   function startDrag(event: ReactPointerEvent<HTMLDivElement>, application: TrackedApplication) {
     if (event.button !== 0 || busyId === application.id) return
+    event.preventDefault()
     const card = event.currentTarget
     const rect = card.getBoundingClientRect()
     const originX = event.clientX
@@ -269,20 +271,23 @@ export function ApplicationsBoard({ onClose }: { onClose: () => void }) {
         </div>
       ) : null}
 
-      {ghost ? (
-        <div
-          className="pointer-events-none fixed z-50 rounded-xl border border-brand bg-white p-2 shadow-lg"
-          style={{ left: ghost.x, top: ghost.y, width: ghost.width }}
-        >
-          <div className="flex items-start gap-1.5">
-            <GripVertical className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
-            <div className="min-w-0">
-              <p className="text-sm font-semibold text-ink">{ghost.title}</p>
-              <p className="mt-0.5 text-xs text-ink">{ghost.company}</p>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      {ghost
+        ? createPortal(
+            <div
+              className="pointer-events-none fixed z-[60] rounded-xl border border-brand bg-white p-2 shadow-lg"
+              style={{ left: ghost.x, top: ghost.y, width: ghost.width }}
+            >
+              <div className="flex items-start gap-1.5">
+                <GripVertical className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-ink">{ghost.title}</p>
+                  <p className="mt-0.5 text-xs text-ink">{ghost.company}</p>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </PageSheet>
   )
 }
