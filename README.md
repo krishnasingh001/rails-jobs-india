@@ -27,13 +27,14 @@ If you are a Rails developer in India, finding a job is slow and scattered:
 | See fresh jobs, not last month's | The backend pulls new listings from Google Jobs on a schedule. Visitors never trigger a fetch. |
 | Find jobs near you | Pick a city or tap Locate to see roles by distance. Filter by work mode, place or keyword. |
 | Understand a job quickly | A detail page with the description, salary, work mode, posted date and every place you can apply. |
+| See jobs picked for you | Save your cities, work mode, expected salary, years of experience and AI fluency (or read them from your resume). The **Jobs for you** page ranks every opening against them and shows why. |
 | Know if you fit | A job fit check compares the skills in the posting with your saved skills and highlights what matches. |
 | Improve your resume | An ATS resume checker scores your resume and finds your skills. |
 | Know where the office is | A Google Maps lookup shows the company's real office location. |
 | Judge the company | A company panel: layoffs, head count, offices, values and founding year, **with the sources linked** so you can check them. |
 | Keep track | Create an account, save jobs and move them from applied to offer. |
 
-**Business impact:** a job seeker spends minutes, not hours, finding relevant roles and screening companies. For recruiters and community leaders, the map shows where Rails talent demand is concentrated across India.
+**Business impact:** a job seeker spends minutes, not hours, finding relevant roles and screening companies. For community leaders, the map shows where Rails talent demand is concentrated across India.
 
 ---
 
@@ -126,6 +127,12 @@ Key places to look:
 
 ---
 
+## Upcoming features
+
+- **Recruiter accounts.** A separate sign-up for recruiters (business email only), so they can post roles and see Rails talent demand. Not available yet; every account today is a job seeker.
+
+---
+
 ## Credits
 
 - **[SerpApi](https://serpapi.com)** for all live data: Google Jobs, Google Maps and Brave AI Mode (see above).
@@ -144,6 +151,7 @@ Key places to look:
 
 - Right now the focus is **Rails jobs** in 8 regions, not every tech job in India.
 - Company profiles are AI-assisted summaries from web sources. They are a starting point: check the linked sources before you decide.
+- Years of experience and AI fluency read from a resume are keyword and date-range estimates you can edit. "Jobs for you" scores only what both you and the job state; many listings have no salary or no years requirement.
 - The job fit check is a keyword match against a fixed skills list. It does not read years of experience or soft requirements.
 - Salary and apply links come from Google Jobs and are only as complete as the listing.
 

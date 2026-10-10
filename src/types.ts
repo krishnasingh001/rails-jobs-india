@@ -21,6 +21,7 @@ export type JobPin = {
   applyOptions: ApplyOption[]
   shareLink: string | null
   thumbnail: string | null
+  skills: string[]
   provenance: Provenance
 }
 

@@ -106,6 +106,7 @@ function buildJobs(): JobPin[] {
       applyOptions: [],
       shareLink: null,
       thumbnail: null,
+      skills: [],
       provenance: { source: 'Fixture', via: null, query: null, searchLocation: null, firstSeenAt: null, fetchedAt: null, originalUrl: null },
     }
   })

@@ -6,7 +6,10 @@ import {
   logoutAccount,
   registerAccount,
   saveAuthToken,
+  saveProfile,
   type Account,
+  type AiLevel,
+  type ProfileUpdate,
 } from '../lib/auth.ts'
 
 type AuthContextValue = {
@@ -18,10 +21,14 @@ type AuthContextValue = {
     email: string
     password: string
     password_confirmation: string
-    role: string
+    role?: string
     resume_url?: string
     skills?: string[]
+    years_experience?: number | null
+    resume_ai_fluency?: AiLevel | null
+    resume_ai_signals?: string[]
   }) => Promise<void>
+  updateProfile: (update: ProfileUpdate) => Promise<void>
   logout: () => Promise<void>
 }
 
@@ -60,9 +67,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       email: string
       password: string
       password_confirmation: string
-      role: string
+      role?: string
       resume_url?: string
       skills?: string[]
+      years_experience?: number | null
+      resume_ai_fluency?: AiLevel | null
+      resume_ai_signals?: string[]
     }) => {
       const result = await registerAccount(payload)
       if (result.auth_token) saveAuthToken(result.auth_token)
@@ -70,6 +80,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     [],
   )
+
+  const updateProfile = useCallback(async (update: ProfileUpdate) => {
+    const result = await saveProfile(update)
+    if (result.user) setUser(result.user)
+  }, [])
 
   const logout = useCallback(async () => {
     try {
@@ -80,7 +95,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const value = useMemo(() => ({ user, loading, login, register, logout }), [user, loading, login, register, logout])
+  const value = useMemo(() => ({ user, loading, login, register, updateProfile, logout }), [user, loading, login, register, updateProfile, logout])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

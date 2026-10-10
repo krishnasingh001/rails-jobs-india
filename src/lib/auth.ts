@@ -4,10 +4,34 @@ export type Account = {
   id: number
   name: string
   email: string
-  role: 'candidate' | 'recruiter'
+  role: 'candidate'
   resume_url?: string | null
   skills?: string[]
+  preferred_cities?: string[]
+  work_modes?: WorkModePreference[]
+  expected_salary_lpa?: number | null
+  years_experience?: number | null
+  ai_fluency?: AiLevel | null
+  resume_ai_fluency?: AiLevel | null
+  resume_ai_signals?: string[]
+  avatar?: string | null
 }
+
+export type WorkModePreference = 'remote' | 'hybrid' | 'onsite'
+export type AiLevel = 'none' | 'user' | 'builder' | 'expert'
+
+export type ProfileUpdate = Partial<{
+  skills: string[]
+  resume_url: string
+  avatar: string | null
+  preferred_cities: string[]
+  work_modes: WorkModePreference[]
+  expected_salary_lpa: number | null
+  years_experience: number | null
+  ai_fluency: AiLevel | null
+  resume_ai_fluency: AiLevel | null
+  resume_ai_signals: string[]
+}>
 
 export function authToken(): string | null {
   return localStorage.getItem(TOKEN_KEY)
@@ -62,9 +86,12 @@ export function registerAccount(payload: {
   email: string
   password: string
   password_confirmation: string
-  role: string
+  role?: string
   resume_url?: string
   skills?: string[]
+  years_experience?: number | null
+  resume_ai_fluency?: AiLevel | null
+  resume_ai_signals?: string[]
 }) {
   return request('/api/v1/auth/register', {
     method: 'POST',
@@ -74,4 +101,8 @@ export function registerAccount(payload: {
 
 export function logoutAccount() {
   return request('/api/v1/auth/logout', { method: 'DELETE' })
+}
+
+export function saveProfile(update: ProfileUpdate) {
+  return request('/api/v1/profile', { method: 'PATCH', body: JSON.stringify(update) })
 }

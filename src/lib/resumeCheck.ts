@@ -25,7 +25,7 @@ export type AtsCheckReport = {
   categories: AtsCheckCategory[]
 }
 
-import { authToken } from './auth.ts'
+import { authToken, type AiLevel } from './auth.ts'
 
 export type SavedResumeCheck = {
   id: number
@@ -68,13 +68,36 @@ export async function checkResume(file: File, targetRole: string): Promise<{ rep
   return { report: payload.data, saved: Boolean(payload.meta?.saved) }
 }
 
-export async function extractResumeSkills(file: File): Promise<string[]> {
+export type ResumeProfile = {
+  skills: string[]
+  yearsExperience: number | null
+  experienceSource: 'stated' | 'dates' | null
+  aiLevel: AiLevel
+  aiSignals: string[]
+}
+
+export async function extractResumeProfile(file: File): Promise<ResumeProfile> {
   const form = new FormData()
   form.append('resume', file)
   const response = await fetch('/api/v1/resume_skills', { method: 'POST', body: form, headers: { accept: 'application/json' } })
-  const payload = (await response.json().catch(() => null)) as { skills?: string[]; message?: string } | null
+  const payload = (await response.json().catch(() => null)) as {
+    skills?: string[]
+    years_experience?: { years: number | null; source: 'stated' | 'dates' | null }
+    ai_fluency?: { level: AiLevel; signals: string[] }
+    message?: string
+  } | null
   if (!response.ok || !payload?.skills) throw new Error(payload?.message || 'Could not read this resume.')
-  return payload.skills
+  return {
+    skills: payload.skills,
+    yearsExperience: payload.years_experience?.years ?? null,
+    experienceSource: payload.years_experience?.source ?? null,
+    aiLevel: payload.ai_fluency?.level ?? 'none',
+    aiSignals: payload.ai_fluency?.signals ?? [],
+  }
+}
+
+export async function extractResumeSkills(file: File): Promise<string[]> {
+  return (await extractResumeProfile(file)).skills
 }
 
 export async function listResumeChecks(): Promise<SavedResumeCheck[]> {

@@ -6,6 +6,8 @@ import { AtsResumeChecker } from './components/AtsResumeChecker.tsx'
 import { ApplicationsBoard } from './components/ApplicationsBoard.tsx'
 import { SignInScreen, SignUpScreen } from './components/AuthScreens.tsx'
 import { IndiaJobsMap } from './components/IndiaJobsMap.tsx'
+import { JobsForYouPage } from './components/JobsForYouPage.tsx'
+import { ProfilePage } from './components/ProfilePage.tsx'
 import { JobDetailPage } from './components/JobDetailPage.tsx'
 import { serpApiJobsSource } from './data/serpJobs.ts'
 import { countJobsByState, withJobCounts } from './lib/aggregateJobs.ts'
@@ -105,11 +107,25 @@ export default function App() {
         <PageOverlay density={density}>
           <Routes>
             <Route path="/sign-in" element={<SignInScreen onSignUp={() => navigate('/sign-up')} onSuccess={home} onClose={home} />} />
-            <Route path="/sign-up" element={<SignUpScreen onSignIn={() => navigate('/sign-in')} onSuccess={home} onClose={home} />} />
+            <Route path="/sign-up" element={<SignUpScreen onSignIn={() => navigate('/sign-in')} onSuccess={() => navigate('/profile')} onClose={home} />} />
             <Route path="/ats" element={<AtsResumeChecker onClose={home} />} />
             <Route
               path="/applications"
               element={authLoading ? null : user ? <ApplicationsBoard onClose={home} /> : <Navigate to="/sign-in" replace />}
+            />
+            <Route
+              path="/for-you"
+              element={
+                authLoading ? null : user ? (
+                  <JobsForYouPage jobs={load.jobs} onOpenJob={(job) => navigate(`/jobs/${encodeURIComponent(job.id)}`)} />
+                ) : (
+                  <Navigate to="/sign-in" replace />
+                )
+              }
+            />
+            <Route
+              path="/profile"
+              element={authLoading ? null : user ? <ProfilePage onClose={home} /> : <Navigate to="/sign-in" replace />}
             />
             <Route
               path="/jobs/:id"

@@ -16,6 +16,7 @@ type SerpJob = {
   applyOptions?: ApplyOption[]
   shareLink?: string | null
   thumbnail?: string | null
+  skills?: string[]
   provenance?: Partial<Provenance>
 }
 
@@ -49,6 +50,7 @@ function toJobPin(job: SerpJob): JobPin {
     applyOptions: job.applyOptions ?? [],
     shareLink: job.shareLink ?? null,
     thumbnail: job.thumbnail ?? null,
+    skills: job.skills ?? [],
     provenance: {
       source: job.provenance?.source ?? 'Google Jobs',
       via: job.provenance?.via ?? null,

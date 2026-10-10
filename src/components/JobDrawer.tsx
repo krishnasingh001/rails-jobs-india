@@ -5,6 +5,7 @@ import { loadCompanyPlace, type CompanyPlace } from '../data/companyPlace.ts'
 import { formatKilometres, travelSense } from '../lib/formatDistance.ts'
 import { trackJob } from '../lib/applications.ts'
 import { formatPosted, workModeLabel } from '../lib/jobLabels.ts'
+import { matchTone, type JobMatch } from '../lib/matchJobs.ts'
 import type { JobPin } from '../types.ts'
 
 type JobDrawerProps = {
@@ -60,11 +61,13 @@ function shortDate(postedAt: string): string {
 
 export function JobCard({
   job,
+  match,
   onShowOffice,
   onOpenJob,
 }: {
   job: JobPin
-  onShowOffice: (place: CompanyPlace) => void
+  match?: JobMatch
+  onShowOffice?: (place: CompanyPlace) => void
   onOpenJob: (job: JobPin) => void
 }) {
   const { user } = useAuth()
@@ -76,7 +79,7 @@ export function JobCard({
   const [trackMessage, setTrackMessage] = useState<string | null>(null)
 
   function reveal(found: CompanyPlace) {
-    if (found.latitude != null && found.longitude != null) onShowOffice(found)
+    if (found.latitude != null && found.longitude != null) onShowOffice?.(found)
   }
 
   async function toggleOffice() {
@@ -136,6 +139,23 @@ export function JobCard({
           </span>
         </span>
       </button>
+      {match ? (
+        <div className="flex flex-wrap items-center gap-1.5 px-3 pb-2.5">
+          <span className={`rounded-full px-2 py-0.5 text-xs font-bold tabular-nums ${matchTone(match.score).className}`}>
+            {match.score}% · {matchTone(match.score).label}
+          </span>
+          {match.reasons.map((reason) => (
+            <span
+              key={reason.kind}
+              className={`rounded-full px-2 py-0.5 text-xs font-medium ${reason.ok ? 'bg-emerald-50 text-emerald-800' : 'bg-amber-50 text-amber-900'}`}
+            >
+              <span aria-hidden="true">{reason.ok ? '✓ ' : '! '}</span>
+              <span className="sr-only">{reason.ok ? 'Matches: ' : 'Does not match: '}</span>
+              {reason.label}
+            </span>
+          ))}
+        </div>
+      ) : null}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-slate-100 px-3 py-2">
         <button
           type="button"
@@ -188,7 +208,7 @@ export function JobCard({
             <div>
               {place.name ? <p className="text-sm font-semibold text-ink">{place.name}</p> : null}
               <p className="mt-1 text-sm text-ink">{place.address}</p>
-              {place.latitude != null && place.longitude != null ? (
+              {onShowOffice && place.latitude != null && place.longitude != null ? (
                 <button
                   type="button"
                   className="mt-2 inline-flex cursor-pointer items-center gap-1 text-sm font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"

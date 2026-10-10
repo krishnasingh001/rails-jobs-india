@@ -1,41 +1,7 @@
 import { PageSheet } from './AppShell.tsx'
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { useAuth } from '../context/AuthContext.tsx'
-import { checkResume, extractResumeSkills, validateResumeFile } from '../lib/resumeCheck.ts'
-
-const FREE_EMAIL_DOMAINS = new Set([
-  'gmail.com',
-  'googlemail.com',
-  'yahoo.com',
-  'yahoo.co.in',
-  'yahoo.co.uk',
-  'ymail.com',
-  'hotmail.com',
-  'hotmail.co.uk',
-  'outlook.com',
-  'live.com',
-  'msn.com',
-  'icloud.com',
-  'me.com',
-  'mac.com',
-  'proton.me',
-  'protonmail.com',
-  'aol.com',
-  'zoho.com',
-  'zohomail.com',
-  'gmx.com',
-  'gmx.net',
-  'mail.com',
-  'yandex.com',
-  'yandex.ru',
-  'rediffmail.com',
-  'inbox.com',
-])
-
-function isFreeEmail(email: string) {
-  const domain = email.trim().toLowerCase().split('@')[1]
-  return Boolean(domain && FREE_EMAIL_DOMAINS.has(domain))
-}
+import { checkResume, extractResumeProfile, validateResumeFile, type ResumeProfile } from '../lib/resumeCheck.ts'
 
 const fieldClass =
   'mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-ink transition-colors duration-200 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/15'
@@ -169,11 +135,11 @@ export function SignUpScreen({
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
-  const [role, setRole] = useState('candidate')
   const [resumeUrl, setResumeUrl] = useState('')
   const [skills, setSkills] = useState<string[]>([])
   const [resumeName, setResumeName] = useState<string | null>(null)
   const [resumeFile, setResumeFile] = useState<File | null>(null)
+  const [resumeInfo, setResumeInfo] = useState<ResumeProfile | null>(null)
   const [reading, setReading] = useState(false)
   const [resumeError, setResumeError] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -189,7 +155,9 @@ export function SignUpScreen({
     setReading(true)
     setResumeError(null)
     try {
-      const found = await extractResumeSkills(file)
+      const info = await extractResumeProfile(file)
+      const found = info.skills
+      setResumeInfo(info)
       setResumeName(file.name)
       setResumeFile(file)
       setSkills((current) => [...current, ...found.filter((skill) => !current.some((c) => c.toLowerCase() === skill.toLowerCase()))])
@@ -204,21 +172,19 @@ export function SignUpScreen({
     event.preventDefault()
     setBusy(true)
     setError(null)
-    if (role === 'recruiter' && isFreeEmail(email)) {
-      setError('Recruiters must sign up with a business email. Personal emails (Gmail, Yahoo, Outlook, etc.) are not allowed.')
-      setBusy(false)
-      return
-    }
     try {
       await register({
         name,
         email,
         password,
         password_confirmation: passwordConfirmation,
-        role,
-        ...(role === 'candidate' ? { resume_url: resumeUrl.trim(), skills } : {}),
+        resume_url: resumeUrl.trim(),
+        skills,
+        years_experience: resumeInfo?.yearsExperience ?? null,
+        resume_ai_fluency: resumeInfo?.aiLevel ?? null,
+        resume_ai_signals: resumeInfo?.aiSignals ?? [],
       })
-      if (role === 'candidate' && resumeFile) {
+      if (resumeFile) {
         // Keep the signup resume in the ATS history. The account already exists, so a failure here must not block sign-up.
         await checkResume(resumeFile, '').catch(() => undefined)
       }
@@ -234,7 +200,7 @@ export function SignUpScreen({
     <AuthShell
       kicker="Get started"
       title="Create your account"
-      subtitle="Join as a candidate or recruiter."
+      subtitle="Save jobs, check your resume and get matched to Rails roles."
       footer={
         <>
           Already have an account?{' '}
@@ -259,39 +225,19 @@ export function SignUpScreen({
         </div>
         <div>
           <label htmlFor="signup-email" className="text-xs font-medium text-ink-muted">
-            {role === 'recruiter' ? 'Work email' : 'Email'}
+            Email
           </label>
           <input
             id="signup-email"
             type="email"
             autoComplete="email"
             required
-            placeholder={role === 'recruiter' ? 'you@company.com' : undefined}
             className={fieldClass}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
-          {role === 'recruiter' ? (
-            <p className="mt-1.5 text-xs text-ink-muted">Use your company email. Personal providers like Gmail or Yahoo are not accepted.</p>
-          ) : null}
         </div>
-        <fieldset>
-          <legend className="text-xs font-medium text-ink-muted">I am a</legend>
-          <div className="mt-1.5 grid grid-cols-2 gap-2">
-            {(['candidate', 'recruiter'] as const).map((option) => (
-              <label
-                key={option}
-                className={`flex cursor-pointer items-center justify-center rounded-xl border px-3 py-3 text-sm font-semibold transition-colors duration-200 ${
-                  role === option ? 'border-brand bg-brand-soft text-brand' : 'border-slate-200 bg-white text-ink-muted hover:bg-brand-soft/70'
-                }`}
-              >
-                <input type="radio" name="role" value={option} checked={role === option} onChange={() => setRole(option)} className="sr-only" />
-                {option === 'candidate' ? 'Candidate' : 'Recruiter'}
-              </label>
-            ))}
-          </div>
-        </fieldset>
-        {role === 'candidate' ? (
+        {(
           <section className="space-y-3 rounded-xl border border-slate-200 p-3">
             <div>
               <label htmlFor="resume-file" className="text-xs font-medium text-ink-muted">
@@ -349,7 +295,7 @@ export function SignUpScreen({
               />
             </div>
           </section>
-        ) : null}
+        )}
         <div>
           <label htmlFor="signup-password" className="text-xs font-medium text-ink-muted">
             Password
