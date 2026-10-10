@@ -70,4 +70,13 @@ class Api::V1::UserResumesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_not UserResume.exists?(mine.id)
   end
+
+  test "clears years of experience when the field is sent blank" do
+    mine = @user.user_resumes.create!(label: "Backend", years_experience: 4)
+
+    patch api_v1_user_resume_path(mine), headers: @headers, params: { years_experience: "" }
+
+    assert_response :success
+    assert_nil mine.reload.years_experience
+  end
 end

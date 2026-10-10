@@ -57,4 +57,37 @@ class Serpapi::GoogleJobTest < ActiveSupport::TestCase
     assert_equal true, listing.attributes[:remote]
     assert_equal "extensions", listing.attributes[:remote_source]
   end
+
+  test "ignores an apply option that is not a link" do
+    missing = Serpapi::GoogleJob.new(
+      { "job_id" => "job-4", "apply_options" => [ "Apply", { "link" => "" } ] },
+      query: "Ruby on Rails",
+      search_location: "India"
+    )
+    number = Serpapi::GoogleJob.new(
+      { "job_id" => "job-4b", "apply_options" => [ { "link" => 12 } ] },
+      query: "Ruby on Rails",
+      search_location: "India"
+    )
+
+    assert_nil missing.attributes[:apply_url]
+    assert_nil number.attributes[:apply_url]
+  end
+
+  test "drops a link that has no host or is not a valid url" do
+    relative = Serpapi::GoogleJob.new(
+      { "job_id" => "job-5", "apply_options" => [ { "link" => "/jobs/1" } ] },
+      query: "Ruby on Rails",
+      search_location: "India"
+    )
+    broken = Serpapi::GoogleJob.new(
+      { "job_id" => "job-6", "apply_options" => [ { "link" => "https://exa mple.com/jobs/1" } ] },
+      query: "Ruby on Rails",
+      search_location: "India"
+    )
+
+    assert_equal "/jobs/1", relative.attributes[:apply_url]
+    assert_nil relative.attributes[:apply_host]
+    assert_nil broken.attributes[:apply_host]
+  end
 end

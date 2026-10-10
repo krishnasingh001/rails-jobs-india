@@ -1,5 +1,4 @@
-export function MapChrome({ showBack, onBack }: { showBack: boolean; onBack: () => void }) {
-  if (!showBack) return null
+export function MapChrome({ onBack }: { onBack: () => void }) {
   return (
     <div className="absolute left-4 top-[4.5rem] z-40 md:left-[calc(min(34rem,45vw)+1rem)]">
       <button

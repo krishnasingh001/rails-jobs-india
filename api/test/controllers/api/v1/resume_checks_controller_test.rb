@@ -96,6 +96,33 @@ class Api::V1::ResumeChecksControllerTest < ActionDispatch::IntegrationTest
     { "Authorization" => "Bearer #{Session.start!(user)}" }
   end
 
+  test "saves a pdf with a pdf content type" do
+    headers = sign_in_headers
+    text = "Asha Verma asha@example.com Ruby Rails Experience Skills Education"
+    pdf = +"%PDF-1.4\n"
+    objs = [
+      "<< /Type /Catalog /Pages 2 0 R >>", "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+      "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>",
+      nil, "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"
+    ]
+    stream = "BT /F1 12 Tf 50 700 Td (#{text}) Tj ET"
+    objs[3] = "<< /Length #{stream.length} >>\nstream\n#{stream}\nendstream"
+    offsets = objs.each_with_index.map do |body, i|
+      off = pdf.bytesize
+      pdf << "#{i + 1} 0 obj\n#{body}\nendobj\n"
+      off
+    end
+    xref = pdf.bytesize
+    pdf << "xref\n0 #{objs.size + 1}\n0000000000 65535 f \n" + offsets.map { |o| format("%010d 00000 n \n", o) }.join
+    pdf << "trailer\n<< /Size #{objs.size + 1} /Root 1 0 R >>\nstartxref\n#{xref}\n%%EOF"
+    file = Rack::Test::UploadedFile.new(StringIO.new(pdf), "application/pdf", original_filename: "asha.pdf")
+
+    post api_v1_resume_checks_path, params: { resume: file }, headers: headers
+
+    assert_response :success
+    assert_equal "application/pdf", ResumeCheck.last.content_type
+  end
+
   test "signed-out checks are not saved" do
     post api_v1_resume_checks_path, params: { resume: docx_upload(RESUME_LINES) }
 

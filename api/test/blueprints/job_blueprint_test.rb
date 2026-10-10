@@ -40,8 +40,8 @@ class JobBlueprintTest < ActiveSupport::TestCase
       via: "Jooble",
       last_seen_at: Time.current,
       raw: {
-        "extensions" => ["3 days ago", "Full–time", nil],
-        "apply_options" => [{ "title" => "Jooble", "link" => "https://jooble.example/1" }, { "title" => "No link" }],
+        "extensions" => [ "3 days ago", "Full–time", nil ],
+        "apply_options" => [ { "title" => "Jooble", "link" => "https://jooble.example/1" }, { "title" => "No link" } ],
         "share_link" => "https://google.example/share",
         "thumbnail" => "https://img.example/logo.png"
       }
@@ -51,8 +51,8 @@ class JobBlueprintTest < ActiveSupport::TestCase
 
     assert_equal "Build things.\n\nShip them.", payload[:description]
     assert_equal "Jooble", payload[:via]
-    assert_equal ["3 days ago", "Full–time"], payload[:extensions]
-    assert_equal [{ title: "Jooble", link: "https://jooble.example/1" }], payload[:applyOptions]
+    assert_equal [ "3 days ago", "Full–time" ], payload[:extensions]
+    assert_equal [ { title: "Jooble", link: "https://jooble.example/1" } ], payload[:applyOptions]
     assert_equal "https://google.example/share", payload[:shareLink]
     assert_equal "https://img.example/logo.png", payload[:thumbnail]
   end
@@ -97,5 +97,21 @@ class JobBlueprintTest < ActiveSupport::TestCase
 
     assert_equal true, payload[:remote]
     assert_equal "extensions", payload[:remoteSource]
+  end
+
+  test "omits fetchedAt when the listing has no crawl time" do
+    job = Job.new(external_id: "job-7", title: "T", company_name: "C", last_seen_at: Time.current)
+    job.define_singleton_method(:last_seen_at) { nil }
+
+    assert_nil JobBlueprint.render_as_hash(job)[:provenance][:fetchedAt]
+  end
+
+  test "omits fetchedAt when the crawl time cannot be converted to utc" do
+    job = Job.new(external_id: "job-8", title: "T", company_name: "C", last_seen_at: Time.current)
+    stamp = Object.new
+    stamp.define_singleton_method(:utc) { nil }
+    job.define_singleton_method(:last_seen_at) { stamp }
+
+    assert_nil JobBlueprint.render_as_hash(job)[:provenance][:fetchedAt]
   end
 end

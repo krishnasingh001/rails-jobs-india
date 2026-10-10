@@ -1,0 +1,12 @@
+[
+  {
+    "company_name": "Acme",
+    "logo": "https://example.com/acme.png",
+    "job_count": 2,
+    "states": ["Pune"],
+    "locations": ["Pune, Maharashtra"],
+    "via_sources": ["BeBee"],
+    "job_ids": ["job-fixture-1"]
+  },
+  { "company_name": "Bare Co" }
+]

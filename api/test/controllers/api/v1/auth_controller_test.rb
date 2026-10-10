@@ -79,4 +79,46 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal [], JSON.parse(response.body).dig("user", "resumes")
   end
+
+  test "keeps the first eight string signals from sign up" do
+    signals = (1..9).map { |index| "signal #{index}" } + [ 4 ]
+
+    post api_v1_auth_register_path, params: {
+      name: "Asha", email: "signals@example.com", password: "secret1", password_confirmation: "secret1",
+      skills: [ "Ruby" ], resume_ai_signals: signals
+    }, as: :json
+
+    assert_response :created
+    stored = JSON.parse(response.body).dig("user", "resumes").first.fetch("ai_signals")
+    assert_equal (1..8).map { |index| "signal #{index}" }, stored
+  end
+
+  test "login with an unknown email is rejected" do
+    post api_v1_auth_login_path, params: { email: "missing@example.com", password: "secret1" }, as: :json
+
+    assert_response :unauthorized
+  end
+
+  test "logout without a session still succeeds" do
+    delete api_v1_auth_logout_path, as: :json
+    assert_response :success
+
+    delete api_v1_auth_logout_path, headers: { "Authorization" => "Bearer not-a-session" }, as: :json
+    assert_response :success
+  end
+
+  test "register explains when the account cannot be saved" do
+    user = User.new
+    user.define_singleton_method(:save) { false }
+    user.errors.define_singleton_method(:full_messages) { [] }
+    User.singleton_class.alias_method(:new_without_stub, :new)
+    User.define_singleton_method(:new) { |*| user }
+
+    post api_v1_auth_register_path, params: { name: "Asha", email: "asha@example.com", password: "secret1" }, as: :json
+
+    assert_response :unprocessable_entity
+    assert_equal "Could not create your account.", JSON.parse(response.body).fetch("message")
+  ensure
+    User.singleton_class.alias_method(:new, :new_without_stub)
+  end
 end

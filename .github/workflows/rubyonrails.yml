@@ -1,60 +1,110 @@
-# This workflow uses actions that are not certified by GitHub.  They are
-# provided by a third-party and are governed by separate terms of service,
-# privacy policy, and support documentation.
-#
-# This workflow will install a prebuilt Ruby version, install dependencies, and
-# run tests and linters.
-name: "Ruby on Rails CI"
+name: CI
+
 on:
   push:
-    branches: [ "master" ]
+    branches: [master, main]
   pull_request:
-    branches: [ "master" ]
+    branches: [master, main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
     services:
       postgres:
-        image: postgres:11-alpine
+        image: postgres:16-alpine
         ports:
-          - "5432:5432"
+          - 5432:5432
         env:
-          POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
+          POSTGRES_DB: rails_jobs_india_test
+        options: >-
+          --health-cmd "pg_isready -U rails -d rails_jobs_india_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      SECRET_KEY_BASE: ci-only-secret-key-base-for-rails-jobs-india-tests
+      DATABASE_URL: postgres://rails:password@localhost:5432/rails_jobs_india_test
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      # Add or replace dependency steps here
+
+      - name: Install PostgreSQL libraries
+        run: sudo apt-get update && sudo apt-get install -y libpq-dev
+
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@78c01b705fd9d5ad960d432d3a0cfa341d50e410 # v1.179.1
         with:
+          working-directory: api
           bundler-cache: true
-      # Add or replace database setup steps here
+
       - name: Set up database schema
         run: bin/rails db:schema:load
-      # Add or replace test runners here
+
       - name: Run tests
-        run: bin/rake
+        run: bin/rails test
 
   lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@78c01b705fd9d5ad960d432d3a0cfa341d50e410 # v1.179.1
+        with:
+          working-directory: api
+          bundler-cache: true
+
+      - name: Scan application code
+        # Rails 8.0.5 support runs through 2026-11-07. That notice is not a vulnerability.
+        run: bundle exec brakeman -q -w2 --except EOLRails
+
+      - name: Audit gem advisories
+        run: |
+          gem install bundler-audit --no-document
+          bundler-audit check --update
+
+      - name: Lint Ruby
+        run: bundle exec rubocop --parallel
+
+  frontend:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@78c01b705fd9d5ad960d432d3a0cfa341d50e410 # v1.179.1
+
+      - name: Install Node
+        uses: actions/setup-node@v4
         with:
-          bundler-cache: true
-      - name: Generate binstubs
-        run: bundle binstubs bundler-audit brakeman rubocop
-      # Add or replace any other lints here
-      - name: Security audit dependencies
-        run: bin/bundler-audit --update
-      - name: Security audit application code
-        run: bin/brakeman -q -w2
-      - name: Lint Ruby files
-        run: bin/rubocop --parallel
+          node-version: 22
+
+      - name: Install frontend dependencies
+        run: |
+          if [ -f yarn.lock ]; then
+            corepack enable
+            yarn install --frozen-lockfile
+          else
+            npm ci
+          fi
+
+      - name: Lint frontend
+        run: npm run lint
+
+      - name: Build frontend
+        run: npm run build

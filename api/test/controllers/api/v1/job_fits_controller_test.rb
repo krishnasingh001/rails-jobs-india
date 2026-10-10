@@ -41,4 +41,19 @@ class Api::V1::JobFitsControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 20, JSON.parse(response.body).dig("data", "score")
   end
+
+  test "includes the latest ats score when the candidate has a saved check" do
+    user = User.create!(name: "Asha", email: "fit@example.com", password: "secret1", password_confirmation: "secret1", skills: [ "Redis" ])
+    check = user.resume_checks.create!(
+      filename: "asha.pdf", content_type: "application/pdf", byte_size: 4, file_data: "%PDF",
+      overall_score: 81, report: {}
+    )
+    headers = { "Authorization" => "Bearer #{Session.start!(user)}" }
+
+    post api_v1_job_fit_path, headers: headers, params: { description: DESCRIPTION }
+
+    data = JSON.parse(response.body).fetch("data")
+    assert_equal 81, data.fetch("ats_score")
+    assert_equal check.id, data.fetch("ats_check_id")
+  end
 end

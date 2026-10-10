@@ -41,5 +41,10 @@ class Api::V1::ResumeSkillsControllerTest < ActionDispatch::IntegrationTest
     junk = Rack::Test::UploadedFile.new(StringIO.new("nope"), "application/pdf", original_filename: "resume.pdf")
     post api_v1_resume_skills_path, params: { resume: junk }
     assert_response :unprocessable_entity
+
+    text = Rack::Test::UploadedFile.new(StringIO.new("plain text"), "text/plain", original_filename: "resume.txt")
+    post api_v1_resume_skills_path, params: { resume: text }
+    assert_response :unprocessable_entity
+    assert_equal "Please upload a PDF or DOCX resume.", JSON.parse(response.body).fetch("message")
   end
 end

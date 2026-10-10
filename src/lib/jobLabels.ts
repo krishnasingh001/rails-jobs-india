@@ -16,6 +16,25 @@ export function workModeLabel(mode: JobPin['workMode']): string {
   return 'On-site'
 }
 
+const CITY_STATES = new Set(['Delhi', 'Chandigarh', 'Goa', 'Puducherry'])
+
+/** One place line for every card, so a state-only listing still reads like a place. */
+export function placeLabel(job: Pick<JobPin, 'city' | 'state' | 'locationLabel'>): string {
+  const raw = job.locationLabel.trim()
+  if (!job.city && /^(anywhere|india|remote|work from home)$/i.test(raw)) return 'Anywhere in India'
+  if (job.city && job.state && job.city !== job.state) return `${job.city}, ${job.state}`
+  if (job.city) return job.city
+  if (job.state && CITY_STATES.has(job.state)) return job.state
+  if (job.state) return `${job.state}, India`
+  return raw || 'India'
+}
+
+/** Drop a leading www or country subdomain so the apply button can show the site. */
+export function applySiteLabel(host: string | null): string {
+  if (!host) return ''
+  return host.replace(/^www\./i, '').replace(/^in\.(?=[^.]+\.)/i, '')
+}
+
 export function timeAgo(iso: string, now: number = Date.now()): string {
   const then = new Date(iso).getTime()
   if (Number.isNaN(then)) return iso
