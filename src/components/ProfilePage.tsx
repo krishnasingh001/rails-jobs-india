@@ -5,6 +5,7 @@ import { photoToAvatar } from '../lib/avatar.ts'
 import { useAuth } from '../context/AuthContext.tsx'
 import { CITIES } from '../data/cities.ts'
 import type { AiLevel, WorkModePreference } from '../lib/auth.ts'
+import { FilterMenu } from './FilterMenu.tsx'
 import { ResumesSection } from './ResumesSection.tsx'
 import { extractResumeProfile, validateResumeFile, type ResumeProfile } from '../lib/resumeCheck.ts'
 
@@ -242,20 +243,17 @@ export function ProfilePage({ onClose }: { onClose: () => void }) {
             {cities.map((city) => (
               <Chip key={city} label={city} onRemove={() => setCities(cities.filter((item) => item !== city))} />
             ))}
-            {cities.length < 10 ? (
-              <select
-                aria-label="Add a city"
+            {cities.length < 10 && availableCities.length > 0 ? (
+              <FilterMenu
+                id="profile-city"
+                label="Add a city"
+                buttonLabel="Add a city"
                 value=""
-                onChange={(event) => event.target.value && setCities([...cities, event.target.value])}
-                className={`${fieldClass} w-auto cursor-pointer`}
-              >
-                <option value="">Add a city…</option>
-                {availableCities.map((city) => (
-                  <option key={city.name} value={city.name}>
-                    {city.name}, {city.state}
-                  </option>
-                ))}
-              </select>
+                placeholder="Add a city…"
+                inline
+                options={availableCities.map((city) => ({ value: city.name, label: `${city.name}, ${city.state}` }))}
+                onChange={(city) => setCities([...cities, city])}
+              />
             ) : null}
           </div>
           <p className="mt-4 text-sm font-semibold text-ink">Work mode</p>

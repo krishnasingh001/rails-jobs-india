@@ -1,0 +1,9 @@
+{
+  "company_name": "Acme",
+  "query": "Acme company profile",
+  "fetched_at": "2026-10-04T09:00:00Z",
+  "markdown": "Acme builds software.",
+  "references": [{ "title": "Acme", "link": "https://acme.example" }],
+  "text_blocks": [{ "type": "paragraph", "snippet": "Acme builds software." }],
+  "related_questions": [{ "question": "What does Acme do?" }]
+}

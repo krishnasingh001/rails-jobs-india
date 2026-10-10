@@ -8,7 +8,7 @@ import { loadCompanyPlace, type CompanyPlace } from '../data/companyPlace.ts'
 import { loadJobFit, type JobFit } from '../lib/jobFit.ts'
 import { rankResumes, type JobMatch } from '../lib/matchJobs.ts'
 import { trackJob } from '../lib/applications.ts'
-import { formatPosted, provenanceLine, timeAgo, workModeLabel } from '../lib/jobLabels.ts'
+import { applySiteLabel, formatPosted, provenanceLine, timeAgo, workModeLabel } from '../lib/jobLabels.ts'
 import type { JobPin } from '../types.ts'
 
 type JobDetailPageProps = {
@@ -219,9 +219,10 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
                 href={job.applyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                title={job.applyHost ? `Apply on ${job.applyHost}` : 'Apply'}
+                className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-brand bg-transparent px-4 py-2 text-sm font-semibold text-brand transition-colors duration-200 hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
-                Apply{job.applyHost ? ` on ${job.applyHost}` : ''}
+                Apply{job.applyHost ? ` on ${applySiteLabel(job.applyHost)}` : ''}
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
                 <span className="sr-only">Opens in a new tab</span>
               </a>

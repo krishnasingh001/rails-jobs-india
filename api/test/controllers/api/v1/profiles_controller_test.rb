@@ -12,6 +12,13 @@ class Api::V1::ProfilesControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
+  test "shows the signed in profile" do
+    get api_v1_profile_path, headers: @headers
+
+    assert_response :success
+    assert_equal "asha@example.com", JSON.parse(response.body).dig("user", "email")
+  end
+
   test "saves preferences" do
     patch api_v1_profile_path, headers: @headers, params: {
       preferred_cities: [ "Pune", "pune", "Indore" ],

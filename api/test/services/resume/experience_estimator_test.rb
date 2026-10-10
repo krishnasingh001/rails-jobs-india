@@ -43,4 +43,26 @@ class Resume::ExperienceEstimatorTest < ActiveSupport::TestCase
   test "returns nothing for text with no dates" do
     assert_nil estimate("I like Rails.")[:years]
   end
+
+  test "ignores named ranges that run backwards or into the future" do
+    assert_nil estimate("Dev Dec 2021 - Jan 2020")[:years]
+    assert_nil estimate("Dev Jan 2030 - Dec 2031")[:years]
+  end
+
+  test "ignores numeric months outside 1 to 12 and ranges that end first" do
+    assert_nil estimate("Dev 13/2020 - 06/2021")[:years]
+    assert_nil estimate("Dev 01/2020 - 13/2021")[:years]
+    assert_nil estimate("Dev 12/2021 - 01/2020")[:years]
+  end
+
+  test "reads a numeric range that is still going" do
+    assert_equal 5.8, estimate("Dev 01/2021 - Present")[:years]
+  end
+
+  test "returns nothing when the merged span covers no months" do
+    estimator = Resume::ExperienceEstimator.new("Jan 2020 - Dec 2021", TODAY)
+    estimator.define_singleton_method(:merge) { |*| [ [ 1, 1 ] ] }
+
+    assert_nil estimator.send(:years_from_dates)
+  end
 end

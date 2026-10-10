@@ -56,6 +56,39 @@ class Api::V1::TrackedApplicationsControllerTest < ActionDispatch::IntegrationTe
     assert_equal 0, @user.tracked_applications.count
   end
 
+  test "rejects an incomplete application, a bad status, and a missing record" do
+    post api_v1_tracked_applications_path, params: { job_external_id: "serp-2" }, headers: @headers, as: :json
+
+    assert_response :unprocessable_entity
+    assert_match(/Job title/, JSON.parse(response.body).fetch("message"))
+
+    post api_v1_tracked_applications_path, params: job_params, headers: @headers, as: :json
+    id = JSON.parse(response.body).dig("data", "id")
+
+    post status_api_v1_tracked_application_path(id), params: { status: "hired" }, headers: @headers, as: :json
+    assert_response :unprocessable_entity
+    assert_equal "Invalid status.", JSON.parse(response.body).fetch("message")
+
+    post status_api_v1_tracked_application_path(0), params: { status: "interview" }, headers: @headers, as: :json
+    assert_response :not_found
+  end
+
+  test "reports a status update that does not save" do
+    post api_v1_tracked_applications_path, params: job_params, headers: @headers, as: :json
+    id = JSON.parse(response.body).dig("data", "id")
+    TrackedApplication.class_eval do
+      alias_method :update_without_stub, :update
+      define_method(:update) { |*| false }
+    end
+
+    post status_api_v1_tracked_application_path(id), params: { status: "interview" }, headers: @headers, as: :json
+
+    assert_response :unprocessable_entity
+    assert_equal "Could not update this application.", JSON.parse(response.body).fetch("message")
+  ensure
+    TrackedApplication.class_eval { alias_method :update, :update_without_stub }
+  end
+
   private
 
   def job_params

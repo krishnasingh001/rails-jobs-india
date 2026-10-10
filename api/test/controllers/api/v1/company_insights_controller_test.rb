@@ -8,7 +8,7 @@ class Api::V1::CompanyInsightsControllerTest < ActionDispatch::IntegrationTest
       profile: {
         "layoffs_last_year" => "No layoffs found.",
         "head_count" => "26 employees (per ZoomInfo)",
-        "office_locations" => ["Pune, Maharashtra, India"],
+        "office_locations" => [ "Pune, Maharashtra, India" ],
         "values" => "No publicly documented company values found.",
         "founded_year" => 2013
       },
@@ -24,10 +24,10 @@ class Api::V1::CompanyInsightsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     insight = JSON.parse(response.body).fetch("insight")
     assert_equal "26 employees (per ZoomInfo)", insight.fetch("headCount")
-    assert_equal ["Pune, Maharashtra, India"], insight.fetch("offices")
+    assert_equal [ "Pune, Maharashtra, India" ], insight.fetch("offices")
     assert_equal 2013, insight.fetch("foundedYear")
     assert_equal "2026-10-04T09:56:00Z", insight.fetch("fetchedAt")
-    assert_equal ["https://www.zaubacorp.com/x"], insight.fetch("sources").map { |source| source["link"] }
+    assert_equal [ "https://www.zaubacorp.com/x" ], insight.fetch("sources").map { |source| source["link"] }
   end
 
   test "returns null when the company has no profile" do

@@ -55,4 +55,47 @@ class Api::V1::PlacesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :not_found
   end
+
+  test "renders an address that has no coordinates" do
+    job = Job.create!(
+      external_id: "job-3",
+      title: "Rails Dev",
+      company_name: "Acme",
+      location: "Pune",
+      last_seen_at: Time.current
+    )
+    CompanyPlace.create!(
+      company_name: job.company_name,
+      search_location: job.location,
+      address: "A street in Pune",
+      found: true
+    )
+
+    get api_v1_place_path, params: { job_id: job.external_id }
+
+    assert_response :success
+    place = JSON.parse(response.body).fetch("place")
+    assert_nil place.fetch("latitude")
+    assert_nil place.fetch("longitude")
+  end
+
+  test "returns a gateway error when the place lookup fails" do
+    job = Job.create!(
+      external_id: "job-4",
+      title: "Rails Dev",
+      company_name: "Acme",
+      location: "Pune",
+      last_seen_at: Time.current
+    )
+    singleton = class << Serpapi::PlaceLookup; self; end
+    singleton.alias_method(:call_without_stub, :call)
+    singleton.define_method(:call) { |*| raise Serpapi::Error, "SerpApi could not be reached." }
+
+    get api_v1_place_path, params: { job_id: job.external_id }
+
+    assert_response :bad_gateway
+    assert_equal "SerpApi could not be reached.", JSON.parse(response.body).fetch("error")
+  ensure
+    singleton.alias_method(:call, :call_without_stub) if singleton
+  end
 end

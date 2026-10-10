@@ -38,6 +38,11 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
+group :test do
+  # Line and branch coverage for the Minitest suite
+  gem "simplecov", "~> 1.3", require: false
+end
+
 gem "pdf-reader", "~> 2.16"
 gem "rubyzip", "~> 3.7"
 
