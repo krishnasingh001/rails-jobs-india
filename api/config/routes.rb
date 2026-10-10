@@ -12,6 +12,7 @@ Rails.application.routes.draw do
         get :file, on: :member
       end
       post "resume_skills", to: "resume_skills#create"
+      resource :profile, only: %i[show update]
       post "job_fit", to: "job_fits#create"
       get "place", to: "places#show"
       get "company_insight", to: "company_insights#show"

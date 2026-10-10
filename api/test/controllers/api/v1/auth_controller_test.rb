@@ -22,20 +22,6 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     assert_equal "krishna@example.com", JSON.parse(response.body).dig("user", "email")
   end
 
-  test "rejects a recruiter signup that uses a personal email" do
-    post api_v1_auth_register_path, params: {
-      name: "Recruiter",
-      email: "recruiter@gmail.com",
-      password: "secret1",
-      password_confirmation: "secret1",
-      role: "recruiter"
-    }, as: :json
-
-    assert_response :unprocessable_entity
-    assert_match "business email", JSON.parse(response.body)["message"]
-    assert_equal 0, User.count
-  end
-
   test "signs in with the right password and rejects the wrong one" do
     User.create!(name: "Krishna", email: "krishna@example.com", password: "secret1", password_confirmation: "secret1", role: "candidate")
 

@@ -9,6 +9,10 @@ class JobBlueprint < Blueprinter::Base
   field :apply_host, name: :applyHost
   field :posted_label, name: :postedAt
 
+  field :skills do |job|
+    Resume::SkillExtractor.call("#{job.title}\n#{job.description}")
+  end
+
   field :extensions do |job|
     Array(job.raw["extensions"]).select { |item| item.is_a?(String) && item.present? }
   end

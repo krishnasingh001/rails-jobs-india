@@ -1,6 +1,6 @@
 module Api
   module V1
-    # Reads a resume during sign-up so the candidate can review the skills before saving.
+    # Reads a resume so the candidate can review the skills, experience and AI fluency before saving.
     # The upload is analyzed in memory and never stored.
     class ResumeSkillsController < ApplicationController
       def create
@@ -14,6 +14,8 @@ module Api
         render json: {
           success: true,
           skills: Resume::SkillExtractor.call(extraction.text),
+          years_experience: Resume::ExperienceEstimator.call(extraction.text),
+          ai_fluency: Resume::AiFluency.call(extraction.text),
           meta: { filename: filename, format: extraction.format, characters: extraction.text.length }
         }
       rescue Resume::TextExtractor::Error => e

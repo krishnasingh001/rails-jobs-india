@@ -25,6 +25,12 @@ class JobBlueprintTest < ActiveSupport::TestCase
     assert_equal "2 days ago", payload[:postedAt]
   end
 
+  test "lists the skills a job asks for" do
+    job = Job.new(external_id: "job-2", title: "Rails Dev", company_name: "Acme", description: "You know Postgres and Sidekiq.", last_seen_at: Time.current)
+
+    assert_equal [ "Ruby on Rails", "PostgreSQL", "Sidekiq" ], JobBlueprint.render_as_hash(job)[:skills]
+  end
+
   test "renders the detail fields from the stored SerpApi payload" do
     job = Job.new(
       external_id: "job-2",

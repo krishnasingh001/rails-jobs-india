@@ -38,16 +38,16 @@ module Api
       private
 
       def sign_up_params
-        role = params[:role].to_s
-        role = "candidate" unless User::ROLES.include?(role)
         {
           name: params[:name],
           email: params[:email],
           password: params[:password],
           password_confirmation: params[:password_confirmation],
-          role: role,
           resume_url: params[:resume_url],
-          skills: params[:skills].is_a?(Array) ? params[:skills].select { |skill| skill.is_a?(String) } : []
+          skills: params[:skills].is_a?(Array) ? params[:skills].select { |skill| skill.is_a?(String) } : [],
+          years_experience: params[:years_experience].presence,
+          resume_ai_fluency: User::AI_LEVELS.include?(params[:resume_ai_fluency].to_s) ? params[:resume_ai_fluency] : nil,
+          resume_ai_signals: params[:resume_ai_signals].is_a?(Array) ? params[:resume_ai_signals].select { |s| s.is_a?(String) }.first(8) : []
         }
       end
 

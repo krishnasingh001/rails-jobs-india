@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_10_160000) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_11_071000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -295,6 +295,14 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_10_160000) do
     t.datetime "updated_at", null: false
     t.string "resume_url"
     t.string "skills", default: [], null: false, array: true
+    t.string "preferred_cities", default: [], null: false, array: true
+    t.string "work_modes", default: [], null: false, array: true
+    t.integer "expected_salary_lpa"
+    t.decimal "years_experience", precision: 4, scale: 1
+    t.string "ai_fluency"
+    t.string "resume_ai_fluency"
+    t.string "resume_ai_signals", default: [], null: false, array: true
+    t.text "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

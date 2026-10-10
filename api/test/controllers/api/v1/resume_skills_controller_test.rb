@@ -22,6 +22,18 @@ class Api::V1::ResumeSkillsControllerTest < ActionDispatch::IntegrationTest
     assert_not_includes skills, "Go"
   end
 
+  test "also reads years of experience and AI fluency" do
+    post api_v1_resume_skills_path, params: {
+      resume: docx_upload([ "Rails engineer with 5 years of experience.", "Built a RAG pipeline with pgvector and used GitHub Copilot daily." ])
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal({ "years" => 5.0, "source" => "stated" }, body["years_experience"])
+    assert_equal "expert", body.dig("ai_fluency", "level")
+    assert_includes body.dig("ai_fluency", "signals"), "RAG"
+  end
+
   test "rejects missing and unreadable files" do
     post api_v1_resume_skills_path
     assert_response :unprocessable_entity
