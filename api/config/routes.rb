@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :jobs, only: :index
-      resources :harvests, only: :create
+      resources :resume_checks, only: %i[index show create destroy] do
+        get :file, on: :member
+      end
+      post "resume_skills", to: "resume_skills#create"
+      post "job_fit", to: "job_fits#create"
       get "place", to: "places#show"
+      get "company_insight", to: "company_insights#show"
       post "auth/register", to: "auth#register"
       post "auth/login", to: "auth#login"
       delete "auth/logout", to: "auth#logout"

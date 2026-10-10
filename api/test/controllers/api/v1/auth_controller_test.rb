@@ -52,4 +52,26 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     get api_v1_auth_me_path, headers: { "Authorization" => "Bearer #{token}" }
     assert_nil JSON.parse(response.body)["user"]
   end
+
+  test "stores the resume link and skills at sign up" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha Verma", email: "asha@example.com", password: "secret1", password_confirmation: "secret1",
+      role: "candidate", resume_url: " https://drive.example.com/asha.pdf ", skills: [ "Ruby", "ruby", " Rails ", "" ]
+    }, as: :json
+
+    assert_response :created
+    user = JSON.parse(response.body).fetch("user")
+    assert_equal "https://drive.example.com/asha.pdf", user.fetch("resume_url")
+    assert_equal [ "Ruby", "Rails" ], user.fetch("skills")
+  end
+
+  test "rejects a resume link that is not http" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha Verma", email: "asha@example.com", password: "secret1", password_confirmation: "secret1",
+      resume_url: "javascript:alert(1)"
+    }, as: :json
+
+    assert_response :unprocessable_entity
+    assert_match(/Resume url/, JSON.parse(response.body).fetch("message"))
+  end
 end

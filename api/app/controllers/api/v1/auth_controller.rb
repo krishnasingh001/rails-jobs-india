@@ -45,7 +45,9 @@ module Api
           email: params[:email],
           password: params[:password],
           password_confirmation: params[:password_confirmation],
-          role: role
+          role: role,
+          resume_url: params[:resume_url],
+          skills: params[:skills].is_a?(Array) ? params[:skills].select { |skill| skill.is_a?(String) } : []
         }
       end
 

@@ -76,7 +76,12 @@ class DataImport
       entry = JSON.parse(File.read(file))
       insight = CompanyInsight.find_or_initialize_by(company_name: entry["company_name"])
       profile = entry["profile"] || {}
-      insight.update!(profile: profile, domain_area: profile["domain_area"])
+      insight.update!(
+        profile: profile,
+        domain_area: profile["domain_area"],
+        profile_references: entry["references"] || [],
+        profile_fetched_at: entry["fetched_at"]
+      )
       1
     end
   end

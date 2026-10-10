@@ -37,3 +37,8 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+
+gem "pdf-reader", "~> 2.16"
+gem "rubyzip", "~> 3.7"
+
+gem "solid_queue", "~> 1.3"
