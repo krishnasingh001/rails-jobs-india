@@ -1,8 +1,9 @@
 import { Search, X } from 'lucide-react'
 import type { CompanyPlace } from '../data/companyPlace.ts'
-import { SORT_OPTIONS, type JobFilters, type ModeFilter, type SortKey } from '../lib/filterJobs.ts'
+import { SORT_OPTIONS, type JobFilters, type ModeFilter } from '../lib/filterJobs.ts'
 import { workModeLabel } from '../lib/jobLabels.ts'
 import type { CityCount, JobPin } from '../types.ts'
+import { FilterMenu } from './FilterMenu.tsx'
 import { JobCard } from './JobDrawer.tsx'
 
 type ModeCounts = Record<ModeFilter, number>
@@ -45,7 +46,7 @@ export function JobBrowser({
 
   return (
     <section className="flex h-full min-h-0 flex-col">
-      <header className="shrink-0 border-b border-slate-200 px-5 py-4">
+      <header className="relative z-20 shrink-0 border-b border-slate-200 bg-white px-5 py-4">
         <p className="font-brand text-xs font-semibold uppercase tracking-[0.14em] text-brand">Rails jobs in India</p>
         <h1 className="mt-1 font-brand text-xl font-semibold text-ink">All openings</h1>
 
@@ -69,36 +70,26 @@ export function JobBrowser({
             <label className="block text-xs font-medium text-ink-muted" htmlFor="job-city">
               City
             </label>
-            <select
+            <FilterMenu
               id="job-city"
+              label="City"
               value={filters.city}
-              onChange={(event) => onFilters({ city: event.target.value })}
-              className={`${fieldClass} mt-1 cursor-pointer`}
-            >
-              <option value="">All cities</option>
-              {cities.map((city) => (
-                <option key={city.city} value={city.city}>
-                  {city.city} ({city.jobs})
-                </option>
-              ))}
-            </select>
+              options={[{ value: '', label: 'All cities' }, ...cities.map((city) => ({ value: city.city, label: `${city.city} (${city.jobs})` }))]}
+              onChange={(city) => onFilters({ city })}
+            />
           </div>
           <div>
             <label className="block text-xs font-medium text-ink-muted" htmlFor="job-sort">
               Sort by
             </label>
-            <select
+            <FilterMenu
               id="job-sort"
+              label="Sort by"
               value={filters.sort}
-              onChange={(event) => onFilters({ sort: event.target.value as SortKey })}
-              className={`${fieldClass} mt-1 cursor-pointer`}
-            >
-              {SORT_OPTIONS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+              align="right"
+              options={SORT_OPTIONS}
+              onChange={(sort) => onFilters({ sort })}
+            />
           </div>
         </div>
 
@@ -154,7 +145,7 @@ export function JobBrowser({
         </p>
       </header>
 
-      <ul className="min-h-0 flex-1 space-y-2 overflow-y-auto px-3 py-3" onMouseLeave={() => onHoverJob(null)}>
+      <ul className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-[#f8f4f0] px-3 py-3" onMouseLeave={() => onHoverJob(null)}>
         {jobs.length === 0 ? (
           <li className="px-1 py-6 text-sm text-ink-muted">No roles match these filters.</li>
         ) : null}

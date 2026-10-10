@@ -161,6 +161,64 @@ class Serpapi::HarvestTest < ActiveSupport::TestCase
     assert_equal [ "stored-1" ], result.jobs.map(&:external_id)
   end
 
+  class DuplicatePageClient
+    attr_reader :api_key
+
+    def initialize
+      @api_key = "test-key"
+    end
+
+    def google_jobs(query:, location:, next_page_token: nil)
+      if next_page_token.nil?
+        {
+          "jobs_results" => [
+            { "job_id" => "already-there", "title" => "Rails Dev", "company_name" => "Acme", "location" => location }
+          ],
+          "serpapi_pagination" => { "next_page_token" => "more-#{query}" }
+        }
+      else
+        {
+          "jobs_results" => [
+            { "job_id" => "new-#{query}", "title" => "Rails Dev", "company_name" => "Acme", "location" => location }
+          ]
+        }
+      end
+    end
+  end
+
+  test "keeps paging when a page only contains listings we already stored" do
+    Job.create!(
+      external_id: "already-there",
+      title: "Rails Dev",
+      company_name: "Acme",
+      location: "India",
+      last_seen_at: Time.current
+    )
+
+    result = Serpapi::Harvest.call(force: true, client: DuplicatePageClient.new)
+
+    assert_equal 2, result.added
+    assert Job.exists?(external_id: "new-Ruby on Rails")
+  end
+
+  class BrokenClient
+    attr_reader :api_key
+
+    def initialize
+      @api_key = "test-key"
+    end
+
+    def google_jobs(*)
+      raise Serpapi::Error, "SerpApi could not be reached."
+    end
+  end
+
+  test "raises when SerpApi fails for a reason other than no results" do
+    assert_raises(Serpapi::Error) do
+      Serpapi::Harvest.call(force: true, client: BrokenClient.new)
+    end
+  end
+
   test "refuses to search without an API key" do
     error = assert_raises(Serpapi::MissingKey) do
       Serpapi::Harvest.call(client: FakeClient.new(api_key: ""))

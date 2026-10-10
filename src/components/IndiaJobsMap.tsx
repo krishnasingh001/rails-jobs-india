@@ -511,7 +511,7 @@ export function IndiaJobsMap({ geo, jobs: initialJobs, showPanels, onOpenJob }: 
         </Map>
       </div>
 
-      <MapChrome showBack={showPanels && selectedCode !== null} onBack={showIndia} />
+      {showPanels ? <MapChrome onBack={showIndia} /> : null}
 
       {showPanels ? (
         <aside className={panelClass}>

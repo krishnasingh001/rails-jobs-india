@@ -1,0 +1,14 @@
+{
+  "fetched_at": "not-a-date",
+  "query": "Ruby on Rails",
+  "location": "India",
+  "state": "India",
+  "jobs": [
+    {
+      "job_id": "job-fixture-2",
+      "title": "Rails Dev",
+      "company_name": "Acme",
+      "location": "India"
+    }
+  ]
+}

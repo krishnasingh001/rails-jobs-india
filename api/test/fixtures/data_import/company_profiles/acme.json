@@ -1,0 +1,9 @@
+{
+  "company_name": "Acme",
+  "fetched_at": "2026-10-04T09:30:00Z",
+  "profile": {
+    "domain_area": "Software",
+    "founded_year": 2010
+  },
+  "references": [{ "title": "About", "link": "https://acme.example/about" }]
+}

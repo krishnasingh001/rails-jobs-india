@@ -1,12 +1,12 @@
 import { useId, useState } from 'react'
-import { ArrowLeft, BookmarkPlus, ExternalLink, MapPin } from 'lucide-react'
+import { AlertCircle, ArrowLeft, BookmarkPlus, Check, ExternalLink, MapPin } from 'lucide-react'
 import { useAuth } from '../context/AuthContext.tsx'
 import { loadCompanyPlace, type CompanyPlace } from '../data/companyPlace.ts'
 import { formatKilometres, travelSense } from '../lib/formatDistance.ts'
 import { trackJob } from '../lib/applications.ts'
-import { formatPosted, workModeLabel } from '../lib/jobLabels.ts'
+import { applySiteLabel, formatPosted, placeLabel, timeAgo, workModeLabel } from '../lib/jobLabels.ts'
 import { matchTone, type JobMatch } from '../lib/matchJobs.ts'
-import type { JobPin } from '../types.ts'
+import type { JobPin, WorkMode } from '../types.ts'
 
 type JobDrawerProps = {
   title: string
@@ -34,7 +34,7 @@ function CompanyLogo({ company, src }: { company: string; src: string | null }) 
         src={src}
         alt=""
         loading="lazy"
-        className="h-11 w-11 shrink-0 rounded-lg border border-slate-200 bg-white object-contain"
+        className="h-10 w-10 shrink-0 rounded-lg border border-slate-200 bg-white object-contain p-0.5"
         onError={() => setFailed(true)}
       />
     )
@@ -42,7 +42,7 @@ function CompanyLogo({ company, src }: { company: string; src: string | null }) 
   return (
     <span
       aria-hidden="true"
-      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-soft font-brand text-sm font-semibold text-brand"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft font-brand text-sm font-semibold text-brand ring-1 ring-brand-border"
     >
       {initials || '?'}
     </span>
@@ -54,10 +54,21 @@ function isFresh(postedAt: string): boolean {
   return !Number.isNaN(then) && Date.now() - then < 3 * 24 * 60 * 60 * 1000
 }
 
-function shortDate(postedAt: string): string {
-  const full = formatPosted(postedAt)
-  return full.replace(/ \d{4}$/, '')
+function postedLabel(postedAt: string): string {
+  if (!postedAt) return ''
+  const parsed = Date.parse(postedAt)
+  if (!Number.isNaN(parsed)) return timeAgo(postedAt)
+  return formatPosted(postedAt).replace(/ \d{4}$/, '')
 }
+
+function modeChipClass(mode: WorkMode): string {
+  if (mode === 'remote') return 'bg-sky-50 text-sky-950 ring-sky-200'
+  if (mode === 'hybrid') return 'bg-amber-50 text-amber-950 ring-amber-200'
+  return 'bg-white text-ink ring-slate-200'
+}
+
+const quietAction =
+  'inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-ink shadow-sm transition-colors duration-200 hover:border-brand-border hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-60'
 
 export function JobCard({
   job,
@@ -76,7 +87,7 @@ export function JobCard({
   const [place, setPlace] = useState<CompanyPlace | null | undefined>(undefined)
   const [error, setError] = useState<string | null>(null)
   const [tracking, setTracking] = useState(false)
-  const [trackMessage, setTrackMessage] = useState<string | null>(null)
+  const [trackMessage, setTrackMessage] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null)
 
   function reveal(found: CompanyPlace) {
     if (found.latitude != null && found.longitude != null) onShowOffice?.(found)
@@ -105,102 +116,143 @@ export function JobCard({
     setTrackMessage(null)
     try {
       const result = await trackJob(job)
-      setTrackMessage(result.alreadyTracked ? 'Already on your application board.' : 'Application tracked.')
+      setTrackMessage({
+        tone: 'ok',
+        text: result.alreadyTracked ? 'Already on your application board.' : 'Application tracked.',
+      })
     } catch (caught) {
-      setTrackMessage(caught instanceof Error ? caught.message : 'Could not track this application.')
+      setTrackMessage({
+        tone: 'error',
+        text: caught instanceof Error ? caught.message : 'Could not track this application.',
+      })
     } finally {
       setTracking(false)
     }
   }
 
   const fresh = isFresh(job.postedAt)
+  const posted = postedLabel(job.postedAt)
   return (
-    <article className={`rounded-xl border bg-white transition-colors duration-200 hover:border-brand-border ${open ? 'border-brand' : 'border-slate-200'}`}>
+    <article
+      className={`relative overflow-hidden rounded-2xl border bg-white shadow-[0_1px_2px_rgb(15_23_42/0.05),0_10px_24px_rgb(15_23_42/0.05)] transition-[border-color,box-shadow] duration-200 motion-reduce:transition-none ${
+        open
+          ? 'border-brand shadow-[0_10px_28px_rgb(220_38_38/0.12)]'
+          : 'border-slate-200/80 hover:border-brand-border hover:shadow-[0_12px_32px_rgb(220_38_38/0.1)]'
+      }`}
+    >
+      <span aria-hidden="true" className={`absolute inset-y-4 left-0 w-1 rounded-r-full ${open ? 'bg-brand' : 'bg-brand/80'}`} />
       <button
         type="button"
-        className="flex w-full cursor-pointer items-start gap-3 px-3 py-3 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        className="flex w-full cursor-pointer items-start gap-3 bg-gradient-to-br from-brand-soft/70 via-white to-white py-3 pr-3.5 pl-4 text-left transition-colors duration-200 hover:from-brand-soft focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand"
         onClick={() => onOpenJob(job)}
       >
         <CompanyLogo company={job.company} src={job.thumbnail} />
         <span className="min-w-0 flex-1">
-          <span className="flex items-start justify-between gap-2">
-            <span className="font-brand text-base font-semibold leading-snug text-ink">{job.title}</span>
-            {fresh ? (
-              <span className="shrink-0 rounded-full bg-brand-soft px-2 py-0.5 text-xs font-semibold text-brand">New</span>
-            ) : job.postedAt ? (
-              <span className="shrink-0 pt-0.5 text-xs text-ink-muted">{shortDate(job.postedAt)}</span>
-            ) : null}
+          <span className="flex items-start justify-between gap-3">
+            <span className="line-clamp-2 font-brand text-base font-semibold leading-snug tracking-tight text-ink">{job.title}</span>
+            <span className="flex shrink-0 items-center gap-1.5">
+              {fresh ? <span className="rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white">New</span> : null}
+              {posted ? (
+                <time
+                  className="rounded-full bg-white px-2 py-0.5 text-xs font-medium tabular-nums text-ink-muted ring-1 ring-slate-200"
+                  dateTime={Number.isNaN(Date.parse(job.postedAt)) ? undefined : job.postedAt}
+                >
+                  {posted}
+                </time>
+              ) : null}
+            </span>
           </span>
-          <span className="mt-0.5 block text-sm text-ink">{job.company}</span>
-          <span className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-muted">
-            <span>{job.locationLabel}</span>
-            <span className="rounded-full border border-slate-200 px-2 py-0.5 font-medium text-ink">{workModeLabel(job.workMode)}</span>
-            {job.salaryLabel ? <span className="font-brand text-sm font-semibold text-brand">{job.salaryLabel}</span> : null}
+          <span className="mt-1 block truncate text-sm font-medium text-ink-muted">{job.company}</span>
+          <span className="mt-2 flex flex-wrap items-center gap-1.5">
+            <span className="inline-flex max-w-full items-center gap-1 rounded-full bg-white px-2 py-0.5 text-xs font-medium text-ink-muted ring-1 ring-slate-200">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-brand" aria-hidden="true" />
+              <span>{placeLabel(job)}</span>
+            </span>
+            <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ring-1 ${modeChipClass(job.workMode)}`}>
+              {workModeLabel(job.workMode)}
+            </span>
+            <span
+              className={`rounded-full px-2 py-0.5 font-brand text-xs font-semibold ring-1 ${
+                job.salaryLabel ? 'bg-brand-soft text-brand ring-brand-border' : 'bg-white text-ink-muted ring-slate-200'
+              }`}
+            >
+              {job.salaryLabel ?? 'Salary not listed'}
+            </span>
           </span>
         </span>
       </button>
       {match ? (
-        <div className="flex flex-wrap items-center gap-1.5 px-3 pb-2.5">
-          <span className={`rounded-full px-2 py-0.5 text-xs font-bold tabular-nums ${matchTone(match.score).className}`}>
+        <div className="flex flex-wrap items-center gap-1.5 px-3.5 pb-3">
+          <span className={`rounded-md px-1.5 py-0.5 text-xs font-bold tabular-nums ${matchTone(match.score).className}`}>
             {match.score}% · {matchTone(match.score).label}
           </span>
           {match.resume && (user?.resumes?.length ?? 0) > 1 ? (
-            <span className="rounded-full bg-brand-soft px-2 py-0.5 text-xs font-semibold text-brand">Apply with: {match.resume.label}</span>
+            <span className="rounded-md bg-brand-soft px-1.5 py-0.5 text-xs font-semibold text-brand">Apply with: {match.resume.label}</span>
           ) : null}
           {match.reasons.map((reason) => (
             <span
               key={reason.kind}
-              className={`rounded-full px-2 py-0.5 text-xs font-medium ${reason.ok ? 'bg-emerald-50 text-emerald-800' : 'bg-amber-50 text-amber-900'}`}
+              className={`inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ${reason.ok ? 'bg-emerald-50 text-emerald-800' : 'bg-amber-50 text-amber-900'}`}
             >
-              <span aria-hidden="true">{reason.ok ? '✓ ' : '! '}</span>
+              {reason.ok ? <Check className="h-3 w-3 shrink-0" aria-hidden="true" /> : <AlertCircle className="h-3 w-3 shrink-0" aria-hidden="true" />}
               <span className="sr-only">{reason.ok ? 'Matches: ' : 'Does not match: '}</span>
               {reason.label}
             </span>
           ))}
         </div>
       ) : null}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-slate-100 px-3 py-2">
-        <button
-          type="button"
-          className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-          aria-expanded={open}
-          aria-controls={panelId}
-          onClick={() => {
-            void toggleOffice()
-          }}
-        >
-          <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-          {open ? 'Hide office' : 'Show office'}
-        </button>
+      <div className="flex items-center justify-between gap-2 border-t border-slate-100 bg-white px-3 py-2 pl-3.5">
+        <div className="flex min-w-0 items-center gap-2">
+          <button
+            type="button"
+            className={`${quietAction} ${open ? 'border-brand-border bg-brand-soft text-brand' : ''}`}
+            aria-expanded={open}
+            aria-controls={panelId}
+            onClick={() => {
+              void toggleOffice()
+            }}
+          >
+            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+            {open ? 'Hide office' : 'Show office'}
+          </button>
+          {user ? (
+            <button
+              type="button"
+              className={quietAction}
+              disabled={tracking}
+              onClick={() => {
+                void track()
+              }}
+            >
+              <BookmarkPlus className="h-3.5 w-3.5" aria-hidden="true" />
+              {tracking ? 'Tracking…' : 'Track'}
+            </button>
+          ) : null}
+        </div>
         {job.applyUrl ? (
           <a
             href={job.applyUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold text-brand underline-offset-2 transition-colors duration-200 hover:text-brand-hover hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            title={job.applyHost ? `Apply on ${job.applyHost}` : 'Apply'}
+            className="inline-flex min-w-0 max-w-[62%] cursor-pointer items-center gap-1.5 rounded-lg border border-brand bg-transparent px-3 py-1.5 text-xs font-semibold text-brand transition-colors duration-200 hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand"
           >
-            Apply on {job.applyHost}
-            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+            <span className="truncate">Apply{job.applyHost ? ` on ${applySiteLabel(job.applyHost)}` : ''}</span>
+            <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
             <span className="sr-only">Opens apply page in a new tab</span>
           </a>
         ) : null}
-        {user ? (
-          <button
-            type="button"
-            className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:text-brand/70"
-            disabled={tracking}
-            onClick={() => {
-              void track()
-            }}
-          >
-            <BookmarkPlus className="h-3.5 w-3.5" aria-hidden="true" />
-            {tracking ? 'Tracking…' : 'Track'}
-          </button>
-        ) : null}
       </div>
-      {trackMessage ? <p className="px-3 pb-2 text-xs text-ink-muted">{trackMessage}</p> : null}
+      {trackMessage ? (
+        <p
+          className={`px-3.5 py-2 text-xs font-medium ${trackMessage.tone === 'error' ? 'text-brand' : 'text-emerald-800'}`}
+          role={trackMessage.tone === 'error' ? 'alert' : 'status'}
+        >
+          {trackMessage.text}
+        </p>
+      ) : null}
       {open ? (
-        <div id={panelId} className="border-t border-slate-100 px-3 py-3">
+        <div id={panelId} className="border-t border-brand-border bg-brand-soft/50 px-3.5 py-3">
           {place === undefined && !error ? <p className="text-sm text-ink-muted">Finding the office…</p> : null}
           {error ? (
             <p className="text-sm text-brand" role="alert">
@@ -210,11 +262,11 @@ export function JobCard({
           {place ? (
             <div>
               {place.name ? <p className="text-sm font-semibold text-ink">{place.name}</p> : null}
-              <p className="mt-1 text-sm text-ink">{place.address}</p>
+              <p className="mt-1 text-sm leading-relaxed text-ink">{place.address}</p>
               {onShowOffice && place.latitude != null && place.longitude != null ? (
                 <button
                   type="button"
-                  className="mt-2 inline-flex cursor-pointer items-center gap-1 text-sm font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                  className="mt-2 inline-flex cursor-pointer items-center gap-1 rounded-lg bg-white px-2.5 py-1.5 text-sm font-semibold text-brand shadow-sm transition-colors duration-200 hover:text-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
                   onClick={() => reveal(place)}
                 >
                   <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
@@ -250,7 +302,7 @@ export function JobDrawer({ title, jobs, distanceKm, emptyLabel, backLabel, onBa
           </p>
         ) : null}
       </div>
-      <ul className="min-h-0 flex-1 space-y-2 overflow-y-auto px-3 py-3">
+      <ul className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-[#f8f4f0] px-3 py-3">
         {jobs.length === 0 && emptyLabel ? <li className="px-1 py-4 text-sm text-ink-muted">{emptyLabel}</li> : null}
         {jobs.map((job) => (
           <li key={job.id}>

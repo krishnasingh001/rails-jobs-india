@@ -78,7 +78,18 @@ _The screenshots use a demo account and real jobs from the app's data._
 
 ### How SerpApi is used
 
-SerpApi is the data source of the whole product. Nothing on the map is hand-written.
+SerpApi is the data source of the whole product. Nothing on the map is hand-written. A credit is spent only on the three paths below. Opening the map or a job reads what we already saved.
+
+```mermaid
+flowchart TD
+  harvest["HarvestJobsJob or jobs:harvest"] --> jobs["google_jobs"]
+  office["Show office, the first time for that company and city"] --> maps["google_maps"]
+  profile["data:fetch_company_profile"] --> brave["brave_ai_mode"]
+  jobs --> saved[("PostgreSQL and api/data")]
+  maps --> saved
+  brave --> saved
+  saved --> visitor["Map, job page and company panel. No SerpApi call."]
+```
 
 | SerpApi engine | What it does for the user |
 |---|---|

@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-10-04T08:00:00Z",
+  "query": "Ruby on Rails",
+  "location": "Pune",
+  "state": "Pune",
+  "jobs": [
+    {
+      "job_id": "job-fixture-1",
+      "title": "Rails Dev",
+      "company_name": "Acme",
+      "location": "Pune, Maharashtra",
+      "apply_options": [{ "title": "Apply", "link": "https://www.acme.example/jobs/1" }]
+    },
+    { "job_id": "", "title": "Skip me" }
+  ]
+}

@@ -44,7 +44,7 @@ export function JobFitCard({
   const link =
     'cursor-pointer font-semibold text-brand underline-offset-2 hover:text-brand-hover hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
   return (
-    <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="job-fit">
+    <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="job-fit">
       <h2 id="job-fit" className="font-brand text-lg font-semibold text-ink">
         Job fit check
       </h2>
