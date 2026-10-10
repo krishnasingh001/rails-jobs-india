@@ -1,45 +1,21 @@
 # ROR India
 
-**Find Rails jobs by city, check the company before you apply, and track every application. All in one place.**
+ROR India is a job board for Ruby on Rails roles in India. A map shows where the openings are. Each job page has the description, salary, work mode, posted date, and every place to apply. The company panel lists recent layoffs, head count, offices, values, and the year founded. A signed-in developer can check a resume against a role and move applications from applied to offer.
 
 Built for the [SerpApi India Hackathon 2026](https://serpapi.github.io/serpapi-india-hackathon-2026/) · Track: **Knowledge & Public Interest**
 
 - Demo video: _add link here_
 - Live demo: _add link here (or run it locally, see below)_
 
-## Track
-
-**Knowledge & Public Interest**
-
-## What it does
-
-ROR India is a job board for Ruby on Rails roles in India. A map shows where the openings are. Each job page has the description, salary, work mode, posted date, and every place to apply. The company panel lists recent layoffs, head count, offices, values, and the year founded. A signed-in developer can check a resume against a role and move applications from applied to offer.
-
-## Who it helps
-
-Rails developers in India who are looking for a job. They can see which cities have work, judge a company before applying, and keep track of every application in one place.
-
-## How it uses SerpApi
-
-SerpApi is the data source. The listings and company facts are not written by hand.
-
-| Engine | Role |
-|---|---|
-| `google_jobs` | Finds live Rails openings and keeps the original description, salary, and apply links. |
-| `google_maps` | Finds the company's office the first time someone clicks **Show office** for that company and city. |
-| `brave_ai_mode` | Builds the company profile (layoffs, head count, offices, values) when `data:fetch_company_profile` is run. |
-
-Opening the map or a job reads saved data from PostgreSQL and `api/data/`. That request does not call SerpApi. The key stays in `api/.env` and is never sent to the browser.
-
 ---
 
-## See it in action: Priya's job search
+## A full job search in ROR India, step by step
 
-Meet Priya. She is a Rails developer in **Pune** and wants a job in **Pune or Bengaluru** only. This is her search:
+See where the Rails jobs are, judge each company, and keep every application in one place.
 
-![Priya's journey, step by step](docs/journey/priya-journey.gif)
+![A full job search in ROR India, step by step](docs/journey/priya-journey.gif)
 
-**Why it matters:** hours of searching become minutes. She picks a city with facts, not guesses. She skips weak matches, applies with a better resume, and always knows where each application stands.
+**Why it matters:** hours of searching become minutes. Pick a city with facts, not guesses. Skip weak matches, apply with a better resume, and always know where each application stands.
 
 <details>
 <summary><b>Show the screens, step by step</b></summary>
@@ -87,22 +63,31 @@ _The screenshots use a demo account and real jobs from the app's data._
 
 - **Frontend:** React, TypeScript, MapLibre (the map), Tailwind.
 - **Backend:** Rails API with PostgreSQL. The SerpApi calls live in `api/app/services/serpapi/`.
-- **Saved SerpApi data (`api/data/`):** this is not a separate data source. It is real data we fetched from SerpApi (jobs from 8 regions and the company profiles), saved as JSON files. We keep it for development, so we could build and test the whole app without spending SerpApi calls again. This let us finish within the free plan's 250 searches. It also means the app works right after setup.
+- **Saved SerpApi data (`api/data/`):** this is not a separate data source. It is real data we fetched from SerpApi (jobs and company profiles), saved as JSON files. We keep it for development, so we could build and test the whole app without spending SerpApi calls again. This let us finish within the free plan's 250 searches. It also means the app works right after setup.
 - **Accounts:** sign up, sign in, and a tracker for your applications.
 
 ### How SerpApi is used
 
-SerpApi is the data source of the whole product. Nothing on the map is hand-written. A credit is spent only on the three paths below. Opening the map or a job reads what we already saved.
+SerpApi is the data source of the whole product. Nothing on the map is hand-written.
 
 ```mermaid
 flowchart TD
-  harvest["HarvestJobsJob or jobs:harvest"] --> jobs["google_jobs"]
-  office["Show office, the first time for that company and city"] --> maps["google_maps"]
-  profile["data:fetch_company_profile"] --> brave["brave_ai_mode"]
+  harvest["HarvestJobsJob or jobs:harvest"] --> jobs
+  office["Show office, the first time for that company and city"] --> maps
+  profile["data:fetch_company_profile"] --> brave
+  subgraph serpapi["SerpApi engines"]
+    jobs["Google Jobs<br/>google_jobs"]
+    maps["Google Maps<br/>google_maps"]
+    brave["Brave AI Mode<br/>brave_ai_mode"]
+  end
   jobs --> saved[("PostgreSQL and api/data")]
   maps --> saved
   brave --> saved
   saved --> visitor["Map, job page and company panel. No SerpApi call."]
+
+  classDef engine fill:#dc2626,stroke:#991b1b,color:#ffffff,font-weight:bold
+  class jobs,maps,brave engine
+  style serpapi fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#991b1b
 ```
 
 | SerpApi engine | What it does for the user |
@@ -116,17 +101,19 @@ How we keep it honest and cheap:
 - **Fresh but not wasteful.** Jobs are stored in our database and served from there, so opening the app or a job costs no SerpApi credit. Only the backend job `HarvestJobsJob` (or `bin/rails jobs:harvest`) calls Google Jobs, and it remembers its page position per query.
 - **Shows its sources.** Company facts always come with links. If we have no profile for a company, the page says so instead of guessing.
 - **One lookup per company.** Offices and profiles are cached, so ten jobs at one company cost one request.
-- **Your key stays on the server.** The browser never sees `SERPAPI_KEY`.
-
-### Keeping jobs fresh
-
-Visitors cannot trigger a fetch. `HarvestJobsJob` can run every day at 18:30 UTC (midnight in India) through Solid Queue. The schedule is currently commented out in `api/config/recurring.yml` to save SerpApi credits; uncomment it to turn it on. The Docker image sets `SOLID_QUEUE_IN_PUMA=true`, so the web process runs the scheduler too. On another host set that variable, or run `bin/jobs` as a second process. It needs `SERPAPI_KEY` and retries up to 3 times, 30 minutes apart, if SerpApi fails.
 
 ---
 
 ## How to run it locally
 
-You need Node 22, Ruby 3.4 and PostgreSQL. A free [SerpApi account](https://serpapi.com) (250 searches/month) is enough.
+### Prerequisites
+
+- Node 22
+- Ruby 3.3 (the version is in `api/.ruby-version`)
+- PostgreSQL
+- A [SerpApi account](https://serpapi.com). The free plan (250 searches a month) is enough.
+
+### Steps
 
 ```bash
 # 1. Backend (Rails API on port 3001)
@@ -144,6 +131,8 @@ npm run dev
 
 Open the address Vite prints (usually http://localhost:5173).
 
+**Note:** The app works with no key too: it shows the saved SerpApi data from `api/data/`. You only need a key to fetch new data.
+
 Useful commands:
 
 ```bash
@@ -153,8 +142,6 @@ bin/rails data:fetch_all_company_profiles       # build profiles for every compa
 bin/rails test                                  # backend tests
 npm run lint && npm run build                   # frontend checks
 ```
-
-The app works with no key too: it shows the saved SerpApi data from `api/data/`. You only need a key to fetch new data.
 
 ---
 
@@ -180,19 +167,9 @@ The app works with no key too: it shows the saved SerpApi data from `api/data/`.
 
 ---
 
-## Limits (what we do not claim)
-
-- Right now the focus is **Rails jobs** in 8 regions, not every tech job in India.
-- Company profiles are AI-assisted summaries from web sources. They are a starting point: check the linked sources before you decide.
-- Years of experience and AI fluency read from a resume are keyword and date-range estimates you can edit. "Jobs for you" scores only what both you and the job state; many listings have no salary or no years requirement.
-- The job fit check is a keyword match against a fixed skills list. It does not read years of experience or soft requirements.
-- Salary and apply links come from Google Jobs and are only as complete as the listing.
-
-## Disclosure
-
-Built with AI help (Claude Code) for coding and review. The backend has an automated test suite (`bin/rails test`).
-
 ## Team
 
 - **Ayush Billore** · [LinkedIn](https://www.linkedin.com/in/ayushbillore/)
 - **Krishna Singh** · [LinkedIn](https://www.linkedin.com/in/krishnasinghcs/)
+
+Built with love by Ayush and his Claude, and Krishna and his Cursor.
