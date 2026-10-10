@@ -5,6 +5,8 @@ class JobBlueprint < Blueprinter::Base
 
   field :company_name, name: :company
   field :salary
+  field :remote
+  field :remote_source, name: :remoteSource
   field :apply_url, name: :applyUrl
   field :apply_host, name: :applyHost
   field :posted_label, name: :postedAt

@@ -10,6 +10,8 @@ export type JobPin = {
   latitude: number | null
   longitude: number | null
   workMode: WorkMode
+  /** What the scrape found: true when the posting is remote, false when it is not, null when unknown. */
+  remote: boolean | null
   locationLabel: string
   salaryLabel: string | null
   applyHost: string | null

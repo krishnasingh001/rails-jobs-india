@@ -7,6 +7,7 @@ type SerpJob = {
   company: string
   location: string
   salary: string | null
+  remote?: boolean | null
   applyUrl: string | null
   applyHost: string | null
   postedAt: string
@@ -38,7 +39,9 @@ function toJobPin(job: SerpJob): JobPin {
     code: located.code,
     latitude: located.latitude,
     longitude: located.longitude,
-    workMode: located.workMode,
+    // The scrape's remote flag wins over what the location text suggests.
+    workMode: job.remote === true ? 'remote' : located.workMode,
+    remote: job.remote ?? null,
     locationLabel: job.location.trim() || place || 'India',
     salaryLabel: job.salary,
     applyHost: job.applyHost,

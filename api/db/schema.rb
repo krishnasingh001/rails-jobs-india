@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_11_071000) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_11_081000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -76,6 +76,8 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_11_071000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "state"
+    t.boolean "remote"
+    t.string "remote_source"
     t.index ["external_id"], name: "index_jobs_on_external_id", unique: true
     t.index ["last_seen_at"], name: "index_jobs_on_last_seen_at"
     t.index ["state"], name: "index_jobs_on_state"
@@ -286,6 +288,20 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_11_071000) do
     t.index ["user_id"], name: "index_tracked_applications_on_user_id"
   end
 
+  create_table "user_resumes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "label", null: false
+    t.text "resume_url"
+    t.string "skills", default: [], null: false, array: true
+    t.decimal "years_experience", precision: 4, scale: 1
+    t.string "ai_fluency"
+    t.string "ai_signals", default: [], null: false, array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "label"], name: "index_user_resumes_on_user_id_and_label", unique: true
+    t.index ["user_id"], name: "index_user_resumes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -317,4 +333,5 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_11_071000) do
   add_foreign_key "solid_queue_recurring_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_scheduled_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "tracked_applications", "users"
+  add_foreign_key "user_resumes", "users"
 end

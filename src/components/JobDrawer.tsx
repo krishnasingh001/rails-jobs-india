@@ -144,6 +144,9 @@ export function JobCard({
           <span className={`rounded-full px-2 py-0.5 text-xs font-bold tabular-nums ${matchTone(match.score).className}`}>
             {match.score}% · {matchTone(match.score).label}
           </span>
+          {match.resume && (user?.resumes?.length ?? 0) > 1 ? (
+            <span className="rounded-full bg-brand-soft px-2 py-0.5 text-xs font-semibold text-brand">Apply with: {match.resume.label}</span>
+          ) : null}
           {match.reasons.map((reason) => (
             <span
               key={reason.kind}

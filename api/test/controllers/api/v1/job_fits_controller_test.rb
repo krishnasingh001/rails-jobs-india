@@ -27,4 +27,18 @@ class Api::V1::JobFitsControllerTest < ActionDispatch::IntegrationTest
   test "has no score when the posting names no known skills" do
     assert_nil Resume::JobFit.call(description: "Great culture", skills: [ "Ruby" ])[:score]
   end
+
+  test "scores against the chosen resume when one is given" do
+    user = User.create!(name: "Asha", email: "asha@example.com", password: "secret1", password_confirmation: "secret1", skills: [ "Redis" ])
+    resume = user.user_resumes.create!(label: "Backend", skills: [ "Ruby on Rails", "Redis", "Docker" ])
+    headers = { "Authorization" => "Bearer #{Session.start!(user)}" }
+
+    post api_v1_job_fit_path, headers: headers, params: { description: DESCRIPTION, resume_id: resume.id }
+
+    assert_equal 60, JSON.parse(response.body).dig("data", "score")
+
+    post api_v1_job_fit_path, headers: headers, params: { description: DESCRIPTION }
+
+    assert_equal 20, JSON.parse(response.body).dig("data", "score")
+  end
 end

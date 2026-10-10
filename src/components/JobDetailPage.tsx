@@ -1,11 +1,12 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, BookmarkPlus, Building2, Clock, ExternalLink, MapPin, Share2, Wallet } from 'lucide-react'
+import { ArrowLeft, BookmarkPlus, Building2, Clock, ExternalLink, FileCheck, MapPin, Share2, Wallet } from 'lucide-react'
 import { JobFitCard } from './JobFitCard.tsx'
 import { CompanyInsightPanel } from './CompanyInsightPanel.tsx'
 import { useAuth } from '../context/AuthContext.tsx'
 import { loadCompanyPlace, type CompanyPlace } from '../data/companyPlace.ts'
 import { loadJobFit, type JobFit } from '../lib/jobFit.ts'
+import { rankResumes, type JobMatch } from '../lib/matchJobs.ts'
 import { trackJob } from '../lib/applications.ts'
 import { formatPosted, provenanceLine, timeAgo, workModeLabel } from '../lib/jobLabels.ts'
 import type { JobPin } from '../types.ts'
@@ -74,6 +75,34 @@ function Description({ text, fit }: { text: string; fit: JobFit | null }) {
   )
 }
 
+function skillsOf(match: JobMatch): string | null {
+  return match.reasons.find((reason) => reason.kind === 'skills')?.label ?? null
+}
+
+/** Names the resume to apply with, and why, using the same scoring as the Jobs for you list. */
+function ApplyWithResume({ ranked }: { ranked: JobMatch[] }) {
+  const best = ranked[0]
+  const next = ranked[1]
+  if (!best?.resume) return null
+  const clearWin = next?.resume && best.score > next.score
+  const skills = skillsOf(best)
+  return (
+    <div className="mt-5 flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3" role="note">
+      <FileCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" aria-hidden="true" />
+      <p className="text-sm text-emerald-900">
+        <strong className="font-semibold">Apply with your “{best.resume.label}” resume.</strong>{' '}
+        {clearWin
+          ? `It matches this role more closely${skills ? `: ${skills}` : ''}, compared with ${skillsOf(next) ?? `a ${next.score}% match`} on “${next.resume?.label}”.`
+          : next
+            ? 'Your resumes fit this role about equally, so any of them will do.'
+            : skills
+              ? `It matches ${skills} this role asks for.`
+              : 'It is the one we compared this role with.'}
+      </p>
+    </div>
+  )
+}
+
 export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
   const { user } = useAuth()
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -86,12 +115,18 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
   const [fitError, setFitError] = useState<string | null>(null)
   const navigate = useNavigate()
   const userId = user?.id ?? null
+  const resumes = user?.resumes ?? []
+  const ranked = useMemo(() => (user && resumes.length > 0 ? rankResumes(job, user) : []), [job, user, resumes.length])
+  const bestResumeId = ranked[0]?.resume?.id ?? null
+  const [pickedResumeId, setPickedResumeId] = useState<number | null>(null)
+  const pickedStillExists = resumes.some((resume) => resume.id === pickedResumeId)
+  const resumeId = pickedStillExists ? pickedResumeId : bestResumeId
 
   useEffect(() => {
     let cancelled = false
     setFit(null)
     setFitError(null)
-    loadJobFit(job.title, job.description)
+    loadJobFit(job.title, job.description, resumeId)
       .then((result) => {
         if (!cancelled) setFit(result)
       })
@@ -101,7 +136,7 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
     return () => {
       cancelled = true
     }
-  }, [job.id, job.title, job.description, userId])
+  }, [job.id, job.title, job.description, userId, resumeId])
 
   useEffect(() => {
     headingRef.current?.focus()
@@ -176,6 +211,8 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
             </div>
           </div>
 
+          {ranked.length > 0 ? <ApplyWithResume ranked={ranked} /> : null}
+
           <div className="mt-5 flex flex-wrap items-center gap-3">
             {job.applyUrl ? (
               <a
@@ -223,7 +260,16 @@ export function JobDetailPage({ job, onBack, onSignIn }: JobDetailPageProps) {
 
         <div className="mt-4 grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_22rem] xl:grid-cols-[minmax(0,1fr)_26rem]">
         <div className="min-w-0 space-y-4">
-        <JobFitCard fit={fit} error={fitError} onSignIn={onSignIn} onAts={() => navigate('/ats')} />
+        <JobFitCard
+          fit={fit}
+          error={fitError}
+          onSignIn={onSignIn}
+          onAts={() => navigate('/ats')}
+          resumes={resumes}
+          resumeId={resumeId}
+          bestResumeId={bestResumeId}
+          onPickResume={setPickedResumeId}
+        />
 
         <CompanyInsightPanel key={job.company} company={job.company} />
 

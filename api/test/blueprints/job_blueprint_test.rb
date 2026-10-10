@@ -89,4 +89,13 @@ class JobBlueprintTest < ActiveSupport::TestCase
     assert_nil payload[:shareLink]
     assert_nil payload[:thumbnail]
   end
+
+  test "renders whether the scrape found the job remote" do
+    job = Job.new(external_id: "job-6", title: "T", company_name: "C", remote: true, remote_source: "extensions", last_seen_at: Time.current)
+
+    payload = JobBlueprint.render_as_hash(job)
+
+    assert_equal true, payload[:remote]
+    assert_equal "extensions", payload[:remoteSource]
+  end
 end

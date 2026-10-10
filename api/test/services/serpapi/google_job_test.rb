@@ -32,4 +32,29 @@ class Serpapi::GoogleJobTest < ActiveSupport::TestCase
     assert_equal "₹18L a year", listing.attributes[:salary]
     assert_equal "3 days ago", listing.attributes[:posted_label]
   end
+
+  test "marks a posting remote from Google's work-from-home flag" do
+    assert_equal [ true, "google_work_from_home" ], Serpapi::GoogleJob.remote_signal({ "detected_extensions" => { "work_from_home" => true } }, "Pune")
+  end
+
+  test "marks a posting remote from its extensions or location" do
+    assert_equal [ true, "extensions" ], Serpapi::GoogleJob.remote_signal({ "extensions" => [ "Full-time", "Work from home" ] }, "Anywhere")
+    assert_equal [ true, "location" ], Serpapi::GoogleJob.remote_signal({}, "Remote, India")
+  end
+
+  test "a posting with no remote signal is not remote" do
+    assert_equal [ false, nil ], Serpapi::GoogleJob.remote_signal({ "extensions" => [ "Full-time" ] }, "Pune, Maharashtra")
+    assert_equal [ false, nil ], Serpapi::GoogleJob.remote_signal(nil, nil)
+  end
+
+  test "stores the remote flag on the job attributes" do
+    listing = Serpapi::GoogleJob.new(
+      { "job_id" => "job-3", "location" => "Anywhere", "extensions" => [ "Work from home" ] },
+      query: "Ruby on Rails",
+      search_location: "India"
+    )
+
+    assert_equal true, listing.attributes[:remote]
+    assert_equal "extensions", listing.attributes[:remote_source]
+  end
 end

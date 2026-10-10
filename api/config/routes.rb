@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       end
       post "resume_skills", to: "resume_skills#create"
       resource :profile, only: %i[show update]
+      resources :user_resumes, path: "resumes", only: %i[index create update destroy]
       post "job_fit", to: "job_fits#create"
       get "place", to: "places#show"
       get "company_insight", to: "company_insights#show"

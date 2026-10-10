@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :sessions, dependent: :destroy
   has_many :tracked_applications, dependent: :destroy
   has_many :resume_checks, dependent: :destroy
+  has_many :user_resumes, dependent: :destroy
 
   before_validation :normalize_email
   before_validation :normalize_resume_profile

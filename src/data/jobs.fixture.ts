@@ -92,6 +92,7 @@ function buildJobs(): JobPin[] {
       latitude: located.latitude,
       longitude: located.longitude,
       workMode: located.workMode,
+      remote: located.workMode === 'remote',
       locationLabel:
         located.workMode === 'remote'
           ? 'Remote, India'

@@ -60,4 +60,23 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
     assert_match(/Resume url/, JSON.parse(response.body).fetch("message"))
   end
+
+  test "the sign-up resume becomes the first resume" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha", email: "asha2@example.com", password: "secret1", password_confirmation: "secret1",
+      skills: [ "Ruby on Rails" ], years_experience: 3, resume_ai_fluency: "user"
+    }
+
+    assert_response :created
+    resumes = JSON.parse(response.body).dig("user", "resumes")
+    assert_equal [ "My resume" ], resumes.map { |resume| resume["label"] }
+    assert_equal [ "Ruby on Rails" ], resumes.first["skills"]
+    assert_equal "user", resumes.first["ai_fluency"]
+  end
+
+  test "signing up without a resume creates none" do
+    post api_v1_auth_register_path, params: { name: "Asha", email: "asha3@example.com", password: "secret1", password_confirmation: "secret1" }
+
+    assert_equal [], JSON.parse(response.body).dig("user", "resumes")
+  end
 end

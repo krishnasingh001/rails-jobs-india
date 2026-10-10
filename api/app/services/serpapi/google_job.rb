@@ -8,6 +8,19 @@ module Serpapi
       @search_location = search_location
     end
 
+    REMOTE_WORDS = /\b(?:remote|work from home|wfh)\b/i
+
+    # [remote, source]. Google Jobs only ever flags the positive case, so a posting
+    # without the flag is recorded as not remote and the source stays nil.
+    def self.remote_signal(result, location)
+      result = {} unless result.is_a?(Hash)
+      return [ true, "google_work_from_home" ] if result.dig("detected_extensions", "work_from_home") == true
+      return [ true, "extensions" ] if Array(result["extensions"]).any? { |item| item.is_a?(String) && item.match?(REMOTE_WORDS) }
+      return [ true, "location" ] if location.to_s.match?(REMOTE_WORDS)
+
+      [ false, nil ]
+    end
+
     def external_id
       result["job_id"].to_s.presence
     end
@@ -27,6 +40,8 @@ module Serpapi
         query: query,
         search_location: search_location,
         raw: result,
+        remote: remote_signal.first,
+        remote_source: remote_signal.last,
         last_seen_at: Time.current
       }
     end
@@ -34,6 +49,10 @@ module Serpapi
     private
 
     attr_reader :result, :query, :search_location
+
+    def remote_signal
+      @remote_signal ||= self.class.remote_signal(result, result["location"])
+    end
 
     def salary
       detected = result.dig("detected_extensions", "salary")

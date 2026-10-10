@@ -1,5 +1,6 @@
-import type { Account, AiLevel } from './auth.ts'
+import type { Account, AiLevel, UserResume } from './auth.ts'
 import type { JobPin } from '../types.ts'
+import { isEligible } from './eligibleJobs.ts'
 
 export type MatchReason = {
   kind: 'skills' | 'mode' | 'city' | 'salary' | 'experience' | 'ai'
@@ -12,6 +13,8 @@ export type JobMatch = {
   /** 0-100, scored only on the things both the candidate and the job state. */
   score: number
   reasons: MatchReason[]
+  /** The resume this score was worked out with. Only set when the candidate has resumes. */
+  resume?: { id: number; label: string }
 }
 
 const WEIGHTS = { skills: 35, mode: 20, city: 20, salary: 10, experience: 10, ai: 5 } as const
@@ -54,14 +57,17 @@ function formatLpa(value: number): string {
 /** What the candidate still has to fill in before a ranked list makes sense. Skills and AI fluency are optional. */
 export function missingPreferences(user: Account): string[] {
   const missing: string[] = []
-  if ((user.preferred_cities?.length ?? 0) === 0) missing.push('preferred cities')
-  if ((user.work_modes?.length ?? 0) === 0) missing.push('work mode')
+  const modes = user.work_modes ?? []
+  const remoteOnly = modes.length > 0 && modes.every((mode) => mode === 'remote')
+  if ((user.preferred_cities?.length ?? 0) === 0 && !remoteOnly) missing.push('preferred cities')
+  if (modes.length === 0) missing.push('work mode')
   if (user.expected_salary_lpa == null) missing.push('expected salary')
   if (user.years_experience == null) missing.push('years of experience')
   return missing
 }
 
-export function matchJob(job: JobPin, user: Account): JobMatch {
+/** Score one job. With a resume, the skills, experience and AI level come from that resume instead of the profile. */
+export function matchJob(job: JobPin, user: Account, resume?: UserResume): JobMatch {
   const reasons: MatchReason[] = []
   let earned = 0
   let possible = 0
@@ -71,7 +77,8 @@ export function matchJob(job: JobPin, user: Account): JobMatch {
     reasons.push({ kind, ok: fraction === 1, label })
   }
 
-  const have = new Set((user.skills ?? []).map((skill) => skill.toLowerCase()))
+  const skills = resume && resume.skills.length > 0 ? resume.skills : (user.skills ?? [])
+  const have = new Set(skills.map((skill) => skill.toLowerCase()))
   if (have.size > 0 && job.skills.length > 0) {
     const matched = job.skills.filter((skill) => have.has(skill.toLowerCase()))
     // Long wish-lists would sink every candidate, so only the first few skills count in full.
@@ -99,27 +106,50 @@ export function matchJob(job: JobPin, user: Account): JobMatch {
   }
 
   const asked = requiredYears(job.description)
-  if (user.years_experience != null && asked != null) {
-    const years = user.years_experience
+  const yearsHeld = resume?.years_experience ?? user.years_experience ?? null
+  if (yearsHeld != null && asked != null) {
+    const years = yearsHeld
     const fraction = years >= asked ? 1 : years >= asked - 1 ? 0.5 : 0
     add('experience', fraction, `Asks ${asked}+ yrs, you have ${years}`)
   }
 
-  const aiLevel = user.ai_fluency ?? user.resume_ai_fluency ?? null
+  const aiLevel = resume ? strongerAi(user.ai_fluency, resume.ai_fluency) : (user.ai_fluency ?? user.resume_ai_fluency ?? null)
   if (aiLevel && aiLevel !== 'none' && AI_JOB_WORDS.test(`${job.title}\n${job.description}`)) {
     add('ai', AI_RANK[aiLevel] >= 1 ? 1 : 0, 'Mentions AI work, which fits your AI experience')
   }
 
-  return { job, score: possible === 0 ? 0 : Math.round((earned / possible) * 100), reasons }
+  return {
+    job,
+    score: possible === 0 ? 0 : Math.round((earned / possible) * 100),
+    reasons,
+    ...(resume ? { resume: { id: resume.id, label: resume.label } } : {}),
+  }
+}
+
+function strongerAi(a: AiLevel | null | undefined, b: AiLevel | null | undefined): AiLevel | null {
+  return (AI_RANK[a ?? 'none'] >= AI_RANK[b ?? 'none'] ? a : b) ?? null
+}
+
+/** The job scored against each of the candidate's resumes, best first. Equal scores keep the order the resumes were added. */
+export function rankResumes(job: JobPin, user: Account): JobMatch[] {
+  return (user.resumes ?? []).map((resume) => matchJob(job, user, resume)).sort((a, b) => b.score - a.score)
+}
+
+/** The candidate's best score for a job, taken over each of their resumes. Without resumes it scores the profile. */
+export function bestMatch(job: JobPin, user: Account): JobMatch {
+  return rankResumes(job, user)[0] ?? matchJob(job, user)
 }
 
 function workLabel(mode: JobPin['workMode']): string {
   return mode === 'remote' ? 'Remote' : mode === 'hybrid' ? 'Hybrid' : 'On-site'
 }
 
+/** Jobs that pass the candidate's city and work-mode filters, best match first. */
 export function matchJobs(jobs: JobPin[], user: Account): JobMatch[] {
+  const wants = { cities: user.preferred_cities ?? [], modes: user.work_modes ?? [] }
   return jobs
-    .map((job) => matchJob(job, user))
+    .filter((job) => isEligible(job, wants))
+    .map((job) => bestMatch(job, user))
     .filter((match) => match.reasons.length > 0)
     .sort((a, b) => b.score - a.score || Date.parse(b.job.postedAt) - Date.parse(a.job.postedAt))
 }

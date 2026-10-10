@@ -29,6 +29,8 @@ type AuthContextValue = {
     resume_ai_signals?: string[]
   }) => Promise<void>
   updateProfile: (update: ProfileUpdate) => Promise<void>
+  /** Re-read the account, e.g. after resumes changed. */
+  reloadUser: () => Promise<void>
   logout: () => Promise<void>
 }
 
@@ -86,6 +88,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (result.user) setUser(result.user)
   }, [])
 
+  const reloadUser = useCallback(async () => {
+    const payload = await fetchAccount()
+    if (payload.user) setUser(payload.user)
+  }, [])
+
   const logout = useCallback(async () => {
     try {
       await logoutAccount()
@@ -95,7 +102,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const value = useMemo(() => ({ user, loading, login, register, updateProfile, logout }), [user, loading, login, register, updateProfile, logout])
+  const value = useMemo(() => ({ user, loading, login, register, updateProfile, reloadUser, logout }), [user, loading, login, register, updateProfile, reloadUser, logout])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

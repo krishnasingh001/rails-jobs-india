@@ -12,11 +12,11 @@ export type JobFit = {
   ats_score: number | null
 }
 
-export async function loadJobFit(title: string, description: string): Promise<JobFit> {
+export async function loadJobFit(title: string, description: string, resumeId?: number | null): Promise<JobFit> {
   const headers = new Headers({ accept: 'application/json', 'content-type': 'application/json' })
   const token = authToken()
   if (token) headers.set('authorization', `Bearer ${token}`)
-  const response = await fetch('/api/v1/job_fit', { method: 'POST', headers, body: JSON.stringify({ title, description }) })
+  const response = await fetch('/api/v1/job_fit', { method: 'POST', headers, body: JSON.stringify({ title, description, resume_id: resumeId ?? undefined }) })
   const payload = (await response.json().catch(() => null)) as { data?: JobFit; message?: string } | null
   if (!response.ok || !payload?.data) throw new Error(payload?.message || 'Could not check your fit for this job.')
   return payload.data

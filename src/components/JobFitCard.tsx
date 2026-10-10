@@ -1,4 +1,5 @@
 import { Check, X } from 'lucide-react'
+import type { UserResume } from '../lib/auth.ts'
 import type { JobFit } from '../lib/jobFit.ts'
 
 function scoreTone(score: number): string {
@@ -26,11 +27,19 @@ export function JobFitCard({
   error,
   onSignIn,
   onAts,
+  resumes = [],
+  resumeId = null,
+  bestResumeId = null,
+  onPickResume,
 }: {
   fit: JobFit | null
   error: string | null
   onSignIn: () => void
   onAts: () => void
+  resumes?: UserResume[]
+  resumeId?: number | null
+  bestResumeId?: number | null
+  onPickResume?: (id: number) => void
 }) {
   const link =
     'cursor-pointer font-semibold text-brand underline-offset-2 hover:text-brand-hover hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
@@ -39,6 +48,26 @@ export function JobFitCard({
       <h2 id="job-fit" className="font-brand text-lg font-semibold text-ink">
         Job fit check
       </h2>
+      {resumes.length > 1 && onPickResume ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
+          <label htmlFor="fit-resume" className="text-ink-muted">
+            Scored against
+          </label>
+          <select
+            id="fit-resume"
+            value={resumeId ?? ''}
+            onChange={(event) => onPickResume(Number(event.target.value))}
+            className="cursor-pointer rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-ink focus:border-brand focus:ring-2 focus:ring-brand/15"
+          >
+            {resumes.map((resume) => (
+              <option key={resume.id} value={resume.id}>
+                {resume.label}
+                {resume.id === bestResumeId ? ' (best fit)' : ''}
+              </option>
+            ))}
+          </select>
+        </div>
+      ) : null}
       {error ? (
         <p className="mt-2 text-sm text-brand" role="alert">
           {error}

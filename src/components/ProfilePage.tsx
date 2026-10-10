@@ -5,9 +5,10 @@ import { photoToAvatar } from '../lib/avatar.ts'
 import { useAuth } from '../context/AuthContext.tsx'
 import { CITIES } from '../data/cities.ts'
 import type { AiLevel, WorkModePreference } from '../lib/auth.ts'
+import { ResumesSection } from './ResumesSection.tsx'
 import { extractResumeProfile, validateResumeFile, type ResumeProfile } from '../lib/resumeCheck.ts'
 
-const MODES: { value: WorkModePreference; label: string }[] = [
+export const MODES: { value: WorkModePreference; label: string }[] = [
   { value: 'remote', label: 'Remote' },
   { value: 'hybrid', label: 'Hybrid' },
   { value: 'onsite', label: 'On-site' },
@@ -24,7 +25,7 @@ export function aiLevelLabel(level: AiLevel | null | undefined): string {
   return AI_LEVELS.find((item) => item.value === level)?.label ?? 'Not set'
 }
 
-const fieldClass =
+export const fieldClass =
   'w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-ink transition-colors duration-200 focus:border-brand focus:ring-2 focus:ring-brand/15'
 
 function Section({ title, hint, children }: { title: string; hint?: string; children: React.ReactNode }) {
@@ -37,7 +38,7 @@ function Section({ title, hint, children }: { title: string; hint?: string; chil
   )
 }
 
-function Chip({ label, onRemove }: { label: string; onRemove: () => void }) {
+export function Chip({ label, onRemove }: { label: string; onRemove: () => void }) {
   return (
     <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft py-1 pl-3 pr-1.5 text-sm font-semibold text-brand">
       {label}
@@ -195,7 +196,14 @@ export function ProfilePage({ onClose }: { onClose: () => void }) {
           </button>
         </div>
 
-        <Section title="Start from your resume" hint="Upload a PDF or DOCX and we fill in your skills, years of experience and AI experience. You can edit everything.">
+        <Section
+          title="Your resumes"
+          hint="Keep up to five, such as a backend and a full-stack version. Each job is scored against the one that fits it best. These save as soon as you change them."
+        >
+          <ResumesSection />
+        </Section>
+
+        <Section title="Start from your resume" hint="Upload a PDF or DOCX to fill in your profile-wide skills, years of experience and AI experience. You can edit everything.">
           <button
             type="button"
             disabled={reading}
