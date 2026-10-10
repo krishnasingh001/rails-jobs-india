@@ -1,5 +1,5 @@
 import { normalizeLocation } from '../lib/normalizeLocation.ts'
-import type { JobPin, JobsSource } from '../types.ts'
+import type { ApplyOption, JobPin, JobsSource, Provenance } from '../types.ts'
 
 type SerpJob = {
   id: string
@@ -10,6 +10,13 @@ type SerpJob = {
   applyUrl: string | null
   applyHost: string | null
   postedAt: string
+  description?: string
+  via?: string | null
+  extensions?: string[]
+  applyOptions?: ApplyOption[]
+  shareLink?: string | null
+  thumbnail?: string | null
+  provenance?: Partial<Provenance>
 }
 
 function isSerpJob(value: unknown): value is SerpJob {
@@ -36,6 +43,21 @@ function toJobPin(job: SerpJob): JobPin {
     applyHost: job.applyHost,
     applyUrl: job.applyUrl,
     postedAt: job.postedAt,
+    description: job.description ?? '',
+    via: job.via ?? null,
+    extensions: job.extensions ?? [],
+    applyOptions: job.applyOptions ?? [],
+    shareLink: job.shareLink ?? null,
+    thumbnail: job.thumbnail ?? null,
+    provenance: {
+      source: job.provenance?.source ?? 'Google Jobs',
+      via: job.provenance?.via ?? null,
+      query: job.provenance?.query ?? null,
+      searchLocation: job.provenance?.searchLocation ?? null,
+      firstSeenAt: job.provenance?.firstSeenAt ?? null,
+      fetchedAt: job.provenance?.fetchedAt ?? null,
+      originalUrl: job.provenance?.originalUrl ?? job.applyUrl,
+    },
   }
 }
 
@@ -59,8 +81,4 @@ export const serpApiJobsSource: JobsSource = {
   load() {
     return fetch('/api/v1/jobs').then(readJobs).then((result) => result.jobs)
   },
-}
-
-export function harvestJobs(): Promise<{ jobs: JobPin[]; added: number }> {
-  return fetch('/api/v1/harvests', { method: 'POST' }).then(readJobs)
 }

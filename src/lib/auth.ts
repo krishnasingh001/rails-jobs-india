@@ -5,6 +5,8 @@ export type Account = {
   name: string
   email: string
   role: 'candidate' | 'recruiter'
+  resume_url?: string | null
+  skills?: string[]
 }
 
 export function authToken(): string | null {
@@ -61,6 +63,8 @@ export function registerAccount(payload: {
   password: string
   password_confirmation: string
   role: string
+  resume_url?: string
+  skills?: string[]
 }) {
   return request('/api/v1/auth/register', {
     method: 'POST',

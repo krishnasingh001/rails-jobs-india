@@ -1,5 +1,7 @@
+import { PageSheet } from './AppShell.tsx'
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { useAuth } from '../context/AuthContext.tsx'
+import { checkResume, extractResumeSkills, validateResumeFile } from '../lib/resumeCheck.ts'
 
 const FREE_EMAIL_DOMAINS = new Set([
   'gmail.com',
@@ -54,9 +56,7 @@ function AuthShell({
   onClose: () => void
 }) {
   return (
-    <div className="pointer-events-none absolute inset-0 z-40 overflow-y-auto px-4 pb-8 pt-24 font-sans md:pt-8">
-      <div className="pointer-events-auto mx-auto flex min-h-[calc(100dvh-8rem)] w-full max-w-md flex-col justify-center md:min-h-[calc(100dvh-4rem)]">
-        <div className="rounded-2xl border border-slate-200 bg-white/95 p-6 shadow-lg backdrop-blur-md sm:p-8">
+    <PageSheet size="narrow">
           <div className="mb-6 text-center">
             <p className="font-brand text-xs font-semibold uppercase tracking-[0.14em] text-brand">{kicker}</p>
             <h1 className="mt-2 font-brand text-3xl font-semibold text-ink">{title}</h1>
@@ -69,9 +69,7 @@ function AuthShell({
               Back to the map
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+    </PageSheet>
   )
 }
 
@@ -172,8 +170,35 @@ export function SignUpScreen({
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
   const [role, setRole] = useState('candidate')
+  const [resumeUrl, setResumeUrl] = useState('')
+  const [skills, setSkills] = useState<string[]>([])
+  const [resumeName, setResumeName] = useState<string | null>(null)
+  const [resumeFile, setResumeFile] = useState<File | null>(null)
+  const [reading, setReading] = useState(false)
+  const [resumeError, setResumeError] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+
+  async function onResumeFile(file: File | undefined) {
+    if (!file) return
+    const problem = validateResumeFile(file)
+    if (problem) {
+      setResumeError(problem)
+      return
+    }
+    setReading(true)
+    setResumeError(null)
+    try {
+      const found = await extractResumeSkills(file)
+      setResumeName(file.name)
+      setResumeFile(file)
+      setSkills((current) => [...current, ...found.filter((skill) => !current.some((c) => c.toLowerCase() === skill.toLowerCase()))])
+    } catch (caught) {
+      setResumeError(caught instanceof Error ? caught.message : 'Could not read this resume.')
+    } finally {
+      setReading(false)
+    }
+  }
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault()
@@ -185,7 +210,18 @@ export function SignUpScreen({
       return
     }
     try {
-      await register({ name, email, password, password_confirmation: passwordConfirmation, role })
+      await register({
+        name,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+        role,
+        ...(role === 'candidate' ? { resume_url: resumeUrl.trim(), skills } : {}),
+      })
+      if (role === 'candidate' && resumeFile) {
+        // Keep the signup resume in the ATS history. The account already exists, so a failure here must not block sign-up.
+        await checkResume(resumeFile, '').catch(() => undefined)
+      }
       onSuccess()
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'Sign up failed')
@@ -255,6 +291,65 @@ export function SignUpScreen({
             ))}
           </div>
         </fieldset>
+        {role === 'candidate' ? (
+          <section className="space-y-3 rounded-xl border border-slate-200 p-3">
+            <div>
+              <label htmlFor="resume-file" className="text-xs font-medium text-ink-muted">
+                Upload your resume <span className="font-normal">(optional, PDF or DOCX)</span>
+              </label>
+              <input
+                id="resume-file"
+                type="file"
+                accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                disabled={reading}
+                className="mt-1 block w-full cursor-pointer text-sm text-ink-muted file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:bg-brand-soft file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand"
+                onChange={(event) => {
+                  void onResumeFile(event.target.files?.[0])
+                  event.target.value = ''
+                }}
+              />
+              <p className="mt-1 text-xs text-ink-muted">
+                {reading ? 'Reading your resume…' : resumeName ? `Skills read from ${resumeName}. It will be saved to your ATS history.` : 'We read your skills from it and save it to your ATS history.'}
+              </p>
+              {resumeError ? (
+                <p className="mt-1 text-xs text-brand" role="alert">
+                  {resumeError}
+                </p>
+              ) : null}
+            </div>
+            {skills.length > 0 ? (
+              <ul className="flex flex-wrap gap-1.5" aria-label="Skills from your resume">
+                {skills.map((skill) => (
+                  <li key={skill} className="flex items-center gap-1 rounded-full bg-brand-soft py-1 pl-2.5 pr-1.5 text-xs font-medium text-brand">
+                    {skill}
+                    <button
+                      type="button"
+                      aria-label={`Remove ${skill}`}
+                      className="cursor-pointer rounded-full px-1 leading-none hover:bg-brand-border"
+                      onClick={() => setSkills((current) => current.filter((item) => item !== skill))}
+                    >
+                      ×
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <div>
+              <label htmlFor="resume-url" className="text-xs font-medium text-ink-muted">
+                Resume link <span className="font-normal">(optional)</span>
+              </label>
+              <input
+                id="resume-url"
+                type="url"
+                inputMode="url"
+                placeholder="https://drive.google.com/…"
+                className={fieldClass}
+                value={resumeUrl}
+                onChange={(event) => setResumeUrl(event.target.value)}
+              />
+            </div>
+          </section>
+        ) : null}
         <div>
           <label htmlFor="signup-password" className="text-xs font-medium text-ink-muted">
             Password

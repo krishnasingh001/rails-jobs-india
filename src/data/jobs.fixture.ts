@@ -100,6 +100,13 @@ function buildJobs(): JobPin[] {
       applyHost: job.applyHost,
       applyUrl: `https://${job.applyHost}`,
       postedAt: posted.toISOString().slice(0, 10),
+      description: '',
+      via: null,
+      extensions: [],
+      applyOptions: [],
+      shareLink: null,
+      thumbnail: null,
+      provenance: { source: 'Fixture', via: null, query: null, searchLocation: null, firstSeenAt: null, fetchedAt: null, originalUrl: null },
     }
   })
 }

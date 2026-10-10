@@ -19,6 +19,8 @@ type AuthContextValue = {
     password: string
     password_confirmation: string
     role: string
+    resume_url?: string
+    skills?: string[]
   }) => Promise<void>
   logout: () => Promise<void>
 }
@@ -59,6 +61,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       password: string
       password_confirmation: string
       role: string
+      resume_url?: string
+      skills?: string[]
     }) => {
       const result = await registerAccount(payload)
       if (result.auth_token) saveAuthToken(result.auth_token)
