@@ -23,6 +23,8 @@ class DataImportTest < ActiveSupport::TestCase
 
       acme = Company.find_by!(company_name: "Acme")
       assert_equal [ "Pune" ], acme.states
+      assert_equal [ "image/png", "acme-logo-bytes" ], [ acme.logo_content_type, acme.logo_data ]
+      assert_nil Company.find_by!(company_name: "Bare Co").logo_data
       assert_equal [], Company.find_by!(company_name: "Bare Co").states
 
       insight = CompanyInsight.find_by!(company_name: "Acme")

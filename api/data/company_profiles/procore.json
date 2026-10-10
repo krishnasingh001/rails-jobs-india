@@ -1,0 +1,40 @@
+{
+  "company_name": "Procore",
+  "query": "Procore: layoffs in the last 12 months (date, employees affected, percent of workforce), total head count with date, office locations, company values, year founded, and domain area (a one or two sentence explanation of what the company does and which industry it serves). Reply as JSON only with keys layoffs_last_year, head_count, office_locations, values, founded_year, domain_area.",
+  "fetched_at": "2026-10-10T10:44:38Z",
+  "profile": {
+    "layoffs_last_year": {
+      "date": "2026-01-14",
+      "employees_affected": 300,
+      "percent_of_workforce": 4
+    },
+    "head_count": {
+      "count": 4421,
+      "as_of": "2025-12-31"
+    },
+    "office_locations": [
+      "Carpinteria, CA (HQ)",
+      "Austin, TX",
+      "Santa Barbara, CA",
+      "New York, NY",
+      "Tampa, FL",
+      "Los Angeles, CA",
+      "San Francisco, CA",
+      "San Diego, CA",
+      "Denver, CO",
+      "Sydney, Australia",
+      "Bengaluru, India",
+      "Toronto, Canada",
+      "Vancouver, Canada"
+    ],
+    "values": [
+      "Openness",
+      "Optimism",
+      "Ownership"
+    ],
+    "founded_year": 2002,
+    "domain_area": "Procore is a cloud-based construction management software platform that serves the construction industry, connecting owners, general contractors, specialty contractors, architects, and engineers to collaborate on projects across the full construction lifecycle."
+  },
+  "raw_markdown": "```json\n{\n  \"layoffs_last_year\": {\n    \"date\": \"2026-01-14\",\n    \"employees_affected\": 300,\n    \"percent_of_workforce\": 4\n  },\n  \"head_count\": {\n    \"count\": 4421,\n    \"as_of\": \"2025-12-31\"\n  },\n  \"office_locations\": [\n    \"Carpinteria, CA (HQ)\",\n    \"Austin, TX\",\n    \"Santa Barbara, CA\",\n    \"New York, NY\",\n    \"Tampa, FL\",\n    \"Los Angeles, CA\",\n    \"San Francisco, CA\",\n    \"San Diego, CA\",\n    \"Denver, CO\",\n    \"Sydney, Australia\",\n    \"Bengaluru, India\",\n    \"Toronto, Canada\",\n    \"Vancouver, Canada\"\n  ],\n  \"values\": [\"Openness\", \"Optimism\", \"Ownership\"],\n  \"founded_year\": 2002,\n  \"domain_area\": \"Procore is a cloud-based construction management software platform that serves the construction industry, connecting owners, general contractors, specialty contractors, architects, and engineers to collaborate on projects across the full construction lifecycle.\"\n}\n```\n\n### References",
+  "references": null
+}

@@ -1,0 +1,655 @@
+{
+  "state": null,
+  "company": "Accenture",
+  "query": "Accenture software engineer",
+  "location": "India",
+  "fetched_at": "2026-10-10T10:48:24Z",
+  "total_fetched": 19,
+  "jobs": [
+    {
+      "title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Pune, Maharashtra",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=n_cTRxFdOz-yl5vKAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBBFsc0RLGRqkawKNlqJiJUgeIAwWcbdhGQm7EwwpUcQvKEncW1-9d77xXtWbE6jmvRwl4c9MRGcOTRMlOD7-kArNShh8hGE4SISOpofotmge-dUuzKooTW-9NI7YaplclnS_1Qac3Do0Kja7tZTOXBYLo7eE9uYnxqG28i0gitmEDVawh8RpHUlkwAAAA&shmds=v1_ARwrE20Z1vxkLlB6m16ejIM1GHUQW7zhD5md6QnMFrlyZZK4KA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=n_cTRxFdOz-yl5vKAAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/sk-en/careers/jobdetails?id=ATCI-5416193-S1985276_en",
+      "job_title": "Custom Software Engineer",
+      "description": "Project Role : Custom Software Engineer\nProject Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.                                                                                                                                                                                                                                                                                                      \nMust have skills : Spring Boot\nGood to have skills : Java, Java Enterprise Edition, Microsoft Azure PaaS\nMinimum 3 year(s) of experience is required\nEducational Qualification : 15 years full time education\n\nSummary: \nAs a Custom Software Engineer, you will engage in the design, construction, and configuration of applications tailored to meet specific business processes and application requirements. Your typical day will involve collaborating with cross-functional teams to gather requirements, developing innovative solutions, and ensuring that applications are optimized for performance and usability. You will also participate in code reviews and contribute to the continuous improvement of development practices, ensuring that the applications you build align with the latest industry standards and best practices.\n \nRoles & Responsibilities: \n- Expected to perform independently and become an SME.\n- Required active participation/contribution in team discussions.\n- Contribute in providing solutions to work related problems.\n- Collaborate with stakeholders to gather and analyse requirements for application development.\n- Participate in the design and architecture of scalable and efficient software solutions.\n \nProfessional & Technical Skills: \n- Must To Have Skills: Proficiency in Spring Boot.\n- Good To Have Skills: Experience with Java Enterprise Edition, Java, Microsoft Azure PaaS.\n- Strong understanding of RESTful API design and development.\n- Experience with microservices architecture and cloud-based solutions.\n- Familiarity with database technologies such as SQL, Oracle or Azure Cosmos DB.\n \nAdditional Information: \n- The candidate should have minimum 3 years of experience in Spring Boot.\n- This position is based at our Pune office.\n- A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/sk-en/careers/jobdetails?id=ATCI-5416193-S1985276_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "埃森哲中国",
+          "link": "https://www.accenture.cn/cn-zh/careers/jobdetails?id=ATCI-5318182-S1939644_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Hackajob",
+          "link": "https://hackajob.com/job/4ba8a4cc-a452-11f1-a7b8-0a05e249917d-custom-software-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Bayt.com",
+          "link": "https://www.bayt.com/ar/india/jobs/custom-software-engineer-74727323/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Platform.uplers.com",
+          "link": "https://platform.uplers.com/talent/all-opportunities/HR1178787078536817?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Foundit",
+          "link": "https://www.foundit.in/job/custom-software-engineer-accenture-pune-67125623?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/custom-software-engineer-accenture-in-india-pune-city--fj-2392360911?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Built In",
+          "link": "https://builtin.com/job/custom-software-engineer/11200124?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6Im5fY1RSeEZkT3oteWw1dktBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwVEdRNWNsaGtkR1pWZURSQldYRkRXblpzVDJvMWVGWnRhR2hDWmt0TVdXbFhiamhoY0hwUGJHOWpVSFEyYzFCeU0xbHdYMHMyVEdoV1ZrdGpZM1JhY2xvNVgzSlZhMkZhWTBoUVdEZGlMWGh3VVZBdGVETllXR1Y1ZDFaVGFubElVazkxWTI1NU1sazVMVXBZVkhKa05XWXhia05SVVhsdGVXVlZjMEpzV1VwUlFYaHlXVW9TRnpsb1prdGhjbUV6VDB4cVZHdFFTVkJzTmpKaU9FRjNHaUpCUkhOeU9XWlViRVp0WW1SUVRUUjZRaTFPVGpoTmFGOTZNakJFWldoMFVtTm4iLCJmY3YiOiIzIiwiZmNfaWQiOiJuX2NUUnhGZE96LXlsNXZLQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru, Karnataka",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=TBq9UOq5V6Baio0VAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQ7CMAwAxdonMJkVoQaQWGAChBgYeUDlRiYtpHYVO6Ijf-gPeQllue3uinFWbM5ZTTq4y8PemAguHFomSvD9jPCUGpQw-QaE4SoSIs0PjVmve-dUYxnU0FpfeumcMNUyuEnSPyptpmAf0aja7tZD2XNYLo7eE1ueTi3DiThgzCmv4IaJ0fCFP-G8ZkyWAAAA&shmds=v1_ARwrE20WdhWOZPPgv5YV_b3x-JTolDeznWlB4Dqaxv3lg-b0dg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=TBq9UOq5V6Baio0VAAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/mu-en/careers/jobdetails?id=ATCI-5440288-S1980516_en",
+      "job_title": "Custom Software Engineer",
+      "description": "Project Role : Custom Software Engineer\nProject Role Description : Analyze, design, code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.                                                                                                                                                                                                                                                                                                                                                                                \nMust have skills : Java Full Stack Development\nGood to have skills : NA\nMinimum 5 year(s) of experience is required\nEducational Qualification : 15 years full time education\n\nSummary: \nAgentAI Native – Developer (Enterprise)\nRole Summary\nBuild high quality agentic AI applications—implement LLM tooling, RAG pipelines, vector search, and API integrations—delivering rapid prototypes that evolve into production systems. Own hands on development, testing, and integration, with a portfolio that demonstrates speed, experimentation, and learning.\nResponsibilities\n \tHands on Build \no\tImplement agents (tools, skills), prompts/templates, planners, memory, and evaluation loops  write clean, testable code and CI/CD pipelines.\no\tStand up RAG services (ingestion, chunking, embeddings, indexing) and integrate vector DBs  add observability and guardrails.\n \tIntegration \no\tConnect to enterprise APIs, event streams, and data sources  ensure robust error handling, retries, and fallbacks.\n \tQuality & Safety \no\tWrite unit/integration tests  implement offline/online evals, red team scenarios, and content/action safety boundaries.\n \tIteration & Communication \no\tPrototype quickly, demo frequently, and communicate trade offs and results clearly with stakeholders.\nMust Have Qualifications (AI Native archetype)\n \tStrong CS and software engineering fundamentals.\n \tHands on experience with LLMs, RAG, vector DBs, and AI APIs.\n \tProven ability to build end to end applications and integrate AI into systems.\n \tVisible portfolio of AI projects demonstrating experimentation and speed.\n \tFast learner with a bias for rapid prototyping and iteration.\n \tAble to translate business problems into practical AI solutions with clear communication.\nProgramming Languages (Developer)\n \tCore build proficiency (choose two or more): \no\tPython (agent frameworks, data/RAG services, evaluation, notebooks to services)\no\tTypeScript/Node.js (service wrappers, tool servers, API integration, front end hooks)\no\tJava (enterprise services, Spring Boot, concurrency/performance)\n \tNice to have: C#/.NET (enterprise stacks), Go (high throughput agents/services), Rust (performance critical tooling), SQL (PostgreSQL/pgvector, query optimization), Bash (DevOps).\n \tFrameworks & tooling: LangChain, LlamaIndex, Semantic Kernel  vector DBs (pgvector, Pinecone, Weaviate, Milvus)  test frameworks (PyTest/JUnit/Jest)  containers, serverless, and cloud SDKs.\nAdditional Information: \n- The candidate should have minimum 5 years of experience in Java Full Stack Development.\n- A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/mu-en/careers/jobdetails?id=ATCI-5440288-S1980516_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/BaIlPWhKdvFUeY-dc-Viz8wIKOOtpk9kpghYQv8oEcjKhBR_lhgmBg?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Job Search At Monster Thailand",
+          "link": "https://www.monster.co.th/job/custom-software-engineer-accenture-bengaluru-bangalore-68214408?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/in/job-listing/custom-software-engineer-accenture-inkabengaluru-2-to-4-years-experience-756304bc-df0c-42f0-ac62-2204fe6087f6?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6IlRCcTlVT3E1VjZCYWlvMFZBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU1RoNUxXVTBVWGxuVjNWRlptOTNkbWhxWlhOTlRuaHVlbVoyY1ZKTllVaHFWVGhpTTFKRFZsQjFRMmgyUWpReWJucExWMUpqVkVGbFpVeFFXbmxQVHpsR2QwTjFSMTk1WkV0clUwdFlNM1kyVlc5UlREazFUMlphT1ZWUVVEZEVVVzlRU0haTVlrRktWRVpVTTJSUmR6STJRMWhaTkV0emFuWldZbmxpZEUxS2VHNXpTMllTRnpsb1prdGhjbUV6VDB4cVZHdFFTVkJzTmpKaU9FRjNHaUpCUkhOeU9XWlJjbkpqTVhZeVVXVklUWGRsZVhkdE4ybFhSRlJmTUdGbFVtUlIiLCJmY3YiOiIzIiwiZmNfaWQiOiJUQnE5VU9xNVY2QmFpbzBWQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Associate Engineer - Backend 4",
+      "company_name": "Accenture",
+      "location": "Kochi, Keralam",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=5FOJm-ckATiUBbhgAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXNQQrCMBBAUdz2CLqZtWgiogi6qiAueoiSjkMSTWdKJkKX3qE39CTWzd89fjUtqlOtKhhdIbixj0yUYQtXhy_iBxzg-5ngKR0ouYwBhOEu4hMtL6GUQc_WqibjtbgS0aD0Vpg6Ge2M9J9Wg8s0pPnQ7o-70Qzs16sakbi8M0FkaARD3EBD2SXX_wAZWxnLlgAAAA&shmds=v1_ARwrE20YfpgYdc2HSiOpVF3sTqxfBtw4FSShu_PfdDT_f8lRvg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=5FOJm-ckATiUBbhgAAAAAA%3D%3D",
+      "extensions": [
+        "10 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/ch-en/careers/jobdetails?id=R00357526_en&title=Associate+Engineer+-+Backend+4",
+      "job_title": "Associate Engineer - Backend 4",
+      "description": "Job Title -  Associate Engineer – Backend –Associate-  ACS Song \n\nManagement Level: Level 12 – Associate\n\nLocation: Kochi\n\nMust have skills: Java/Springboot\n\nGood to have skills: Agile Project Management\n\nExperience: 1-2 years of experience is required\n\nEducational Qualification: Graduation (Accurate educational details should capture) \n\n\n\nJob Summary\n\nWe are seeking a skilled and motivated Java/Spring Developer with 1–2 years of hands-on experience in designing, developing, and maintaining high-performance Java applications. The ideal candidate has a strong understanding of object-oriented programming, backend development, and modern software engineering best practices. You will be responsible for writing clean, scalable code, collaborating with cross-functional teams, and contributing to all phases of the software development lifecycle.\n\nRoles and Responsibilities\n\nWrite clean, maintainable, and well-documented Java code following team coding standards, good debugging skillsetCollaborate on technical implementation, assist other developers and consult in implementation and developmentDemonstrate capability to effectively assimilate new skills and use of new technologies.Exceptional productivity and attention to product quality issuesBe accountable to deliver the task to the agreed standardsAdhere to development standards and architectural guidelines set by the Solution Design teamContribute to the development of eCommerce features and support integration with external systems under guidance.Continuously learn and keep up with new technologies relevant to the project and team.Demonstrate abilities to effectively communicate ideas and to mentor less experienced team membersProactively explore new tools and technologies and contribute ideas during discussions.Act as the key trouble-shooter in complex/escalated incidentsProvide innovative ideas and solutions in an ever-changing environment with up-to-date knowledge regarding existing technologies.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/ch-en/careers/jobdetails?id=R00357526_en&title=Associate+Engineer+-+Backend+4&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.co.in/job-listing/associate-engineer-backend-4-accenture-JV_IC2887994_KO0,28_KE29,38.htm?jl=1010268654695&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/u5PaJsnpqfu0VLffMKc1une5DaC4qBbyOM7wrconRv_3O2PBN0B8RA?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jooble",
+          "link": "https://in.jooble.org/jdp/5693894751808299166?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://in.linkedin.com/jobs/view/associate-engineer-backend-4-at-accenture-in-india-4469235708?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/associate-engineer-backend-4-accenture-kochi-kerala--t7xk-847393713?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/in/job-listing/associate-engineer-backend-4-accenture-kochi-1-to-2-years-experience-059e9ae6-e43e-4adf-9c09-ce74c8f40600?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobted",
+          "link": "https://www.jobted.in/job/dcdeea1133a1025fa0caf34925eca3d1?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBc3NvY2lhdGUgRW5naW5lZXIgLSBCYWNrZW5kIDQiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6IjVGT0ptLWNrQVRpVUJiaGdBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU2tKT2EyUkJXbXB6YkRCV01IZElkblptYjNneE5WaDRUVEkwVWpJM2VuaEtWVVpUY3kxYWJESkhZWEJvZURONVRYbHlhVmhKUlZwV1FsTm1aWEY0Yldnd05EVjZVekl6Y20xVmNGaGthemh6UzNBeWVtNVRTV1F0WVRkeWFVcFBVM0kxYjJRdFNrMDBXWGRQUW1sVVdsVkJRMU5OT0V4ZlkycFBUMkV5UjBWcWVFOU5abU1TRnpsb1prdGhjbUV6VDB4cVZHdFFTVkJzTmpKaU9FRjNHaUpCUkhOeU9XWlRMVzVXTXpZellVZDZiSFk1Y0hsNFkyZDRXWFpzT0RGWlZXZEIiLCJmY3YiOiIzIiwiZmNfaWQiOiI1Rk9KbS1ja0FUaVVCYmhnQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai, Tamil Nadu",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=cZ9l9JPgFd81evmTAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQ7CMAwAxdonMHlGqAEkFphQhdhYYK_cYJKg1K5qV3TkDfBDXkJZbru74j0r1tWgJi1c5G5P7AmOHBIT9fB9feAhDShh7yMIw0kkZJrvo1mnO-dUcxnU0JIvvbROmBoZ3STpH7XGKdhlNKo329VYdhwWcPCe2IbplBiqSMyYlnDFNmU44234AWNfaIKVAAAA&shmds=v1_ARwrE21YqeOF4Ft3IAOkUXLoKsey0LwrkSJLvFXD-dQZJixWpw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=cZ9l9JPgFd81evmTAAAAAA%3D%3D",
+      "extensions": [
+        "18 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/at-de/careers/jobdetails?id=ATCI-5439571-S1980247_en",
+      "job_title": "Custom Software Engineer",
+      "description": "Project Role : Custom Software Engineer\nProject Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.                                                                                                                                                                                                                                                                                                      \nMust have skills : Java Full Stack Development\nGood to have skills : NA\nMinimum 12 year(s) of experience is required\nEducational Qualification : 15 years full time education\n\nRole Summary\nAI POWERED TECH TALENT\nDesign and deliver enterprise-grade, full-stack solutions leveraging AgentAI tools for accelerated development. Act as a bridge between traditional engineering teams and AI-native specialists, enabling productivity uplift and scalability without deep ML model training or MLOps ownership. AI Powered Tech Talent.\nKey Responsibilities\n \tSolution Architecture \no\tDefine end-to-end architecture for full-stack enterprise applications integrating AgentAI copilots, pre-built AI services, and APIs.\no\tEnsure compliance with SDLC, security, and performance standards while embedding AI-assisted workflows.\n \tAI Integration \no\tUse AgentAI tools and LLM-based copilots for coding, testing, debugging, documentation, and design acceleration.\no\tIncorporate AI services (e.g., RAG-based retrieval, conversational APIs) into enterprise systems.\n \tFull-Stack Design \no\tArchitect scalable front-end and back-end solutions using modern frameworks and cloud-native patterns.\no\tOptimize API design, data flows, and UI/UX for AI-assisted features.\n \tCollaboration \no\tAct as a liaison between traditional engineering teams and AI-native squads  drive adoption of AI-assisted development practices.\n \tGovernance & Quality \no\tMaintain architectural integrity, scalability, and reliability  enforce responsible AI usage and guardrails.\nMust-Have Qualifications\n \tSolid foundation in enterprise engineering, SDLC, and domain/industry workflows.\n \tDemonstrated capability in using copilots and LLM tools for software development tasks.\n \tPractical understanding of AI concepts like RAG and limitations of LLMs.\n \tAbility to deliver faster, higher-quality outcomes by combining human judgment with AI-assisted productivity.\n \tDoes not train models or design ML architectures  focuses on integration and productivity uplift.\nProgramming & Full-Stack Skills\n \tBackend (Any 1 or more): \no\tJava (Spring Boot) – microservices, API integration\no\t.NET (C#) – enterprise application frameworks\no\tPython – scripting, automation, AI API integration\n \tFrontend: \no\tReact / Angular / Vue.js – responsive UI development\no\tTypeScript / JavaScript – modern front-end engineering\n \tAdditional: SQL/NoSQL, REST/GraphQL APIs, cloud-native skills (Azure/AWS/GCP), containerization (Docker/Kubernetes), CI/CD pipelines.\n\nAdditional Information: \n- The candidate should have minimum 12 years of experience in Java Full Stack Development.\n- A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/at-de/careers/jobdetails?id=ATCI-5439571-S1980247_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/pmMWPkbG5B3-UIVRmQDrVKv2eRpXxXBaxrIzo5MeCFvT_w5KNjDorw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6ImNaOWw5SlBnRmQ4MWV2bVRBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU1hocWNFdHhjemhmWXpkSFZrMUtMVVF6VDFrME1saGtVVFpMZWtWWmF6ZHJNSEJLWkdsQ01uZExVMnhIT0ZkbGVrOTFURXh3WDI1bGFHdG1WRmhYTm1KRlNXOTFSamhpWkZWRWQwVnBXbU40WDBaM1RWbFNhR2t5V0U1TWNXUnNaRzU0VEhGd2VIZE5RbWd5TlU4eGJrcDJiRXhXZUdFeVprWkVaVmd4TkVWbmVqTkNjM1VTRnpsb1prdGhjbUV6VDB4cVZHdFFTVkJzTmpKaU9FRjNHaUpCUkhOeU9XWlRRa0pmTTFZelp6WTBTRFprWDFWemVUTXlRbHAyYW1WaVNVaEIiLCJmY3YiOiIzIiwiZmNfaWQiOiJjWjlsOUpQZ0ZkODFldm1UQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Application Support Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai, Tamil Nadu",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=auPP_mk5OUeMwNL8AAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXLsQrCMBCAYVz7CE43izQidNGpiLi56F6u8Ugi6V1ILtDRdxB8QJ_EuvzT_zWfVdP1KcVgUYMw3GpKkhXO7AITZfi-3vCUEQphth6W5SLiIq2PXjWVgzGlxNYVXbxtrUxGmEaZzYLKP0PxmClFVBr23W5uE7sN9NYSa80EgeHkiRnDFu44hQhXfNQf1yiLwZkAAAA&shmds=v1_ARwrE23to3jwOdcEC2FSqKPLXP8msVkkUdK0d9qrd-2wnStEgw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=auPP_mk5OUeMwNL8AAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/il-en/careers/jobdetails?id=ATCI-R1-S2024039_en",
+      "job_title": "Application Support Engineer",
+      "description": "Project Role : Application Support Engineer\nProject Role Description : Act as software detectives, provide a dynamic service identifying and solving issues within multiple components of critical business systems.                                                                                                                                                                                                                                                                                                                                                                                                \nMust have skills : Java Enterprise Edition\nGood to have skills : NA\nEducational Qualification : 15 years full time education\n\nSummary: \nAs a Full Stack Engineer, a typical day involves designing and implementing comprehensive system features that span from the user interface to the backend infrastructure. The role requires actively contributing to the development lifecycle by creating innovative solutions that enhance client services. The work environment encourages adopting new technologies and methodologies, focusing on cloud-based and agile approaches to address complex business challenges effectively. Collaboration with team members and stakeholders is integral to ensure seamless integration and delivery of high-quality software products.\n\nRoles & Responsibilities:- Expected to build knowledge and support the team.\n\n- Participate in Problem Solving discussions.\n\n- Assist in the documentation and maintenance of software components to ensure clarity and ease of future enhancements.\n\n- Collaborate with cross-functional teams to understand requirements and contribute to the design of scalable solutions.\n\n- Engage in code reviews and provide constructive feedback to peers to maintain code quality and consistency.\n\nProfessional & Technical Skills:- Must To Have Skills: Proficiency in Java Enterprise Edition.\n\n- Strong understanding of object-oriented programming concepts and design patterns.\n\n- Experience with web technologies including HTML, CSS, and JavaScript frameworks.\n\n- Familiarity with database management and query languages such as SQL.\n\n- Knowledge of software development lifecycle and agile methodologies.\n\nAdditional Information:- The candidate should have minimum 0-2 years of experience in Java Enterprise Edition.\n\n- This position is based at our Kolkata office.\n\n- A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/il-en/careers/jobdetails?id=ATCI-R1-S2024039_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "埃森哲中国",
+          "link": "https://www.accenture.cn/cn-zh/careers/jobdetails?id=ATCI-5672081-S2058003_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Oracle",
+          "link": "https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/214282?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Startup Jobs",
+          "link": "https://startup.jobs/application-support-engineer-rapyutarobotics-9969928?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Built In",
+          "link": "https://builtin.com/job/application-support-engineer/11073898?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/wuAda9OyP6KPzBcH7bvSLhkkhCxc0jaBfTsNIrrco4QuuszwO4Mn1w?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Cutshort",
+          "link": "https://cutshort.io/job/Application-Support-Engineer-Chennai-Alin-Technologies-7JozEK2C?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBcHBsaWNhdGlvbiBTdXBwb3J0IEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIiwiaHRpZG9jaWQiOiJhdVBQX21rNU9VZU13Tkw4QUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJRlNXNWthV0UiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFMzTXhORzFPYVdOdU1uSk9la00wVG5ORlFtNW5jV2N3V0hoWGVtRktOMGM1V2xZeE4wdzFNM1ZwZW5wdmVFaDFWbGR6UVU1eGQxRlFORFV0TTNGdllsVTFlbWRZTWtrMGFIaGhibU16ZDAxMGRrdDNUVGR5ZVZGUmRHNUVibFpqVkhSNFJYVjFiSFJSVlVSSGQxcGhkMEpJWkZsVlNrNHdRbDlEY25WTlZuRkxNV0ZHU1ZJU0Z6bG9aa3RoY21FelQweHFWR3RRU1ZCc05qSmlPRUYzR2lKQlJITnlPV1pTYUVJeGVtOVFUREZrZG5wRFJtWlJiV2d4TlVGd05ra3pZelJuIiwiZmN2IjoiMyIsImZjX2lkIjoiYXVQUF9tazVPVWVNd05MOEFBQUFBQT09In0="
+    },
+    {
+      "title": "Software Product & Platform Engineer Lead",
+      "company_name": "Accenture",
+      "location": "Gurugram, Haryana",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=eF2nVUnsZmlUcacNAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWOMQrCQBBFsc0RLGQqC5GsCDZaKYgWFgEPEMbNZBNJdsLsLMbOO3gCr-ZJXJvX_fdf9plkhyvX-kAhKISraBXmUHSoNUsPR-9aTyRwIazg-3rDnW8QCMU2wB5OzK6j6a5RHcLWmBC63AVFbW1uuTfs6cajSaPwRxmadDQkO5XrzWrMB-8Ws7215DWmgjYZo0Qn2C_hjPJEjz8Ezex-pAAAAA&shmds=v1_ARwrE21-e47bCAienfBDbojSEKGqPpf5eN4wy3jhtkVqW1hxAQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=eF2nVUnsZmlUcacNAAAAAA%3D%3D",
+      "extensions": [
+        "2 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/ar-es/careers/jobdetails?id=14666365_en&title=Software+Product+%26+Platform+Engineer+Lead",
+      "job_title": "Software Product & Platform Engineer Lead",
+      "description": "Job Title - Software Prod & Plat Engineer Associate Manager\nManagement Level: 08 - Associate Manager\nLocation: Bengaluru / Gurugram\nMust have skills: Backend Development (Java / Golang / Node.js / C#), Docker, Kubernetes, AWS, Relational Databases (PostgreSQL / MySQL), Unit & Integration Testing, hands-on experience with AI coding tools (Cursor / Claude), strong Computer Science fundamentals\nGood to have skills: Frontend Development (React / Angular / HTML), building custom AI skills / tools / agents\nExperience: Minimum 9 year(s) of experience is required\nEducational Qualification: B.Tech / BE from a Tier-1 institute (IIT / NIT / BITS / IIIT or equivalent top-tier college) \n\nJob Summary:\nWe don't want you typing - we want you thinking; let AI be your typist. As a Software Prod & Plat Engineer at Accenture LearnVantage (ALV), you'll be a deeply hands-on, AI-native engineer who owns modules end-to-end, deploys AI agents to move fast, and applies rigorous and responsible engineering judgment to everything that ships. You steer AI in the right direction - and because your CS fundamentals are strong, you're never fazed by a language or stack you haven't used before.\n\nRoles & Responsibilities:\n\tDesign, build, and own backend services and features end-to-end, hands-on in code.\n\tUse AI development tools (Cursor / Claude) day in, day out - and build custom skills/tools/agents that boost your team's productivity so they focus on business problems.\n\tUphold a high bar: review, verify, and own every line - using AI rigorously and responsibly.\n\tDrive quality through unit and integration testing, code reviews, and solid engineering hygiene (Git, CI/CD, deployments).\n\tMentor junior engineers and raise the technical bar on the team.\n\tTurn ambiguous requirements into clear, actionable, well-engineered solutions.\n\nProfessional & Technical Skills:\n\tMust To Have Skills: Strong hands-on backend development in a widely used language (Java / Golang / Node.js / C#), backed by solid CS fundamentals.\n\tStrong hands-on experience with Docker, Kubernetes, AWS, and relational databases (PostgreSQL / MySQL).\n\tFirst-hand experience writing unit and integration tests.\n\tDemonstrable, current use of AI coding tools (Cursor / Claude), ideally extended with custom skills/tools.\n\tExperience building systems that scale - high throughput, real complexity.\n\tGood to have: working knowledge of frontend development (React / Angular / HTML).\n\nAdditional Information:\n\tThe ideal candidate is a hands-on, AI-native go-getter who brings solutions and interesting questions - not someone waiting to be told what to do.\n\tThis position is based at our Bengaluru / Gurugram office.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/ar-es/careers/jobdetails?id=14666365_en&title=Software+Product+%26+Platform+Engineer+Lead&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://in.linkedin.com/jobs/view/software-product-platform-engineer-lead-at-accenture-in-india-4455357722?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/software-product-platform-engineer-lead-accenture-services-pvt-ltd-gurugram-haryana--t7xk-834375662?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBQcm9kdWN0IFx1MDAyNiBQbGF0Zm9ybSBFbmdpbmVlciBMZWFkIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIiwiaHRpZG9jaWQiOiJlRjJuVlVuc1ptbFVjYWNOQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJRlNXNWthV0UiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFNVOW5WSEpmWVdWdlNUVmpWM1JuV0UwMldWTkNXRk5mUm5OeWNVbHJWVGR3UWtsYVRWRkZWVTVNVms0MVFuZDZUelpzTUdwRGNWSm9WR0p1VDJwNGNsZzViVU42U1hsRU5ISkxSMTlPTjJGc09VZ3dhRTFOWDBsYWRFVndOMnBQVGxSSlNXRklVVFJsVFV4TFJGUXdlRVo1Y2toMmQzUjJSVVpMUTNadVExcGFOSEJtZUZZU0Z6bG9aa3RoY21FelQweHFWR3RRU1ZCc05qSmlPRUYzR2lKQlJITnlPV1pSTUVGeFlVWnVNek5WYkdSaldtWTJOWGhXZVU1YWIwYzBNMEZCIiwiZmN2IjoiMyIsImZjX2lkIjoiZUYyblZVbnNabWxVY2FjTkFBQUFBQT09In0="
+    },
+    {
+      "title": "Cloud Platform Engineer",
+      "company_name": "Accenture",
+      "location": "Kochi, Keralam",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=4ZUtprh1PR1QtL3sAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXMMQrCMBSAYVx7BF3eLJIUwUUnKeLQxRuUND6TSPJeyEuhowdw84aexLr82_c371XTdpGnO9yiqQ8uCS7kAiEW-L4-8OQRBE2xHpjgyuwirk--1ixHrUWiclJNDVZZTpoJR571guSfQbwpmJcxDvtDO6tMbrs5W4tUp4IQCHq2Puygx2KiST_EajkwjwAAAA&shmds=v1_ARwrE22okZLDej_FX1LbDjgWCv8f6bUHfgIxjhX-LxkH5hGOLg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=4ZUtprh1PR1QtL3sAAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/dk-en/careers/jobdetails?id=R00306121_en",
+      "job_title": "Cloud Platform Engineer",
+      "description": "Job Title -  Cloud Platform Engineer Specialist ACS Song \n\nManagement Level: \n\nLocation: Kochi\n\nMust have skills: AWS or Azure or GCP\n\nGood to have skills: Hybrid Cloud\n\nExperience: 5-8 years of experience is required\n\nEducational Qualification: Graduation (Accurate educational details should capture) \n\nJob Summary\n\nWithin our Cloud Platforms & Managed Services Solution Line, we apply an agile approach to provide true on-demand cloud platforms. We implement and operate secure cloud and hybrid global infrastructures using automation techniques for our client's business critical application landscape. As a Cloud Platform Engineer, you are responsible for implementing cloud and hybrid global infrastructures using infrastructure-as-code.\n\nRoles and Responsibilities\n\nImplement Cloud and Hybrid Infrastructures using Infrastructure-as-Code.Automate Provisioning and Maintenance for streamlined operations.Design and Estimate Infrastructure with an emphasis on observability and security.Establish CI/CD Pipelines for seamless application deployment.Ensure Data Integrity and Security through robust mechanisms.Implement Backup and Recovery Procedures for data protection.Build Self-Service Systems for enhanced developer autonomy.Collaborate with Development and Operations Teams for platform optimization.Awareness and follow industry best practices",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/dk-en/careers/jobdetails?id=R00306121_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.co.in/job-listing/cloud-engineer-lead-gallagher-JV_IC2887994_KO0,19_KE20,29.htm?jl=1010249799813&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/55k0sTZfwptqB_ZShf6yCWqPFdrpScfsRJtTYmtPJSEsKHjH7Oihfw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://in.linkedin.com/jobs/view/cloud-platform-engineer-at-accenture-in-india-4448361027?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "India Jobs Expertini",
+          "link": "https://in.expertini.com/job/cloud-engineer-lead-kochi-gallagher-635369083350162147/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajo.org",
+          "link": "https://in.trabajo.org/job-1907-6ee0372ba05b7a6c47b942d103d38f41?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobrapido.com",
+          "link": "https://in.jobrapido.com/jobpreview/1672270184842264576?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/337428066/cloud-platform-engineer-aws-kochi?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDbG91ZCBQbGF0Zm9ybSBFbmdpbmVlciIsImNvbXBhbnlfbmFtZSI6IkFjY2VudHVyZSIsImh0aWRvY2lkIjoiNFpVdHByaDFQUjFRdEwzc0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBURTB5ZFhvNGN5MVJlV3hmZGxRNE5HSnliSGxLU25OcVRERkVjbTlSWVZaS1JVeG9hekZ0UlVSdVpXZ3RUbXRUYkVRMVRWUkpOV3RTYVVSSVJUbHNTbkJ5WnkxblYzUkZibEpOU1RKRVlteDNNVUZFWDBwMFRFZHZaakl5ZEVkUVlURlRkblI1WVdkSmNGUlFOM05hVmxkWVNVaE5WMHRrVVdOVVFtdFpXWEpWVmtwalRrY1NGemxvWmt0aGNtRXpUMHhxVkd0UVNWQnNOakppT0VGM0dpSkJSSE55T1daVVUyWndXVlZpVlV0T1UxZDJjRkZqY1RaVVZuZEdWRW93YzFkQiIsImZjdiI6IjMiLCJmY19pZCI6IjRaVXRwcmgxUFIxUXRMM3NBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Custom Software Engineer - SAP ABAP",
+      "company_name": "Accenture",
+      "location": "Mumbai, Maharashtra",
+      "via": "Instahyre",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=xT029E4ku5RSzDqTAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBBFsfUIVlOLZkWwUZsoYhUQcoAwWcbdlWQn7EwwpXew9nKexLV51X__zT-z-fE8inIPNd_1iYngEl2IRAnWUJc3KE8Z39cbHtyCECbrgSNcmV1Hi4NXHWRvjEhXOFHUYAvLveFILU8mS_JHIz5_Dx0qNdvdZiqG6JZQWktRxxwNEaqxbzGsoMI8RfGa8AedREAGoAAAAA&shmds=v1_ARwrE23qB_uYT0L1CPQG0TScjzg9gai3rJMVIgvLHmiyALgdLw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=xT029E4ku5RSzDqTAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f61f56faf8c57bd7bd/images/L_UlPke-v5-z_ZWEEI_2rBwxQDBQQBd-LL1Sx0rV89c.jpeg",
+      "extensions": [
+        "18 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.instahyre.com/job-444107-custom-software-engineer-sap-abap-at-accenture-2-mumbai/",
+      "job_title": "Custom Software Engineer - SAP ABAP",
+      "description": "As a Custom Software Engineer, a typical day involves creating tailored software solutions by designing, coding, and improving various components within systems or applications. The role requires working with contemporary frameworks and following agile methodologies to ensure the delivery of scalable and efficient software that meets unique business requirements. Collaboration with different teams and continuous refinement of software elements are integral parts of the daily workflow, fostering innovation and responsiveness to evolving project needs.\n\n\n\n\nResponsibilities: \n\nDevelop custom software solutions to design, code, and enhance components across systems or applications.Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.Expected to be an SME, collaborate, and manage the team to perform.Responsible for team decisions.Engage with multiple teams and contribute to key decisions.Provide solutions to problems for their immediate team and across multiple teams.Lead efforts to identify and implement process improvements that enhance team productivity and software quality.Mentor junior team members to support their professional growth and integration within the team.\n\n\nRequirements:  \n\nMust-have skills: Proficiency in SAP ABAP Development for HANA.Strong knowledge of the software development lifecycle and agile methodologies.Experience in designing and optimizing custom code for high performance and scalability.Ability to troubleshoot and resolve complex technical issues within SAP environments.Familiarity with integration techniques and data handling in enterprise systems.\n\n\nAdditional Information: \n\nThe candidate should have a minimum of 5 years of experience in SAP ABAP Development for HANA.A 15-year full-time education is required.15 years of full-time education.",
+      "apply_options": [
+        {
+          "title": "Instahyre",
+          "link": "https://www.instahyre.com/job-444107-custom-software-engineer-sap-abap-at-accenture-2-mumbai/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobaaj",
+          "link": "https://www.jobaaj.com/job/baker-hughes-sap-software-engineer-abap-mumbai-maharashtra-5-to-7-years-675538?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIgLSBTQVAgQUJBUCIsImNvbXBhbnlfbmFtZSI6IkFjY2VudHVyZSIsImh0aWRvY2lkIjoieFQwMjlFNGt1NVJTekRxVEFBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTM0JsVkV4V01EYzBSM015WWprMk5IVlNha1pMWVhwaVQxSmpWekZaUTJ0UlVVdEhYME5MTURoVGQwZDNaR1JKUWxkMGJsZDRkRXhpWDBGSVZrMWZRa1pCVW5kbmVYcExlblpzWldScFkxSnlhelZNV2tsTFJFSTViRW8zU0RZMGFUZFRiMVphU0ZsWmRXSTFkaTFWY0ZKR05tOVpVVXRPZUdSTk5tWlRXa04xVVhsNE5qQVNGemxvWmt0aGNtRXpUMHhxVkd0UVNWQnNOakppT0VGM0dpSkJSSE55T1daU05XUjFkakprVEhCTFFrNDJWRGgzTm0xWFkwUlhOVmt0Tm5KQiIsImZjdiI6IjMiLCJmY19pZCI6InhUMDI5RTRrdTVSU3pEcVRBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "App Automation Eng Specialist",
+      "company_name": "Accenture",
+      "location": "Kolkata, West Bengal",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=NIXJXuhq1JlpC9NgAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBAAsc0TrNZWJCeCFlpFEAtLC0vZHMvl9LJ7ZDeQ0j_Y-D5f4tlMNcNUn1m1a3KGZjTp0aIwnDjANZOPmKIafF9veEgLSjj4DopwFgmJ5ofOLOveOdVUB7VS-9pL74SplcmVSP-4a4cD5YRG9812PdWZw3LReE9s40AQGS6Snmi4ghuV45E4YPoBseNwepsAAAA&shmds=v1_ARwrE22XHZ9bel3lFFKComIUAi9BgbZHtlnAluf5FT9IFqlu3w&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=NIXJXuhq1JlpC9NgAAAAAA%3D%3D",
+      "extensions": [
+        "17 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/pl-en/careers/jobdetails?id=AIOC-S01654189_en",
+      "job_title": "App Automation Eng Specialist",
+      "description": "Skill required: Tech for Operations - Microsoft Azure DevOps\nDesignation: App Automation Eng Specialist\nQualifications:Any Graduation  \nYears of Experience:7 to 11 years  \nAbout Accenture\nAccenture is a global professional services company with leading capabilities in digital, cloud and security.Combining unmatched experience and specialized skills across more than 40 industries, we offer Strategy and Consulting, Technology and Operations services, and Accenture Song— all powered by the world’s largest network of Advanced Technology and  Intelligent Operations centers. Our 784,000 people deliver on the promise of technology and human ingenuity every day, serving clients in more than 120 countries.  We embrace the power of change to create value and shared success for our clients, people, shareholders, partners and  communities.Visit us at www.accenture.com \nWhat would you do? In our Service Supply Chain offering, we leverage a combination of proprietary technology and client systems to develop, execute, and deliver BPaaS (business process as a service) or Managed Service solutions across the service lifecycle: Plan, Deliver, and Recover. In this role, you will partner with business development and act as a Business Subject Matter Expert (SME) to help build resilient solutions that will enhance our clients   supply chains and customer experience. \n The Application Automation Engineer Specialist (DevOps Specialist) is primarily responsible for building, deploying, maintain and automating our software development pipelines from source control through production. As an Automation Eng Senior Analyst Engineer, the candidate is responsible for developing and delivering scripts and automation tools used to build, integrate, and deploy software releases to Accenture platforms. The candidate will ensure solutions are built based on Accenture standards.\nWhat are we looking for? •\tBachelor’s degree computer science, information systems, or equivalent combination of education and work experience.\n •\t5+ years of hand-on experience with Azure DevOps\n •\tAzure DevOps (AZ - 400) certification required\n •\tHands-on experience in continuous delivery and continuous integration of CI/CD pipelines\n •\tExperience with Azure Repos, branching, code review and code analysis tools\n •\tProficient with Git, Git Flow, Azure DevOps\n •\tStrong hands-on expertise in diverse DevSecOps concepts / tools, especially on Azure DevOps, Pipelines, GitHub, GitHub actions\n •\tAbility to assess the requirement, environment and suggest right tools / technologies\n •\tHands on experience on Kubernetes and containerization technologies like Docker and Azure Container Registry\n •\tGood knowledge on PowerShell scripting\n •\tExpertise in Debugging and providing solutions and workarounds\n •\tHands-on experience with REST APIs and consuming from .Net Technologies and PowerShell\n •\tKnowledge on Azure Databricks and its architecture / framework\n •\tKnowledge on Azure Machine Learning Service and its architecture / framework\n •\tKnowledge on different monitoring and logging solutions available on Cloud, preferably on Azure\n •\tExpertise on Azure Functions\n •\tExcellent communication, presentation, and coding abilities\n •\tAzure Data Engineering (AZ-200 and AZ-201) and Azure Cloud Developer (AZ-203) certifications preferred \nRoles and Responsibilities: •\tLead software activities to scale Accenture engineering delivery capabilities, from build system automation to automated deployment\n •\tDrive continual process improvement in deployment practices \n •\tArchitect, develop, deploy, and evolve CI and CD systems for our cloud applications\n •\tWrite Infrastructure as Code (IaC) using Industry standard tools and services\n •\tWrite application deployment automation using industry standard deployment and configuration tools\n •\tDesign and implement continuous delivery pipelines \n •\tOversee systems support including responding to monitoring alerts\n •\tImplement industry best practices and tooling\n •\tWork with developers to identify necessary Azure resources and automate their provisioning\n •\tDocument automation processes\n •\tWork closely with key stakeholders to capture, analyze, and derive DevOps requirements\n •\tCI/CD pipeline support (troubleshooting, support with setting up in new projects)\n •\tCI/CD infrastructure and process troubleshooting (disk space, network issues etc).",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/pl-en/careers/jobdetails?id=AIOC-S01654189_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/llae_zZrw6212v0pfKB7SzfFETK1bwb1U0mEKYakP-eFqeDTegdRfA?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/app-automation-eng-specialist-accenture-kolkata--ss-in-19fz0m9?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/in/job-listing/app-automation-eng-specialist-accenture-inwbkolkata-2-to-5-years-experience-7b8db821-d0c1-4175-a594-3afa28b07643?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Tsenta",
+          "link": "https://tsenta.com/jobs/accenture-app-automation-eng-specialist-96e738ef-7007-431e-a240-a84bb545f4d2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JobsEye",
+          "link": "https://jobseye.in/jobs/app-automation-eng-specialist-at-accenture-1857148?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBcHAgQXV0b21hdGlvbiBFbmcgU3BlY2lhbGlzdCIsImNvbXBhbnlfbmFtZSI6IkFjY2VudHVyZSIsImh0aWRvY2lkIjoiTklYSlh1aHExSmxwQzlOZ0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTelY0T1c5c1ZVUkxaV1ZMY1dSVmJrMVJiVEJKWlZsRE0xRkJMVUpTVUZGMk1WVjBObEJOYnpVMVlXTm9UVVJUTVZSYVdHd3dSVTVvVFhKcWVFaFhTMnBSWXpGM1JsWk5OR1JsTmpGWWNFZG5OMUZPVGkxa2JWYzRURVJFVVZOVlZHdG9VbUprUjJGbk0xcHdaSGxrVFd3emFrUm5OVUV3Ykc5YWRYRldhRzFqVjJSRFdVc1NGemxvWmt0aGNtRXpUMHhxVkd0UVNWQnNOakppT0VGM0dpSkJSSE55T1daU1FVdzRhMDlqVVRNeFMwcHdMV2haVjBWS04xb3pkMVJNWjBGbiIsImZjdiI6IjMiLCJmY19pZCI6Ik5JWEpYdWhxMUpscEM5TmdBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "AI Native Software Engineer (Mumbai)",
+      "company_name": "Accenture",
+      "location": "Mumbai, Maharashtra",
+      "via": "Jobrapido.com",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=StT1rTXb7bdBRv9bAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_yWNMQrCQBBFsc0RrKZUkawINopFChGL2HiAMFnGzUqyE3YmmtI72Hs4T-KKza_efy97T7J9cYIzqr8TXPiqD4wEh-B8IIowK4euRj-Hz_MFN65BCKNtgAMcmV1L012j2svWGJE2d6LJZHPLneFANY8mneQ3lTTJ3LeoVK03qzHvg1tAYS0FHVLSB_i3llBiQlEajfgF6f3xtqEAAAA&shmds=v1_ARwrE22kJPVRH-LBrpTNvGqeQJyHroe4kIhtkdGzQq-8qP63dA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=StT1rTXb7bdBRv9bAAAAAA%3D%3D",
+      "extensions": [
+        "3 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://in.jobrapido.com/jobpreview/3824387037402759168",
+      "job_title": "AI Native Software Engineer (Mumbai)",
+      "description": "Project Role : AI Native Software Engineer  \nProject Role Description : Build and ship production-ready software using AI as a core part of the engineering lifecycle. Apply AI-native practices to develop and validate solutions, maintain quality and compliance, and continuously improve how software is built and operated.  \nMust have skills : Business Requirements Analysis  \nGood to have skills : NA  \nMinimum 12 year(s) of experience is required  \nEducational Qualification : 15 years full time education  \n\nSummary:  \nAs an AI Native Software Engineer, a typical day involves developing and delivering software solutions where artificial intelligence is deeply integrated into the engineering process. This role focuses on creating production-ready applications by embedding AI principles throughout the software lifecycle. The engineer actively participates in validating solutions, ensuring adherence to quality standards and compliance requirements, and continuously enhancing the methods and practices used to build and operate software systems. Collaboration and innovation are key elements, as the engineer works to advance the capabilities and efficiency of AI-driven software development.  \n\nRoles & Responsibilities:  \n- Expected to be an SME, collaborate and manage the team to perform.  \n- Responsible for team decisions.  \n- Engage with multiple teams and contribute on key decisions.  \n- Expected to provide solutions to problems that apply across multiple teams.  \n- Lead efforts to identify and implement best practices in AI-native software development.  \n- Facilitate knowledge sharing and mentorship within the team to foster professional growth.  \n- Coordinate cross-functional collaboration to align project goals and deliverables.  \n- Support junior team members by providing guidance and assisting with problem-solving.  \n\nProfessional & Technical Skills:  \n- Must To Have Skills: Proficiency in Business Requirements Analysis.  \n- Solid analytical skills to interpret and translate business needs into technical",
+      "apply_options": [
+        {
+          "title": "Jobrapido.com",
+          "link": "https://in.jobrapido.com/jobpreview/3824387037402759168?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBSSBOYXRpdmUgU29mdHdhcmUgRW5naW5lZXIgKE11bWJhaSkiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6IlN0VDFyVFhiN2JkQlJ2OWJBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwVERKTlltWnRUMHRCT1ZKalNYcEJSM2hwVjFkd2QzVjJXVk52Y3poS2RFYzBkRE16Y1MxRVExOUZZeTFyUzB0amRGOUlVVGN6ZG14aU5GUTNNMlYwVGxGWFozTXhZMFJ0VUd0d2MwRlBia0pDU0ZwTFh6ZFlXVzlFVW04eGFsbzFXR3RLYzNCd1dtbGFSVjlZVUVsUmIwTkNhRkpoV2pNd1NtbzRUVkpwU1dWcFZWZG9UR29TRnpsb1prdGhjbUV6VDB4cVZHdFFTVkJzTmpKaU9FRjNHaUpCUkhOeU9XWlRSV2hRYUV0QmRFRmFWMTlDYm5odmRWZGFUVmwxUTIxRkxUbG4iLCJmY3YiOiIzIiwiZmNfaWQiOiJTdFQxclRYYjdiZEJSdjliQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Madhya Pradesh",
+      "via": "Indeed",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=qCpn4cWp3daXBLJmAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBAAsc0TtNnaIqeCjVYiYiUIPiBsLutdQrIbbjcYOz9g5Q99ibGZbmay9yxbHwc16eAmd3tgIjhxqJkowff1gUZKUMLkIwjDWSS0NN9Hs153zqm2eVBDq33upXPCVMroJkn_KDROwb5Fo2KzXY15z2G5OHhPbMN0qhkuWMUnwjVhRRp_BUlsmpAAAAA&shmds=v1_ARwrE23Bx2Fy-7Y_h_skadN5ZQuIi8GGtoMDt5MkfZQ3GmNVQw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=qCpn4cWp3daXBLJmAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f7e64250134c7c297b/images/dk-hoPMiDx-n3deUhrvXDku3GWFpPeG0rvey2WCLbro.jpeg",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://in.indeed.com/viewjob?jk=465ad636e9a54420",
+      "job_title": "Custom Software Engineer",
+      "description": "Project Role : Custom Software Engineer \n \nProject Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs. \n \nMust have skills : Java Full Stack Development \n \nGood to have skills : NA \n \n\n  Minimum 7.5 year(s) of experience is required \n \nEducational Qualification : 15 years full time education \n \n\n \n\n  Summary: \n \n\n  As a Custom Software Engineer, a typical day involves creating tailored software solutions by designing, coding, and improving various components within systems or applications. The role requires working with modern development frameworks and following agile methodologies to ensure the delivery of scalable and efficient software that meets unique business requirements. Collaboration with different teams and continuous refinement of software elements are integral parts of the daily workflow, ensuring that solutions remain robust and adaptable to evolving needs. \n \n\n \n\n  Roles & Responsibilities: \n \n\n \n  Expected to be an SME, collaborate and manage the team to perform.\n  Responsible for team decisions.\n  Engage with multiple teams and contribute on key decisions.\n  Provide solutions to problems for their immediate team and across multiple teams.\n  Lead efforts to identify and implement process improvements that enhance team productivity and software quality.\n  Mentor junior team members to support their professional growth and integration within the team.\n \n \n\n  Professional & Technical Skills: \n \n\n \n  Must To Have Skills: Proficiency in Java Full Stack Development.\n  Experience with front-end technologies such as HTML, CSS, and JavaScript frameworks.\n  Strong knowledge of back-end development including server-side programming and database management.\n  Familiarity with agile software development practices and continuous integration/continuous deployment pipelines.\n  Ability to troubleshoot and optimize application performance across different environments.\n \n \n\n  Additional Information: \n \n\n \n  The candidate should have minimum 8 years of experience in Java Full Stack Development.\n  - This position is based at our INDC1A - NON-STPI location. \n \n\n \n  A 15 years full time education is required.\n \n\n\n\n 15 years full time education",
+      "apply_options": [
+        {
+          "title": "Indeed",
+          "link": "https://in.indeed.com/viewjob?jk=465ad636e9a54420&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JobLeads",
+          "link": "https://www.jobleads.com/in/job/custom-software-engineer--indore-district--eea4ba829bf459f723cdfef4408c7f92e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Recruit.net",
+          "link": "https://www.recruit.net/job/custom-software-engineer-jobs/0C8A6A4BCE87136E?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6InFDcG40Y1dwM2RhWEJMSm1BQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU21kcVQxaExUM0ZpVDBFMlZFWllNamR6UW5kMFMyUTJWbFk1ZGpKQlZHdHFiRlpNYzJGVmJXUjFVR054V0c1emFYWndabXRaWjB0RlZrVmxUamRDUTJaa1RHTjNkRTlHWkZwRlVsQTBNbmhIY1dwM1JXdFJReTFvTVZscmFtNU9OR3BqU2xoVWRWcEJRamhXV2tsRFEyTmpjR0p6VVZCWFREVmFSVGxIVTBoNmJtaDVkVFFTRnpsNFprdGhjVlJFVEZscGNEVk9iMUI0V201d2QwRkpHaUpCUkhOeU9XWlNXRWd4YW5SNVQyNXhaUzEwYzI0NVVrZFdWWEJ4T0c5UFdtOTMiLCJmY3YiOiIzIiwiZmNfaWQiOiJxQ3BuNGNXcDNkYVhCTEptQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Technical Test Engineer 2",
+      "company_name": "Accenture in India",
+      "location": "Kochi, Keralam",
+      "via": "LinkedIn",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=bwc-NhSgkG02pTUfAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXLMQrCQBBAUWxzBKsprESyErDRykJE0qYPk3HYXdnMhJ0VUnoHC-_nSTTN5zW_-qyqpmMKEgkTdGwFLuKjMGdo4Pt6w0MHMMZMAVTgquoTr0-hlMmOzpml2lvBEqkmHZ0KDzq7_2RLeguYeUpYuG8O-7mexG83ZyKW8swMUeAm94gLWqUQd9ByxoTjD_4ZLYGaAAAA&shmds=v1_ARwrE20dCoR9x_oL4OveVV-uh0emfbXmd1KOe_yhW3J7oIkExA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=bwc-NhSgkG02pTUfAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f7e64250134c7c297b/images/oAtIiq1QDYgNnZQHR7letcWRvQEAxrqahot-PPfmCF8.jpeg",
+      "extensions": [
+        "15 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://in.linkedin.com/jobs/view/technical-test-engineer-2-at-accenture-in-india-4469226840",
+      "job_title": "Technical Test Engineer 2",
+      "description": "Job Title: Technical Test Engineer - Analyst - ACS SONG\n\nManagement Level: Level 11 - Analyst\n\nLocation: Kochi\n\nMust have skills: Cypress/Playwright - Javascript\n\nGood to have skills: API automation \n\nExperience: 2-3 years of experience is required\n\nEducational Qualification: Graduation (Accurate educational details should capture) \n\nJob Summary\n\nAt Accenture Song, delivering top-notch solutions means ensuring development outcomes align with expectations. While manual testing is still important, there's an increasing focus on automating various testing types - functional, regression, visual, performance, and compatibility. As a Technical Test Engineer, you will contribute to our automation efforts, helping enhance overall quality and efficiency.\n\nRoles and Responsibilities will include:\n\nWork in Agile environments, preferably using Scrum or Kanban methodologies.Design, develop, execute, and maintain automated test scripts for web applications using Playwright and Cypress.Assist in creating and executing test plans, test cases, and test scripts based on business requirements and acceptance criteria.Perform UI, functional, regression, smoke, and exploratory testing.Collaborate with Product Owners, Business Analysts, Developers, and QA team members to understand requirements and report issues effectively.Execute automated test suites and analyze test results to identify defects and improve software quality.Log defects and provide clear, concise documentation of test execution results.Contribute to the maintenance and enhancement of existing automation frameworks and reusable test components.Demonstrate a proactive mindset, willingness to learn, and continuously improve automation and testing skills.Maintain high standards of professionalism, ownership, and quality throughout the Software Testing Life Cycle.",
+      "apply_options": [
+        {
+          "title": "LinkedIn",
+          "link": "https://in.linkedin.com/jobs/view/technical-test-engineer-2-at-accenture-in-india-4469226840?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Shine",
+          "link": "https://www.shine.com/jobs/technical-test-engineer-2/accenture-in-india/19565780?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/technical-test-engineer-2-accenture-kochi--fj-2370776035?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.co.in/job/beOhE-woNTrl-TYqW42wSE5JU4iA7-HxjDGS5qOhciW7C84zTENDow?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/in/job-listing/technical-test-engineer-2-accenture-kochi-2-to-3-years-experience-eb1a579a-52a7-481f-8830-11b8d2329041?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajo.org",
+          "link": "https://in.trabajo.org/job-2927-221e77e2c14e2aa1cf02e0e5bb717bd9?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobaaj",
+          "link": "https://www.jobaaj.com/job/accenture-technical-test-engineer-2-kochi-india-2-to-5-years-1761715?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobted",
+          "link": "https://www.jobted.in/job/4e55e9751d8778561a149157611584b1?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJUZWNobmljYWwgVGVzdCBFbmdpbmVlciAyIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIGluIEluZGlhIiwiaHRpZG9jaWQiOiJid2MtTmhTZ2tHMDJwVFVmQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJRlNXNWthV0UiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFREQTRRMDVFTmpaUFJIRktkR3BVTkhKQmVqSlZTMGt6WWpGWllsSTFTbXhaYW5oUVZ6bGljVjlUTVVkemFXUnNlbVJMV0Vzek1TMURVelY0T0hCWVFWSlhRWEF5YWpkNFRWcE1OVFZxYWxoVlJVMTRUV3ROY25RNWMwZHZWWFozYm1sT2RtVnRXblpWVGxoVVFXOURUbE5TWW01NFZtUnVNR0ZoZDBGVlZYQnVRalV3U3pJU0Z6bDRaa3RoY1ZSRVRGbHBjRFZPYjFCNFdtNXdkMEZKR2lKQlJITnlPV1pVVEV4eVkzaEpSR2haUXpkbU5WRkNjSGwwTmpoWFNFbHlOekYzIiwiZmN2IjoiMyIsImZjX2lkIjoiYndjLU5oU2drRzAycFRVZkFBQUFBQT09In0="
+    },
+    {
+      "title": "Custom Software Engineering Associate",
+      "company_name": "Accenture",
+      "location": "Maharashtra",
+      "via": "Indeed",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=t3W6apB3D3AuJRuHAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBBFsc0JxGpqi6wINgpCELGy8gBhsoy7K8lM2JlgSu9g4f08iWvzq_ferz6L6nia1GSAm9ztiZngzCExUU4coFEVn9AIvq83PKQDJcw-gjBcREJPq0M0G3XvnGpfBzW05GsvgxOmTmZXJP1Pq7HUx77E2u1uM9cjh_Wy8Z7YpnKbGK5YENRoGX-yKjs4mgAAAA&shmds=v1_ARwrE231seng53nZv4Gd_b-LgA7MEdnVJw0pt-bEZRhzRKAHjw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=t3W6apB3D3AuJRuHAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f7e64250134c7c297b/images/wF11gMWOJzUV8PnVIIfIaXPiPaD1kNJeCWF-t7qSzfo.jpeg",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://in.indeed.com/viewjob?jk=07268a48ae4d6ec8",
+      "job_title": "Custom Software Engineering Associate",
+      "description": "Skill required: Marketing Operations - Hyper Text Markup Language (HTML)\nDesignation: Custom Software Engineering Associate\nQualifications:Any Graduation \nYears of Experience:1 to 3 years \nAbout Accenture\n\n  Accenture is a global professional services company with leading capabilities in digital, cloud and security.Combining unmatched experience and specialized skills across more than 40 industries, we offer Strategy and Consulting, Technology and Operations services, and Accenture Song— all powered by the world’s largest network of Advanced Technology and Intelligent Operations centers. Our 784,000 people deliver on the promise of technology and human ingenuity every day, serving clients in more than 120 countries. We embrace the power of change to create value and shared success for our clients, people, shareholders, partners and communities.Visit us at www.accenture.com \nWhat would you do? Help balance increased marketing complexity and diminishing marketing resources. Drive marketing performance with deep functional and technical expertise, while accelerating time-to-market and operating efficiencies at scale through Data and Technology, Next Generation Content Services, Digital Marketing Services & Customer Engagement and Media Growth Services. In a Marketing Operations job profile, responsibilities include managing and optimizing marketing processes and systems. This involves tasks such as campaign execution, data analysis, and budget management. The goal is to improve marketing efficiency and effectiveness. The role requires strong analytical skills, attention to detail, and knowledge of marketing technologies. It is essential for ensuring that marketing strategies are implemented smoothly and deliver measurable results. Set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. It describes the structure of text-based information in a document by denoting certain text as links, headings, paragraphs and lists as well as to supplement that text with interactive forms, embedded images and other objects-typically for developing web pages.\nWhat are we looking for? •Proficiency in HTML5 and CSS3: Strong knowledge and hands-on experience in coding responsive HTML email templates that render consistently across various email clients and devices. •Email Design Best Practices: Understanding of email design principles, user experience (UX) considerations, and email deliverability best practices. •Testing and Troubleshooting: Experience in testing emails across different devices and email clients to identify and resolve rendering issues. •Attention to Detail: A keen eye for detail to ensure accuracy and consistency in coding and email rendering. •Marketing Automation platform knowledge: Familiarity with the Braze, Eloqua, Adobe builder knowledge including the use of Content Builder, Data Extensions, and AMPscript for personalization etc. •JavaScript and AMPscript: Knowledge of JavaScript and AMPscript enables advanced dynamic content personalization and interactivity within emails. •Email Automation: Familiarity with email automation tools and processes, including journey-based emails and triggered campaigns. •Graphic Design: Basic graphic design skills to assist in creating visual elements for email templates. •SQL: Understanding of SQL queries to work with data •A/B Testing: Experience in setting up and analyzing A/B tests to optimize email campaign performance. •Accessibility: Awareness of email accessibility best practices to ensure emails are inclusive and compliant with accessibility standards. \nRoles and Responsibilities: Campaign Planning and Requirements Gathering: •Collaborate with Project Manager and/or marketing stakeholders to understand campaign objectives and requirements by carefully reviewing briefs and seeking clarification before the build along with highlighting risks (if any). •Collaborate with creative teams to ensure the seamless integration of visual elements into HTML templates. HTML Email Template Development: •Design and develop HTML email templates (from PSDs) optimized for various email clients, ensuring compatibility and responsiveness across desktop and mobile devices. •Implement dynamic content and personalized elements using personalization languages (example AMPscript or SSJS) to create dynamic and personalized email experiences. Email Build Testing: •Conduct thorough testing to verify email rendering across different email clients and devices to ensure consistent display and functionality. Email Design Best Practices: •Stay up to date with email design best practices, industry trends, and email marketing standards to create visually compelling and effective email campaigns. Troubleshooting and Issue Resolution: •Identify and resolve any HTML/CSS-related issues that may arise during email campaign development or execution. Work Orchestration and Data hygiene: •Fully understand ticketing/request management tool and accurately record updates, data points, timestamps etc. to provide seamless campaign experience to both internal and external stakeholders. •Adhere to all Desktop Procedures (DTPs) / Standard Operating Procedures (SOP) along with checklist and other important process document to carry out all required tasks. •Complete all required reports so that accurate numbers are reported to both client and leadership\n\n\n\n\n Any Graduation",
+      "apply_options": [
+        {
+          "title": "Indeed",
+          "link": "https://in.indeed.com/viewjob?jk=07268a48ae4d6ec8&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXJpbmcgQXNzb2NpYXRlIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIiwiaHRpZG9jaWQiOiJ0M1c2YXBCM0QzQXVKUnVIQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJRlNXNWthV0UiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFRGcFFkbmsyVUVkM2NqWjNUbFp0V0VjeE55MTNlbkJtWjA1a0xVSXRVbWwwTUVSalRsVmpiMXBZVVhCa01ERktWemRRTkhVdFVFWmxjVWhxYUhCVFpWSk1jM2gzVkc1dGNXTTVWazk2Y2tGRlZXdElkbXhsYjJ0M1psWnlYMHhOVFVWUFZqRnNiWFJTVmpkSFFVdDZVSE5ZYlVOUFZVRmhRemhyUTB4UWRHOUlYMHR0ZDNJU0Z6bDRaa3RoY1ZSRVRGbHBjRFZPYjFCNFdtNXdkMEZKR2lKQlJITnlPV1pVZHpVelIwVlljMWhhTURCalFUSXROV1k1WkZkVWNrVkJPVlJCIiwiZmN2IjoiMyIsImZjX2lkIjoidDNXNmFwQjNEM0F1SlJ1SEFBQUFBQT09In0="
+    },
+    {
+      "title": "Custom Software Engineer and Software Architect",
+      "company_name": "Accenture India Private Limited",
+      "location": "Hyderabad, Telangana",
+      "via": "BeBee",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=zaVfGBDzodDGmwU0AAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_0WNMQrCQBBFsc0RrKYWSUQQQSsRUcFC0F4mu-NmJZkJu6PGzjt4Ic_iSVwrm188_v8ve_eyzfIaVRo4yFnvGAhW7DwTBUC2f7oIpvJKRuHzfMFFSoiEiYEwrEVcTf15pdrGWVHEWOcuKqo3uZGmEKZSuiKN4i9OsUqPbY1Kp_Fk1OUtu8F0YQyxXpNqy9Yj7IO_pQbsfJO8FjzD5mEpYIl2CEeqkR0yfgHNVbpxwwAAAA&shmds=v1_ARwrE23OrmkWFS2IO9TNpOV9yeBhX9IfCRCfhiEkEGi8eJcOBg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=zaVfGBDzodDGmwU0AAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f7e64250134c7c297b/images/qq2us7wYmwvgXQPsTv1MarR5sxChjmz29_XNxYgYRok.jpeg",
+      "extensions": [
+        "6 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://bebee.com/in/jobs/custom-software-engineer-and-software-architect-accenture-india-private-limited-hyderabad--techmap_in_1900649081",
+      "job_title": "Custom Software Engineer and Software Architect",
+      "description": "Custom Software Engineer Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.\n\n\nMust have skills : .Net Full Stack Development Good to have skills : NA Minimum 7.5 year(s) of experience is required Educational Qualification : 15 years full time education Summary: The Architect will focus on multiple areas and provide architectural direction and leadership to the engineering teams. They will work to influence and build a vision with product managers, team members, and other engineering teams to solve complex problems. The role involves leading design sessions and conducting code reviews to elevate the quality of engineering across the organization.\n\n\nAdditionally, the Architect will mentor team members to help them achieve success in their goals and contribute effectively to projects. Roles &\n\n\nResponsibilities: Scope Collaborate with cross-functional teams to prepare technical design specifications based on product management and architectural initiatives Drive Architectural Governance activities Seek platform convergence Plan across engineering initiatives and new feature delivery to find a balance between customer delivery and organizational health Identify opportunities for improvement in applications and provide actionable recommendations to the teams Assist and mentor development staff in the delivery of product features Excellence Helping to build successful teams that have a learning culture by providing direction and fostering communication to help teams make decisions to accomplish their goals Assisting teams with technical conversations, driving towards action and a successful outcome Communication & Influence Build strong relationships with your team and stakeholders Care about our customers and the impact our software has on their business outcomes Demonstrate a willingness to learn, adjusting as needed to make improvements to the team s processes, etc. Provide feedback to peers and teams to instill a learning culture Communicating clearly with executive leadership, peers, and development teams Favor optimism Professional & Technical Skills: Significant experience in design (architecture, design patterns, reliability, and scaling) and implementation or enhancement of new and current systems. Significant experience in system engineering involving analytical systems design and implementation.\n\n\nFluency and specialization with modern languages such as Java, C# or Python Experience in building products using microservices architectural patterns and extensible REST APIs.\n\n\nExperience in design (architecture, design patterns, reliability, and scaling) and implementation or enhancement of new and current systems. Familiarity with continuous delivery and infrastructure as code. Proven experience leading cloud, DevOps, or AI modernization initiatives. Strong understanding of LLMs, automation, and engineering toolchains. Ability to translate AI innovation into business and productivity impact.\n\n\nPreferred Qualifications Fluency in DevOps Concepts Experience with application monitoring tools and performance assessments. Understanding of security architecture, protocols, and products including Active Directory, Windows Authentication, SAML, OAuth.\n\n\nExperience with AWS (Amazon Web Services) and Azure a background in multi-cloud environments.\n\n\nAdditional Information: Bachelor s OR Master s Degree in Software Engineering, Computer Science, Information Systems, or related field. Minimum (7) years of experience in software development or equivalent combination of education and/or experience flexible for the right candidate.\n\n\nAdditional Information\nThe candidate should have minimum 7.5 years of experience in .Net Full Stack Development.This position is based at our Hyderabad office.A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/custom-software-engineer-and-software-architect-accenture-india-private-limited-hyderabad--techmap_in_1900649081?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/job-listing/business-and-integration-architect-accenture-hyderabad-3-to-5-years-experience-9b4c8c53-3a92-409a-b59f-beb829b2e280?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIgYW5kIFNvZnR3YXJlIEFyY2hpdGVjdCIsImNvbXBhbnlfbmFtZSI6IkFjY2VudHVyZSBJbmRpYSBQcml2YXRlIExpbWl0ZWQiLCJodGlkb2NpZCI6InphVmZHQkR6b2RER213VTBBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU25aSmJXTXpRamxwY2tObk5VWnZkMDFuVTNNM05qQjNWa3RwVUhsSGRWQXliRXRJUmpGMVRXcHRPWFZITXpoTllVNW5lRkJaTUdsQk1XbzFaVlV4YlZSaVpWaHlVa05XYTNobGJYTm5TM0JaZW5kWFZGWkpXVE42YjJ4V1ZUaHZVRlpqV25OeE1WTTFSemxmTjBReU1qZFdUbEV3TWpoQ2FsSm9Nbk5WU1hKRWVGUkZRVU1TRnpsNFprdGhjVlJFVEZscGNEVk9iMUI0V201d2QwRkpHaUpCUkhOeU9XWlJRelJNVTJGUlVVTjNZMlUwVTBrNFpWbG9Wa1ptVGxSamRqaDMiLCJmY3YiOiIzIiwiZmNfaWQiOiJ6YVZmR0JEem9kREdtd1UwQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Application Support Engineer",
+      "company_name": "Accenture",
+      "location": "India",
+      "via": "Accenture",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=VCBcNd-kyeUVbFroAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXLoQ7CMBCA4WAnkajTiJWQzICaIAuaB1i6culKyt2ld0smkXjekCehmF_9X_PeNF0vklPwlpjgtohwMbhQTIRY4Pv6wIMnUPQlzFCXgTlm3J1nM9GTc6q5jWrVhzbw0zHhxKurSP8ZdfYFJXvD8dgd1lYo7rd9CEi2FIREcKV78j-OaxNriwAAAA&shmds=v1_ARwrE20MZicZ856t9uXBSMV-BDt1sdZ9M4teOI_S_LY8AmOZrw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=VCBcNd-kyeUVbFroAAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.accenture.com/pt-pt/careers/jobdetails?id=ATCI-5478090-S2007099_en",
+      "job_title": "Application Support Engineer",
+      "description": "Project Role : Application Support Engineer\nProject Role Description : Act as software detectives, provide a dynamic service identifying and solving issues within multiple components of critical business systems.                                                                                                                                                                                                                                                                                                                                                                                                \nMust have skills : ServiceNow Now Assist\nGood to have skills : NA\nMinimum 2 year(s) of experience is required\nEducational Qualification : 15 years full time education\n\nSummary: \nAs an Application Support Engineer, you will act as software detectives, providing a dynamic service that identifies and solves issues within multiple components of critical business systems. Your typical day will involve collaborating with various teams to troubleshoot and resolve software-related challenges, ensuring the smooth operation of essential applications. You will engage in problem-solving activities, analyze system performance, and contribute to the continuous improvement of processes and tools used within the organization. Your role will be pivotal in maintaining the integrity and efficiency of business systems, allowing for seamless operations across departments.\n \nRoles & Responsibilities: \n- Expected to perform independently and become an SME.\n- Required active participation/contribution in team discussions.\n- Contribute in providing solutions to work related problems.\n- Assist in the documentation of processes and procedures to enhance team knowledge.\n- Engage in training and mentoring junior team members to foster a collaborative environment.\n \nProfessional & Technical Skills: \n- Must To Have Skills: Proficiency in ServiceNow Now Assist.\n- Strong analytical and problem-solving skills to address complex software issues.\n- Experience with incident management and service request fulfillment.\n- Familiarity with ITIL processes and best practices.\n- Ability to work collaboratively in a team-oriented environment.\n \nAdditional Information: \n- The candidate should have minimum 2 years of experience in ServiceNow Now Assist.\n- This position is based at our Pune office.\n- A 15 years full time education is required.",
+      "apply_options": [
+        {
+          "title": "Accenture",
+          "link": "https://www.accenture.com/pt-pt/careers/jobdetails?id=ATCI-5478090-S2007099_en&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobvite",
+          "link": "https://jobs.jobvite.com/brahma/job/o8pHyfww?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "GSPANN Careers",
+          "link": "https://careers.gspann.com/jobs/open-positions/retail-application-support-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Workday",
+          "link": "https://lseg.wd3.myworkdayjobs.com/en-US/Careers/job/Application-Support-Engineer_R0122720?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Freshersworld",
+          "link": "https://www.freshersworld.com/jobs/application-support-engineer-jobs-opening-in-client-of-freshers-world-at-gurgaon-others-gurgaon-2949724?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Foundit",
+          "link": "https://www.foundit.in/job/application-support-engineer-aine-ai-india-64020682?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.co.in/job-listing/application-support-engineer-4-years-ventura-securities-JV_KO0,36_KE37,55.htm?jl=1009839946523&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Indeed",
+          "link": "https://in.indeed.com/viewjob?jk=d2a1e67580eadb96&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBcHBsaWNhdGlvbiBTdXBwb3J0IEVuZ2luZWVyIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIiwiaHRpZG9jaWQiOiJWQ0JjTmQta3llVVZiRnJvQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJRlNXNWthV0UiLCJnbCI6ImluIiwiaGwiOiJlbiIsImZjIjoiRXN3QkNvd0JRVXBwVkRSMFRFZGlWM0p4VlRSSE5XWm5VVVpzTjFNM2MyVkhiVkpUZDNWclRGcDZSek00UVZGT1VsZDRUalI0UW1acmNGSlBaMjU1WVdsWmJERnhXRFUyVVZkWlpVdENOVWN0WTNsNll6TkZhbE5EZUhOWlpGcEVWR2hzZEZwdFFqRlNNSGd3YzJSa2FIRTFXWGhSYUVWS1ZXSkdPR1pEWDFKNmNFaHFWMVJIVXpkRmVWSnBOVmt4WW5NU0Z6bDRaa3RoY1ZSRVRGbHBjRFZPYjFCNFdtNXdkMEZKR2lKQlJITnlPV1pVWDJ4eldVVTFhWGREUTA5WFkwbGFTMGxSYVhjNWNrNUJhMGRSIiwiZmN2IjoiMyIsImZjX2lkIjoiVkNCY05kLWt5ZVVWYkZyb0FBQUFBQT09In0="
+    },
+    {
+      "title": "Software Development Lead",
+      "company_name": "Accenture India Private Limited",
+      "location": "Kolkata, West Bengal",
+      "via": "Shine",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=UbiYKK6xXFVWQsYwAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCQBBFsc0RrKYWyUpABK0UQcQUgoVlGDfjZnWzs2THmNI7eAuP5Ulcm1f991_2GWXFia_yxI5gSz05Di15gZKwhu_rDTe-QCTsdAPsYcdsHI1XjUiIS6VidLmJgmJ1rrlV7OnCg0pS_KOKTToODoWqYj4b8uDNZLHWOiUeqbj3tUU4drZPCyhta4VqsB4O7O4oOIUzRYENeYPuB2251getAAAA&shmds=v1_ARwrE23Wpx1M-8oGXu4CPPca8-SUvTjWt1N2NGvnn0HSEfBtgQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=UbiYKK6xXFVWQsYwAAAAAA%3D%3D",
+      "extensions": [
+        "8 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.shine.com/jobs/software-development-lead/accenture-india-private-limited/19690130",
+      "job_title": "Software Development Lead",
+      "description": "Custom Software Engineer Project Role : Custom Software Engineer Project Role Description : Develop and configure software systems either end-to-end or for a specific stage of product lifecycle. Apply knowledge of technologies, applications, methodologies, processes and tools to support a client, project or entity. Must have skills : SAP EWM Good to have skills : SAP ABAP Development for HANA Minimum 7.5 year(s) of experience is required Educational Qualification : 15 years full time education Summary: As a Custom Software Engineer, you will engage in the development and configuration of software systems, either managing the entire process or focusing on specific stages of the product lifecycle. Your typical day will involve collaborating with various teams to ensure that the software meets client requirements, applying your knowledge of technologies and methodologies to support project goals effectively. You will also be responsible for troubleshooting issues and providing innovative solutions to enhance system performance and user experience. Roles & Responsibilities: - Expected to be an SME. - Collaborate and manage the team to perform. - Responsible for team decisions. - Engage with multiple teams and contribute on key decisions. - Provide solutions to problems for their immediate team and across multiple teams. - Facilitate knowledge sharing sessions to enhance team capabilities. - Monitor project progress and ensure alignment with client expectations. Professional & Technical Skills: - Must To Have Skills: Proficiency in SAP EWM. - Good To Have Skills: Experience with SAP ABAP Development for HANA. - Strong understanding of software development methodologies. - Experience in system integration and configuration. - Familiarity with project management tools and practices. Additional Information: - The candidate should have minimum 7.5 years of experience in SAP EWM. - This position is based at our Kolkata office. - A 15 years full time education is required. .",
+      "apply_options": [
+        {
+          "title": "Shine",
+          "link": "https://www.shine.com/jobs/software-development-lead/accenture-india-private-limited/19690130?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/software-development-lead-accenture-india-private-limited-kolkata-calcutta--techmap_in_1963418867?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Getmereferred.com",
+          "link": "https://getmereferred.com/job-listing/software-development-lead-accenture-kolkata-5-to-7-years-experience-74e0fd83-6a5b-4532-90a9-cde00551d755?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JobLeads",
+          "link": "https://www.jobleads.com/in/job/software-development-lead--kolkata-district--ee8b5cb16c6c84297c291a06c8d84e735?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobrapido.com",
+          "link": "https://in.jobrapido.com/jobpreview/4220287089704435712?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/341564848/software-development-lead-kolkata?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBEZXZlbG9wbWVudCBMZWFkIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIEluZGlhIFByaXZhdGUgTGltaXRlZCIsImh0aWRvY2lkIjoiVWJpWUtLNnhYRlZXUXNZd0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTMHhZWVd0eWMzVmZURWwyY1hWaU5FOUJaRTFqZUhVNU5rWnBSakZOYW5kbE5EbFdjVmMzVVVOelJtOWZlWGhNTTB4QlJXMDRhVjg1YVVacVZFVmlOazEyWlhabVNGaEJSazlhVEc1bFVFMVJlbWxrUXkxTGNqYzBTVVZRUjA5Mk1XaEtOVnBvU1c5d05WcEdSRE40VG1oblJGRk1ZMGc1TlUxR2IweG5Sa3AzUldoVVExSVNGemw0Wmt0aGNWUkVURmxwY0RWT2IxQjRXbTV3ZDBGSkdpSkJSSE55T1daVE4wSnlPV1Z0Y1Y5SVlucDFhV014TW1oVE1UaGhYMGQ1YkVwbiIsImZjdiI6IjMiLCJmY19pZCI6IlViaVlLSzZ4WEZWV1FzWXdBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Custom Software Engineer - Full Stack Developer with AI Integration",
+      "company_name": "Accenture India Private Limited",
+      "location": "Indore, Madhya Pradesh",
+      "via": "BeBee",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=jUdJAm7cycgewODSAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWOvWrDQBCEcatHcLV1cKRgcJGkEvlD4IDBbcCcT-u7s0-74nYlO13ewe_mB_CT5NRMMfMNM8VtVvy8DaLcwZYPejYJ4YNcIMQEj_A5xAhbNfYE7zhi5D7b56Ae6gYaUnTJaGCC-98VjrwHQZOsh-x8MbuI81ev2stLVYnE0olm3JaWu4oJ93ypckkm2YnP2300irvl6ulS9uQenmtrkXTIpxpqg4FNCmMmYB26oNhCoCnghAv4Nq3_nQjTovh_JPxci9kAAAA&shmds=v1_ARwrE20KghfJkrDOsl6sCnlBDstG9G8VCeTF7MrC2w8GXVgGjw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=jUdJAm7cycgewODSAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6aca17f7e64250134c7c297b/images/ilpxrBsnaSF127sBWQDKmnMB0-gpO8YNVmNbFbTGKaE.jpeg",
+      "extensions": [
+        "9 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://bebee.com/in/jobs/custom-software-engineer-full-stack-developer-with-ai-integration-accenture-india-private-limited-in--techmap_in_1593023318",
+      "job_title": "Custom Software Engineer - Full Stack Developer with AI Integration",
+      "description": "Custom Software Engineer Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.\n\n\nMust have skills : .Net Full Stack Development Good to have skills : NA Minimum 3 year(s) of experience is required Educational Qualification : 15 years full time education Summary: Seeking a forward-thinking professional with an AI-first mindset to design, develop, and deploy enterprise-grade solutions using Generative and Agentic AI frameworks that drive innovation, efficiency, and business transformation. AI Powered Tech Talent Roles &\n\n\nResponsibilities: Lead AI-driven solution design and delivery by applying GenAI and Agentic AI to address complex business challenges, automate processes, and integrate intelligent insights into enterprise workflows for measurable impact. Professional & Technical Skills: Strong grasp of Generative and Agentic AI, prompt engineering, and AI evaluation frameworks. Ability to align AI capabilities with business objectives while ensuring scalability, responsible use, and tangible value realization.\n\n\nWe are seeking a dynamic Mid-Level Application Architects / Senior Developers with a strong focus on hands-on development and practical solution design. The ideal candidate will have robust experience in .NET Core, MVC, and Python, with working knowledge of front-end technologies like React or Angular, and a foundational understanding of AI integration. This role emphasizes active coding, solution implementation, and collaboration across application development, infrastructure, and integration in multi-cloud environments (AWS, Azure, Google Cloud) to deliver scalable, secure enterprise applications.\n\n\nKey Responsibilities: Hands-On Coding: Actively develop, test, and deploy application-heavy solutions, write clean, efficient code in any of the programming languages like .NET Core (C#, ASP.NET), and Python for backend systems, and contributing to front-end development using React or Angular.\n\n\nSolution Design: Partner with senior architects to design scalable, cloud-native application architectures, focusing on performance, maintainability, and integration in multi-cloud environments.\n\n\nIntegration Development: Build and maintain integrations using APIs, microservices, and event-driven patterns (e.g., REST, GraphQL, Kafka, or message queues). Multi-Cloud Implementation: Develop and deploy applications across AWS, Azure, and Google Cloud, ensuring portability and optimization for cost and performance.\n\n\nAI Integration: Implement practical AI features (e.g., automation, basic analytics) using cloud-based AI services or frameworks like TensorFlow or PyTorch.\n\n\nInfrastructure Support: Collaborate with DevOps teams to implement containerized solutions (Docker, Kubernetes) and CI/CD pipelines, with hands-on use of IaC tools like Terraform or BiCep. Performance & Security Optimization: Ensure applications meet performance and security standards through code reviews, testing, and adherence to best practices.\n\n\nTeam Collaboration: Work closely with developers, product managers, and infrastructure teams to translate requirements into technical implementations, providing hands-on support and mentorship.\n\n\nContinuous Learning: Stay updated on full-stack development trends, cloud technologies, and AI advancements to contribute to innovative solutions.\n\n\nQualifications &\n\n\nSkills: Experience: 5 to 12 years of hands-on experience in full-stack development, with at least 2 years in a lead developer or junior architect role focusing on application-heavy systems. Demonstrated experience building and deploying solutions in multi-cloud environments (AWS, Azure, Google Cloud). Strong proficiency in .NET, and Python for backend development.\n\n\nHands-on experience with front-end frameworks like React, Angular, or similar. Basic exposure to AI/ML integration, such as using cloud AI services (e.g., Azure Open AI, Azure Foundry, AWS SageMaker,) or simple ML frameworks. Practical experience with integration patterns (e.g., REST APIs, message queues) and microservices architecture.\n\n\nFamiliarity with infrastructure tools like Docker, Kubernetes, and IaC (e.g., Terraform, BiCep).\n\n\nExperience with cloud-native services (e.g., Azure Functions, LogicApps, ServiceBus etc.). Working knowledge of DevOps practices, including CI/CD pipelines and monitoring tools. Understanding of secure coding practices and basic enterprise security standards (e.g., IAM, encryption).\n\n\nSoft Skills: Strong debugging and problem-solving skills with a hands-on mindset. Clear communication to collaborate with technical and non-technical stakeholders. Ability to juggle hands-on coding with architectural design contributions. Eagerness to learn and adapt to new tools, frameworks, and cloud technologies.\n\n\nEducation: Bachelor s degree in computer science, Engineering, or a related field.\n\n\nCertifications like Azure Developer Associate, Azure AI Fundamentals or similar are a plus.",
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/in/jobs/custom-software-engineer-full-stack-developer-with-ai-integration-accenture-india-private-limited-in--techmap_in_1593023318?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Kit Job",
+          "link": "https://www.kitjob.in/job/340158633/custom-software-engineer-full-stack-developer-with-ai-integration-indore?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJDdXN0b20gU29mdHdhcmUgRW5naW5lZXIgLSBGdWxsIFN0YWNrIERldmVsb3BlciB3aXRoIEFJIEludGVncmF0aW9uIiwiY29tcGFueV9uYW1lIjoiQWNjZW50dXJlIEluZGlhIFByaXZhdGUgTGltaXRlZCIsImh0aWRvY2lkIjoialVkSkFtN2N5Y2dld09EU0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTVWRrYUdSTVpEZ3hSMGswZEUxaWVVZFNaSEpxUmxjdGNFMDRUQzFWTjNCbWNGWmxkMnBOZFV0VmJUQkxNbHBuZGtoS05UTmxjMWR1VldORGNVeDVWMHRsWlhBM1gxVlBObk56YkZkMk5GQkdZMUl6U0hZeE5XVmFiRWxwTkcxU1JHVTJiRVZPV21ZelJVVkpjVll5WjBkbU0yVktkVzFsYlhOek1rVjZhRWxXUlZJd01XVVNGemw0Wmt0aGNWUkVURmxwY0RWT2IxQjRXbTV3ZDBGSkdpSkJSSE55T1daUmIxVXhTbWRuWTNOMFlWRkhjVUpxTUc1TFZtZEZNVnBRVWpCQiIsImZjdiI6IjMiLCJmY19pZCI6ImpVZEpBbTdjeWNnZXdPRFNBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Software Engineer (DevOps with AWS)",
+      "company_name": "Accenture",
+      "location": "Ahmedabad, Gujarat",
+      "via": "Shine",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=_t57rZB0vypE6uDFAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXNsQ6CMBCA4bjyCC7eqMaAMXFRFxINowODIznK2ZZAr2kPcfQdXH06n0Rc_u3Pl3xmyanku4wYCC5OW0cUYHmmx9VHGK0YyG_lCr6vN7RcQyQMygA7KJh1R_OjEfHxkGUxdqmOgmJVqrjP2FHNz2ya4j9VNBPhOxSqdvvtM_VOrxe5UuRkmGzrIDc9NVhjs4FiaDGg_ABpzMXgnwAAAA&shmds=v1_ARwrE22WrMmQF2nKuNdn6O6WmPXY5D-fpjL755Ko0IV766fppw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=_t57rZB0vypE6uDFAAAAAA%3D%3D",
+      "extensions": [
+        "24 days ago",
+        "Full–time"
+      ],
+      "source_link": "https://www.shine.com/jobs/software-engineer-devops-with-aws/accenture/19554892",
+      "job_title": "Software Engineer (DevOps with AWS)",
+      "description": "Project Role : Custom Software Engineer\n\n\nProject Role Description :  Design, build and configure applications to meet business process and application requirements.\n\n\nMust have skills :  AWS Architecture\n\n\nGood to have skills :  NA\n\n\nMinimum 7.5 Year(s) Of Experience Is Required\n\n\nEducational Qualification : 15 years full time education\n\n\nSummary:\n\n\nAs an Application Developer, you will design, build, and configure applications to meet business process and application requirements. A typical day involves collaborating with various teams to understand their needs, developing innovative solutions, and ensuring that applications are aligned with business objectives. You will engage in problem-solving activities, manage project timelines, and contribute to the overall success of application development initiatives.\n\n\nRoles & Responsibilities:\n\n\nExpected to be an SME.\n\n\nCollaborate and manage the team to perform.\n\n\nResponsible for team decisions.\n\n\nEngage with multiple teams and contribute on key decisions.\n\n\nProvide solutions to problems for their immediate team and across multiple teams.\n\n\nFacilitate knowledge sharing sessions to enhance team capabilities.\n\n\nMonitor project progress and ensure alignment with business goals.\n\n\nProfessional & Technical Skills:\n\n\nMust To Have Skills: Proficiency in AWS Architecture.\n\n\nStrong understanding of cloud computing principles and best practices.\n\n\nExperience with application development frameworks and methodologies.\n\n\nFamiliarity with DevOps practices and tools for continuous integration and deployment.\n\n\nAbility to troubleshoot and optimize application performance.\n\n\nAdditional Information:\n\n\nThe candidate should have minimum 7.5 years of experience in AWS Architecture.\n\n\nThis position is based at our Bengaluru office.\n\n\nA 15 years full time education is required. .",
+      "apply_options": [
+        {
+          "title": "Shine",
+          "link": "https://www.shine.com/jobs/software-engineer-devops-with-aws/accenture/19554892?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciAoRGV2T3BzIHdpdGggQVdTKSIsImNvbXBhbnlfbmFtZSI6IkFjY2VudHVyZSIsImh0aWRvY2lkIjoiX3Q1N3JaQjB2eXBFNnVERkFBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSUZTVzVrYVdFIiwiZ2wiOiJpbiIsImhsIjoiZW4iLCJmYyI6IkVzd0JDb3dCUVVwcFZEUjBTVnBTTTFWNlpWWkJORWwyY1hSUVlVVTVUWGRhU0c5a1MxTkZiM2xIUXpaNk9IbDNWVmRzVERKUVZISkdjV2RmUzBSTU5HTmxXakZLWlc5d056SktVRzgwVDBsdVVqUldWMFpzWjNBemMyeDRiSFJDWW5KdVdsOTBNRE5CUVhSTVptSm5RV0pJVGtKUllXUnNaRmhVTmtsV00zaFBZME55UmpWRVJuUldhV1JFTmtGa1ozSVNGemw0Wmt0aGNWUkVURmxwY0RWT2IxQjRXbTV3ZDBGSkdpSkJSSE55T1daUmVHOTVUa2haU2podVRtNUhSRkk0Y1RsQlJXNHRXSGhoUTNkUiIsImZjdiI6IjMiLCJmY19pZCI6Il90NTdyWkIwdnlwRTZ1REZBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Software Developer / Applications Development",
+      "company_name": "Accenture",
+      "location": "Ahmedabad, Gujarat",
+      "via": "Shine",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=Accenture+software+engineer&htidocid=8Cune8yZb5MbKP1fAAAAAA%3D%3D&hl=en-IN&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_zWOsQ3CMBBFRZsRaLgaoRgh0UAVCZEBGCC6OEcc5Pgs3wVSsgM7MBiTYAqa33y993_xXhTnC1_1gYngRHfyHCmBgSpGP1jUgYP8i5GCwuf5ghu3IITJOuAANXPvaXl0qlEOxoj4shfNrC0tj4YDtTybDMkvGnF5LHpUanb77VzG0K9XlbXZPuUXQ4DKjdRhi90G6umGCfULYgGEbakAAAA&shmds=v1_ARwrE22O2KiPerOvHZC2YpeLWMF4p50S0L7o4Mvmn3numng9og&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Accenture+software+engineer&htidocid=8Cune8yZb5MbKP1fAAAAAA%3D%3D",
+      "extensions": [
+        "Full–time"
+      ],
+      "source_link": "https://www.shine.com/jobs/software-developer-applications-development/accenture/19547473",
+      "job_title": "Software Developer / Applications Development",
+      "description": "Project Role : Custom Software Engineer\n\n\nProject Role Description :  Develop custom software solutions to design, code, and enhance components across systems or applications. Use modern frameworks and agile practices to deliver scalable, high-performing solutions tailored to specific business needs.\n\n\nOracle Applications Development\n\n\nMinimum 7.5 Year(s) Of Experience Is Required\n\n\nEducational Qualification : 15 years full time education\n\n\nAs a Custom Software Engineer, a typical day involves creating tailored software solutions by designing, coding, and improving various components within systems or applications. The role requires working with contemporary frameworks and following agile methodologies to ensure the delivery of scalable and efficient software that meets unique business requirements. Collaboration with different teams and continuous refinement of software elements are integral parts of the daily workflow, fostering innovation and responsiveness to evolving project needs.\n\n\nProvide solutions to problems for their immediate team and across multiple teams.\n\n\nLead efforts to identify and implement process improvements that enhance team productivity and software quality.\n\n\nMentor junior team members to support their professional growth and skill development.\n\n\nCoordinate cross-functional communication to ensure alignment of project goals and timely delivery.\n\n\nMust To Have Skills: Proficiency in Oracle Applications Development.\n\n\nStrong knowledge of software development life cycle and agile methodologies.\n\n\nExperience with modern programming languages and frameworks relevant to Oracle Applications.\n\n\nAbility to design scalable and maintainable software components.\n\n\nFamiliarity with debugging, testing, and performance optimization techniques.\n\n\nThe candidate should have minimum 7.5 years of experience in Oracle Applications Development.\n\n\nThis position is based at our Bengaluru office.\n\n\nA 15 years full time education is required. .",
+      "apply_options": [
+        {
+          "title": "Shine",
+          "link": "https://www.shine.com/jobs/software-developer-applications-development/accenture/19547473?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBEZXZlbG9wZXIgLyBBcHBsaWNhdGlvbnMgRGV2ZWxvcG1lbnQiLCJjb21wYW55X25hbWUiOiJBY2NlbnR1cmUiLCJodGlkb2NpZCI6IjhDdW5lOHlaYjVNYktQMWZBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lGU1c1a2FXRSIsImdsIjoiaW4iLCJobCI6ImVuIiwiZmMiOiJFc3dCQ293QlFVcHBWRFIwU2pkbE1XVllYelkyV0RSMVZYVTJabkZrYTFWa01scHBRek5FYmtneFVYSjBWVVZVWjIxSE4xZDJWbHBEVld0UlQwazVVRlZ5VEdSTldIbGpXVTFvYWtzMFJtdHVkSEJxYWt0eVUyVkNUVTlNVG1Kc05UQkdkRWh4ZWs1cGFVRkJlVlpLYlVwUGVVVXdaa0pUUnkxVlNIWjZjREpCTUZwTWNpMDVaMHRYT0cxSldHVkVhRk1TRnpsNFprdGhjVlJFVEZscGNEVk9iMUI0V201d2QwRkpHaUpCUkhOeU9XWlVUa2QxTkdaSmVVOTJkbWx0VFRkb1ZuSXlhRmQwZFRscllqaEIiLCJmY3YiOiIzIiwiZmNfaWQiOiI4Q3VuZTh5WmI1TWJLUDFmQUFBQUFBPT0ifQ=="
+    }
+  ]
+}

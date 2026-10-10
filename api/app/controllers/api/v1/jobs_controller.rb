@@ -3,7 +3,7 @@ module Api
     class JobsController < ApplicationController
       # Read-only: HarvestJobsJob keeps the table fresh, never a visitor's request.
       def index
-        render json: JobBlueprint.render_as_hash(Job.recent, root: :jobs)
+        render json: JobBlueprint.render_as_hash(Job.recent.includes(:company), root: :jobs)
       end
     end
   end

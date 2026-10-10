@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :jobs, only: :index
+      resources :logos, only: :show
       resources :resume_checks, only: %i[index show create destroy] do
         get :file, on: :member
       end

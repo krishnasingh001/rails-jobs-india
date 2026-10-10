@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_10_11_081000) do
+ActiveRecord::Schema[8.0].define(version: 2026_10_11_090000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -24,6 +24,8 @@ ActiveRecord::Schema[8.0].define(version: 2026_10_11_081000) do
     t.jsonb "job_ids", default: [], null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.binary "logo_data"
+    t.string "logo_content_type"
     t.index ["company_name"], name: "index_companies_on_company_name", unique: true
   end
 

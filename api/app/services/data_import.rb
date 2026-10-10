@@ -45,8 +45,11 @@ class DataImport
 
   def import_companies
     read("companies/companies.json").each do |entry|
+      logo = DATA_DIR.join("logos", entry["logo_file"].to_s) if entry["logo_file"].present?
       Company.find_or_initialize_by(company_name: entry["company_name"]).update!(
         logo: entry["logo"],
+        logo_data: logo&.binread,
+        logo_content_type: logo && Rack::Mime.mime_type(logo.extname),
         job_count: entry["job_count"].to_i,
         states: entry["states"] || [],
         locations: entry["locations"] || [],
