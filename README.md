@@ -1,44 +1,82 @@
-# Rails Jobs India
+# ROR India
 
-**See where the Ruby on Rails jobs are in India, and check if the company is worth your time, in one place.**
+**Find Rails jobs by city, check the company before you apply, and track every application. All in one place.**
 
-Built for the [SerpApi India Hackathon 2026](https://serpapi.github.io/serpapi-india-hackathon-2026/) · Track: **Knowledge & Public Interest** (jobs)
+Built for the [SerpApi India Hackathon 2026](https://serpapi.github.io/serpapi-india-hackathon-2026/) · Track: **Knowledge & Public Interest**
 
 - Demo video: _add link here_
 - Live demo: _add link here (or run it locally, see below)_
 
 ---
 
-## The problem
+## What is ROR India?
 
-If you are a Rails developer in India, finding a job is slow and scattered:
+ROR India is a job board made only for **Ruby on Rails developers in India**. It shows you **where** the Rails jobs are on a map, and gives you the facts you need before you apply:
 
-- Job boards list roles one by one. They do not show **where** the work is.
-- You can't tell if a city has 2 openings or 20 without searching each one.
-- Every board shows a slightly different copy of the same job.
-- Before applying, you still have to research the company: layoffs, size, offices.
-- Then you lose track of where you applied.
-
-## What you get
-
-| You want to... | What the app does |
-|---|---|
-| Know where the Rails jobs are | A map of India. Taller states have more openings. Pick a state to see its cities. |
-| See fresh jobs, not last month's | The backend pulls new listings from Google Jobs on a schedule. Visitors never trigger a fetch. |
-| Find jobs near you | Pick a city or tap Locate to see roles by distance. Filter by work mode, place or keyword. |
-| Understand a job quickly | A detail page with the description, salary, work mode, posted date and every place you can apply. |
-| See jobs picked for you | Save your cities, work mode, expected salary, years of experience and AI fluency (or read them from your resume). The **Jobs for you** page ranks every opening against them and shows why. |
-| Know if you fit | A job fit check compares the skills in the posting with your saved skills and highlights what matches. |
-| Improve your resume | An ATS resume checker scores your resume and finds your skills. |
-| Know where the office is | A Google Maps lookup shows the company's real office location. |
-| Judge the company | A company panel: layoffs, head count, offices, values and founding year, **with the sources linked** so you can check them. |
-| Keep track | Create an account, save jobs and move them from applied to offer. |
-
-**Business impact:** a job seeker spends minutes, not hours, finding relevant roles and screening companies. For community leaders, the map shows where Rails talent demand is concentrated across India.
+- **About the job:** city, remote / hybrid / on-site, salary, posted date, the full description, and every place you can apply.
+- **About the company:** recent layoffs, head count, office locations, values and founding year, with source links so you can check them yourself.
+- **About you:** how well your resume fits the job, and where each of your applications stands.
 
 ---
 
-## How SerpApi is used
+## See it in action: Priya's job search
+
+Meet Priya. She is a Rails developer in **Pune** and wants a job in **Pune or Bengaluru** only. This is her search:
+
+![Priya's journey, step by step](docs/journey/priya-journey.gif)
+
+**Why it matters:** hours of searching become minutes. She picks a city with facts, not guesses. She skips weak matches, applies with a better resume, and always knows where each application stands.
+
+<details>
+<summary><b>Show the screens, step by step</b></summary>
+
+**1. See where the jobs are**
+![Map](docs/journey/01-map.png)
+
+**2. Pick your city: Pune, then Bengaluru**
+![Pune](docs/journey/02-pune.png)
+![Bengaluru](docs/journey/03-bengaluru.png)
+
+**3. Open a job**
+![Job page](docs/journey/04-job.png)
+
+**4. Check the company**
+![Company panel](docs/journey/05-company.png)
+
+**5. Create an account and upload a resume**
+![Sign up](docs/journey/06-signup.png)
+
+**6. Say what you want**
+![Preferences](docs/journey/07-preferences.png)
+
+**7. Jobs picked for you**
+![Jobs for you](docs/journey/08-for-you.png)
+
+**8. See how well you fit**
+![Job fit](docs/journey/09-job-fit.png)
+
+**9. Improve your resume**
+![Resume check](docs/journey/10-resume-check.png)
+
+**10. Track every application**
+![Tracker](docs/journey/11-tracker.png)
+
+</details>
+
+_The screenshots use a demo account and real jobs from the app's data._
+
+---
+
+## How this is built
+
+### Architecture
+
+- **Frontend:** React, TypeScript, MapLibre (the map), Tailwind.
+- **Backend:** Rails API with PostgreSQL. The SerpApi calls live in `api/app/services/serpapi/`.
+- **Saved SerpApi data (`api/data/`):** this is not a separate data source. It is real data we fetched from SerpApi (jobs from 8 regions and the company profiles), saved as JSON files. We keep it for development, so we could build and test the whole app without spending SerpApi calls again. This let us finish within the free plan's 250 searches. It also means the app works right after setup.
+- **Accounts:** sign up, sign in, and a tracker for your applications.
+
+### How SerpApi is used
 
 SerpApi is the data source of the whole product. Nothing on the map is hand-written.
 
@@ -55,9 +93,13 @@ How we keep it honest and cheap:
 - **One lookup per company.** Offices and profiles are cached, so ten jobs at one company cost one request.
 - **Your key stays on the server.** The browser never sees `SERPAPI_KEY`.
 
+### Keeping jobs fresh
+
+Visitors cannot trigger a fetch. `HarvestJobsJob` can run every day at 18:30 UTC (midnight in India) through Solid Queue. The schedule is currently commented out in `api/config/recurring.yml` to save SerpApi credits; uncomment it to turn it on. The Docker image sets `SOLID_QUEUE_IN_PUMA=true`, so the web process runs the scheduler too. On another host set that variable, or run `bin/jobs` as a second process. It needs `SERPAPI_KEY` and retries up to 3 times, 30 minutes apart, if SerpApi fails.
+
 ---
 
-## Run it locally
+## How to run it locally
 
 You need Node 22, Ruby 3.4 and PostgreSQL. A free [SerpApi account](https://serpapi.com) (250 searches/month) is enough.
 
@@ -67,7 +109,7 @@ cd api
 bundle install
 cp .env.example .env          # then put your key in: SERPAPI_KEY=...
 bin/rails db:setup
-bin/rails data:import         # loads the pre-collected jobs and company profiles
+bin/rails data:import         # loads the saved SerpApi jobs and company profiles
 bin/rails s -p 3001
 
 # 2. Frontend (in a second terminal, from the repo root)
@@ -87,49 +129,15 @@ bin/rails test                                  # backend tests
 npm run lint && npm run build                   # frontend checks
 ```
 
-The app works with no key too: it shows the pre-collected jobs from `api/data/`. You only need a key to fetch new data.
+The app works with no key too: it shows the saved SerpApi data from `api/data/`. You only need a key to fetch new data.
 
 ---
 
-## Keeping jobs fresh
+## What is planned
 
-Visitors cannot trigger a fetch. `HarvestJobsJob` can run every day at 18:30 UTC (midnight in India) through Solid Queue. The schedule is currently commented out in `api/config/recurring.yml` to save SerpApi credits; uncomment it to turn it on. The Docker image sets `SOLID_QUEUE_IN_PUMA=true`, so the web process runs the scheduler too. On another host set that variable, or run `bin/jobs` as a second process. It needs `SERPAPI_KEY` and retries up to 3 times, 30 minutes apart, if SerpApi fails.
-
----
-
-## How it works (short version)
-
-```
-Google Jobs / Maps / Brave AI Mode   (via SerpApi)
-              │
-        Rails API  ── stores jobs, offices, profiles in PostgreSQL
-              │          (refreshed by a backend job, never by visitors)
-        React + MapLibre map  ──►  state → city → job → company panel
-```
-
-- **Frontend:** React, TypeScript, MapLibre (the map), Tailwind.
-- **Backend:** Rails API with PostgreSQL. The SerpApi calls live in `api/app/services/serpapi/`.
-- **Pre-collected data:** `api/data/` holds jobs from 8 regions and the company profiles as JSON files, so the app works instantly after setup.
-- **Accounts:** sign up, sign in, and a tracker for your applications.
-
-Key places to look:
-
-| Where | What |
-|---|---|
-| `api/app/services/serpapi/client.rb` | The one place that talks to SerpApi |
-| `api/app/services/serpapi/harvest.rb` | Fetching jobs from Google Jobs and paging through results |
-| `api/app/jobs/harvest_jobs_job.rb` | The scheduled backend job that keeps listings updated |
-| `api/app/services/resume/job_fit.rb` | Job fit check (keyword match, no AI call) |
-| `api/app/services/serpapi/place_lookup.rb` | Office lookup with Google Maps |
-| `src/components/IndiaJobsMap.tsx` | The map |
-| `src/components/JobDetailPage.tsx` | The job page |
-| `src/components/CompanyInsightPanel.tsx` | The company panel with sources |
-
----
-
-## Upcoming features
-
-- **Recruiter accounts.** A separate sign-up for recruiters (business email only), so they can post roles and see Rails talent demand. Not available yet; every account today is a job seeker.
+- **New-job alerts.** Pick the companies you dream of working at and get told when they post a Rails role, so you apply on day one, not day ten.
+- **Recruiter accounts.** A separate sign-up for recruiters (business email only), so they can post roles and see where Rails talent demand is. Not available yet; every account today is a job seeker.
+- **Deeper resume vs job check.** Today the fit check is a keyword match. We want it to also read years of experience and other requirements.
 
 ---
 
@@ -161,4 +169,5 @@ Built with AI help (Claude Code) for coding and review. The backend has an autom
 
 ## Team
 
-_Add team names here._
+- **Ayush Billore** · [LinkedIn](https://www.linkedin.com/in/ayushbillore/)
+- **Krishna Singh** · [LinkedIn](https://www.linkedin.com/in/krishnasinghcs/)
