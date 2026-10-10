@@ -22,20 +22,6 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     assert_equal "krishna@example.com", JSON.parse(response.body).dig("user", "email")
   end
 
-  test "rejects a recruiter signup that uses a personal email" do
-    post api_v1_auth_register_path, params: {
-      name: "Recruiter",
-      email: "recruiter@gmail.com",
-      password: "secret1",
-      password_confirmation: "secret1",
-      role: "recruiter"
-    }, as: :json
-
-    assert_response :unprocessable_entity
-    assert_match "business email", JSON.parse(response.body)["message"]
-    assert_equal 0, User.count
-  end
-
   test "signs in with the right password and rejects the wrong one" do
     User.create!(name: "Krishna", email: "krishna@example.com", password: "secret1", password_confirmation: "secret1", role: "candidate")
 
@@ -51,5 +37,46 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
 
     get api_v1_auth_me_path, headers: { "Authorization" => "Bearer #{token}" }
     assert_nil JSON.parse(response.body)["user"]
+  end
+
+  test "stores the resume link and skills at sign up" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha Verma", email: "asha@example.com", password: "secret1", password_confirmation: "secret1",
+      role: "candidate", resume_url: " https://drive.example.com/asha.pdf ", skills: [ "Ruby", "ruby", " Rails ", "" ]
+    }, as: :json
+
+    assert_response :created
+    user = JSON.parse(response.body).fetch("user")
+    assert_equal "https://drive.example.com/asha.pdf", user.fetch("resume_url")
+    assert_equal [ "Ruby", "Rails" ], user.fetch("skills")
+  end
+
+  test "rejects a resume link that is not http" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha Verma", email: "asha@example.com", password: "secret1", password_confirmation: "secret1",
+      resume_url: "javascript:alert(1)"
+    }, as: :json
+
+    assert_response :unprocessable_entity
+    assert_match(/Resume url/, JSON.parse(response.body).fetch("message"))
+  end
+
+  test "the sign-up resume becomes the first resume" do
+    post api_v1_auth_register_path, params: {
+      name: "Asha", email: "asha2@example.com", password: "secret1", password_confirmation: "secret1",
+      skills: [ "Ruby on Rails" ], years_experience: 3, resume_ai_fluency: "user"
+    }
+
+    assert_response :created
+    resumes = JSON.parse(response.body).dig("user", "resumes")
+    assert_equal [ "My resume" ], resumes.map { |resume| resume["label"] }
+    assert_equal [ "Ruby on Rails" ], resumes.first["skills"]
+    assert_equal "user", resumes.first["ai_fluency"]
+  end
+
+  test "signing up without a resume creates none" do
+    post api_v1_auth_register_path, params: { name: "Asha", email: "asha3@example.com", password: "secret1", password_confirmation: "secret1" }
+
+    assert_equal [], JSON.parse(response.body).dig("user", "resumes")
   end
 end

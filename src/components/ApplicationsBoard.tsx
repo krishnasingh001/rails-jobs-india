@@ -1,3 +1,4 @@
+import { PageSheet } from './AppShell.tsx'
 import { useEffect, useState } from 'react'
 import {
   APPLICATION_STATUSES,
@@ -75,9 +76,7 @@ export function ApplicationsBoard({ onClose }: { onClose: () => void }) {
   const total = columns ? APPLICATION_STATUSES.reduce((sum, status) => sum + columns[status].length, 0) : 0
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-40 overflow-y-auto px-4 pb-8 pt-24 font-sans md:pt-8">
-      <div className="pointer-events-auto mx-auto w-full max-w-6xl">
-        <div className="rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur-md sm:p-6">
+    <PageSheet size="wide">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <p className="font-brand text-xs font-semibold uppercase tracking-[0.14em] text-brand">Your account</p>
@@ -152,8 +151,6 @@ export function ApplicationsBoard({ onClose }: { onClose: () => void }) {
               ))}
             </div>
           ) : null}
-        </div>
-      </div>
-    </div>
+    </PageSheet>
   )
 }

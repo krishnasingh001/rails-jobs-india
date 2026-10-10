@@ -10,11 +10,26 @@ export type JobPin = {
   latitude: number | null
   longitude: number | null
   workMode: WorkMode
+  /** What the scrape found: true when the posting is remote, false when it is not, null when unknown. */
+  remote: boolean | null
   locationLabel: string
   salaryLabel: string | null
   applyHost: string | null
   applyUrl: string | null
   postedAt: string
+  description: string
+  via: string | null
+  extensions: string[]
+  applyOptions: ApplyOption[]
+  shareLink: string | null
+  thumbnail: string | null
+  skills: string[]
+  provenance: Provenance
+}
+
+export type ApplyOption = {
+  title: string
+  link: string
 }
 
 export type StateCount = {
@@ -59,12 +74,16 @@ export type IndiaFeatureCollection = {
   features: IndiaFeature[]
 }
 
-export type Panel =
-  | { kind: 'states' }
-  | { kind: 'cities'; code: string }
-  | { kind: 'jobs'; code: string; city: string }
-  | { kind: 'remote' }
-
 export interface JobsSource {
   load(): Promise<JobPin[]>
+}
+
+export type Provenance = {
+  source: string
+  via: string | null
+  query: string | null
+  searchLocation: string | null
+  firstSeenAt: string | null
+  fetchedAt: string | null
+  originalUrl: string | null
 }

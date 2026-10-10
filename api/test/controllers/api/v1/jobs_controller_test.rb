@@ -12,7 +12,6 @@ class Api::V1::JobsControllerTest < ActionDispatch::IntegrationTest
       posted_label: "3 days ago",
       last_seen_at: Time.current
     )
-    SerpapiFetch.create!(fetched_at: Time.current, job_count: 1)
 
     get api_v1_jobs_path
 
@@ -28,39 +27,16 @@ class Api::V1::JobsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "3 days ago", job["postedAt"]
   end
 
-  test "returns stored jobs when a live search fails" do
-    Job.create!(
-      external_id: "job-1",
-      title: "Rails Dev",
-      company_name: "Acme",
-      location: "Chennai, Tamil Nadu",
-      last_seen_at: Time.current
-    )
+  test "never calls SerpApi while serving jobs" do
     singleton = class << Serpapi::Harvest; self; end
     original = Serpapi::Harvest.method(:call)
-    singleton.define_method(:call) do |*|
-      raise Serpapi::Error, "SerpApi could not be reached."
-    end
+    singleton.define_method(:call) { |*, **| flunk "request triggered a harvest" }
 
     get api_v1_jobs_path
 
     assert_response :success
-    assert_equal "job-1", JSON.parse(response.body).fetch("jobs").fetch(0).fetch("id")
+    assert_equal [], JSON.parse(response.body).fetch("jobs")
   ensure
-    singleton&.define_method(:call) do |*args, **kwargs, &block|
-      original.call(*args, **kwargs, &block)
-    end
-  end
-
-  test "returns an error when the SerpApi key is missing" do
-    original = ENV["SERPAPI_KEY"]
-    ENV["SERPAPI_KEY"] = ""
-
-    get api_v1_jobs_path
-
-    assert_response :bad_gateway
-    assert_equal "Add SERPAPI_KEY to api/.env and restart the Rails server.", JSON.parse(response.body)["error"]
-  ensure
-    ENV["SERPAPI_KEY"] = original
+    singleton&.define_method(:call) { |*args, **kwargs, &block| original.call(*args, **kwargs, &block) }
   end
 end

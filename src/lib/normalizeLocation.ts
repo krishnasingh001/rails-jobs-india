@@ -26,6 +26,7 @@ const STATE_ALIASES: { phrase: string; state: string; code: string }[] = [
   { phrase: 'gujarat', state: 'Gujarat', code: 'GJ' },
   { phrase: 'haryana', state: 'Haryana', code: 'HR' },
   { phrase: 'himachal pradesh', state: 'Himachal Pradesh', code: 'HP' },
+  { phrase: 'ladakh', state: 'Ladakh', code: 'LA' },
   { phrase: 'jammu and kashmir', state: 'Jammu and Kashmir', code: 'JK' },
   { phrase: 'jharkhand', state: 'Jharkhand', code: 'JH' },
   { phrase: 'karnataka', state: 'Karnataka', code: 'KA' },

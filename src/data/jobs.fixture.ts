@@ -92,6 +92,7 @@ function buildJobs(): JobPin[] {
       latitude: located.latitude,
       longitude: located.longitude,
       workMode: located.workMode,
+      remote: located.workMode === 'remote',
       locationLabel:
         located.workMode === 'remote'
           ? 'Remote, India'
@@ -100,6 +101,14 @@ function buildJobs(): JobPin[] {
       applyHost: job.applyHost,
       applyUrl: `https://${job.applyHost}`,
       postedAt: posted.toISOString().slice(0, 10),
+      description: '',
+      via: null,
+      extensions: [],
+      applyOptions: [],
+      shareLink: null,
+      thumbnail: null,
+      skills: [],
+      provenance: { source: 'Fixture', via: null, query: null, searchLocation: null, firstSeenAt: null, fetchedAt: null, originalUrl: null },
     }
   })
 }

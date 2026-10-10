@@ -1,39 +1,7 @@
+import { PageSheet } from './AppShell.tsx'
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { useAuth } from '../context/AuthContext.tsx'
-
-const FREE_EMAIL_DOMAINS = new Set([
-  'gmail.com',
-  'googlemail.com',
-  'yahoo.com',
-  'yahoo.co.in',
-  'yahoo.co.uk',
-  'ymail.com',
-  'hotmail.com',
-  'hotmail.co.uk',
-  'outlook.com',
-  'live.com',
-  'msn.com',
-  'icloud.com',
-  'me.com',
-  'mac.com',
-  'proton.me',
-  'protonmail.com',
-  'aol.com',
-  'zoho.com',
-  'zohomail.com',
-  'gmx.com',
-  'gmx.net',
-  'mail.com',
-  'yandex.com',
-  'yandex.ru',
-  'rediffmail.com',
-  'inbox.com',
-])
-
-function isFreeEmail(email: string) {
-  const domain = email.trim().toLowerCase().split('@')[1]
-  return Boolean(domain && FREE_EMAIL_DOMAINS.has(domain))
-}
+import { checkResume, extractResumeProfile, validateResumeFile, type ResumeProfile } from '../lib/resumeCheck.ts'
 
 const fieldClass =
   'mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-ink transition-colors duration-200 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/15'
@@ -54,9 +22,7 @@ function AuthShell({
   onClose: () => void
 }) {
   return (
-    <div className="pointer-events-none absolute inset-0 z-40 overflow-y-auto px-4 pb-8 pt-24 font-sans md:pt-8">
-      <div className="pointer-events-auto mx-auto flex min-h-[calc(100dvh-8rem)] w-full max-w-md flex-col justify-center md:min-h-[calc(100dvh-4rem)]">
-        <div className="rounded-2xl border border-slate-200 bg-white/95 p-6 shadow-lg backdrop-blur-md sm:p-8">
+    <PageSheet size="narrow">
           <div className="mb-6 text-center">
             <p className="font-brand text-xs font-semibold uppercase tracking-[0.14em] text-brand">{kicker}</p>
             <h1 className="mt-2 font-brand text-3xl font-semibold text-ink">{title}</h1>
@@ -69,9 +35,7 @@ function AuthShell({
               Back to the map
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+    </PageSheet>
   )
 }
 
@@ -171,21 +135,59 @@ export function SignUpScreen({
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
-  const [role, setRole] = useState('candidate')
+  const [resumeUrl, setResumeUrl] = useState('')
+  const [skills, setSkills] = useState<string[]>([])
+  const [resumeName, setResumeName] = useState<string | null>(null)
+  const [resumeFile, setResumeFile] = useState<File | null>(null)
+  const [resumeInfo, setResumeInfo] = useState<ResumeProfile | null>(null)
+  const [reading, setReading] = useState(false)
+  const [resumeError, setResumeError] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+
+  async function onResumeFile(file: File | undefined) {
+    if (!file) return
+    const problem = validateResumeFile(file)
+    if (problem) {
+      setResumeError(problem)
+      return
+    }
+    setReading(true)
+    setResumeError(null)
+    try {
+      const info = await extractResumeProfile(file)
+      const found = info.skills
+      setResumeInfo(info)
+      setResumeName(file.name)
+      setResumeFile(file)
+      setSkills((current) => [...current, ...found.filter((skill) => !current.some((c) => c.toLowerCase() === skill.toLowerCase()))])
+    } catch (caught) {
+      setResumeError(caught instanceof Error ? caught.message : 'Could not read this resume.')
+    } finally {
+      setReading(false)
+    }
+  }
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault()
     setBusy(true)
     setError(null)
-    if (role === 'recruiter' && isFreeEmail(email)) {
-      setError('Recruiters must sign up with a business email. Personal emails (Gmail, Yahoo, Outlook, etc.) are not allowed.')
-      setBusy(false)
-      return
-    }
     try {
-      await register({ name, email, password, password_confirmation: passwordConfirmation, role })
+      await register({
+        name,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+        resume_url: resumeUrl.trim(),
+        skills,
+        years_experience: resumeInfo?.yearsExperience ?? null,
+        resume_ai_fluency: resumeInfo?.aiLevel ?? null,
+        resume_ai_signals: resumeInfo?.aiSignals ?? [],
+      })
+      if (resumeFile) {
+        // Keep the signup resume in the ATS history. The account already exists, so a failure here must not block sign-up.
+        await checkResume(resumeFile, '').catch(() => undefined)
+      }
       onSuccess()
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'Sign up failed')
@@ -198,7 +200,7 @@ export function SignUpScreen({
     <AuthShell
       kicker="Get started"
       title="Create your account"
-      subtitle="Join as a candidate or recruiter."
+      subtitle="Save jobs, check your resume and get matched to Rails roles."
       footer={
         <>
           Already have an account?{' '}
@@ -223,38 +225,77 @@ export function SignUpScreen({
         </div>
         <div>
           <label htmlFor="signup-email" className="text-xs font-medium text-ink-muted">
-            {role === 'recruiter' ? 'Work email' : 'Email'}
+            Email
           </label>
           <input
             id="signup-email"
             type="email"
             autoComplete="email"
             required
-            placeholder={role === 'recruiter' ? 'you@company.com' : undefined}
             className={fieldClass}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
-          {role === 'recruiter' ? (
-            <p className="mt-1.5 text-xs text-ink-muted">Use your company email. Personal providers like Gmail or Yahoo are not accepted.</p>
-          ) : null}
         </div>
-        <fieldset>
-          <legend className="text-xs font-medium text-ink-muted">I am a</legend>
-          <div className="mt-1.5 grid grid-cols-2 gap-2">
-            {(['candidate', 'recruiter'] as const).map((option) => (
-              <label
-                key={option}
-                className={`flex cursor-pointer items-center justify-center rounded-xl border px-3 py-3 text-sm font-semibold transition-colors duration-200 ${
-                  role === option ? 'border-brand bg-brand-soft text-brand' : 'border-slate-200 bg-white text-ink-muted hover:bg-brand-soft/70'
-                }`}
-              >
-                <input type="radio" name="role" value={option} checked={role === option} onChange={() => setRole(option)} className="sr-only" />
-                {option === 'candidate' ? 'Candidate' : 'Recruiter'}
+        {(
+          <section className="space-y-3 rounded-xl border border-slate-200 p-3">
+            <div>
+              <label htmlFor="resume-file" className="text-xs font-medium text-ink-muted">
+                Upload your resume <span className="font-normal">(optional, PDF or DOCX)</span>
               </label>
-            ))}
-          </div>
-        </fieldset>
+              <input
+                id="resume-file"
+                type="file"
+                accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                disabled={reading}
+                className="mt-1 block w-full cursor-pointer text-sm text-ink-muted file:mr-3 file:cursor-pointer file:rounded-full file:border-0 file:bg-brand-soft file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand"
+                onChange={(event) => {
+                  void onResumeFile(event.target.files?.[0])
+                  event.target.value = ''
+                }}
+              />
+              <p className="mt-1 text-xs text-ink-muted">
+                {reading ? 'Reading your resume…' : resumeName ? `Skills read from ${resumeName}. It will be saved to your ATS history.` : 'We read your skills from it and save it to your ATS history.'}
+              </p>
+              {resumeError ? (
+                <p className="mt-1 text-xs text-brand" role="alert">
+                  {resumeError}
+                </p>
+              ) : null}
+            </div>
+            {skills.length > 0 ? (
+              <ul className="flex flex-wrap gap-1.5" aria-label="Skills from your resume">
+                {skills.map((skill) => (
+                  <li key={skill} className="flex items-center gap-1 rounded-full bg-brand-soft py-1 pl-2.5 pr-1.5 text-xs font-medium text-brand">
+                    {skill}
+                    <button
+                      type="button"
+                      aria-label={`Remove ${skill}`}
+                      className="cursor-pointer rounded-full px-1 leading-none hover:bg-brand-border"
+                      onClick={() => setSkills((current) => current.filter((item) => item !== skill))}
+                    >
+                      ×
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <div>
+              <label htmlFor="resume-url" className="text-xs font-medium text-ink-muted">
+                Resume link <span className="font-normal">(optional)</span>
+              </label>
+              <input
+                id="resume-url"
+                type="url"
+                inputMode="url"
+                placeholder="https://drive.google.com/…"
+                className={fieldClass}
+                value={resumeUrl}
+                onChange={(event) => setResumeUrl(event.target.value)}
+              />
+            </div>
+          </section>
+        )}
         <div>
           <label htmlFor="signup-password" className="text-xs font-medium text-ink-muted">
             Password

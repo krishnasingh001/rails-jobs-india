@@ -1,5 +1,5 @@
 import { normalizeLocation } from '../lib/normalizeLocation.ts'
-import type { JobPin, JobsSource } from '../types.ts'
+import type { ApplyOption, JobPin, JobsSource, Provenance } from '../types.ts'
 
 type SerpJob = {
   id: string
@@ -7,9 +7,18 @@ type SerpJob = {
   company: string
   location: string
   salary: string | null
+  remote?: boolean | null
   applyUrl: string | null
   applyHost: string | null
   postedAt: string
+  description?: string
+  via?: string | null
+  extensions?: string[]
+  applyOptions?: ApplyOption[]
+  shareLink?: string | null
+  thumbnail?: string | null
+  skills?: string[]
+  provenance?: Partial<Provenance>
 }
 
 function isSerpJob(value: unknown): value is SerpJob {
@@ -30,12 +39,30 @@ function toJobPin(job: SerpJob): JobPin {
     code: located.code,
     latitude: located.latitude,
     longitude: located.longitude,
-    workMode: located.workMode,
+    // The scrape's remote flag wins over what the location text suggests.
+    workMode: job.remote === true ? 'remote' : located.workMode,
+    remote: job.remote ?? null,
     locationLabel: job.location.trim() || place || 'India',
     salaryLabel: job.salary,
     applyHost: job.applyHost,
     applyUrl: job.applyUrl,
     postedAt: job.postedAt,
+    description: job.description ?? '',
+    via: job.via ?? null,
+    extensions: job.extensions ?? [],
+    applyOptions: job.applyOptions ?? [],
+    shareLink: job.shareLink ?? null,
+    thumbnail: job.thumbnail ?? null,
+    skills: job.skills ?? [],
+    provenance: {
+      source: job.provenance?.source ?? 'Google Jobs',
+      via: job.provenance?.via ?? null,
+      query: job.provenance?.query ?? null,
+      searchLocation: job.provenance?.searchLocation ?? null,
+      firstSeenAt: job.provenance?.firstSeenAt ?? null,
+      fetchedAt: job.provenance?.fetchedAt ?? null,
+      originalUrl: job.provenance?.originalUrl ?? job.applyUrl,
+    },
   }
 }
 
@@ -59,8 +86,4 @@ export const serpApiJobsSource: JobsSource = {
   load() {
     return fetch('/api/v1/jobs').then(readJobs).then((result) => result.jobs)
   },
-}
-
-export function harvestJobs(): Promise<{ jobs: JobPin[]; added: number }> {
-  return fetch('/api/v1/harvests', { method: 'POST' }).then(readJobs)
 }

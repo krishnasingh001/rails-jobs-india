@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react'
+import { Link, Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { PageOverlay, PageSheet, TopNav } from './components/AppShell.tsx'
+import { useAuth } from './context/AuthContext.tsx'
+import { AtsResumeChecker } from './components/AtsResumeChecker.tsx'
 import { ApplicationsBoard } from './components/ApplicationsBoard.tsx'
 import { SignInScreen, SignUpScreen } from './components/AuthScreens.tsx'
 import { IndiaJobsMap } from './components/IndiaJobsMap.tsx'
+import { JobsForYouPage } from './components/JobsForYouPage.tsx'
+import { OnboardingPage } from './components/OnboardingPage.tsx'
+import { ProfilePage } from './components/ProfilePage.tsx'
+import { JobDetailPage } from './components/JobDetailPage.tsx'
 import { serpApiJobsSource } from './data/serpJobs.ts'
 import { countJobsByState, withJobCounts } from './lib/aggregateJobs.ts'
 import type { IndiaFeatureCollection, JobPin } from './types.ts'
@@ -43,7 +51,11 @@ function ErrorScreen({ message }: { message: string }) {
 
 export default function App() {
   const [load, setLoad] = useState<LoadState>({ status: 'loading' })
-  const [screen, setScreen] = useState<'map' | 'sign-in' | 'sign-up' | 'applications'>('map')
+  const navigate = useNavigate()
+  const location = useLocation()
+  const { user, loading: authLoading } = useAuth()
+  const home = () => navigate('/')
+  const goBack = () => (location.key === 'default' ? navigate('/') : navigate(-1))
 
   useEffect(() => {
     let cancelled = false
@@ -79,23 +91,78 @@ export default function App() {
 
   if (load.status === 'loading') return <LoadingScreen />
   if (load.status === 'error') return <ErrorScreen message={load.message} />
+  const onMap = location.pathname === '/'
+  const density = location.pathname === '/sign-in' || location.pathname === '/sign-up' ? 'light' : 'heavy'
+  const jobsById = new Map(load.jobs.map((job) => [job.id, job]))
+
   return (
-    <>
+    <div className="relative h-dvh w-full overflow-hidden">
       <IndiaJobsMap
         geo={load.geo}
         jobs={load.jobs}
-        showPanels={screen === 'map'}
-        onSignIn={() => setScreen('sign-in')}
-        onSignUp={() => setScreen('sign-up')}
-        onOpenApplications={() => setScreen('applications')}
+        showPanels={onMap}
+        onOpenJob={(job) => navigate(`/jobs/${encodeURIComponent(job.id)}`)}
       />
-      {screen === 'applications' ? <ApplicationsBoard onClose={() => setScreen('map')} /> : null}
-      {screen === 'sign-in' ? (
-        <SignInScreen onSignUp={() => setScreen('sign-up')} onSuccess={() => setScreen('map')} onClose={() => setScreen('map')} />
-      ) : null}
-      {screen === 'sign-up' ? (
-        <SignUpScreen onSignIn={() => setScreen('sign-in')} onSuccess={() => setScreen('map')} onClose={() => setScreen('map')} />
-      ) : null}
-    </>
+      <TopNav />
+      {onMap ? null : (
+        <PageOverlay density={density}>
+          <Routes>
+            <Route path="/sign-in" element={<SignInScreen onSignUp={() => navigate('/sign-up')} onSuccess={home} onClose={home} />} />
+            <Route path="/sign-up" element={<SignUpScreen onSignIn={() => navigate('/sign-in')} onSuccess={() => navigate('/welcome')} onClose={home} />} />
+            <Route path="/ats" element={<AtsResumeChecker onClose={home} />} />
+            <Route
+              path="/applications"
+              element={authLoading ? null : user ? <ApplicationsBoard onClose={home} /> : <Navigate to="/sign-in" replace />}
+            />
+            <Route
+              path="/for-you"
+              element={
+                authLoading ? null : user ? (
+                  <JobsForYouPage jobs={load.jobs} onOpenJob={(job) => navigate(`/jobs/${encodeURIComponent(job.id)}`)} />
+                ) : (
+                  <Navigate to="/sign-in" replace />
+                )
+              }
+            />
+            <Route
+              path="/welcome"
+              element={
+                authLoading ? null : user ? (
+                  <OnboardingPage onDone={() => navigate('/for-you')} />
+                ) : (
+                  <Navigate to="/sign-in" replace />
+                )
+              }
+            />
+            <Route
+              path="/profile"
+              element={authLoading ? null : user ? <ProfilePage onClose={home} /> : <Navigate to="/sign-in" replace />}
+            />
+            <Route
+              path="/jobs/:id"
+              element={<JobRoute jobs={jobsById} onBack={goBack} onSignIn={() => navigate('/sign-in')} />}
+            />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </PageOverlay>
+      )}
+    </div>
   )
+}
+
+function JobRoute({ jobs, onBack, onSignIn }: { jobs: Map<string, JobPin>; onBack: () => void; onSignIn: () => void }) {
+  const { id } = useParams()
+  const job = id ? jobs.get(id) : undefined
+  if (!job) {
+    return (
+      <PageSheet size="narrow">
+        <h1 className="font-brand text-xl font-semibold text-ink">Job not found</h1>
+        <p className="mt-2 text-sm text-ink-muted">This role may have been removed.</p>
+        <Link to="/" className="mt-4 inline-block text-sm font-semibold text-brand hover:underline">
+          Back to the map
+        </Link>
+      </PageSheet>
+    )
+  }
+  return <JobDetailPage job={job} onBack={onBack} onSignIn={onSignIn} />
 }
