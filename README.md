@@ -169,4 +169,5 @@ Built with AI help (Claude Code) for coding and review. The backend has an autom
 
 ## Team
 
-_Add team names here._
+- **Ayush Billore** · [LinkedIn](https://www.linkedin.com/in/ayushbillore/)
+- **Krishna Singh** · [LinkedIn](https://www.linkedin.com/in/krishnasinghcs/)
